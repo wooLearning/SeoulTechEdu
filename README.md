@@ -79,3 +79,4 @@ Git_SeoulEduRepo/
 ## 🛠️ Tech Stack
 
 `Verilog` `SystemVerilog` `FPGA` `UART` `FIFO` `RISC-V` `Vivado` `xsim` `Python`
+# SeoulTechEdu
