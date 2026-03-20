@@ -1,0 +1,6 @@
+module_name,scenario_id,scenario_name,sample_count,wr_acc_count,rd_acc_count,wr_block_count,rd_block_count
+sync_fifo,1,fill_burst,64,31,15,33,1
+sync_fifo,2,simul_stress,64,64,64,0,0
+sync_fifo,3,drain_burst,64,19,31,0,33
+sync_fifo,4,flag_pressure,64,43,46,2,0
+sync_fifo,5,balanced_stream,63,45,42,0,6

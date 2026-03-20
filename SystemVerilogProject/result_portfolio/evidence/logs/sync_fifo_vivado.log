@@ -1,0 +1,1023 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Mar 19 12:52:57 2026
+# Process ID: 6468
+# Current directory: D:/02_learning_lab/fpga/portfoloio_uvm1
+# Command line: vivado.exe -mode batch -source D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/templates/contexts/simulation/adapters/tcl/sim_run_vivado_nogui.tcl -log D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/sync_fifo/vivado_sim_tb_sync_fifo.log -journal D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/sync_fifo/vivado_sim_tb_sync_fifo.jou -notrace -tclargs D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1 tb_sync_fifo D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/vivado_project D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/manifest/manifest_src_files.lst D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/manifest/manifest_tb_files.lst D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/manifest/manifest_inc_dirs.lst D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/sync_fifo/tb_sync_fifo.sv -testplusarg TESTNAME=all -testplusarg CSV_SUMMARY=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_summary.csv -testplusarg CSV_SCENARIO=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_scenarios.csv -testplusarg CSV_TRACE=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_trace.csv
+# Log file: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/sync_fifo/vivado_sim_tb_sync_fifo.log
+# Journal file: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/sync_fifo/vivado_sim_tb_sync_fifo.jou
+#-----------------------------------------------------------
+source D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/templates/contexts/simulation/adapters/tcl/sim_run_vivado_nogui.tcl -notrace
+[INFO] Loading build config: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/templates/contexts/vivado/domain/project_build_config.tcl
+[INFO] Applying TB scope filter by selected file folder: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/sync_fifo
+[INFO] Creating Vivado project: sim_nogui_tb_sync_fifo
+[INFO] Project directory: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_sync_fifo
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_sync_fifo'
+[INFO] Adding source files: 6
+[INFO] Adding testbench files: 3
+[INFO] Setting include dirs: 1
+[INFO] Setting simulation top: tb_sync_fifo
+[INFO] Setting xsim.more_options: -testplusarg TESTNAME=all -testplusarg CSV_SUMMARY=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_summary.csv -testplusarg CSV_SCENARIO=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_scenarios.csv -testplusarg CSV_TRACE=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_trace.csv
+[INFO] Initial launch runtime set to 0ns (auto replay mode)
+[INFO] Launching simulation in batch mode...
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_sync_fifo/sim_nogui_tb_sync_fifo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_sync_fifo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_sync_fifo/sim_nogui_tb_sync_fifo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_sync_fifo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/src/sync_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/sync_fifo/sync_fifo_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/sync_fifo/sync_fifo_tb_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/sync_fifo/tb_sync_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_sync_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_sync_fifo/sim_nogui_tb_sync_fifo.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_sync_fifo/sim_nogui_tb_sync_fifo.sim/sim_1/behav/xsim'
+"xelab -wto de945e17892d4005a350cf58f3d51317 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sync_fifo_behav xil_defaultlib.tb_sync_fifo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto de945e17892d4005a350cf58f3d51317 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_sync_fifo_behav xil_defaultlib.tb_sync_fifo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.sync_fifo_tb_pkg
+Compiling package std.std
+Compiling module xil_defaultlib.sync_fifo_if
+Compiling module xil_defaultlib.sync_fifo_default
+Compiling module xil_defaultlib.tb_sync_fifo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_sync_fifo_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_sync_fifo/sim_nogui_tb_sync_fifo.sim/sim_1/behav/xsim/xsim.dir/tb_sync_fifo_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 19 12:53:12 2026...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_sync_fifo/sim_nogui_tb_sync_fifo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_sync_fifo_behav -key {Behavioral:sim_1:Functional:tb_sync_fifo} -tclbatch {tb_sync_fifo.tcl} -log {simulate.log} -testplusarg TESTNAME=all -testplusarg CSV_SUMMARY=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_summary.csv -testplusarg CSV_SCENARIO=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_scenarios.csv -testplusarg CSV_TRACE=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/sync_fifo_trace.csv"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_sync_fifo.tcl
+WARNING: Simulation object /tb_sync_fifo/env was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+[TB] Starting sync FIFO verification (UVM-inspired custom environment)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_sync_fifo_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1108.078 ; gain = 0.000
+[INFO] Auto replay: restart + run all
+INFO: [Simtcl 6-17] Simulation restarted
+[TB] Starting sync FIFO verification (UVM-inspired custom environment)
+[DRV] reset released
+[GEN][PHASE] iter=0 scenario=fill_burst
+[DRV] t=30000 scenario=fill_burst wr=1 rd=1 wdata=b2
+[MON] t=36000 scenario=fill_burst wr=1 rd=1 wdata=b2 rdata=0 full=0 empty=0
+[SCB] BLOCK-RD t=36000 scenario=fill_burst pre_count=0
+[DRV] t=40000 scenario=fill_burst wr=1 rd=0 wdata=37
+[MON] t=46000 scenario=fill_burst wr=1 rd=0 wdata=37 rdata=0 full=0 empty=0
+[DRV] t=50000 scenario=fill_burst wr=1 rd=0 wdata=cd
+[MON] t=56000 scenario=fill_burst wr=1 rd=0 wdata=cd rdata=0 full=0 empty=0
+[DRV] t=60000 scenario=fill_burst wr=1 rd=0 wdata=b7
+[MON] t=66000 scenario=fill_burst wr=1 rd=0 wdata=b7 rdata=0 full=0 empty=0
+[DRV] t=70000 scenario=fill_burst wr=1 rd=0 wdata=e7
+[MON] t=76000 scenario=fill_burst wr=1 rd=0 wdata=e7 rdata=0 full=0 empty=0
+[DRV] t=80000 scenario=fill_burst wr=1 rd=0 wdata=be
+[MON] t=86000 scenario=fill_burst wr=1 rd=0 wdata=be rdata=0 full=0 empty=0
+[DRV] t=90000 scenario=fill_burst wr=1 rd=0 wdata=a3
+[MON] t=96000 scenario=fill_burst wr=1 rd=0 wdata=a3 rdata=0 full=0 empty=0
+[DRV] t=100000 scenario=fill_burst wr=1 rd=0 wdata=96
+[MON] t=106000 scenario=fill_burst wr=1 rd=0 wdata=96 rdata=0 full=0 empty=0
+[DRV] t=110000 scenario=fill_burst wr=1 rd=0 wdata=51
+[MON] t=116000 scenario=fill_burst wr=1 rd=0 wdata=51 rdata=0 full=0 empty=0
+[DRV] t=120000 scenario=fill_burst wr=1 rd=1 wdata=9b
+[MON] t=126000 scenario=fill_burst wr=1 rd=1 wdata=9b rdata=b2 full=0 empty=0
+[SCB] PASS-RD t=126000 scenario=fill_burst exp=b2 got=b2
+[DRV] t=130000 scenario=fill_burst wr=1 rd=0 wdata=f2
+[MON] t=136000 scenario=fill_burst wr=1 rd=0 wdata=f2 rdata=b2 full=0 empty=0
+[DRV] t=140000 scenario=fill_burst wr=1 rd=0 wdata=26
+[MON] t=146000 scenario=fill_burst wr=1 rd=0 wdata=26 rdata=b2 full=0 empty=0
+[DRV] t=150000 scenario=fill_burst wr=1 rd=0 wdata=a4
+[MON] t=156000 scenario=fill_burst wr=1 rd=0 wdata=a4 rdata=b2 full=0 empty=0
+[DRV] t=160000 scenario=fill_burst wr=1 rd=0 wdata=df
+[MON] t=166000 scenario=fill_burst wr=1 rd=0 wdata=df rdata=b2 full=0 empty=0
+[DRV] t=170000 scenario=fill_burst wr=1 rd=1 wdata=91
+[MON] t=176000 scenario=fill_burst wr=1 rd=1 wdata=91 rdata=37 full=0 empty=0
+[SCB] PASS-RD t=176000 scenario=fill_burst exp=37 got=37
+[DRV] t=180000 scenario=fill_burst wr=1 rd=1 wdata=6a
+[MON] t=186000 scenario=fill_burst wr=1 rd=1 wdata=6a rdata=cd full=0 empty=0
+[SCB] PASS-RD t=186000 scenario=fill_burst exp=cd got=cd
+[DRV] t=190000 scenario=fill_burst wr=1 rd=0 wdata=a0
+[MON] t=196000 scenario=fill_burst wr=1 rd=0 wdata=a0 rdata=cd full=0 empty=0
+[DRV] t=200000 scenario=fill_burst wr=1 rd=0 wdata=de
+[MON] t=206000 scenario=fill_burst wr=1 rd=0 wdata=de rdata=cd full=0 empty=0
+[DRV] t=210000 scenario=fill_burst wr=1 rd=1 wdata=25
+[MON] t=216000 scenario=fill_burst wr=1 rd=1 wdata=25 rdata=b7 full=0 empty=0
+[SCB] PASS-RD t=216000 scenario=fill_burst exp=b7 got=b7
+[DRV] t=220000 scenario=fill_burst wr=1 rd=0 wdata=ca
+[MON] t=226000 scenario=fill_burst wr=1 rd=0 wdata=ca rdata=b7 full=1 empty=0
+[DRV] t=230000 scenario=fill_burst wr=1 rd=0 wdata=66
+[MON] t=236000 scenario=fill_burst wr=1 rd=0 wdata=66 rdata=b7 full=1 empty=0
+[SCB] BLOCK-WR t=236000 scenario=fill_burst pre_count=16
+[DRV] t=240000 scenario=fill_burst wr=1 rd=1 wdata=2e
+[MON] t=246000 scenario=fill_burst wr=1 rd=1 wdata=2e rdata=e7 full=1 empty=0
+[SCB] PASS-RD t=246000 scenario=fill_burst exp=e7 got=e7
+[DRV] t=250000 scenario=fill_burst wr=1 rd=0 wdata=34
+[MON] t=256000 scenario=fill_burst wr=1 rd=0 wdata=34 rdata=e7 full=1 empty=0
+[SCB] BLOCK-WR t=256000 scenario=fill_burst pre_count=16
+[DRV] t=260000 scenario=fill_burst wr=1 rd=0 wdata=bc
+[MON] t=266000 scenario=fill_burst wr=1 rd=0 wdata=bc rdata=e7 full=1 empty=0
+[SCB] BLOCK-WR t=266000 scenario=fill_burst pre_count=16
+[DRV] t=270000 scenario=fill_burst wr=1 rd=0 wdata=90
+[MON] t=276000 scenario=fill_burst wr=1 rd=0 wdata=90 rdata=e7 full=1 empty=0
+[SCB] BLOCK-WR t=276000 scenario=fill_burst pre_count=16
+[DRV] t=280000 scenario=fill_burst wr=1 rd=0 wdata=5a
+[MON] t=286000 scenario=fill_burst wr=1 rd=0 wdata=5a rdata=e7 full=1 empty=0
+[SCB] BLOCK-WR t=286000 scenario=fill_burst pre_count=16
+[DRV] t=290000 scenario=fill_burst wr=1 rd=0 wdata=8f
+[MON] t=296000 scenario=fill_burst wr=1 rd=0 wdata=8f rdata=e7 full=1 empty=0
+[SCB] BLOCK-WR t=296000 scenario=fill_burst pre_count=16
+[DRV] t=300000 scenario=fill_burst wr=1 rd=1 wdata=78
+[MON] t=306000 scenario=fill_burst wr=1 rd=1 wdata=78 rdata=be full=1 empty=0
+[SCB] PASS-RD t=306000 scenario=fill_burst exp=be got=be
+[DRV] t=310000 scenario=fill_burst wr=1 rd=0 wdata=cb
+[MON] t=316000 scenario=fill_burst wr=1 rd=0 wdata=cb rdata=be full=1 empty=0
+[SCB] BLOCK-WR t=316000 scenario=fill_burst pre_count=16
+[DRV] t=320000 scenario=fill_burst wr=1 rd=0 wdata=fd
+[MON] t=326000 scenario=fill_burst wr=1 rd=0 wdata=fd rdata=be full=1 empty=0
+[SCB] BLOCK-WR t=326000 scenario=fill_burst pre_count=16
+[DRV] t=330000 scenario=fill_burst wr=1 rd=0 wdata=ec
+[MON] t=336000 scenario=fill_burst wr=1 rd=0 wdata=ec rdata=be full=1 empty=0
+[SCB] BLOCK-WR t=336000 scenario=fill_burst pre_count=16
+[DRV] t=340000 scenario=fill_burst wr=1 rd=0 wdata=cc
+[MON] t=346000 scenario=fill_burst wr=1 rd=0 wdata=cc rdata=be full=1 empty=0
+[SCB] BLOCK-WR t=346000 scenario=fill_burst pre_count=16
+[DRV] t=350000 scenario=fill_burst wr=1 rd=0 wdata=a2
+[MON] t=356000 scenario=fill_burst wr=1 rd=0 wdata=a2 rdata=be full=1 empty=0
+[SCB] BLOCK-WR t=356000 scenario=fill_burst pre_count=16
+[DRV] t=360000 scenario=fill_burst wr=1 rd=0 wdata=51
+[MON] t=366000 scenario=fill_burst wr=1 rd=0 wdata=51 rdata=be full=1 empty=0
+[SCB] BLOCK-WR t=366000 scenario=fill_burst pre_count=16
+[DRV] t=370000 scenario=fill_burst wr=1 rd=0 wdata=59
+[MON] t=376000 scenario=fill_burst wr=1 rd=0 wdata=59 rdata=be full=1 empty=0
+[SCB] BLOCK-WR t=376000 scenario=fill_burst pre_count=16
+[DRV] t=380000 scenario=fill_burst wr=1 rd=0 wdata=58
+[MON] t=386000 scenario=fill_burst wr=1 rd=0 wdata=58 rdata=be full=1 empty=0
+[SCB] BLOCK-WR t=386000 scenario=fill_burst pre_count=16
+[DRV] t=390000 scenario=fill_burst wr=1 rd=1 wdata=7f
+[MON] t=396000 scenario=fill_burst wr=1 rd=1 wdata=7f rdata=a3 full=1 empty=0
+[SCB] PASS-RD t=396000 scenario=fill_burst exp=a3 got=a3
+[DRV] t=400000 scenario=fill_burst wr=1 rd=0 wdata=a1
+[MON] t=406000 scenario=fill_burst wr=1 rd=0 wdata=a1 rdata=a3 full=1 empty=0
+[SCB] BLOCK-WR t=406000 scenario=fill_burst pre_count=16
+[DRV] t=410000 scenario=fill_burst wr=1 rd=0 wdata=40
+[MON] t=416000 scenario=fill_burst wr=1 rd=0 wdata=40 rdata=a3 full=1 empty=0
+[SCB] BLOCK-WR t=416000 scenario=fill_burst pre_count=16
+[DRV] t=420000 scenario=fill_burst wr=1 rd=0 wdata=9c
+[MON] t=426000 scenario=fill_burst wr=1 rd=0 wdata=9c rdata=a3 full=1 empty=0
+[SCB] BLOCK-WR t=426000 scenario=fill_burst pre_count=16
+[DRV] t=430000 scenario=fill_burst wr=1 rd=0 wdata=1
+[MON] t=436000 scenario=fill_burst wr=1 rd=0 wdata=1 rdata=a3 full=1 empty=0
+[SCB] BLOCK-WR t=436000 scenario=fill_burst pre_count=16
+[DRV] t=440000 scenario=fill_burst wr=1 rd=0 wdata=da
+[MON] t=446000 scenario=fill_burst wr=1 rd=0 wdata=da rdata=a3 full=1 empty=0
+[SCB] BLOCK-WR t=446000 scenario=fill_burst pre_count=16
+[DRV] t=450000 scenario=fill_burst wr=1 rd=0 wdata=7d
+[MON] t=456000 scenario=fill_burst wr=1 rd=0 wdata=7d rdata=a3 full=1 empty=0
+[SCB] BLOCK-WR t=456000 scenario=fill_burst pre_count=16
+[DRV] t=460000 scenario=fill_burst wr=1 rd=0 wdata=b5
+[MON] t=466000 scenario=fill_burst wr=1 rd=0 wdata=b5 rdata=a3 full=1 empty=0
+[SCB] BLOCK-WR t=466000 scenario=fill_burst pre_count=16
+[DRV] t=470000 scenario=fill_burst wr=1 rd=0 wdata=45
+[MON] t=476000 scenario=fill_burst wr=1 rd=0 wdata=45 rdata=a3 full=1 empty=0
+[SCB] BLOCK-WR t=476000 scenario=fill_burst pre_count=16
+[DRV] t=480000 scenario=fill_burst wr=1 rd=1 wdata=a7
+[MON] t=486000 scenario=fill_burst wr=1 rd=1 wdata=a7 rdata=96 full=1 empty=0
+[SCB] PASS-RD t=486000 scenario=fill_burst exp=96 got=96
+[DRV] t=490000 scenario=fill_burst wr=1 rd=0 wdata=6f
+[MON] t=496000 scenario=fill_burst wr=1 rd=0 wdata=6f rdata=96 full=1 empty=0
+[SCB] BLOCK-WR t=496000 scenario=fill_burst pre_count=16
+[DRV] t=500000 scenario=fill_burst wr=1 rd=0 wdata=9e
+[MON] t=506000 scenario=fill_burst wr=1 rd=0 wdata=9e rdata=96 full=1 empty=0
+[SCB] BLOCK-WR t=506000 scenario=fill_burst pre_count=16
+[DRV] t=510000 scenario=fill_burst wr=1 rd=0 wdata=ca
+[MON] t=516000 scenario=fill_burst wr=1 rd=0 wdata=ca rdata=96 full=1 empty=0
+[SCB] BLOCK-WR t=516000 scenario=fill_burst pre_count=16
+[DRV] t=520000 scenario=fill_burst wr=1 rd=0 wdata=fc
+[MON] t=526000 scenario=fill_burst wr=1 rd=0 wdata=fc rdata=96 full=1 empty=0
+[SCB] BLOCK-WR t=526000 scenario=fill_burst pre_count=16
+[DRV] t=530000 scenario=fill_burst wr=1 rd=0 wdata=b1
+[MON] t=536000 scenario=fill_burst wr=1 rd=0 wdata=b1 rdata=96 full=1 empty=0
+[SCB] BLOCK-WR t=536000 scenario=fill_burst pre_count=16
+[DRV] t=540000 scenario=fill_burst wr=1 rd=0 wdata=31
+[MON] t=546000 scenario=fill_burst wr=1 rd=0 wdata=31 rdata=96 full=1 empty=0
+[SCB] BLOCK-WR t=546000 scenario=fill_burst pre_count=16
+[DRV] t=550000 scenario=fill_burst wr=1 rd=0 wdata=10
+[MON] t=556000 scenario=fill_burst wr=1 rd=0 wdata=10 rdata=96 full=1 empty=0
+[SCB] BLOCK-WR t=556000 scenario=fill_burst pre_count=16
+[DRV] t=560000 scenario=fill_burst wr=1 rd=0 wdata=55
+[MON] t=566000 scenario=fill_burst wr=1 rd=0 wdata=55 rdata=96 full=1 empty=0
+[SCB] BLOCK-WR t=566000 scenario=fill_burst pre_count=16
+[DRV] t=570000 scenario=fill_burst wr=1 rd=1 wdata=ca
+[MON] t=576000 scenario=fill_burst wr=1 rd=1 wdata=ca rdata=51 full=1 empty=0
+[SCB] PASS-RD t=576000 scenario=fill_burst exp=51 got=51
+[DRV] t=580000 scenario=fill_burst wr=1 rd=0 wdata=aa
+[MON] t=586000 scenario=fill_burst wr=1 rd=0 wdata=aa rdata=51 full=1 empty=0
+[SCB] BLOCK-WR t=586000 scenario=fill_burst pre_count=16
+[DRV] t=590000 scenario=fill_burst wr=1 rd=0 wdata=8b
+[MON] t=596000 scenario=fill_burst wr=1 rd=0 wdata=8b rdata=51 full=1 empty=0
+[SCB] BLOCK-WR t=596000 scenario=fill_burst pre_count=16
+[DRV] t=600000 scenario=fill_burst wr=1 rd=1 wdata=58
+[MON] t=606000 scenario=fill_burst wr=1 rd=1 wdata=58 rdata=9b full=1 empty=0
+[SCB] PASS-RD t=606000 scenario=fill_burst exp=9b got=9b
+[DRV] t=610000 scenario=fill_burst wr=1 rd=1 wdata=a7
+[MON] t=616000 scenario=fill_burst wr=1 rd=1 wdata=a7 rdata=f2 full=1 empty=0
+[SCB] PASS-RD t=616000 scenario=fill_burst exp=f2 got=f2
+[DRV] t=620000 scenario=fill_burst wr=1 rd=0 wdata=bf
+[MON] t=626000 scenario=fill_burst wr=1 rd=0 wdata=bf rdata=f2 full=1 empty=0
+[SCB] BLOCK-WR t=626000 scenario=fill_burst pre_count=16
+[DRV] t=630000 scenario=fill_burst wr=1 rd=0 wdata=cc
+[MON] t=636000 scenario=fill_burst wr=1 rd=0 wdata=cc rdata=f2 full=1 empty=0
+[SCB] BLOCK-WR t=636000 scenario=fill_burst pre_count=16
+[DRV] t=640000 scenario=fill_burst wr=1 rd=0 wdata=23
+[MON] t=646000 scenario=fill_burst wr=1 rd=0 wdata=23 rdata=f2 full=1 empty=0
+[SCB] BLOCK-WR t=646000 scenario=fill_burst pre_count=16
+[DRV] t=650000 scenario=fill_burst wr=1 rd=0 wdata=e1
+[MON] t=656000 scenario=fill_burst wr=1 rd=0 wdata=e1 rdata=f2 full=1 empty=0
+[SCB] BLOCK-WR t=656000 scenario=fill_burst pre_count=16
+[DRV] t=660000 scenario=fill_burst wr=1 rd=1 wdata=dc
+[MON] t=666000 scenario=fill_burst wr=1 rd=1 wdata=dc rdata=26 full=1 empty=0
+[SCB] PASS-RD t=666000 scenario=fill_burst exp=26 got=26
+[GEN][PHASE] iter=64 scenario=simul_stress
+[DRV] t=670000 scenario=simul_stress wr=1 rd=1 wdata=33
+[MON] t=676000 scenario=simul_stress wr=1 rd=1 wdata=33 rdata=a4 full=1 empty=0
+[SCB] PASS-RD t=676000 scenario=simul_stress exp=a4 got=a4
+[DRV] t=680000 scenario=simul_stress wr=1 rd=1 wdata=e0
+[MON] t=686000 scenario=simul_stress wr=1 rd=1 wdata=e0 rdata=df full=1 empty=0
+[SCB] PASS-RD t=686000 scenario=simul_stress exp=df got=df
+[DRV] t=690000 scenario=simul_stress wr=1 rd=1 wdata=88
+[MON] t=696000 scenario=simul_stress wr=1 rd=1 wdata=88 rdata=91 full=1 empty=0
+[SCB] PASS-RD t=696000 scenario=simul_stress exp=91 got=91
+[DRV] t=700000 scenario=simul_stress wr=1 rd=1 wdata=3
+[MON] t=706000 scenario=simul_stress wr=1 rd=1 wdata=3 rdata=6a full=1 empty=0
+[SCB] PASS-RD t=706000 scenario=simul_stress exp=6a got=6a
+[DRV] t=710000 scenario=simul_stress wr=1 rd=1 wdata=55
+[MON] t=716000 scenario=simul_stress wr=1 rd=1 wdata=55 rdata=a0 full=1 empty=0
+[SCB] PASS-RD t=716000 scenario=simul_stress exp=a0 got=a0
+[DRV] t=720000 scenario=simul_stress wr=1 rd=1 wdata=53
+[MON] t=726000 scenario=simul_stress wr=1 rd=1 wdata=53 rdata=de full=1 empty=0
+[SCB] PASS-RD t=726000 scenario=simul_stress exp=de got=de
+[DRV] t=730000 scenario=simul_stress wr=1 rd=1 wdata=8a
+[MON] t=736000 scenario=simul_stress wr=1 rd=1 wdata=8a rdata=25 full=1 empty=0
+[SCB] PASS-RD t=736000 scenario=simul_stress exp=25 got=25
+[DRV] t=740000 scenario=simul_stress wr=1 rd=1 wdata=1c
+[MON] t=746000 scenario=simul_stress wr=1 rd=1 wdata=1c rdata=ca full=1 empty=0
+[SCB] PASS-RD t=746000 scenario=simul_stress exp=ca got=ca
+[DRV] t=750000 scenario=simul_stress wr=1 rd=1 wdata=9d
+[MON] t=756000 scenario=simul_stress wr=1 rd=1 wdata=9d rdata=2e full=1 empty=0
+[SCB] PASS-RD t=756000 scenario=simul_stress exp=2e got=2e
+[DRV] t=760000 scenario=simul_stress wr=1 rd=1 wdata=10
+[MON] t=766000 scenario=simul_stress wr=1 rd=1 wdata=10 rdata=78 full=1 empty=0
+[SCB] PASS-RD t=766000 scenario=simul_stress exp=78 got=78
+[DRV] t=770000 scenario=simul_stress wr=1 rd=1 wdata=ab
+[MON] t=776000 scenario=simul_stress wr=1 rd=1 wdata=ab rdata=7f full=1 empty=0
+[SCB] PASS-RD t=776000 scenario=simul_stress exp=7f got=7f
+[DRV] t=780000 scenario=simul_stress wr=1 rd=1 wdata=77
+[MON] t=786000 scenario=simul_stress wr=1 rd=1 wdata=77 rdata=a7 full=1 empty=0
+[SCB] PASS-RD t=786000 scenario=simul_stress exp=a7 got=a7
+[DRV] t=790000 scenario=simul_stress wr=1 rd=1 wdata=85
+[MON] t=796000 scenario=simul_stress wr=1 rd=1 wdata=85 rdata=ca full=1 empty=0
+[SCB] PASS-RD t=796000 scenario=simul_stress exp=ca got=ca
+[DRV] t=800000 scenario=simul_stress wr=1 rd=1 wdata=3
+[MON] t=806000 scenario=simul_stress wr=1 rd=1 wdata=3 rdata=58 full=1 empty=0
+[SCB] PASS-RD t=806000 scenario=simul_stress exp=58 got=58
+[DRV] t=810000 scenario=simul_stress wr=1 rd=1 wdata=b3
+[MON] t=816000 scenario=simul_stress wr=1 rd=1 wdata=b3 rdata=a7 full=1 empty=0
+[SCB] PASS-RD t=816000 scenario=simul_stress exp=a7 got=a7
+[DRV] t=820000 scenario=simul_stress wr=1 rd=1 wdata=57
+[MON] t=826000 scenario=simul_stress wr=1 rd=1 wdata=57 rdata=dc full=1 empty=0
+[SCB] PASS-RD t=826000 scenario=simul_stress exp=dc got=dc
+[DRV] t=830000 scenario=simul_stress wr=1 rd=1 wdata=8e
+[MON] t=836000 scenario=simul_stress wr=1 rd=1 wdata=8e rdata=33 full=1 empty=0
+[SCB] PASS-RD t=836000 scenario=simul_stress exp=33 got=33
+[DRV] t=840000 scenario=simul_stress wr=1 rd=1 wdata=e6
+[MON] t=846000 scenario=simul_stress wr=1 rd=1 wdata=e6 rdata=e0 full=1 empty=0
+[SCB] PASS-RD t=846000 scenario=simul_stress exp=e0 got=e0
+[DRV] t=850000 scenario=simul_stress wr=1 rd=1 wdata=b0
+[MON] t=856000 scenario=simul_stress wr=1 rd=1 wdata=b0 rdata=88 full=1 empty=0
+[SCB] PASS-RD t=856000 scenario=simul_stress exp=88 got=88
+[DRV] t=860000 scenario=simul_stress wr=1 rd=1 wdata=b4
+[MON] t=866000 scenario=simul_stress wr=1 rd=1 wdata=b4 rdata=3 full=1 empty=0
+[SCB] PASS-RD t=866000 scenario=simul_stress exp=3 got=3
+[DRV] t=870000 scenario=simul_stress wr=1 rd=1 wdata=9f
+[MON] t=876000 scenario=simul_stress wr=1 rd=1 wdata=9f rdata=55 full=1 empty=0
+[SCB] PASS-RD t=876000 scenario=simul_stress exp=55 got=55
+[DRV] t=880000 scenario=simul_stress wr=1 rd=1 wdata=15
+[MON] t=886000 scenario=simul_stress wr=1 rd=1 wdata=15 rdata=53 full=1 empty=0
+[SCB] PASS-RD t=886000 scenario=simul_stress exp=53 got=53
+[DRV] t=890000 scenario=simul_stress wr=1 rd=1 wdata=a2
+[MON] t=896000 scenario=simul_stress wr=1 rd=1 wdata=a2 rdata=8a full=1 empty=0
+[SCB] PASS-RD t=896000 scenario=simul_stress exp=8a got=8a
+[DRV] t=900000 scenario=simul_stress wr=1 rd=1 wdata=d2
+[MON] t=906000 scenario=simul_stress wr=1 rd=1 wdata=d2 rdata=1c full=1 empty=0
+[SCB] PASS-RD t=906000 scenario=simul_stress exp=1c got=1c
+[DRV] t=910000 scenario=simul_stress wr=1 rd=1 wdata=a0
+[MON] t=916000 scenario=simul_stress wr=1 rd=1 wdata=a0 rdata=9d full=1 empty=0
+[SCB] PASS-RD t=916000 scenario=simul_stress exp=9d got=9d
+[DRV] t=920000 scenario=simul_stress wr=1 rd=1 wdata=19
+[MON] t=926000 scenario=simul_stress wr=1 rd=1 wdata=19 rdata=10 full=1 empty=0
+[SCB] PASS-RD t=926000 scenario=simul_stress exp=10 got=10
+[DRV] t=930000 scenario=simul_stress wr=1 rd=1 wdata=62
+[MON] t=936000 scenario=simul_stress wr=1 rd=1 wdata=62 rdata=ab full=1 empty=0
+[SCB] PASS-RD t=936000 scenario=simul_stress exp=ab got=ab
+[DRV] t=940000 scenario=simul_stress wr=1 rd=1 wdata=4
+[MON] t=946000 scenario=simul_stress wr=1 rd=1 wdata=4 rdata=77 full=1 empty=0
+[SCB] PASS-RD t=946000 scenario=simul_stress exp=77 got=77
+[DRV] t=950000 scenario=simul_stress wr=1 rd=1 wdata=3d
+[MON] t=956000 scenario=simul_stress wr=1 rd=1 wdata=3d rdata=85 full=1 empty=0
+[SCB] PASS-RD t=956000 scenario=simul_stress exp=85 got=85
+[DRV] t=960000 scenario=simul_stress wr=1 rd=1 wdata=c
+[MON] t=966000 scenario=simul_stress wr=1 rd=1 wdata=c rdata=3 full=1 empty=0
+[SCB] PASS-RD t=966000 scenario=simul_stress exp=3 got=3
+[DRV] t=970000 scenario=simul_stress wr=1 rd=1 wdata=3c
+[MON] t=976000 scenario=simul_stress wr=1 rd=1 wdata=3c rdata=b3 full=1 empty=0
+[SCB] PASS-RD t=976000 scenario=simul_stress exp=b3 got=b3
+[DRV] t=980000 scenario=simul_stress wr=1 rd=1 wdata=a5
+[MON] t=986000 scenario=simul_stress wr=1 rd=1 wdata=a5 rdata=57 full=1 empty=0
+[SCB] PASS-RD t=986000 scenario=simul_stress exp=57 got=57
+[DRV] t=990000 scenario=simul_stress wr=1 rd=1 wdata=f0
+[MON] t=996000 scenario=simul_stress wr=1 rd=1 wdata=f0 rdata=8e full=1 empty=0
+[SCB] PASS-RD t=996000 scenario=simul_stress exp=8e got=8e
+[DRV] t=1000000 scenario=simul_stress wr=1 rd=1 wdata=fd
+[MON] t=1006000 scenario=simul_stress wr=1 rd=1 wdata=fd rdata=e6 full=1 empty=0
+[SCB] PASS-RD t=1006000 scenario=simul_stress exp=e6 got=e6
+[DRV] t=1010000 scenario=simul_stress wr=1 rd=1 wdata=9e
+[MON] t=1016000 scenario=simul_stress wr=1 rd=1 wdata=9e rdata=b0 full=1 empty=0
+[SCB] PASS-RD t=1016000 scenario=simul_stress exp=b0 got=b0
+[DRV] t=1020000 scenario=simul_stress wr=1 rd=1 wdata=18
+[MON] t=1026000 scenario=simul_stress wr=1 rd=1 wdata=18 rdata=b4 full=1 empty=0
+[SCB] PASS-RD t=1026000 scenario=simul_stress exp=b4 got=b4
+[DRV] t=1030000 scenario=simul_stress wr=1 rd=1 wdata=e
+[MON] t=1036000 scenario=simul_stress wr=1 rd=1 wdata=e rdata=9f full=1 empty=0
+[SCB] PASS-RD t=1036000 scenario=simul_stress exp=9f got=9f
+[DRV] t=1040000 scenario=simul_stress wr=1 rd=1 wdata=15
+[MON] t=1046000 scenario=simul_stress wr=1 rd=1 wdata=15 rdata=15 full=1 empty=0
+[SCB] PASS-RD t=1046000 scenario=simul_stress exp=15 got=15
+[DRV] t=1050000 scenario=simul_stress wr=1 rd=1 wdata=75
+[MON] t=1056000 scenario=simul_stress wr=1 rd=1 wdata=75 rdata=a2 full=1 empty=0
+[SCB] PASS-RD t=1056000 scenario=simul_stress exp=a2 got=a2
+[DRV] t=1060000 scenario=simul_stress wr=1 rd=1 wdata=4a
+[MON] t=1066000 scenario=simul_stress wr=1 rd=1 wdata=4a rdata=d2 full=1 empty=0
+[SCB] PASS-RD t=1066000 scenario=simul_stress exp=d2 got=d2
+[DRV] t=1070000 scenario=simul_stress wr=1 rd=1 wdata=1a
+[MON] t=1076000 scenario=simul_stress wr=1 rd=1 wdata=1a rdata=a0 full=1 empty=0
+[SCB] PASS-RD t=1076000 scenario=simul_stress exp=a0 got=a0
+[DRV] t=1080000 scenario=simul_stress wr=1 rd=1 wdata=28
+[MON] t=1086000 scenario=simul_stress wr=1 rd=1 wdata=28 rdata=19 full=1 empty=0
+[SCB] PASS-RD t=1086000 scenario=simul_stress exp=19 got=19
+[DRV] t=1090000 scenario=simul_stress wr=1 rd=1 wdata=b3
+[MON] t=1096000 scenario=simul_stress wr=1 rd=1 wdata=b3 rdata=62 full=1 empty=0
+[SCB] PASS-RD t=1096000 scenario=simul_stress exp=62 got=62
+[DRV] t=1100000 scenario=simul_stress wr=1 rd=1 wdata=81
+[MON] t=1106000 scenario=simul_stress wr=1 rd=1 wdata=81 rdata=4 full=1 empty=0
+[SCB] PASS-RD t=1106000 scenario=simul_stress exp=4 got=4
+[DRV] t=1110000 scenario=simul_stress wr=1 rd=1 wdata=3a
+[MON] t=1116000 scenario=simul_stress wr=1 rd=1 wdata=3a rdata=3d full=1 empty=0
+[SCB] PASS-RD t=1116000 scenario=simul_stress exp=3d got=3d
+[DRV] t=1120000 scenario=simul_stress wr=1 rd=1 wdata=4b
+[MON] t=1126000 scenario=simul_stress wr=1 rd=1 wdata=4b rdata=c full=1 empty=0
+[SCB] PASS-RD t=1126000 scenario=simul_stress exp=c got=c
+[DRV] t=1130000 scenario=simul_stress wr=1 rd=1 wdata=6
+[MON] t=1136000 scenario=simul_stress wr=1 rd=1 wdata=6 rdata=3c full=1 empty=0
+[SCB] PASS-RD t=1136000 scenario=simul_stress exp=3c got=3c
+[DRV] t=1140000 scenario=simul_stress wr=1 rd=1 wdata=87
+[MON] t=1146000 scenario=simul_stress wr=1 rd=1 wdata=87 rdata=a5 full=1 empty=0
+[SCB] PASS-RD t=1146000 scenario=simul_stress exp=a5 got=a5
+[DRV] t=1150000 scenario=simul_stress wr=1 rd=1 wdata=24
+[MON] t=1156000 scenario=simul_stress wr=1 rd=1 wdata=24 rdata=f0 full=1 empty=0
+[SCB] PASS-RD t=1156000 scenario=simul_stress exp=f0 got=f0
+[DRV] t=1160000 scenario=simul_stress wr=1 rd=1 wdata=7e
+[MON] t=1166000 scenario=simul_stress wr=1 rd=1 wdata=7e rdata=fd full=1 empty=0
+[SCB] PASS-RD t=1166000 scenario=simul_stress exp=fd got=fd
+[DRV] t=1170000 scenario=simul_stress wr=1 rd=1 wdata=96
+[MON] t=1176000 scenario=simul_stress wr=1 rd=1 wdata=96 rdata=9e full=1 empty=0
+[SCB] PASS-RD t=1176000 scenario=simul_stress exp=9e got=9e
+[DRV] t=1180000 scenario=simul_stress wr=1 rd=1 wdata=4b
+[MON] t=1186000 scenario=simul_stress wr=1 rd=1 wdata=4b rdata=18 full=1 empty=0
+[SCB] PASS-RD t=1186000 scenario=simul_stress exp=18 got=18
+[DRV] t=1190000 scenario=simul_stress wr=1 rd=1 wdata=12
+[MON] t=1196000 scenario=simul_stress wr=1 rd=1 wdata=12 rdata=e full=1 empty=0
+[SCB] PASS-RD t=1196000 scenario=simul_stress exp=e got=e
+[DRV] t=1200000 scenario=simul_stress wr=1 rd=1 wdata=f
+[MON] t=1206000 scenario=simul_stress wr=1 rd=1 wdata=f rdata=15 full=1 empty=0
+[SCB] PASS-RD t=1206000 scenario=simul_stress exp=15 got=15
+[DRV] t=1210000 scenario=simul_stress wr=1 rd=1 wdata=c9
+[MON] t=1216000 scenario=simul_stress wr=1 rd=1 wdata=c9 rdata=75 full=1 empty=0
+[SCB] PASS-RD t=1216000 scenario=simul_stress exp=75 got=75
+[DRV] t=1220000 scenario=simul_stress wr=1 rd=1 wdata=23
+[MON] t=1226000 scenario=simul_stress wr=1 rd=1 wdata=23 rdata=4a full=1 empty=0
+[SCB] PASS-RD t=1226000 scenario=simul_stress exp=4a got=4a
+[DRV] t=1230000 scenario=simul_stress wr=1 rd=1 wdata=8c
+[MON] t=1236000 scenario=simul_stress wr=1 rd=1 wdata=8c rdata=1a full=1 empty=0
+[SCB] PASS-RD t=1236000 scenario=simul_stress exp=1a got=1a
+[DRV] t=1240000 scenario=simul_stress wr=1 rd=1 wdata=73
+[MON] t=1246000 scenario=simul_stress wr=1 rd=1 wdata=73 rdata=28 full=1 empty=0
+[SCB] PASS-RD t=1246000 scenario=simul_stress exp=28 got=28
+[DRV] t=1250000 scenario=simul_stress wr=1 rd=1 wdata=4a
+[MON] t=1256000 scenario=simul_stress wr=1 rd=1 wdata=4a rdata=b3 full=1 empty=0
+[SCB] PASS-RD t=1256000 scenario=simul_stress exp=b3 got=b3
+[DRV] t=1260000 scenario=simul_stress wr=1 rd=1 wdata=d3
+[MON] t=1266000 scenario=simul_stress wr=1 rd=1 wdata=d3 rdata=81 full=1 empty=0
+[SCB] PASS-RD t=1266000 scenario=simul_stress exp=81 got=81
+[DRV] t=1270000 scenario=simul_stress wr=1 rd=1 wdata=3e
+[MON] t=1276000 scenario=simul_stress wr=1 rd=1 wdata=3e rdata=3a full=1 empty=0
+[SCB] PASS-RD t=1276000 scenario=simul_stress exp=3a got=3a
+[DRV] t=1280000 scenario=simul_stress wr=1 rd=1 wdata=df
+[MON] t=1286000 scenario=simul_stress wr=1 rd=1 wdata=df rdata=4b full=1 empty=0
+[SCB] PASS-RD t=1286000 scenario=simul_stress exp=4b got=4b
+[DRV] t=1290000 scenario=simul_stress wr=1 rd=1 wdata=f
+[MON] t=1296000 scenario=simul_stress wr=1 rd=1 wdata=f rdata=6 full=1 empty=0
+[SCB] PASS-RD t=1296000 scenario=simul_stress exp=6 got=6
+[DRV] t=1300000 scenario=simul_stress wr=1 rd=1 wdata=8b
+[MON] t=1306000 scenario=simul_stress wr=1 rd=1 wdata=8b rdata=87 full=1 empty=0
+[SCB] PASS-RD t=1306000 scenario=simul_stress exp=87 got=87
+[GEN][PHASE] iter=128 scenario=flag_pressure
+[DRV] t=1310000 scenario=flag_pressure wr=1 rd=1 wdata=b0
+[MON] t=1316000 scenario=flag_pressure wr=1 rd=1 wdata=b0 rdata=24 full=1 empty=0
+[SCB] PASS-RD t=1316000 scenario=flag_pressure exp=24 got=24
+[DRV] t=1320000 scenario=flag_pressure wr=1 rd=0 wdata=da
+[MON] t=1326000 scenario=flag_pressure wr=1 rd=0 wdata=da rdata=24 full=1 empty=0
+[SCB] BLOCK-WR t=1326000 scenario=flag_pressure pre_count=16
+[DRV] t=1330000 scenario=flag_pressure wr=0 rd=1 wdata=21
+[MON] t=1336000 scenario=flag_pressure wr=0 rd=1 wdata=21 rdata=7e full=0 empty=0
+[SCB] PASS-RD t=1336000 scenario=flag_pressure exp=7e got=7e
+[DRV] t=1340000 scenario=flag_pressure wr=0 rd=1 wdata=ee
+[MON] t=1346000 scenario=flag_pressure wr=0 rd=1 wdata=ee rdata=96 full=0 empty=0
+[SCB] PASS-RD t=1346000 scenario=flag_pressure exp=96 got=96
+[DRV] t=1350000 scenario=flag_pressure wr=1 rd=1 wdata=65
+[MON] t=1356000 scenario=flag_pressure wr=1 rd=1 wdata=65 rdata=4b full=0 empty=0
+[SCB] PASS-RD t=1356000 scenario=flag_pressure exp=4b got=4b
+[DRV] t=1360000 scenario=flag_pressure wr=0 rd=1 wdata=c6
+[MON] t=1366000 scenario=flag_pressure wr=0 rd=1 wdata=c6 rdata=12 full=0 empty=0
+[SCB] PASS-RD t=1366000 scenario=flag_pressure exp=12 got=12
+[DRV] t=1370000 scenario=flag_pressure wr=1 rd=0 wdata=1a
+[MON] t=1376000 scenario=flag_pressure wr=1 rd=0 wdata=1a rdata=12 full=0 empty=0
+[DRV] t=1380000 scenario=flag_pressure wr=1 rd=1 wdata=b2
+[MON] t=1386000 scenario=flag_pressure wr=1 rd=1 wdata=b2 rdata=f full=0 empty=0
+[SCB] PASS-RD t=1386000 scenario=flag_pressure exp=f got=f
+[DRV] t=1390000 scenario=flag_pressure wr=1 rd=0 wdata=f3
+[MON] t=1396000 scenario=flag_pressure wr=1 rd=0 wdata=f3 rdata=f full=0 empty=0
+[DRV] t=1400000 scenario=flag_pressure wr=0 rd=1 wdata=1c
+[MON] t=1406000 scenario=flag_pressure wr=0 rd=1 wdata=1c rdata=c9 full=0 empty=0
+[SCB] PASS-RD t=1406000 scenario=flag_pressure exp=c9 got=c9
+[DRV] t=1410000 scenario=flag_pressure wr=1 rd=1 wdata=5a
+[MON] t=1416000 scenario=flag_pressure wr=1 rd=1 wdata=5a rdata=23 full=0 empty=0
+[SCB] PASS-RD t=1416000 scenario=flag_pressure exp=23 got=23
+[DRV] t=1420000 scenario=flag_pressure wr=1 rd=1 wdata=2a
+[MON] t=1426000 scenario=flag_pressure wr=1 rd=1 wdata=2a rdata=8c full=0 empty=0
+[SCB] PASS-RD t=1426000 scenario=flag_pressure exp=8c got=8c
+[DRV] t=1430000 scenario=flag_pressure wr=0 rd=1 wdata=98
+[MON] t=1436000 scenario=flag_pressure wr=0 rd=1 wdata=98 rdata=73 full=0 empty=0
+[SCB] PASS-RD t=1436000 scenario=flag_pressure exp=73 got=73
+[DRV] t=1440000 scenario=flag_pressure wr=1 rd=1 wdata=e8
+[MON] t=1446000 scenario=flag_pressure wr=1 rd=1 wdata=e8 rdata=4a full=0 empty=0
+[SCB] PASS-RD t=1446000 scenario=flag_pressure exp=4a got=4a
+[DRV] t=1450000 scenario=flag_pressure wr=1 rd=1 wdata=1d
+[MON] t=1456000 scenario=flag_pressure wr=1 rd=1 wdata=1d rdata=d3 full=0 empty=0
+[SCB] PASS-RD t=1456000 scenario=flag_pressure exp=d3 got=d3
+[DRV] t=1460000 scenario=flag_pressure wr=1 rd=1 wdata=d8
+[MON] t=1466000 scenario=flag_pressure wr=1 rd=1 wdata=d8 rdata=3e full=0 empty=0
+[SCB] PASS-RD t=1466000 scenario=flag_pressure exp=3e got=3e
+[DRV] t=1470000 scenario=flag_pressure wr=1 rd=1 wdata=65
+[MON] t=1476000 scenario=flag_pressure wr=1 rd=1 wdata=65 rdata=df full=0 empty=0
+[SCB] PASS-RD t=1476000 scenario=flag_pressure exp=df got=df
+[DRV] t=1480000 scenario=flag_pressure wr=0 rd=1 wdata=cf
+[MON] t=1486000 scenario=flag_pressure wr=0 rd=1 wdata=cf rdata=f full=0 empty=0
+[SCB] PASS-RD t=1486000 scenario=flag_pressure exp=f got=f
+[DRV] t=1490000 scenario=flag_pressure wr=1 rd=0 wdata=a7
+[MON] t=1496000 scenario=flag_pressure wr=1 rd=0 wdata=a7 rdata=f full=0 empty=0
+[DRV] t=1500000 scenario=flag_pressure wr=1 rd=1 wdata=d9
+[MON] t=1506000 scenario=flag_pressure wr=1 rd=1 wdata=d9 rdata=8b full=0 empty=0
+[SCB] PASS-RD t=1506000 scenario=flag_pressure exp=8b got=8b
+[DRV] t=1510000 scenario=flag_pressure wr=1 rd=1 wdata=c8
+[MON] t=1516000 scenario=flag_pressure wr=1 rd=1 wdata=c8 rdata=b0 full=0 empty=0
+[SCB] PASS-RD t=1516000 scenario=flag_pressure exp=b0 got=b0
+[DRV] t=1520000 scenario=flag_pressure wr=1 rd=0 wdata=ed
+[MON] t=1526000 scenario=flag_pressure wr=1 rd=0 wdata=ed rdata=b0 full=0 empty=0
+[DRV] t=1530000 scenario=flag_pressure wr=0 rd=1 wdata=89
+[MON] t=1536000 scenario=flag_pressure wr=0 rd=1 wdata=89 rdata=65 full=0 empty=0
+[SCB] PASS-RD t=1536000 scenario=flag_pressure exp=65 got=65
+[DRV] t=1540000 scenario=flag_pressure wr=1 rd=0 wdata=4c
+[MON] t=1546000 scenario=flag_pressure wr=1 rd=0 wdata=4c rdata=65 full=0 empty=0
+[DRV] t=1550000 scenario=flag_pressure wr=1 rd=0 wdata=da
+[MON] t=1556000 scenario=flag_pressure wr=1 rd=0 wdata=da rdata=65 full=0 empty=0
+[DRV] t=1560000 scenario=flag_pressure wr=1 rd=1 wdata=62
+[MON] t=1566000 scenario=flag_pressure wr=1 rd=1 wdata=62 rdata=1a full=0 empty=0
+[SCB] PASS-RD t=1566000 scenario=flag_pressure exp=1a got=1a
+[DRV] t=1570000 scenario=flag_pressure wr=1 rd=0 wdata=7c
+[MON] t=1576000 scenario=flag_pressure wr=1 rd=0 wdata=7c rdata=1a full=1 empty=0
+[DRV] t=1580000 scenario=flag_pressure wr=0 rd=1 wdata=45
+[MON] t=1586000 scenario=flag_pressure wr=0 rd=1 wdata=45 rdata=b2 full=0 empty=0
+[SCB] PASS-RD t=1586000 scenario=flag_pressure exp=b2 got=b2
+[DRV] t=1590000 scenario=flag_pressure wr=1 rd=1 wdata=9b
+[MON] t=1596000 scenario=flag_pressure wr=1 rd=1 wdata=9b rdata=f3 full=0 empty=0
+[SCB] PASS-RD t=1596000 scenario=flag_pressure exp=f3 got=f3
+[DRV] t=1600000 scenario=flag_pressure wr=1 rd=0 wdata=66
+[MON] t=1606000 scenario=flag_pressure wr=1 rd=0 wdata=66 rdata=f3 full=1 empty=0
+[DRV] t=1610000 scenario=flag_pressure wr=1 rd=1 wdata=b9
+[MON] t=1616000 scenario=flag_pressure wr=1 rd=1 wdata=b9 rdata=5a full=1 empty=0
+[SCB] PASS-RD t=1616000 scenario=flag_pressure exp=5a got=5a
+[DRV] t=1620000 scenario=flag_pressure wr=0 rd=0 wdata=c
+[MON] t=1626000 scenario=flag_pressure wr=0 rd=0 wdata=c rdata=5a full=1 empty=0
+[DRV] t=1630000 scenario=flag_pressure wr=0 rd=1 wdata=e
+[MON] t=1636000 scenario=flag_pressure wr=0 rd=1 wdata=e rdata=2a full=0 empty=0
+[SCB] PASS-RD t=1636000 scenario=flag_pressure exp=2a got=2a
+[DRV] t=1640000 scenario=flag_pressure wr=1 rd=0 wdata=95
+[MON] t=1646000 scenario=flag_pressure wr=1 rd=0 wdata=95 rdata=2a full=1 empty=0
+[DRV] t=1650000 scenario=flag_pressure wr=1 rd=1 wdata=c
+[MON] t=1656000 scenario=flag_pressure wr=1 rd=1 wdata=c rdata=e8 full=1 empty=0
+[SCB] PASS-RD t=1656000 scenario=flag_pressure exp=e8 got=e8
+[DRV] t=1660000 scenario=flag_pressure wr=1 rd=1 wdata=e0
+[MON] t=1666000 scenario=flag_pressure wr=1 rd=1 wdata=e0 rdata=1d full=1 empty=0
+[SCB] PASS-RD t=1666000 scenario=flag_pressure exp=1d got=1d
+[DRV] t=1670000 scenario=flag_pressure wr=0 rd=0 wdata=10
+[MON] t=1676000 scenario=flag_pressure wr=0 rd=0 wdata=10 rdata=1d full=1 empty=0
+[DRV] t=1680000 scenario=flag_pressure wr=0 rd=1 wdata=72
+[MON] t=1686000 scenario=flag_pressure wr=0 rd=1 wdata=72 rdata=d8 full=0 empty=0
+[SCB] PASS-RD t=1686000 scenario=flag_pressure exp=d8 got=d8
+[DRV] t=1690000 scenario=flag_pressure wr=1 rd=0 wdata=ba
+[MON] t=1696000 scenario=flag_pressure wr=1 rd=0 wdata=ba rdata=d8 full=1 empty=0
+[DRV] t=1700000 scenario=flag_pressure wr=1 rd=0 wdata=1b
+[MON] t=1706000 scenario=flag_pressure wr=1 rd=0 wdata=1b rdata=d8 full=1 empty=0
+[SCB] BLOCK-WR t=1706000 scenario=flag_pressure pre_count=16
+[DRV] t=1710000 scenario=flag_pressure wr=1 rd=0 wdata=d6
+[MON] t=1716000 scenario=flag_pressure wr=1 rd=0 wdata=d6 rdata=d8 full=1 empty=0
+[SCB] BLOCK-WR t=1716000 scenario=flag_pressure pre_count=16
+[DRV] t=1720000 scenario=flag_pressure wr=1 rd=1 wdata=7
+[MON] t=1726000 scenario=flag_pressure wr=1 rd=1 wdata=7 rdata=65 full=1 empty=0
+[SCB] PASS-RD t=1726000 scenario=flag_pressure exp=65 got=65
+[DRV] t=1730000 scenario=flag_pressure wr=0 rd=1 wdata=82
+[MON] t=1736000 scenario=flag_pressure wr=0 rd=1 wdata=82 rdata=a7 full=0 empty=0
+[SCB] PASS-RD t=1736000 scenario=flag_pressure exp=a7 got=a7
+[DRV] t=1740000 scenario=flag_pressure wr=1 rd=1 wdata=27
+[MON] t=1746000 scenario=flag_pressure wr=1 rd=1 wdata=27 rdata=d9 full=0 empty=0
+[SCB] PASS-RD t=1746000 scenario=flag_pressure exp=d9 got=d9
+[DRV] t=1750000 scenario=flag_pressure wr=1 rd=0 wdata=ab
+[MON] t=1756000 scenario=flag_pressure wr=1 rd=0 wdata=ab rdata=d9 full=1 empty=0
+[DRV] t=1760000 scenario=flag_pressure wr=1 rd=1 wdata=e8
+[MON] t=1766000 scenario=flag_pressure wr=1 rd=1 wdata=e8 rdata=c8 full=1 empty=0
+[SCB] PASS-RD t=1766000 scenario=flag_pressure exp=c8 got=c8
+[DRV] t=1770000 scenario=flag_pressure wr=0 rd=0 wdata=cc
+[MON] t=1776000 scenario=flag_pressure wr=0 rd=0 wdata=cc rdata=c8 full=1 empty=0
+[DRV] t=1780000 scenario=flag_pressure wr=0 rd=1 wdata=1
+[MON] t=1786000 scenario=flag_pressure wr=0 rd=1 wdata=1 rdata=ed full=0 empty=0
+[SCB] PASS-RD t=1786000 scenario=flag_pressure exp=ed got=ed
+[DRV] t=1790000 scenario=flag_pressure wr=1 rd=1 wdata=39
+[MON] t=1796000 scenario=flag_pressure wr=1 rd=1 wdata=39 rdata=4c full=0 empty=0
+[SCB] PASS-RD t=1796000 scenario=flag_pressure exp=4c got=4c
+[DRV] t=1800000 scenario=flag_pressure wr=1 rd=1 wdata=5
+[MON] t=1806000 scenario=flag_pressure wr=1 rd=1 wdata=5 rdata=da full=0 empty=0
+[SCB] PASS-RD t=1806000 scenario=flag_pressure exp=da got=da
+[DRV] t=1810000 scenario=flag_pressure wr=0 rd=0 wdata=34
+[MON] t=1816000 scenario=flag_pressure wr=0 rd=0 wdata=34 rdata=da full=0 empty=0
+[DRV] t=1820000 scenario=flag_pressure wr=1 rd=1 wdata=d9
+[MON] t=1826000 scenario=flag_pressure wr=1 rd=1 wdata=d9 rdata=62 full=0 empty=0
+[SCB] PASS-RD t=1826000 scenario=flag_pressure exp=62 got=62
+[DRV] t=1830000 scenario=flag_pressure wr=1 rd=1 wdata=c7
+[MON] t=1836000 scenario=flag_pressure wr=1 rd=1 wdata=c7 rdata=7c full=0 empty=0
+[SCB] PASS-RD t=1836000 scenario=flag_pressure exp=7c got=7c
+[DRV] t=1840000 scenario=flag_pressure wr=1 rd=0 wdata=9f
+[MON] t=1846000 scenario=flag_pressure wr=1 rd=0 wdata=9f rdata=7c full=1 empty=0
+[DRV] t=1850000 scenario=flag_pressure wr=1 rd=0 wdata=f0
+[MON] t=1856000 scenario=flag_pressure wr=1 rd=0 wdata=f0 rdata=7c full=1 empty=0
+[SCB] BLOCK-WR t=1856000 scenario=flag_pressure pre_count=16
+[DRV] t=1860000 scenario=flag_pressure wr=1 rd=1 wdata=32
+[MON] t=1866000 scenario=flag_pressure wr=1 rd=1 wdata=32 rdata=9b full=1 empty=0
+[SCB] PASS-RD t=1866000 scenario=flag_pressure exp=9b got=9b
+[DRV] t=1870000 scenario=flag_pressure wr=1 rd=0 wdata=18
+[MON] t=1876000 scenario=flag_pressure wr=1 rd=0 wdata=18 rdata=9b full=1 empty=0
+[SCB] BLOCK-WR t=1876000 scenario=flag_pressure pre_count=16
+[DRV] t=1880000 scenario=flag_pressure wr=0 rd=1 wdata=9f
+[MON] t=1886000 scenario=flag_pressure wr=0 rd=1 wdata=9f rdata=66 full=0 empty=0
+[SCB] PASS-RD t=1886000 scenario=flag_pressure exp=66 got=66
+[DRV] t=1890000 scenario=flag_pressure wr=1 rd=1 wdata=a
+[MON] t=1896000 scenario=flag_pressure wr=1 rd=1 wdata=a rdata=b9 full=0 empty=0
+[SCB] PASS-RD t=1896000 scenario=flag_pressure exp=b9 got=b9
+[DRV] t=1900000 scenario=flag_pressure wr=1 rd=0 wdata=5f
+[MON] t=1906000 scenario=flag_pressure wr=1 rd=0 wdata=5f rdata=b9 full=1 empty=0
+[DRV] t=1910000 scenario=flag_pressure wr=0 rd=0 wdata=d8
+[MON] t=1916000 scenario=flag_pressure wr=0 rd=0 wdata=d8 rdata=b9 full=1 empty=0
+[DRV] t=1920000 scenario=flag_pressure wr=1 rd=1 wdata=51
+[MON] t=1926000 scenario=flag_pressure wr=1 rd=1 wdata=51 rdata=95 full=1 empty=0
+[SCB] PASS-RD t=1926000 scenario=flag_pressure exp=95 got=95
+[DRV] t=1930000 scenario=flag_pressure wr=0 rd=1 wdata=e
+[MON] t=1936000 scenario=flag_pressure wr=0 rd=1 wdata=e rdata=c full=0 empty=0
+[SCB] PASS-RD t=1936000 scenario=flag_pressure exp=c got=c
+[DRV] t=1940000 scenario=flag_pressure wr=1 rd=1 wdata=c6
+[MON] t=1946000 scenario=flag_pressure wr=1 rd=1 wdata=c6 rdata=e0 full=0 empty=0
+[SCB] PASS-RD t=1946000 scenario=flag_pressure exp=e0 got=e0
+[GEN][PHASE] iter=192 scenario=drain_burst
+[DRV] t=1950000 scenario=drain_burst wr=0 rd=1 wdata=aa
+[MON] t=1956000 scenario=drain_burst wr=0 rd=1 wdata=aa rdata=ba full=0 empty=0
+[SCB] PASS-RD t=1956000 scenario=drain_burst exp=ba got=ba
+[DRV] t=1960000 scenario=drain_burst wr=0 rd=1 wdata=e
+[MON] t=1966000 scenario=drain_burst wr=0 rd=1 wdata=e rdata=7 full=0 empty=0
+[SCB] PASS-RD t=1966000 scenario=drain_burst exp=7 got=7
+[DRV] t=1970000 scenario=drain_burst wr=0 rd=1 wdata=90
+[MON] t=1976000 scenario=drain_burst wr=0 rd=1 wdata=90 rdata=27 full=0 empty=0
+[SCB] PASS-RD t=1976000 scenario=drain_burst exp=27 got=27
+[DRV] t=1980000 scenario=drain_burst wr=1 rd=1 wdata=12
+[MON] t=1986000 scenario=drain_burst wr=1 rd=1 wdata=12 rdata=ab full=0 empty=0
+[SCB] PASS-RD t=1986000 scenario=drain_burst exp=ab got=ab
+[DRV] t=1990000 scenario=drain_burst wr=0 rd=1 wdata=2b
+[MON] t=1996000 scenario=drain_burst wr=0 rd=1 wdata=2b rdata=e8 full=0 empty=0
+[SCB] PASS-RD t=1996000 scenario=drain_burst exp=e8 got=e8
+[DRV] t=2000000 scenario=drain_burst wr=1 rd=1 wdata=86
+[MON] t=2006000 scenario=drain_burst wr=1 rd=1 wdata=86 rdata=39 full=0 empty=0
+[SCB] PASS-RD t=2006000 scenario=drain_burst exp=39 got=39
+[DRV] t=2010000 scenario=drain_burst wr=1 rd=1 wdata=e2
+[MON] t=2016000 scenario=drain_burst wr=1 rd=1 wdata=e2 rdata=5 full=0 empty=0
+[SCB] PASS-RD t=2016000 scenario=drain_burst exp=5 got=5
+[DRV] t=2020000 scenario=drain_burst wr=0 rd=1 wdata=1b
+[MON] t=2026000 scenario=drain_burst wr=0 rd=1 wdata=1b rdata=d9 full=0 empty=0
+[SCB] PASS-RD t=2026000 scenario=drain_burst exp=d9 got=d9
+[DRV] t=2030000 scenario=drain_burst wr=1 rd=1 wdata=76
+[MON] t=2036000 scenario=drain_burst wr=1 rd=1 wdata=76 rdata=c7 full=0 empty=0
+[SCB] PASS-RD t=2036000 scenario=drain_burst exp=c7 got=c7
+[DRV] t=2040000 scenario=drain_burst wr=0 rd=1 wdata=7e
+[MON] t=2046000 scenario=drain_burst wr=0 rd=1 wdata=7e rdata=9f full=0 empty=0
+[SCB] PASS-RD t=2046000 scenario=drain_burst exp=9f got=9f
+[DRV] t=2050000 scenario=drain_burst wr=0 rd=1 wdata=1b
+[MON] t=2056000 scenario=drain_burst wr=0 rd=1 wdata=1b rdata=32 full=0 empty=0
+[SCB] PASS-RD t=2056000 scenario=drain_burst exp=32 got=32
+[DRV] t=2060000 scenario=drain_burst wr=0 rd=1 wdata=f5
+[MON] t=2066000 scenario=drain_burst wr=0 rd=1 wdata=f5 rdata=a full=0 empty=0
+[SCB] PASS-RD t=2066000 scenario=drain_burst exp=a got=a
+[DRV] t=2070000 scenario=drain_burst wr=0 rd=1 wdata=8
+[MON] t=2076000 scenario=drain_burst wr=0 rd=1 wdata=8 rdata=5f full=0 empty=0
+[SCB] PASS-RD t=2076000 scenario=drain_burst exp=5f got=5f
+[DRV] t=2080000 scenario=drain_burst wr=0 rd=1 wdata=2a
+[MON] t=2086000 scenario=drain_burst wr=0 rd=1 wdata=2a rdata=51 full=0 empty=0
+[SCB] PASS-RD t=2086000 scenario=drain_burst exp=51 got=51
+[DRV] t=2090000 scenario=drain_burst wr=0 rd=1 wdata=10
+[MON] t=2096000 scenario=drain_burst wr=0 rd=1 wdata=10 rdata=c6 full=0 empty=0
+[SCB] PASS-RD t=2096000 scenario=drain_burst exp=c6 got=c6
+[DRV] t=2100000 scenario=drain_burst wr=1 rd=1 wdata=7c
+[MON] t=2106000 scenario=drain_burst wr=1 rd=1 wdata=7c rdata=12 full=0 empty=0
+[SCB] PASS-RD t=2106000 scenario=drain_burst exp=12 got=12
+[DRV] t=2110000 scenario=drain_burst wr=0 rd=1 wdata=6c
+[MON] t=2116000 scenario=drain_burst wr=0 rd=1 wdata=6c rdata=86 full=0 empty=0
+[SCB] PASS-RD t=2116000 scenario=drain_burst exp=86 got=86
+[DRV] t=2120000 scenario=drain_burst wr=0 rd=1 wdata=18
+[MON] t=2126000 scenario=drain_burst wr=0 rd=1 wdata=18 rdata=e2 full=0 empty=0
+[SCB] PASS-RD t=2126000 scenario=drain_burst exp=e2 got=e2
+[DRV] t=2130000 scenario=drain_burst wr=1 rd=1 wdata=2a
+[MON] t=2136000 scenario=drain_burst wr=1 rd=1 wdata=2a rdata=76 full=0 empty=0
+[SCB] PASS-RD t=2136000 scenario=drain_burst exp=76 got=76
+[DRV] t=2140000 scenario=drain_burst wr=0 rd=1 wdata=66
+[MON] t=2146000 scenario=drain_burst wr=0 rd=1 wdata=66 rdata=7c full=0 empty=0
+[SCB] PASS-RD t=2146000 scenario=drain_burst exp=7c got=7c
+[DRV] t=2150000 scenario=drain_burst wr=0 rd=1 wdata=13
+[MON] t=2156000 scenario=drain_burst wr=0 rd=1 wdata=13 rdata=2a full=0 empty=1
+[SCB] PASS-RD t=2156000 scenario=drain_burst exp=2a got=2a
+[DRV] t=2160000 scenario=drain_burst wr=0 rd=1 wdata=6c
+[MON] t=2166000 scenario=drain_burst wr=0 rd=1 wdata=6c rdata=2a full=0 empty=1
+[SCB] BLOCK-RD t=2166000 scenario=drain_burst pre_count=0
+[DRV] t=2170000 scenario=drain_burst wr=0 rd=1 wdata=ca
+[MON] t=2176000 scenario=drain_burst wr=0 rd=1 wdata=ca rdata=2a full=0 empty=1
+[SCB] BLOCK-RD t=2176000 scenario=drain_burst pre_count=0
+[DRV] t=2180000 scenario=drain_burst wr=0 rd=1 wdata=5a
+[MON] t=2186000 scenario=drain_burst wr=0 rd=1 wdata=5a rdata=2a full=0 empty=1
+[SCB] BLOCK-RD t=2186000 scenario=drain_burst pre_count=0
+[DRV] t=2190000 scenario=drain_burst wr=1 rd=1 wdata=da
+[MON] t=2196000 scenario=drain_burst wr=1 rd=1 wdata=da rdata=2a full=0 empty=0
+[SCB] BLOCK-RD t=2196000 scenario=drain_burst pre_count=0
+[DRV] t=2200000 scenario=drain_burst wr=1 rd=1 wdata=cb
+[MON] t=2206000 scenario=drain_burst wr=1 rd=1 wdata=cb rdata=da full=0 empty=0
+[SCB] PASS-RD t=2206000 scenario=drain_burst exp=da got=da
+[DRV] t=2210000 scenario=drain_burst wr=0 rd=1 wdata=4
+[MON] t=2216000 scenario=drain_burst wr=0 rd=1 wdata=4 rdata=cb full=0 empty=1
+[SCB] PASS-RD t=2216000 scenario=drain_burst exp=cb got=cb
+[DRV] t=2220000 scenario=drain_burst wr=0 rd=1 wdata=23
+[MON] t=2226000 scenario=drain_burst wr=0 rd=1 wdata=23 rdata=cb full=0 empty=1
+[SCB] BLOCK-RD t=2226000 scenario=drain_burst pre_count=0
+[DRV] t=2230000 scenario=drain_burst wr=0 rd=1 wdata=cd
+[MON] t=2236000 scenario=drain_burst wr=0 rd=1 wdata=cd rdata=cb full=0 empty=1
+[SCB] BLOCK-RD t=2236000 scenario=drain_burst pre_count=0
+[DRV] t=2240000 scenario=drain_burst wr=0 rd=1 wdata=30
+[MON] t=2246000 scenario=drain_burst wr=0 rd=1 wdata=30 rdata=cb full=0 empty=1
+[SCB] BLOCK-RD t=2246000 scenario=drain_burst pre_count=0
+[DRV] t=2250000 scenario=drain_burst wr=0 rd=1 wdata=d
+[MON] t=2256000 scenario=drain_burst wr=0 rd=1 wdata=d rdata=cb full=0 empty=1
+[SCB] BLOCK-RD t=2256000 scenario=drain_burst pre_count=0
+[DRV] t=2260000 scenario=drain_burst wr=1 rd=1 wdata=b8
+[MON] t=2266000 scenario=drain_burst wr=1 rd=1 wdata=b8 rdata=cb full=0 empty=0
+[SCB] BLOCK-RD t=2266000 scenario=drain_burst pre_count=0
+[DRV] t=2270000 scenario=drain_burst wr=1 rd=1 wdata=5e
+[MON] t=2276000 scenario=drain_burst wr=1 rd=1 wdata=5e rdata=b8 full=0 empty=0
+[SCB] PASS-RD t=2276000 scenario=drain_burst exp=b8 got=b8
+[DRV] t=2280000 scenario=drain_burst wr=1 rd=1 wdata=58
+[MON] t=2286000 scenario=drain_burst wr=1 rd=1 wdata=58 rdata=5e full=0 empty=0
+[SCB] PASS-RD t=2286000 scenario=drain_burst exp=5e got=5e
+[DRV] t=2290000 scenario=drain_burst wr=0 rd=1 wdata=48
+[MON] t=2296000 scenario=drain_burst wr=0 rd=1 wdata=48 rdata=58 full=0 empty=1
+[SCB] PASS-RD t=2296000 scenario=drain_burst exp=58 got=58
+[DRV] t=2300000 scenario=drain_burst wr=1 rd=1 wdata=ce
+[MON] t=2306000 scenario=drain_burst wr=1 rd=1 wdata=ce rdata=58 full=0 empty=0
+[SCB] BLOCK-RD t=2306000 scenario=drain_burst pre_count=0
+[DRV] t=2310000 scenario=drain_burst wr=0 rd=1 wdata=ad
+[MON] t=2316000 scenario=drain_burst wr=0 rd=1 wdata=ad rdata=ce full=0 empty=1
+[SCB] PASS-RD t=2316000 scenario=drain_burst exp=ce got=ce
+[DRV] t=2320000 scenario=drain_burst wr=0 rd=1 wdata=5b
+[MON] t=2326000 scenario=drain_burst wr=0 rd=1 wdata=5b rdata=ce full=0 empty=1
+[SCB] BLOCK-RD t=2326000 scenario=drain_burst pre_count=0
+[DRV] t=2330000 scenario=drain_burst wr=0 rd=1 wdata=71
+[MON] t=2336000 scenario=drain_burst wr=0 rd=1 wdata=71 rdata=ce full=0 empty=1
+[SCB] BLOCK-RD t=2336000 scenario=drain_burst pre_count=0
+[DRV] t=2340000 scenario=drain_burst wr=1 rd=1 wdata=df
+[MON] t=2346000 scenario=drain_burst wr=1 rd=1 wdata=df rdata=ce full=0 empty=0
+[SCB] BLOCK-RD t=2346000 scenario=drain_burst pre_count=0
+[DRV] t=2350000 scenario=drain_burst wr=0 rd=1 wdata=49
+[MON] t=2356000 scenario=drain_burst wr=0 rd=1 wdata=49 rdata=df full=0 empty=1
+[SCB] PASS-RD t=2356000 scenario=drain_burst exp=df got=df
+[DRV] t=2360000 scenario=drain_burst wr=1 rd=1 wdata=95
+[MON] t=2366000 scenario=drain_burst wr=1 rd=1 wdata=95 rdata=df full=0 empty=0
+[SCB] BLOCK-RD t=2366000 scenario=drain_burst pre_count=0
+[DRV] t=2370000 scenario=drain_burst wr=1 rd=1 wdata=6a
+[MON] t=2376000 scenario=drain_burst wr=1 rd=1 wdata=6a rdata=95 full=0 empty=0
+[SCB] PASS-RD t=2376000 scenario=drain_burst exp=95 got=95
+[DRV] t=2380000 scenario=drain_burst wr=0 rd=1 wdata=c
+[MON] t=2386000 scenario=drain_burst wr=0 rd=1 wdata=c rdata=6a full=0 empty=1
+[SCB] PASS-RD t=2386000 scenario=drain_burst exp=6a got=6a
+[DRV] t=2390000 scenario=drain_burst wr=0 rd=1 wdata=7d
+[MON] t=2396000 scenario=drain_burst wr=0 rd=1 wdata=7d rdata=6a full=0 empty=1
+[SCB] BLOCK-RD t=2396000 scenario=drain_burst pre_count=0
+[DRV] t=2400000 scenario=drain_burst wr=0 rd=1 wdata=19
+[MON] t=2406000 scenario=drain_burst wr=0 rd=1 wdata=19 rdata=6a full=0 empty=1
+[SCB] BLOCK-RD t=2406000 scenario=drain_burst pre_count=0
+[DRV] t=2410000 scenario=drain_burst wr=0 rd=1 wdata=b9
+[MON] t=2416000 scenario=drain_burst wr=0 rd=1 wdata=b9 rdata=6a full=0 empty=1
+[SCB] BLOCK-RD t=2416000 scenario=drain_burst pre_count=0
+[DRV] t=2420000 scenario=drain_burst wr=0 rd=1 wdata=66
+[MON] t=2426000 scenario=drain_burst wr=0 rd=1 wdata=66 rdata=6a full=0 empty=1
+[SCB] BLOCK-RD t=2426000 scenario=drain_burst pre_count=0
+[DRV] t=2430000 scenario=drain_burst wr=0 rd=1 wdata=73
+[MON] t=2436000 scenario=drain_burst wr=0 rd=1 wdata=73 rdata=6a full=0 empty=1
+[SCB] BLOCK-RD t=2436000 scenario=drain_burst pre_count=0
+[DRV] t=2440000 scenario=drain_burst wr=0 rd=1 wdata=d2
+[MON] t=2446000 scenario=drain_burst wr=0 rd=1 wdata=d2 rdata=6a full=0 empty=1
+[SCB] BLOCK-RD t=2446000 scenario=drain_burst pre_count=0
+[DRV] t=2450000 scenario=drain_burst wr=1 rd=1 wdata=35
+[MON] t=2456000 scenario=drain_burst wr=1 rd=1 wdata=35 rdata=6a full=0 empty=0
+[SCB] BLOCK-RD t=2456000 scenario=drain_burst pre_count=0
+[DRV] t=2460000 scenario=drain_burst wr=1 rd=1 wdata=f3
+[MON] t=2466000 scenario=drain_burst wr=1 rd=1 wdata=f3 rdata=35 full=0 empty=0
+[SCB] PASS-RD t=2466000 scenario=drain_burst exp=35 got=35
+[DRV] t=2470000 scenario=drain_burst wr=0 rd=1 wdata=e3
+[MON] t=2476000 scenario=drain_burst wr=0 rd=1 wdata=e3 rdata=f3 full=0 empty=1
+[SCB] PASS-RD t=2476000 scenario=drain_burst exp=f3 got=f3
+[DRV] t=2480000 scenario=drain_burst wr=0 rd=1 wdata=95
+[MON] t=2486000 scenario=drain_burst wr=0 rd=1 wdata=95 rdata=f3 full=0 empty=1
+[SCB] BLOCK-RD t=2486000 scenario=drain_burst pre_count=0
+[DRV] t=2490000 scenario=drain_burst wr=0 rd=1 wdata=d6
+[MON] t=2496000 scenario=drain_burst wr=0 rd=1 wdata=d6 rdata=f3 full=0 empty=1
+[SCB] BLOCK-RD t=2496000 scenario=drain_burst pre_count=0
+[DRV] t=2500000 scenario=drain_burst wr=0 rd=1 wdata=ef
+[MON] t=2506000 scenario=drain_burst wr=0 rd=1 wdata=ef rdata=f3 full=0 empty=1
+[SCB] BLOCK-RD t=2506000 scenario=drain_burst pre_count=0
+[DRV] t=2510000 scenario=drain_burst wr=0 rd=1 wdata=84
+[MON] t=2516000 scenario=drain_burst wr=0 rd=1 wdata=84 rdata=f3 full=0 empty=1
+[SCB] BLOCK-RD t=2516000 scenario=drain_burst pre_count=0
+[DRV] t=2520000 scenario=drain_burst wr=0 rd=1 wdata=d8
+[MON] t=2526000 scenario=drain_burst wr=0 rd=1 wdata=d8 rdata=f3 full=0 empty=1
+[SCB] BLOCK-RD t=2526000 scenario=drain_burst pre_count=0
+[DRV] t=2530000 scenario=drain_burst wr=0 rd=1 wdata=4d
+[MON] t=2536000 scenario=drain_burst wr=0 rd=1 wdata=4d rdata=f3 full=0 empty=1
+[SCB] BLOCK-RD t=2536000 scenario=drain_burst pre_count=0
+[DRV] t=2540000 scenario=drain_burst wr=0 rd=1 wdata=2
+[MON] t=2546000 scenario=drain_burst wr=0 rd=1 wdata=2 rdata=f3 full=0 empty=1
+[SCB] BLOCK-RD t=2546000 scenario=drain_burst pre_count=0
+[DRV] t=2550000 scenario=drain_burst wr=1 rd=1 wdata=3
+[MON] t=2556000 scenario=drain_burst wr=1 rd=1 wdata=3 rdata=f3 full=0 empty=0
+[SCB] BLOCK-RD t=2556000 scenario=drain_burst pre_count=0
+[DRV] t=2560000 scenario=drain_burst wr=0 rd=1 wdata=91
+[MON] t=2566000 scenario=drain_burst wr=0 rd=1 wdata=91 rdata=3 full=0 empty=1
+[SCB] PASS-RD t=2566000 scenario=drain_burst exp=3 got=3
+[DRV] t=2570000 scenario=drain_burst wr=0 rd=1 wdata=87
+[MON] t=2576000 scenario=drain_burst wr=0 rd=1 wdata=87 rdata=3 full=0 empty=1
+[SCB] BLOCK-RD t=2576000 scenario=drain_burst pre_count=0
+[DRV] t=2580000 scenario=drain_burst wr=0 rd=1 wdata=94
+[MON] t=2586000 scenario=drain_burst wr=0 rd=1 wdata=94 rdata=3 full=0 empty=1
+[SCB] BLOCK-RD t=2586000 scenario=drain_burst pre_count=0
+[GEN][PHASE] iter=256 scenario=balanced_stream
+[DRV] t=2590000 scenario=balanced_stream wr=1 rd=1 wdata=e3
+[MON] t=2596000 scenario=balanced_stream wr=1 rd=1 wdata=e3 rdata=3 full=0 empty=0
+[SCB] BLOCK-RD t=2596000 scenario=balanced_stream pre_count=0
+[DRV] t=2600000 scenario=balanced_stream wr=1 rd=0 wdata=c8
+[MON] t=2606000 scenario=balanced_stream wr=1 rd=0 wdata=c8 rdata=3 full=0 empty=0
+[DRV] t=2610000 scenario=balanced_stream wr=0 rd=0 wdata=bf
+[MON] t=2616000 scenario=balanced_stream wr=0 rd=0 wdata=bf rdata=3 full=0 empty=0
+[DRV] t=2620000 scenario=balanced_stream wr=0 rd=1 wdata=6a
+[MON] t=2626000 scenario=balanced_stream wr=0 rd=1 wdata=6a rdata=e3 full=0 empty=0
+[SCB] PASS-RD t=2626000 scenario=balanced_stream exp=e3 got=e3
+[DRV] t=2630000 scenario=balanced_stream wr=0 rd=0 wdata=b8
+[MON] t=2636000 scenario=balanced_stream wr=0 rd=0 wdata=b8 rdata=e3 full=0 empty=0
+[DRV] t=2640000 scenario=balanced_stream wr=1 rd=1 wdata=f3
+[MON] t=2646000 scenario=balanced_stream wr=1 rd=1 wdata=f3 rdata=c8 full=0 empty=0
+[SCB] PASS-RD t=2646000 scenario=balanced_stream exp=c8 got=c8
+[DRV] t=2650000 scenario=balanced_stream wr=1 rd=1 wdata=ae
+[MON] t=2656000 scenario=balanced_stream wr=1 rd=1 wdata=ae rdata=f3 full=0 empty=0
+[SCB] PASS-RD t=2656000 scenario=balanced_stream exp=f3 got=f3
+[DRV] t=2660000 scenario=balanced_stream wr=1 rd=1 wdata=4f
+[MON] t=2666000 scenario=balanced_stream wr=1 rd=1 wdata=4f rdata=ae full=0 empty=0
+[SCB] PASS-RD t=2666000 scenario=balanced_stream exp=ae got=ae
+[DRV] t=2670000 scenario=balanced_stream wr=0 rd=0 wdata=72
+[MON] t=2676000 scenario=balanced_stream wr=0 rd=0 wdata=72 rdata=ae full=0 empty=0
+[DRV] t=2680000 scenario=balanced_stream wr=0 rd=1 wdata=a3
+[MON] t=2686000 scenario=balanced_stream wr=0 rd=1 wdata=a3 rdata=4f full=0 empty=1
+[SCB] PASS-RD t=2686000 scenario=balanced_stream exp=4f got=4f
+[DRV] t=2690000 scenario=balanced_stream wr=1 rd=0 wdata=35
+[MON] t=2696000 scenario=balanced_stream wr=1 rd=0 wdata=35 rdata=4f full=0 empty=0
+[DRV] t=2700000 scenario=balanced_stream wr=1 rd=1 wdata=c8
+[MON] t=2706000 scenario=balanced_stream wr=1 rd=1 wdata=c8 rdata=35 full=0 empty=0
+[SCB] PASS-RD t=2706000 scenario=balanced_stream exp=35 got=35
+[DRV] t=2710000 scenario=balanced_stream wr=1 rd=1 wdata=37
+[MON] t=2716000 scenario=balanced_stream wr=1 rd=1 wdata=37 rdata=c8 full=0 empty=0
+[SCB] PASS-RD t=2716000 scenario=balanced_stream exp=c8 got=c8
+[DRV] t=2720000 scenario=balanced_stream wr=1 rd=1 wdata=94
+[MON] t=2726000 scenario=balanced_stream wr=1 rd=1 wdata=94 rdata=37 full=0 empty=0
+[SCB] PASS-RD t=2726000 scenario=balanced_stream exp=37 got=37
+[DRV] t=2730000 scenario=balanced_stream wr=1 rd=1 wdata=28
+[MON] t=2736000 scenario=balanced_stream wr=1 rd=1 wdata=28 rdata=94 full=0 empty=0
+[SCB] PASS-RD t=2736000 scenario=balanced_stream exp=94 got=94
+[DRV] t=2740000 scenario=balanced_stream wr=0 rd=1 wdata=7f
+[MON] t=2746000 scenario=balanced_stream wr=0 rd=1 wdata=7f rdata=28 full=0 empty=1
+[SCB] PASS-RD t=2746000 scenario=balanced_stream exp=28 got=28
+[DRV] t=2750000 scenario=balanced_stream wr=1 rd=0 wdata=cf
+[MON] t=2756000 scenario=balanced_stream wr=1 rd=0 wdata=cf rdata=28 full=0 empty=0
+[DRV] t=2760000 scenario=balanced_stream wr=1 rd=0 wdata=48
+[MON] t=2766000 scenario=balanced_stream wr=1 rd=0 wdata=48 rdata=28 full=0 empty=0
+[DRV] t=2770000 scenario=balanced_stream wr=0 rd=0 wdata=ba
+[MON] t=2776000 scenario=balanced_stream wr=0 rd=0 wdata=ba rdata=28 full=0 empty=0
+[DRV] t=2780000 scenario=balanced_stream wr=1 rd=1 wdata=b3
+[MON] t=2786000 scenario=balanced_stream wr=1 rd=1 wdata=b3 rdata=cf full=0 empty=0
+[SCB] PASS-RD t=2786000 scenario=balanced_stream exp=cf got=cf
+[DRV] t=2790000 scenario=balanced_stream wr=0 rd=1 wdata=dc
+[MON] t=2796000 scenario=balanced_stream wr=0 rd=1 wdata=dc rdata=48 full=0 empty=0
+[SCB] PASS-RD t=2796000 scenario=balanced_stream exp=48 got=48
+[DRV] t=2800000 scenario=balanced_stream wr=1 rd=0 wdata=3b
+[MON] t=2806000 scenario=balanced_stream wr=1 rd=0 wdata=3b rdata=48 full=0 empty=0
+[DRV] t=2810000 scenario=balanced_stream wr=1 rd=1 wdata=aa
+[MON] t=2816000 scenario=balanced_stream wr=1 rd=1 wdata=aa rdata=b3 full=0 empty=0
+[SCB] PASS-RD t=2816000 scenario=balanced_stream exp=b3 got=b3
+[DRV] t=2820000 scenario=balanced_stream wr=1 rd=1 wdata=49
+[MON] t=2826000 scenario=balanced_stream wr=1 rd=1 wdata=49 rdata=3b full=0 empty=0
+[SCB] PASS-RD t=2826000 scenario=balanced_stream exp=3b got=3b
+[DRV] t=2830000 scenario=balanced_stream wr=1 rd=1 wdata=bd
+[MON] t=2836000 scenario=balanced_stream wr=1 rd=1 wdata=bd rdata=aa full=0 empty=0
+[SCB] PASS-RD t=2836000 scenario=balanced_stream exp=aa got=aa
+[DRV] t=2840000 scenario=balanced_stream wr=0 rd=1 wdata=3b
+[MON] t=2846000 scenario=balanced_stream wr=0 rd=1 wdata=3b rdata=49 full=0 empty=0
+[SCB] PASS-RD t=2846000 scenario=balanced_stream exp=49 got=49
+[DRV] t=2850000 scenario=balanced_stream wr=1 rd=1 wdata=7
+[MON] t=2856000 scenario=balanced_stream wr=1 rd=1 wdata=7 rdata=bd full=0 empty=0
+[SCB] PASS-RD t=2856000 scenario=balanced_stream exp=bd got=bd
+[DRV] t=2860000 scenario=balanced_stream wr=1 rd=1 wdata=2a
+[MON] t=2866000 scenario=balanced_stream wr=1 rd=1 wdata=2a rdata=7 full=0 empty=0
+[SCB] PASS-RD t=2866000 scenario=balanced_stream exp=7 got=7
+[DRV] t=2870000 scenario=balanced_stream wr=1 rd=1 wdata=3a
+[MON] t=2876000 scenario=balanced_stream wr=1 rd=1 wdata=3a rdata=2a full=0 empty=0
+[SCB] PASS-RD t=2876000 scenario=balanced_stream exp=2a got=2a
+[DRV] t=2880000 scenario=balanced_stream wr=1 rd=1 wdata=fa
+[MON] t=2886000 scenario=balanced_stream wr=1 rd=1 wdata=fa rdata=3a full=0 empty=0
+[SCB] PASS-RD t=2886000 scenario=balanced_stream exp=3a got=3a
+[DRV] t=2890000 scenario=balanced_stream wr=0 rd=0 wdata=d0
+[MON] t=2896000 scenario=balanced_stream wr=0 rd=0 wdata=d0 rdata=3a full=0 empty=0
+[DRV] t=2900000 scenario=balanced_stream wr=0 rd=0 wdata=73
+[MON] t=2906000 scenario=balanced_stream wr=0 rd=0 wdata=73 rdata=3a full=0 empty=0
+[DRV] t=2910000 scenario=balanced_stream wr=1 rd=1 wdata=75
+[MON] t=2916000 scenario=balanced_stream wr=1 rd=1 wdata=75 rdata=fa full=0 empty=0
+[SCB] PASS-RD t=2916000 scenario=balanced_stream exp=fa got=fa
+[DRV] t=2920000 scenario=balanced_stream wr=1 rd=1 wdata=32
+[MON] t=2926000 scenario=balanced_stream wr=1 rd=1 wdata=32 rdata=75 full=0 empty=0
+[SCB] PASS-RD t=2926000 scenario=balanced_stream exp=75 got=75
+[DRV] t=2930000 scenario=balanced_stream wr=1 rd=1 wdata=53
+[MON] t=2936000 scenario=balanced_stream wr=1 rd=1 wdata=53 rdata=32 full=0 empty=0
+[SCB] PASS-RD t=2936000 scenario=balanced_stream exp=32 got=32
+[DRV] t=2940000 scenario=balanced_stream wr=1 rd=0 wdata=4a
+[MON] t=2946000 scenario=balanced_stream wr=1 rd=0 wdata=4a rdata=32 full=0 empty=0
+[DRV] t=2950000 scenario=balanced_stream wr=1 rd=1 wdata=87
+[MON] t=2956000 scenario=balanced_stream wr=1 rd=1 wdata=87 rdata=53 full=0 empty=0
+[SCB] PASS-RD t=2956000 scenario=balanced_stream exp=53 got=53
+[DRV] t=2960000 scenario=balanced_stream wr=0 rd=1 wdata=59
+[MON] t=2966000 scenario=balanced_stream wr=0 rd=1 wdata=59 rdata=4a full=0 empty=0
+[SCB] PASS-RD t=2966000 scenario=balanced_stream exp=4a got=4a
+[DRV] t=2970000 scenario=balanced_stream wr=1 rd=0 wdata=2b
+[MON] t=2976000 scenario=balanced_stream wr=1 rd=0 wdata=2b rdata=4a full=0 empty=0
+[DRV] t=2980000 scenario=balanced_stream wr=1 rd=1 wdata=22
+[MON] t=2986000 scenario=balanced_stream wr=1 rd=1 wdata=22 rdata=87 full=0 empty=0
+[SCB] PASS-RD t=2986000 scenario=balanced_stream exp=87 got=87
+[DRV] t=2990000 scenario=balanced_stream wr=1 rd=0 wdata=3
+[MON] t=2996000 scenario=balanced_stream wr=1 rd=0 wdata=3 rdata=87 full=0 empty=0
+[DRV] t=3000000 scenario=balanced_stream wr=1 rd=1 wdata=56
+[MON] t=3006000 scenario=balanced_stream wr=1 rd=1 wdata=56 rdata=2b full=0 empty=0
+[SCB] PASS-RD t=3006000 scenario=balanced_stream exp=2b got=2b
+[DRV] t=3010000 scenario=balanced_stream wr=1 rd=1 wdata=6c
+[MON] t=3016000 scenario=balanced_stream wr=1 rd=1 wdata=6c rdata=22 full=0 empty=0
+[SCB] PASS-RD t=3016000 scenario=balanced_stream exp=22 got=22
+[DRV] t=3020000 scenario=balanced_stream wr=1 rd=0 wdata=d2
+[MON] t=3026000 scenario=balanced_stream wr=1 rd=0 wdata=d2 rdata=22 full=0 empty=0
+[DRV] t=3030000 scenario=balanced_stream wr=0 rd=0 wdata=85
+[MON] t=3036000 scenario=balanced_stream wr=0 rd=0 wdata=85 rdata=22 full=0 empty=0
+[DRV] t=3040000 scenario=balanced_stream wr=1 rd=1 wdata=9
+[MON] t=3046000 scenario=balanced_stream wr=1 rd=1 wdata=9 rdata=3 full=0 empty=0
+[SCB] PASS-RD t=3046000 scenario=balanced_stream exp=3 got=3
+[DRV] t=3050000 scenario=balanced_stream wr=0 rd=1 wdata=df
+[MON] t=3056000 scenario=balanced_stream wr=0 rd=1 wdata=df rdata=56 full=0 empty=0
+[SCB] PASS-RD t=3056000 scenario=balanced_stream exp=56 got=56
+[DRV] t=3060000 scenario=balanced_stream wr=0 rd=1 wdata=25
+[MON] t=3066000 scenario=balanced_stream wr=0 rd=1 wdata=25 rdata=6c full=0 empty=0
+[SCB] PASS-RD t=3066000 scenario=balanced_stream exp=6c got=6c
+[DRV] t=3070000 scenario=balanced_stream wr=1 rd=1 wdata=67
+[MON] t=3076000 scenario=balanced_stream wr=1 rd=1 wdata=67 rdata=d2 full=0 empty=0
+[SCB] PASS-RD t=3076000 scenario=balanced_stream exp=d2 got=d2
+[DRV] t=3080000 scenario=balanced_stream wr=0 rd=1 wdata=a8
+[MON] t=3086000 scenario=balanced_stream wr=0 rd=1 wdata=a8 rdata=9 full=0 empty=0
+[SCB] PASS-RD t=3086000 scenario=balanced_stream exp=9 got=9
+[DRV] t=3090000 scenario=balanced_stream wr=1 rd=1 wdata=43
+[MON] t=3096000 scenario=balanced_stream wr=1 rd=1 wdata=43 rdata=67 full=0 empty=0
+[SCB] PASS-RD t=3096000 scenario=balanced_stream exp=67 got=67
+[DRV] t=3100000 scenario=balanced_stream wr=1 rd=1 wdata=86
+[MON] t=3106000 scenario=balanced_stream wr=1 rd=1 wdata=86 rdata=43 full=0 empty=0
+[SCB] PASS-RD t=3106000 scenario=balanced_stream exp=43 got=43
+[DRV] t=3110000 scenario=balanced_stream wr=1 rd=1 wdata=2d
+[MON] t=3116000 scenario=balanced_stream wr=1 rd=1 wdata=2d rdata=86 full=0 empty=0
+[SCB] PASS-RD t=3116000 scenario=balanced_stream exp=86 got=86
+[DRV] t=3120000 scenario=balanced_stream wr=1 rd=1 wdata=10
+[MON] t=3126000 scenario=balanced_stream wr=1 rd=1 wdata=10 rdata=2d full=0 empty=0
+[SCB] PASS-RD t=3126000 scenario=balanced_stream exp=2d got=2d
+[DRV] t=3130000 scenario=balanced_stream wr=1 rd=0 wdata=19
+[MON] t=3136000 scenario=balanced_stream wr=1 rd=0 wdata=19 rdata=2d full=0 empty=0
+[DRV] t=3140000 scenario=balanced_stream wr=1 rd=1 wdata=a2
+[MON] t=3146000 scenario=balanced_stream wr=1 rd=1 wdata=a2 rdata=10 full=0 empty=0
+[SCB] PASS-RD t=3146000 scenario=balanced_stream exp=10 got=10
+[DRV] t=3150000 scenario=balanced_stream wr=1 rd=1 wdata=17
+[MON] t=3156000 scenario=balanced_stream wr=1 rd=1 wdata=17 rdata=19 full=0 empty=0
+[SCB] PASS-RD t=3156000 scenario=balanced_stream exp=19 got=19
+[DRV] t=3160000 scenario=balanced_stream wr=1 rd=1 wdata=6b
+[MON] t=3166000 scenario=balanced_stream wr=1 rd=1 wdata=6b rdata=a2 full=0 empty=0
+[SCB] PASS-RD t=3166000 scenario=balanced_stream exp=a2 got=a2
+[DRV] t=3170000 scenario=balanced_stream wr=1 rd=0 wdata=cd
+[MON] t=3176000 scenario=balanced_stream wr=1 rd=0 wdata=cd rdata=a2 full=0 empty=0
+[DRV] t=3180000 scenario=balanced_stream wr=1 rd=1 wdata=39
+[MON] t=3186000 scenario=balanced_stream wr=1 rd=1 wdata=39 rdata=17 full=0 empty=0
+[SCB] PASS-RD t=3186000 scenario=balanced_stream exp=17 got=17
+[DRV] t=3190000 scenario=balanced_stream wr=1 rd=0 wdata=87
+[MON] t=3196000 scenario=balanced_stream wr=1 rd=0 wdata=87 rdata=17 full=0 empty=0
+[DRV] t=3200000 scenario=balanced_stream wr=1 rd=1 wdata=73
+[MON] t=3206000 scenario=balanced_stream wr=1 rd=1 wdata=73 rdata=6b full=0 empty=0
+[SCB] PASS-RD t=3206000 scenario=balanced_stream exp=6b got=6b
+[DRV] t=3210000 scenario=balanced_stream wr=0 rd=1 wdata=90
+[MON] t=3216000 scenario=balanced_stream wr=0 rd=1 wdata=90 rdata=cd full=0 empty=0
+[SCB] PASS-RD t=3216000 scenario=balanced_stream exp=cd got=cd
+[DRV] t=3220000 scenario=balanced_stream wr=0 rd=0 wdata=e7
+[MON] t=3226000 scenario=balanced_stream wr=0 rd=0 wdata=e7 rdata=cd full=0 empty=0
+[SCB][SUMMARY] sample=320 pass=833 fail=0 wr_acc=196 rd_acc=193 wr_block=41 rd_block=33 depth_left=3 full_seen=133 empty_seen=34
+[SCB][COVERAGE] functional_coverage=0.00%
+[SCB][SCENARIO] id=1 name=fill_burst sample=64 wr_acc=28 rd_acc=12 wr_block=36 rd_block=1
+[SCB][SCENARIO] id=2 name=simul_stress sample=64 wr_acc=64 rd_acc=64 wr_block=0 rd_block=0
+[SCB][SCENARIO] id=3 name=drain_burst sample=64 wr_acc=18 rd_acc=33 wr_block=0 rd_block=31
+[SCB][SCENARIO] id=4 name=flag_pressure sample=64 wr_acc=40 rd_acc=41 wr_block=5 rd_block=0
+[SCB][SCENARIO] id=5 name=balanced_stream sample=64 wr_acc=46 rd_acc=43 wr_block=0 rd_block=1
+[SCB][PASS] Sync FIFO scoreboard completed without mismatches
+[GEN][SUMMARY] scenario=fill_burst generated=64
+[GEN][SUMMARY] scenario=simul_stress generated=64
+[GEN][SUMMARY] scenario=drain_burst generated=64
+[GEN][SUMMARY] scenario=flag_pressure generated=64
+[GEN][SUMMARY] scenario=balanced_stream generated=64
+[GEN] finished: run_count=320
+[ENV] run finished
+[TB] tb_sync_fifo finished successfully
+$finish called at time : 3246 ns : File "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/sync_fifo/tb_sync_fifo.sv" Line 61
+[INFO] Auto replay run all completed.
+INFO: [Simtcl 6-16] Simulation closed
+[SUCCESS] Auto replay completed for top: tb_sync_fifo
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 12:53:15 2026...

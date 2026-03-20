@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SystemVerilog Python Visual Report</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --panel: rgba(255,255,255,0.88);
+      --panel-strong: #ffffff;
+      --text: #191f28;
+      --muted: #6b7684;
+      --line: #e5e8eb;
+      --blue: #3182f6;
+      --green: #08b47f;
+      --orange: #ffb020;
+      --red: #f04452;
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(49,130,246,0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(8,180,127,0.10), transparent 22%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.82));
+      border: 1px solid rgba(255,255,255,0.8);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: 40px;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+    .hero-copy {
+      margin: 0 0 18px;
+      max-width: 840px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .hero ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+    .section {
+      margin-top: 28px;
+    }
+    .section-title {
+      margin: 0 0 16px;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .metric-card, .chart-card, .info-card {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      backdrop-filter: blur(16px);
+    }
+    .metric-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .metric-card h3, .chart-card h3 {
+      margin: 10px 0 10px;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+    }
+    .card-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .metric-grid {
+      margin: 18px 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px 10px;
+    }
+    .metric-grid dt {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .metric-grid dd {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .status-pass {
+      color: #016b4a;
+      background: rgba(8,180,127,0.12);
+    }
+    .status-fail {
+      color: #b42318;
+      background: rgba(240,68,82,0.12);
+    }
+    .chart-stack {
+      display: grid;
+      gap: 18px;
+    }
+    .chart-card img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 20px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: var(--shadow);
+      padding: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      background: transparent;
+    }
+    th, td {
+      padding: 14px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      white-space: nowrap;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .path-list {
+      display: grid;
+      gap: 10px;
+    }
+    .path-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(49,130,246,0.06);
+      border: 1px solid rgba(49,130,246,0.10);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 13px;
+      color: #2f3a48;
+    }
+    .detail-list {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+    .detail-list li {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 1024px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .card-head {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">SystemVerilog Portfolio</p>
+      <h1>Python 시각화 검증 보고서</h1>
+      <p class="hero-copy">
+        TB scoreboard가 직접 생성한 CSV를 Python으로 다시 시각화해 만든 포트폴리오용 보고서입니다.
+        PASS/FAIL만 보여주는 수준을 넘어서, scenario별 activity, accepted/blocked path, depth 변화까지 정리했습니다.
+      </p>
+      <ul>
+        
+    <li>TB scoreboard가 직접 만든 CSV를 기반으로 Python에서 다시 시각화해 재현 가능한 분석 흐름을 구성했습니다.</li>
+    <li>accepted path와 blocked path를 함께 집계해 full/empty boundary behavior까지 근거 자료로 남겼습니다.</li>
+    <li>clocking block을 drive, pre-sample, post-sample 단계로 분리해 XSim 기준 clean pass가 유지되도록 정렬했습니다.</li>
+    
+      </ul>
+      <p class="hero-copy" style="margin-top:18px;">
+        현재 이 HTML 대시보드는 FIFO 계열 showcase의 CSV/그래프 해석을 중심으로 구성돼 있습니다.
+        UART RX, UART+FIFO, UART TX+FIFO, UART+async FIFO는 모듈별 상세 보고서와 Vivado 로그에서 이어서 확인할 수 있도록 정리했습니다.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">UART 확장 안내</h2>
+      <article class="info-card">
+        <p class="eyebrow">UART Reports</p>
+        <h3>UART 추가분은 별도 상세 보고서로 정리했습니다</h3>
+        <p class="card-copy">UART 계열은 protocol, bridge timing, scenario coverage, assertion 설명 비중이 높아 별도 문서에서 더 자세히 설명합니다.</p>
+        <div class="path-list" style="margin-top:18px;">
+          <div class="path-item">../markdown/module_reports/uart_rx_report_ko.md</div>
+          <div class="path-item">../markdown/module_reports/uart_fifo_report_ko.md</div>
+          <div class="path-item">../markdown/module_reports/uart_tx_fifo_report_ko.md</div>
+          <div class="path-item">../markdown/module_reports/uart_async_fifo_report_ko.md</div>
+          <div class="path-item">../../evidence/logs/uart_rx_vivado.log / uart_fifo_vivado.log / uart_tx_fifo_vivado.log / uart_async_fifo_vivado.log</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">모듈 요약 카드</h2>
+      <div class="card-grid">
+        
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="eyebrow">Async FIFO (Dedicated RTL)</span>
+                <span class="status-pill status-pass">PASS</span>
+              </div>
+              <h3>1,153 samples observed</h3>
+              <p class="card-copy">Accepted path와 blocked path를 함께 집계해 boundary condition까지 검증한 결과입니다.</p>
+              <dl class="metric-grid">
+                <div><dt>PASS</dt><dd>190</dd></div>
+                <div><dt>FAIL</dt><dd>0</dd></div>
+                <div><dt>WR Acc</dt><dd>96</dd></div>
+                <div><dt>RD Acc</dt><dd>94</dd></div>
+                <div><dt>WR Block</dt><dd>41</dd></div>
+                <div><dt>RD Block</dt><dd>39</dd></div>
+              </dl>
+            </article>
+            
+
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="eyebrow">Async FIFO (Showcase)</span>
+                <span class="status-pill status-pass">PASS</span>
+              </div>
+              <h3>1,153 samples observed</h3>
+              <p class="card-copy">Accepted path와 blocked path를 함께 집계해 boundary condition까지 검증한 결과입니다.</p>
+              <dl class="metric-grid">
+                <div><dt>PASS</dt><dd>190</dd></div>
+                <div><dt>FAIL</dt><dd>0</dd></div>
+                <div><dt>WR Acc</dt><dd>96</dd></div>
+                <div><dt>RD Acc</dt><dd>94</dd></div>
+                <div><dt>WR Block</dt><dd>41</dd></div>
+                <div><dt>RD Block</dt><dd>39</dd></div>
+              </dl>
+            </article>
+            
+
+            <article class="metric-card">
+              <div class="metric-top">
+                <span class="eyebrow">Sync FIFO</span>
+                <span class="status-pill status-pass">PASS</span>
+              </div>
+              <h3>320 samples observed</h3>
+              <p class="card-copy">Accepted path와 blocked path를 함께 집계해 boundary condition까지 검증한 결과입니다.</p>
+              <dl class="metric-grid">
+                <div><dt>PASS</dt><dd>838</dd></div>
+                <div><dt>FAIL</dt><dd>0</dd></div>
+                <div><dt>WR Acc</dt><dd>202</dd></div>
+                <div><dt>RD Acc</dt><dd>198</dd></div>
+                <div><dt>WR Block</dt><dd>35</dd></div>
+                <div><dt>RD Block</dt><dd>40</dd></div>
+              </dl>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">클래스별 역할</h2>
+      <div class="card-grid">
+        
+            <article class="info-card">
+              <p class="eyebrow">Class Architecture</p>
+              <h3>Async FIFO (Dedicated RTL)</h3>
+              <ul class="detail-list"><li>`transaction`: preFull/preEmpty, request, response를 함께 담아 accepted transaction 판정 근거를 보관</li><li>`generator`: fill, mixed, drain, pressure phase bias를 주는 constrained-random stimulus 생성</li><li>`driver`: dual-clock driver clocking block으로 negedge에서 request를 세팅</li><li>`monitor`: pre_cb와 mon_cb를 분리해 acceptance 기준과 post-update 결과를 각각 샘플링</li><li>`scoreboard`: accepted write/read만 reference queue에 반영하고 data/flag 정합성 판정</li><li>`coverage`: scenario, domain, path, flag, cross 항목을 수집</li><li>`environment`: mailbox와 종료 이벤트를 연결하고 전체 실행 수명주기를 제어</li></ul>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Class Architecture</p>
+              <h3>Async FIFO (Showcase)</h3>
+              <ul class="detail-list"><li>`transaction`: preFull/preEmpty, request, response를 함께 담아 accepted transaction 판정 근거를 보관</li><li>`generator`: fill, mixed, drain, pressure phase bias를 주는 constrained-random stimulus 생성</li><li>`driver`: dual-clock driver clocking block으로 negedge에서 request를 세팅</li><li>`monitor`: pre_cb와 mon_cb를 분리해 acceptance 기준과 post-update 결과를 각각 샘플링</li><li>`scoreboard`: accepted write/read만 reference queue에 반영하고 data/flag 정합성 판정</li><li>`coverage`: scenario, domain, path, flag, cross 항목을 수집</li><li>`environment`: mailbox와 종료 이벤트를 연결하고 전체 실행 수명주기를 제어</li></ul>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Class Architecture</p>
+              <h3>Sync FIFO</h3>
+              <ul class="detail-list"><li>`transaction`: request, response, pre-count 기반 판정에 필요한 snapshot을 보관</li><li>`generator`: fill, simul, drain, pressure, balanced phase를 생성</li><li>`driver`: single-clock driver clocking block으로 negedge에 request와 data를 고정</li><li>`monitor`: 다음 negedge #1step 시점에서 cycle 결과를 수집</li><li>`scoreboard`: same-cycle read/write 정책을 반영한 queue model 유지</li><li>`coverage`: scenario, request mix, path, flag, cross 항목을 수집</li><li>`environment`: 컴포넌트 생성, 연결, preset, 종료 제어 담당</li></ul>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section chart-stack">
+      <h2 class="section-title">차트</h2>
+      
+      <article class="chart-card">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Python Visualization</p>
+            <h3>Verification Dashboard</h3>
+          </div>
+          <p class="card-copy">대표 차트 4개를 한 화면에서 볼 수 있는 메인 대시보드입니다.</p>
+        </div>
+        <img src="assets/python_dashboard.png" alt="Verification Dashboard">
+      </article>
+    
+      
+      <article class="chart-card">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Python Visualization</p>
+            <h3>Module Transfer Overview</h3>
+          </div>
+          <p class="card-copy">모듈별 accepted와 blocked count를 비교해 검증 범위를 설명합니다.</p>
+        </div>
+        <img src="assets/python_module_overview.png" alt="Module Transfer Overview">
+      </article>
+    
+      
+      <article class="chart-card">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Python Visualization</p>
+            <h3>Scenario Activity Heatmap</h3>
+          </div>
+          <p class="card-copy">시나리오별 activity 분포를 통해 pressure path와 정상 path가 모두 발생했는지 보여줍니다.</p>
+        </div>
+        <img src="assets/python_scenario_heatmap.png" alt="Scenario Activity Heatmap">
+      </article>
+    
+      
+      <article class="chart-card">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Python Visualization</p>
+            <h3>Reference Model Depth Trend</h3>
+          </div>
+          <p class="card-copy">trace CSV를 기준으로 queue depth의 시계열 변화를 시각화했습니다.</p>
+        </div>
+        <img src="assets/python_trace_timeseries.png" alt="Reference Model Depth Trend">
+      </article>
+    
+      
+      <article class="chart-card">
+        <div class="card-head">
+          <div>
+            <p class="eyebrow">Python Visualization</p>
+            <h3>Depth Histogram</h3>
+          </div>
+          <p class="card-copy">depth 분포를 통해 경계 상태와 중간 상태가 어떻게 나타났는지 확인할 수 있습니다.</p>
+        </div>
+        <img src="assets/python_depth_histogram.png" alt="Depth Histogram">
+      </article>
+    
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">그래프 해석 가이드</h2>
+      <div class="card-grid">
+        
+      <article class="info-card">
+        <p class="eyebrow">Chart Guide</p>
+        <h3>1. Verification Dashboard</h3>
+        <p class="card-copy">
+          4개 핵심 그래프를 한 화면에 모은 요약판입니다. 발표나 포트폴리오 첫 장에서 전체 검증 범위를 빠르게 설명하기 위해 넣었습니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Chart Guide</p>
+        <h3>2. Module Transfer Overview</h3>
+        <p class="card-copy">
+          x축은 모듈, y축은 횟수입니다. WR/RD accepted와 WR/RD blocked를 함께 보여줘 정상 경로뿐 아니라 full/empty 경계 조건까지 실제로 검증했는지 설명하기 위해 선택했습니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Chart Guide</p>
+        <h3>3. Scenario Activity Heatmap</h3>
+        <p class="card-copy">
+          x축은 시나리오, y축은 모듈이며 각 셀의 색과 숫자는 accepted activity 양입니다. 어떤 시나리오가 실제로 활발히 수행되었는지 한눈에 보이게 하려는 의도입니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Chart Guide</p>
+        <h3>4. Reference Model Depth Trend</h3>
+        <p class="card-copy">
+          x축은 sample index, y축은 transaction 이후의 reference model depth입니다. FIFO가 fill, mixed, drain 흐름을 따라 실제로 차고 비는지를 시간 순서로 보여주기 위해 넣었습니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Chart Guide</p>
+        <h3>5. Depth Histogram</h3>
+        <p class="card-copy">
+          x축은 depth 값, y축은 해당 depth가 등장한 빈도입니다. 테스트가 특정 구간에만 몰리지 않고 empty/full 근처 경계 상태까지 얼마나 넓게 밟았는지 설명하기 위한 분포 그래프입니다.
+        </p>
+      </article>
+    
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Coverage 설정 설명 및 근거</h2>
+      <div class="card-grid">
+        
+      <article class="info-card">
+        <p class="eyebrow">Coverage Plan</p>
+        <h3>Scenario Coverage</h3>
+        <p class="card-copy">
+          generator가 설계한 phase-aware 시나리오가 실제로 모두 실행됐는지 보는 항목입니다.
+          단순 랜덤 분포가 아니라 fill, mixed, drain, pressure 구간이 모두 존재해야 한다는 설계 의도를 담고 있습니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Coverage Plan</p>
+        <h3>Path Coverage</h3>
+        <p class="card-copy">
+          `wr_acc`, `rd_acc`와 함께 `wr_block`, `rd_block`를 반드시 남기도록 한 이유는 정상 경로만 아니라
+          full/empty 보호 경로까지 검증 근거로 남기기 위해서입니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Coverage Plan</p>
+        <h3>Flag and Cross Coverage</h3>
+        <p class="card-copy">
+          `full`, `empty`, `normal` 상태와 scenario/request mix/domain을 교차해
+          특정 시나리오가 실제로 어떤 경계 상태를 만들었는지 연결합니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Coverage Plan</p>
+        <h3>Why CSV Again</h3>
+        <p class="card-copy">
+          XSim의 coverage 퍼센트 하나만으로는 의도가 잘 전달되지 않아,
+          scoreboard가 직접 만든 summary/scenario/trace CSV를 Python에서 다시 읽어 coverage 해석 근거를 보강했습니다.
+        </p>
+      </article>
+    
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">시나리오 상세 설명</h2>
+      <div class="card-grid">
+        
+            <article class="info-card">
+              <p class="eyebrow">Scenario Guide</p>
+              <h3>fill_burst</h3>
+              <p class="card-copy"><strong>목적:</strong> queue depth를 빠르게 끌어올려 full 근처 동작과 write blocked path를 의도적으로 만든 시나리오입니다.</p>
+              <p class="card-copy"><strong>커버리지 해석:</strong> WR Acc가 충분히 나오면서 WR Block이 함께 관측되면 fill/full pressure가 실제로 검증된 것입니다.</p>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Scenario Guide</p>
+              <h3>mixed_stress</h3>
+              <p class="card-copy"><strong>목적:</strong> read/write를 섞어 일반 운용 구간에서 ordering과 accepted path를 동시에 검증하는 시나리오입니다.</p>
+              <p class="card-copy"><strong>커버리지 해석:</strong> WR Acc와 RD Acc가 함께 높게 나타나면 scoreboard ordering 검증이 활발히 수행된 것으로 해석합니다.</p>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Scenario Guide</p>
+              <h3>drain_burst</h3>
+              <p class="card-copy"><strong>목적:</strong> queue를 비우는 방향으로 bias를 줘 empty 근처 동작과 read blocked path를 유도하는 시나리오입니다.</p>
+              <p class="card-copy"><strong>커버리지 해석:</strong> RD Acc와 RD Block이 함께 나타나면 drain과 underflow protection이 모두 검증된 것입니다.</p>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Scenario Guide</p>
+              <h3>full_pressure</h3>
+              <p class="card-copy"><strong>목적:</strong> 깊이가 높은 상태에서 write를 지속적으로 인가해 backpressure와 full flag 일관성을 보는 시나리오입니다.</p>
+              <p class="card-copy"><strong>커버리지 해석:</strong> WR Block이 의미 있게 잡히면 DUT가 full 보호를 수행했고 monitor/scoreboard가 이를 포착한 것입니다.</p>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Scenario Guide</p>
+              <h3>empty_pressure</h3>
+              <p class="card-copy"><strong>목적:</strong> 비어 있는 상태에서 read를 반복해 underflow protection과 empty flag 일관성을 확인하는 시나리오입니다.</p>
+              <p class="card-copy"><strong>커버리지 해석:</strong> RD Block이 의미 있게 나타나면 empty 보호 경로가 실제로 수행된 것입니다.</p>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Scenario Guide</p>
+              <h3>simul_stress</h3>
+              <p class="card-copy"><strong>목적:</strong> sync FIFO에서 same-cycle read/write 정책을 강하게 두드리는 시나리오입니다.</p>
+              <p class="card-copy"><strong>커버리지 해석:</strong> WR Acc와 RD Acc가 같은 구간에서 동시에 높으면 동시 처리 정책 검증이 충분히 일어났다고 볼 수 있습니다.</p>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Scenario Guide</p>
+              <h3>flag_pressure</h3>
+              <p class="card-copy"><strong>목적:</strong> sync FIFO의 full/empty 근처를 반복적으로 두드려 flag 경계 조건과 blocked path를 강조하는 시나리오입니다.</p>
+              <p class="card-copy"><strong>커버리지 해석:</strong> WR Block 또는 RD Block이 함께 보이면 boundary pressure가 실제로 먹혔다는 의미입니다.</p>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Scenario Guide</p>
+              <h3>balanced_stream</h3>
+              <p class="card-copy"><strong>목적:</strong> 한쪽으로 치우치지 않은 steady-state traffic에서 sustained throughput과 flag 안정성을 보는 시나리오입니다.</p>
+              <p class="card-copy"><strong>커버리지 해석:</strong> WR Acc와 RD Acc가 균형 있게 유지되면 steady-state stream 검증 근거로 활용할 수 있습니다.</p>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">시나리오별 커버리지 집계</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>모듈</th>
+              <th>시나리오</th>
+              <th>샘플</th>
+              <th>WR Acc</th>
+              <th>RD Acc</th>
+              <th>WR Block</th>
+              <th>RD Block</th>
+              <th>Activity</th>
+              <th>해석 포인트</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Async FIFO (Showcase)</td>
+              <td>fill_burst</td>
+              <td>229</td>
+              <td>23</td>
+              <td>8</td>
+              <td>19</td>
+              <td>1</td>
+              <td>31</td>
+              <td>WR Acc가 충분히 나오면서 WR Block이 함께 관측되면 fill/full pressure가 실제로 검증된 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Showcase)</td>
+              <td>mixed_stress</td>
+              <td>231</td>
+              <td>28</td>
+              <td>29</td>
+              <td>6</td>
+              <td>0</td>
+              <td>57</td>
+              <td>WR Acc와 RD Acc가 함께 높게 나타나면 scoreboard ordering 검증이 활발히 수행된 것으로 해석합니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Showcase)</td>
+              <td>drain_burst</td>
+              <td>231</td>
+              <td>10</td>
+              <td>24</td>
+              <td>0</td>
+              <td>18</td>
+              <td>34</td>
+              <td>RD Acc와 RD Block이 함께 나타나면 drain과 underflow protection이 모두 검증된 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Showcase)</td>
+              <td>full_pressure</td>
+              <td>231</td>
+              <td>26</td>
+              <td>11</td>
+              <td>16</td>
+              <td>0</td>
+              <td>37</td>
+              <td>WR Block이 의미 있게 잡히면 DUT가 full 보호를 수행했고 monitor/scoreboard가 이를 포착한 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Showcase)</td>
+              <td>empty_pressure</td>
+              <td>230</td>
+              <td>9</td>
+              <td>22</td>
+              <td>0</td>
+              <td>20</td>
+              <td>31</td>
+              <td>RD Block이 의미 있게 나타나면 empty 보호 경로가 실제로 수행된 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Dedicated RTL)</td>
+              <td>fill_burst</td>
+              <td>229</td>
+              <td>23</td>
+              <td>8</td>
+              <td>19</td>
+              <td>1</td>
+              <td>31</td>
+              <td>WR Acc가 충분히 나오면서 WR Block이 함께 관측되면 fill/full pressure가 실제로 검증된 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Dedicated RTL)</td>
+              <td>mixed_stress</td>
+              <td>231</td>
+              <td>28</td>
+              <td>29</td>
+              <td>6</td>
+              <td>0</td>
+              <td>57</td>
+              <td>WR Acc와 RD Acc가 함께 높게 나타나면 scoreboard ordering 검증이 활발히 수행된 것으로 해석합니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Dedicated RTL)</td>
+              <td>drain_burst</td>
+              <td>231</td>
+              <td>10</td>
+              <td>24</td>
+              <td>0</td>
+              <td>18</td>
+              <td>34</td>
+              <td>RD Acc와 RD Block이 함께 나타나면 drain과 underflow protection이 모두 검증된 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Dedicated RTL)</td>
+              <td>full_pressure</td>
+              <td>231</td>
+              <td>26</td>
+              <td>11</td>
+              <td>16</td>
+              <td>0</td>
+              <td>37</td>
+              <td>WR Block이 의미 있게 잡히면 DUT가 full 보호를 수행했고 monitor/scoreboard가 이를 포착한 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Async FIFO (Dedicated RTL)</td>
+              <td>empty_pressure</td>
+              <td>230</td>
+              <td>9</td>
+              <td>22</td>
+              <td>0</td>
+              <td>20</td>
+              <td>31</td>
+              <td>RD Block이 의미 있게 나타나면 empty 보호 경로가 실제로 수행된 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Sync FIFO</td>
+              <td>fill_burst</td>
+              <td>64</td>
+              <td>31</td>
+              <td>15</td>
+              <td>33</td>
+              <td>1</td>
+              <td>46</td>
+              <td>WR Acc가 충분히 나오면서 WR Block이 함께 관측되면 fill/full pressure가 실제로 검증된 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Sync FIFO</td>
+              <td>simul_stress</td>
+              <td>64</td>
+              <td>64</td>
+              <td>64</td>
+              <td>0</td>
+              <td>0</td>
+              <td>128</td>
+              <td>WR Acc와 RD Acc가 같은 구간에서 동시에 높으면 동시 처리 정책 검증이 충분히 일어났다고 볼 수 있습니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Sync FIFO</td>
+              <td>drain_burst</td>
+              <td>64</td>
+              <td>19</td>
+              <td>31</td>
+              <td>0</td>
+              <td>33</td>
+              <td>50</td>
+              <td>RD Acc와 RD Block이 함께 나타나면 drain과 underflow protection이 모두 검증된 것입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Sync FIFO</td>
+              <td>flag_pressure</td>
+              <td>64</td>
+              <td>43</td>
+              <td>46</td>
+              <td>2</td>
+              <td>0</td>
+              <td>89</td>
+              <td>WR Block 또는 RD Block이 함께 보이면 boundary pressure가 실제로 먹혔다는 의미입니다.</td>
+            </tr>
+            
+            <tr>
+              <td>Sync FIFO</td>
+              <td>balanced_stream</td>
+              <td>63</td>
+              <td>45</td>
+              <td>42</td>
+              <td>0</td>
+              <td>6</td>
+              <td>87</td>
+              <td>WR Acc와 RD Acc가 균형 있게 유지되면 steady-state stream 검증 근거로 활용할 수 있습니다.</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Assertion과 자동 판정</h2>
+      <div class="card-grid">
+        
+            <article class="info-card">
+              <p class="eyebrow">Assertion</p>
+              <h3>Async FIFO (Dedicated RTL)</h3>
+              <ul class="detail-list"><li>`async_fifo_if.sv`: write/read domain에서 `oFull &amp;&amp; oEmpty` 동시 high 금지</li><li>`async_fifo_if.sv`: reset 이후 `oEmpty=1`, `oFull=0` 기대</li><li>`async_fifo_driver.svh`: `vif`, `transaction` null 여부 immediate assertion</li><li>`async_fifo_scoreboard.svh`: mismatch 시 `$fatal`로 즉시 fail 처리</li></ul>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Assertion</p>
+              <h3>Async FIFO (Showcase)</h3>
+              <ul class="detail-list"><li>`fifo_if.sv`: write/read domain에서 `oFull &amp;&amp; oEmpty` 동시 high 금지</li><li>`fifo_if.sv`: reset 이후 `oEmpty=1`, `oFull=0` 기대</li><li>`fifo_driver.svh`: `vif`, `transaction` null 여부 immediate assertion</li><li>`fifo_scoreboard.svh`: mismatch 시 `$fatal`로 즉시 fail 처리</li></ul>
+            </article>
+            
+            <article class="info-card">
+              <p class="eyebrow">Assertion</p>
+              <h3>Sync FIFO</h3>
+              <ul class="detail-list"><li>`sync_fifo_if.sv`: `oFull &amp;&amp; oEmpty` 동시 high 금지</li><li>`sync_fifo_if.sv`: reset 이후 `oEmpty=1`, `oFull=0` 기대</li><li>`sync_fifo_scoreboard.svh`: data/flag mismatch 시 즉시 fail 처리</li></ul>
+            </article>
+            
+      </div>
+    </section>
+
+    <section class="section card-grid">
+      <article class="info-card">
+        <p class="eyebrow">Timing Note</p>
+        <h3>Clocking Block 기반 샘플링</h3>
+        <p class="card-copy">
+          driver는 `negedge` 기반 clocking block으로 입력을 인가하고, monitor는 `pre_cb`와 `mon_cb`를 분리해
+          acceptance 판정 근거와 post-update 결과를 각각 수집합니다. 수동 지연 대신 clocking block에 타이밍 의도를 담았습니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Coverage Note</p>
+        <h3>숫자보다 관측 범위를 설명</h3>
+        <p class="card-copy">
+          covergroup 항목과 scoreboard summary를 함께 사용해 scenario hit, accepted/blocked path, flag state를 읽을 수 있게 했습니다.
+          포트폴리오에서는 단일 퍼센트보다 어떤 검증 경로가 실제로 관측되었는지가 더 중요합니다.
+        </p>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Portfolio Folder</p>
+        <h3>바로 가져다 쓸 수 있는 패키지</h3>
+        <p class="card-copy">
+          이 HTML, Markdown, 차트 PNG, 통합 CSV는 모두 같은 폴더에 정리해 두었습니다.
+          이후 GitHub 업로드나 발표 자료로 바로 재사용하기 쉽게 구성했습니다.
+        </p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">자료 경로</h2>
+      <div class="path-list">
+        <div class="path-item">reports/html/systemverilog_python_visual_report_ko.html</div>
+        <div class="path-item">reports/markdown/overview/systemverilog_python_visual_report_ko.md</div>
+        <div class="path-item">reports/html/assets</div>
+        <div class="path-item">evidence/csv</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

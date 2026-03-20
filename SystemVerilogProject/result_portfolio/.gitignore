@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+xsim.dir/
+work/
+*.wdb
+*.wcfg
+*.vcd

@@ -1,0 +1,1746 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Mar 19 12:52:57 2026
+# Process ID: 14352
+# Current directory: D:/02_learning_lab/fpga/portfoloio_uvm1
+# Command line: vivado.exe -mode batch -source D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/templates/contexts/simulation/adapters/tcl/sim_run_vivado_nogui.tcl -log D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/fifo/vivado_sim_tb_fifo.log -journal D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/fifo/vivado_sim_tb_fifo.jou -notrace -tclargs D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1 tb_fifo D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/vivado_project D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/manifest/manifest_src_files.lst D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/manifest/manifest_tb_files.lst D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/manifest/manifest_inc_dirs.lst D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/fifo/tb_fifo.sv -testplusarg TESTNAME=all -testplusarg CSV_SUMMARY=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_summary.csv -testplusarg CSV_SCENARIO=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_scenarios.csv -testplusarg CSV_TRACE=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_trace.csv
+# Log file: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/fifo/vivado_sim_tb_fifo.log
+# Journal file: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/tb/fifo/vivado_sim_tb_fifo.jou
+#-----------------------------------------------------------
+source D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/templates/contexts/simulation/adapters/tcl/sim_run_vivado_nogui.tcl -notrace
+[INFO] Loading build config: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/templates/contexts/vivado/domain/project_build_config.tcl
+[INFO] Applying TB scope filter by selected file folder: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/fifo
+[INFO] Creating Vivado project: sim_nogui_tb_fifo
+[INFO] Project directory: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_fifo
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_fifo'
+[INFO] Adding source files: 6
+[INFO] Adding testbench files: 3
+[INFO] Setting include dirs: 1
+[INFO] Setting simulation top: tb_fifo
+[INFO] Setting xsim.more_options: -testplusarg TESTNAME=all -testplusarg CSV_SUMMARY=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_summary.csv -testplusarg CSV_SCENARIO=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_scenarios.csv -testplusarg CSV_TRACE=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_trace.csv
+[INFO] Initial launch runtime set to 0ns (auto replay mode)
+[INFO] Launching simulation in batch mode...
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_fifo/sim_nogui_tb_fifo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_fifo/sim_nogui_tb_fifo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_fifo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/src/fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/fifo/fifo_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/fifo/fifo_tb_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/fifo/tb_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_fifo/sim_nogui_tb_fifo.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_fifo/sim_nogui_tb_fifo.sim/sim_1/behav/xsim'
+"xelab -wto 9659983335764fb9937f5353db9d6425 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_behav xil_defaultlib.tb_fifo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 9659983335764fb9937f5353db9d6425 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_behav xil_defaultlib.tb_fifo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.fifo_tb_pkg
+Compiling package std.std
+Compiling module xil_defaultlib.fifo_if
+Compiling module xil_defaultlib.fifo_default
+Compiling module xil_defaultlib.tb_fifo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_fifo/sim_nogui_tb_fifo.sim/sim_1/behav/xsim/xsim.dir/tb_fifo_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 19 12:53:12 2026...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/vivado_project/project/sim_nogui_tb_fifo/sim_nogui_tb_fifo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fifo_behav -key {Behavioral:sim_1:Functional:tb_fifo} -tclbatch {tb_fifo.tcl} -log {simulate.log} -testplusarg TESTNAME=all -testplusarg CSV_SUMMARY=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_summary.csv -testplusarg CSV_SCENARIO=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_scenarios.csv -testplusarg CSV_TRACE=D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/output/analytics/tb_csv/async_fifo_trace.csv"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_fifo.tcl
+WARNING: Simulation object /tb_fifo/env was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+[TB] Starting async FIFO verification (UVM-inspired custom environment)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fifo_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1103.922 ; gain = 0.000
+[INFO] Auto replay: restart + run all
+INFO: [Simtcl 6-17] Simulation restarted
+[TB] Starting async FIFO verification (UVM-inspired custom environment)
+[DRV] reset released
+[GEN][PHASE] iter=0 scenario=fill_burst
+[MON-WR] t=69000 scenario=fill_burst wr_en=1 wdata=64 full=0 empty=1
+[SCB-WR] PASS t=69000 scenario=fill_burst push=64 depth=1
+[MON-WR] t=77000 scenario=fill_burst wr_en=0 wdata=64 full=0 empty=1
+[MON-RD] t=78000 scenario=fill_burst rd_en=1 rdata=0 full=0 empty=1
+[SCB-RD] BLOCK t=78000 scenario=fill_burst empty_pre=1 depth=1
+[DRV] scenario=fill_burst wr_en=1 rd_en=1 wdata=64 @84000
+[MON-WR] t=85000 scenario=fill_burst wr_en=0 wdata=64 full=0 empty=1
+[MON-RD] t=92000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=1
+[MON-WR] t=93000 scenario=fill_burst wr_en=1 wdata=f1 full=0 empty=1
+[SCB-WR] PASS t=93000 scenario=fill_burst push=f1 depth=2
+[MON-WR] t=101000 scenario=fill_burst wr_en=0 wdata=f1 full=0 empty=1
+[MON-RD] t=106000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=109000 scenario=fill_burst wr_en=0 wdata=f1 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=f1 @112000
+[MON-WR] t=117000 scenario=fill_burst wr_en=0 wdata=f1 full=0 empty=0
+[MON-RD] t=120000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=125000 scenario=fill_burst wr_en=1 wdata=3f full=0 empty=0
+[SCB-WR] PASS t=125000 scenario=fill_burst push=3f depth=3
+[MON-WR] t=133000 scenario=fill_burst wr_en=0 wdata=3f full=0 empty=0
+[MON-RD] t=134000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=3f @140000
+[MON-WR] t=141000 scenario=fill_burst wr_en=0 wdata=3f full=0 empty=0
+[MON-RD] t=148000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=149000 scenario=fill_burst wr_en=1 wdata=c5 full=0 empty=0
+[SCB-WR] PASS t=149000 scenario=fill_burst push=c5 depth=4
+[MON-WR] t=157000 scenario=fill_burst wr_en=0 wdata=c5 full=0 empty=0
+[MON-RD] t=162000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=165000 scenario=fill_burst wr_en=0 wdata=c5 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=c5 @168000
+[MON-WR] t=173000 scenario=fill_burst wr_en=0 wdata=c5 full=0 empty=0
+[MON-RD] t=176000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=181000 scenario=fill_burst wr_en=1 wdata=61 full=0 empty=0
+[SCB-WR] PASS t=181000 scenario=fill_burst push=61 depth=5
+[MON-WR] t=189000 scenario=fill_burst wr_en=0 wdata=61 full=0 empty=0
+[MON-RD] t=190000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=61 @196000
+[MON-WR] t=197000 scenario=fill_burst wr_en=0 wdata=61 full=0 empty=0
+[MON-RD] t=204000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=205000 scenario=fill_burst wr_en=1 wdata=21 full=0 empty=0
+[SCB-WR] PASS t=205000 scenario=fill_burst push=21 depth=6
+[MON-WR] t=213000 scenario=fill_burst wr_en=0 wdata=21 full=0 empty=0
+[MON-RD] t=218000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=221000 scenario=fill_burst wr_en=0 wdata=21 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=21 @224000
+[MON-WR] t=229000 scenario=fill_burst wr_en=0 wdata=21 full=0 empty=0
+[MON-RD] t=232000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=237000 scenario=fill_burst wr_en=1 wdata=b4 full=0 empty=0
+[SCB-WR] PASS t=237000 scenario=fill_burst push=b4 depth=7
+[MON-WR] t=245000 scenario=fill_burst wr_en=0 wdata=b4 full=0 empty=0
+[MON-RD] t=246000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=b4 @252000
+[MON-WR] t=253000 scenario=fill_burst wr_en=0 wdata=b4 full=0 empty=0
+[MON-RD] t=260000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=261000 scenario=fill_burst wr_en=1 wdata=eb full=0 empty=0
+[SCB-WR] PASS t=261000 scenario=fill_burst push=eb depth=8
+[MON-WR] t=269000 scenario=fill_burst wr_en=0 wdata=eb full=0 empty=0
+[MON-RD] t=274000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=277000 scenario=fill_burst wr_en=0 wdata=eb full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=eb @280000
+[MON-WR] t=285000 scenario=fill_burst wr_en=0 wdata=eb full=0 empty=0
+[MON-RD] t=288000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=293000 scenario=fill_burst wr_en=1 wdata=d0 full=0 empty=0
+[SCB-WR] PASS t=293000 scenario=fill_burst push=d0 depth=9
+[MON-WR] t=301000 scenario=fill_burst wr_en=0 wdata=d0 full=0 empty=0
+[MON-RD] t=302000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=d0 @308000
+[MON-WR] t=309000 scenario=fill_burst wr_en=0 wdata=d0 full=0 empty=0
+[MON-RD] t=316000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=317000 scenario=fill_burst wr_en=1 wdata=3d full=0 empty=0
+[SCB-WR] PASS t=317000 scenario=fill_burst push=3d depth=10
+[MON-WR] t=325000 scenario=fill_burst wr_en=0 wdata=3d full=0 empty=0
+[MON-RD] t=330000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=333000 scenario=fill_burst wr_en=0 wdata=3d full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=3d @336000
+[MON-WR] t=341000 scenario=fill_burst wr_en=0 wdata=3d full=0 empty=0
+[MON-RD] t=344000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=349000 scenario=fill_burst wr_en=1 wdata=65 full=0 empty=0
+[SCB-WR] PASS t=349000 scenario=fill_burst push=65 depth=11
+[MON-WR] t=357000 scenario=fill_burst wr_en=0 wdata=65 full=0 empty=0
+[MON-RD] t=358000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=65 @364000
+[MON-WR] t=365000 scenario=fill_burst wr_en=0 wdata=65 full=0 empty=0
+[MON-RD] t=372000 scenario=fill_burst rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=373000 scenario=fill_burst wr_en=1 wdata=c3 full=0 empty=0
+[SCB-WR] PASS t=373000 scenario=fill_burst push=c3 depth=12
+[MON-WR] t=381000 scenario=fill_burst wr_en=0 wdata=c3 full=0 empty=0
+[MON-RD] t=386000 scenario=fill_burst rd_en=1 rdata=64 full=0 empty=0
+[SCB-RD] PASS t=386000 scenario=fill_burst exp=64 got=64 depth_after=11
+[MON-WR] t=389000 scenario=fill_burst wr_en=0 wdata=c3 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=1 wdata=c3 @392000
+[MON-WR] t=397000 scenario=fill_burst wr_en=0 wdata=c3 full=0 empty=0
+[MON-RD] t=400000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[MON-WR] t=405000 scenario=fill_burst wr_en=1 wdata=aa full=0 empty=0
+[SCB-WR] PASS t=405000 scenario=fill_burst push=aa depth=12
+[MON-WR] t=413000 scenario=fill_burst wr_en=0 wdata=aa full=0 empty=0
+[MON-RD] t=414000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=aa @420000
+[MON-WR] t=421000 scenario=fill_burst wr_en=0 wdata=aa full=0 empty=0
+[MON-RD] t=428000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[MON-WR] t=429000 scenario=fill_burst wr_en=1 wdata=e4 full=0 empty=0
+[SCB-WR] PASS t=429000 scenario=fill_burst push=e4 depth=13
+[MON-WR] t=437000 scenario=fill_burst wr_en=0 wdata=e4 full=0 empty=0
+[MON-RD] t=442000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[MON-WR] t=445000 scenario=fill_burst wr_en=0 wdata=e4 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=e4 @448000
+[MON-WR] t=453000 scenario=fill_burst wr_en=0 wdata=e4 full=0 empty=0
+[MON-RD] t=456000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[MON-WR] t=461000 scenario=fill_burst wr_en=1 wdata=6a full=0 empty=0
+[SCB-WR] PASS t=461000 scenario=fill_burst push=6a depth=14
+[MON-WR] t=469000 scenario=fill_burst wr_en=0 wdata=6a full=0 empty=0
+[MON-RD] t=470000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=6a @476000
+[MON-WR] t=477000 scenario=fill_burst wr_en=0 wdata=6a full=0 empty=0
+[MON-RD] t=484000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[MON-WR] t=485000 scenario=fill_burst wr_en=1 wdata=3a full=0 empty=0
+[SCB-WR] PASS t=485000 scenario=fill_burst push=3a depth=15
+[MON-WR] t=493000 scenario=fill_burst wr_en=0 wdata=3a full=0 empty=0
+[MON-RD] t=498000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[MON-WR] t=501000 scenario=fill_burst wr_en=0 wdata=3a full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=3a @504000
+[MON-WR] t=509000 scenario=fill_burst wr_en=0 wdata=3a full=0 empty=0
+[MON-RD] t=512000 scenario=fill_burst rd_en=0 rdata=64 full=0 empty=0
+[MON-WR] t=517000 scenario=fill_burst wr_en=1 wdata=6e full=1 empty=0
+[SCB-WR] PASS t=517000 scenario=fill_burst push=6e depth=16
+[MON-WR] t=525000 scenario=fill_burst wr_en=0 wdata=6e full=1 empty=0
+[MON-RD] t=526000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=6e @532000
+[MON-WR] t=533000 scenario=fill_burst wr_en=0 wdata=6e full=1 empty=0
+[MON-RD] t=540000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=541000 scenario=fill_burst wr_en=1 wdata=58 full=1 empty=0
+[SCB-WR] BLOCK t=541000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=549000 scenario=fill_burst wr_en=0 wdata=58 full=1 empty=0
+[MON-RD] t=554000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=557000 scenario=fill_burst wr_en=0 wdata=58 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=58 @560000
+[MON-WR] t=565000 scenario=fill_burst wr_en=0 wdata=58 full=1 empty=0
+[MON-RD] t=568000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=573000 scenario=fill_burst wr_en=1 wdata=cb full=1 empty=0
+[SCB-WR] BLOCK t=573000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=581000 scenario=fill_burst wr_en=0 wdata=cb full=1 empty=0
+[MON-RD] t=582000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=cb @588000
+[MON-WR] t=589000 scenario=fill_burst wr_en=0 wdata=cb full=1 empty=0
+[MON-RD] t=596000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=597000 scenario=fill_burst wr_en=1 wdata=18 full=1 empty=0
+[SCB-WR] BLOCK t=597000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=605000 scenario=fill_burst wr_en=0 wdata=18 full=1 empty=0
+[MON-RD] t=610000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=613000 scenario=fill_burst wr_en=0 wdata=18 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=18 @616000
+[MON-WR] t=621000 scenario=fill_burst wr_en=0 wdata=18 full=1 empty=0
+[MON-RD] t=624000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=629000 scenario=fill_burst wr_en=1 wdata=fe full=1 empty=0
+[SCB-WR] BLOCK t=629000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=637000 scenario=fill_burst wr_en=0 wdata=fe full=1 empty=0
+[MON-RD] t=638000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=fe @644000
+[MON-WR] t=645000 scenario=fill_burst wr_en=0 wdata=fe full=1 empty=0
+[MON-RD] t=652000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=653000 scenario=fill_burst wr_en=1 wdata=2b full=1 empty=0
+[SCB-WR] BLOCK t=653000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=661000 scenario=fill_burst wr_en=0 wdata=2b full=1 empty=0
+[MON-RD] t=666000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=669000 scenario=fill_burst wr_en=0 wdata=2b full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=2b @672000
+[MON-WR] t=677000 scenario=fill_burst wr_en=0 wdata=2b full=1 empty=0
+[MON-RD] t=680000 scenario=fill_burst rd_en=0 rdata=64 full=1 empty=0
+[MON-WR] t=685000 scenario=fill_burst wr_en=1 wdata=5c full=1 empty=0
+[SCB-WR] BLOCK t=685000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=693000 scenario=fill_burst wr_en=0 wdata=5c full=1 empty=0
+[MON-RD] t=694000 scenario=fill_burst rd_en=1 rdata=f1 full=1 empty=0
+[SCB-RD] PASS t=694000 scenario=fill_burst exp=f1 got=f1 depth_after=15
+[DRV] scenario=fill_burst wr_en=1 rd_en=1 wdata=5c @700000
+[MON-WR] t=701000 scenario=fill_burst wr_en=0 wdata=5c full=1 empty=0
+[MON-RD] t=708000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=709000 scenario=fill_burst wr_en=1 wdata=4e full=1 empty=0
+[SCB-WR] BLOCK t=709000 scenario=fill_burst full_pre=1 depth=15
+[MON-WR] t=717000 scenario=fill_burst wr_en=0 wdata=4e full=0 empty=0
+[MON-RD] t=722000 scenario=fill_burst rd_en=0 rdata=f1 full=0 empty=0
+[MON-WR] t=725000 scenario=fill_burst wr_en=0 wdata=4e full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=4e @728000
+[MON-WR] t=733000 scenario=fill_burst wr_en=0 wdata=4e full=0 empty=0
+[MON-RD] t=736000 scenario=fill_burst rd_en=0 rdata=f1 full=0 empty=0
+[MON-WR] t=741000 scenario=fill_burst wr_en=1 wdata=8e full=1 empty=0
+[SCB-WR] PASS t=741000 scenario=fill_burst push=8e depth=16
+[MON-WR] t=749000 scenario=fill_burst wr_en=0 wdata=8e full=1 empty=0
+[MON-RD] t=750000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=8e @756000
+[MON-WR] t=757000 scenario=fill_burst wr_en=0 wdata=8e full=1 empty=0
+[MON-RD] t=764000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=765000 scenario=fill_burst wr_en=1 wdata=15 full=1 empty=0
+[SCB-WR] BLOCK t=765000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=773000 scenario=fill_burst wr_en=0 wdata=15 full=1 empty=0
+[MON-RD] t=778000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=781000 scenario=fill_burst wr_en=0 wdata=15 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=15 @784000
+[MON-WR] t=789000 scenario=fill_burst wr_en=0 wdata=15 full=1 empty=0
+[MON-RD] t=792000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=797000 scenario=fill_burst wr_en=1 wdata=8 full=1 empty=0
+[SCB-WR] BLOCK t=797000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=805000 scenario=fill_burst wr_en=0 wdata=8 full=1 empty=0
+[MON-RD] t=806000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=8 @812000
+[MON-WR] t=813000 scenario=fill_burst wr_en=0 wdata=8 full=1 empty=0
+[MON-RD] t=820000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=821000 scenario=fill_burst wr_en=1 wdata=35 full=1 empty=0
+[SCB-WR] BLOCK t=821000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=829000 scenario=fill_burst wr_en=0 wdata=35 full=1 empty=0
+[MON-RD] t=834000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=837000 scenario=fill_burst wr_en=0 wdata=35 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=35 @840000
+[MON-WR] t=845000 scenario=fill_burst wr_en=0 wdata=35 full=1 empty=0
+[MON-RD] t=848000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=853000 scenario=fill_burst wr_en=1 wdata=4 full=1 empty=0
+[SCB-WR] BLOCK t=853000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=861000 scenario=fill_burst wr_en=0 wdata=4 full=1 empty=0
+[MON-RD] t=862000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=4 @868000
+[MON-WR] t=869000 scenario=fill_burst wr_en=0 wdata=4 full=1 empty=0
+[MON-RD] t=876000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=877000 scenario=fill_burst wr_en=1 wdata=4b full=1 empty=0
+[SCB-WR] BLOCK t=877000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=885000 scenario=fill_burst wr_en=0 wdata=4b full=1 empty=0
+[MON-RD] t=890000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=893000 scenario=fill_burst wr_en=0 wdata=4b full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=4b @896000
+[MON-WR] t=901000 scenario=fill_burst wr_en=0 wdata=4b full=1 empty=0
+[MON-RD] t=904000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=909000 scenario=fill_burst wr_en=1 wdata=4f full=1 empty=0
+[SCB-WR] BLOCK t=909000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=917000 scenario=fill_burst wr_en=0 wdata=4f full=1 empty=0
+[MON-RD] t=918000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=4f @924000
+[MON-WR] t=925000 scenario=fill_burst wr_en=0 wdata=4f full=1 empty=0
+[MON-RD] t=932000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=933000 scenario=fill_burst wr_en=1 wdata=92 full=1 empty=0
+[SCB-WR] BLOCK t=933000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=941000 scenario=fill_burst wr_en=0 wdata=92 full=1 empty=0
+[MON-RD] t=946000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=949000 scenario=fill_burst wr_en=0 wdata=92 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=92 @952000
+[MON-WR] t=957000 scenario=fill_burst wr_en=0 wdata=92 full=1 empty=0
+[MON-RD] t=960000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=965000 scenario=fill_burst wr_en=1 wdata=12 full=1 empty=0
+[SCB-WR] BLOCK t=965000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=973000 scenario=fill_burst wr_en=0 wdata=12 full=1 empty=0
+[MON-RD] t=974000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=12 @980000
+[MON-WR] t=981000 scenario=fill_burst wr_en=0 wdata=12 full=1 empty=0
+[MON-RD] t=988000 scenario=fill_burst rd_en=0 rdata=f1 full=1 empty=0
+[MON-WR] t=989000 scenario=fill_burst wr_en=1 wdata=34 full=1 empty=0
+[SCB-WR] BLOCK t=989000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=997000 scenario=fill_burst wr_en=0 wdata=34 full=1 empty=0
+[MON-RD] t=1002000 scenario=fill_burst rd_en=1 rdata=3f full=1 empty=0
+[SCB-RD] PASS t=1002000 scenario=fill_burst exp=3f got=3f depth_after=15
+[MON-WR] t=1005000 scenario=fill_burst wr_en=0 wdata=34 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=1 wdata=34 @1008000
+[MON-WR] t=1013000 scenario=fill_burst wr_en=0 wdata=34 full=1 empty=0
+[MON-RD] t=1016000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1021000 scenario=fill_burst wr_en=1 wdata=ab full=0 empty=0
+[SCB-WR] BLOCK t=1021000 scenario=fill_burst full_pre=1 depth=15
+[MON-WR] t=1029000 scenario=fill_burst wr_en=0 wdata=ab full=0 empty=0
+[MON-RD] t=1030000 scenario=fill_burst rd_en=0 rdata=3f full=0 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=ab @1036000
+[MON-WR] t=1037000 scenario=fill_burst wr_en=0 wdata=ab full=0 empty=0
+[MON-RD] t=1044000 scenario=fill_burst rd_en=0 rdata=3f full=0 empty=0
+[MON-WR] t=1045000 scenario=fill_burst wr_en=1 wdata=34 full=1 empty=0
+[SCB-WR] PASS t=1045000 scenario=fill_burst push=34 depth=16
+[MON-WR] t=1053000 scenario=fill_burst wr_en=0 wdata=34 full=1 empty=0
+[MON-RD] t=1058000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1061000 scenario=fill_burst wr_en=0 wdata=34 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=34 @1064000
+[MON-WR] t=1069000 scenario=fill_burst wr_en=0 wdata=34 full=1 empty=0
+[MON-RD] t=1072000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1077000 scenario=fill_burst wr_en=1 wdata=99 full=1 empty=0
+[SCB-WR] BLOCK t=1077000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=1085000 scenario=fill_burst wr_en=0 wdata=99 full=1 empty=0
+[MON-RD] t=1086000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=99 @1092000
+[MON-WR] t=1093000 scenario=fill_burst wr_en=0 wdata=99 full=1 empty=0
+[MON-RD] t=1100000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1101000 scenario=fill_burst wr_en=1 wdata=58 full=1 empty=0
+[SCB-WR] BLOCK t=1101000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=1109000 scenario=fill_burst wr_en=0 wdata=58 full=1 empty=0
+[MON-RD] t=1114000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1117000 scenario=fill_burst wr_en=0 wdata=58 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=58 @1120000
+[MON-WR] t=1125000 scenario=fill_burst wr_en=0 wdata=58 full=1 empty=0
+[MON-RD] t=1128000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1133000 scenario=fill_burst wr_en=1 wdata=f6 full=1 empty=0
+[SCB-WR] BLOCK t=1133000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=1141000 scenario=fill_burst wr_en=0 wdata=f6 full=1 empty=0
+[MON-RD] t=1142000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=f6 @1148000
+[MON-WR] t=1149000 scenario=fill_burst wr_en=0 wdata=f6 full=1 empty=0
+[MON-RD] t=1156000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1157000 scenario=fill_burst wr_en=1 wdata=43 full=1 empty=0
+[SCB-WR] BLOCK t=1157000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=1165000 scenario=fill_burst wr_en=0 wdata=43 full=1 empty=0
+[MON-RD] t=1170000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1173000 scenario=fill_burst wr_en=0 wdata=43 full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=43 @1176000
+[MON-WR] t=1181000 scenario=fill_burst wr_en=0 wdata=43 full=1 empty=0
+[MON-RD] t=1184000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1189000 scenario=fill_burst wr_en=1 wdata=ae full=1 empty=0
+[SCB-WR] BLOCK t=1189000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=1197000 scenario=fill_burst wr_en=0 wdata=ae full=1 empty=0
+[MON-RD] t=1198000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=ae @1204000
+[MON-WR] t=1205000 scenario=fill_burst wr_en=0 wdata=ae full=1 empty=0
+[MON-RD] t=1212000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1213000 scenario=fill_burst wr_en=1 wdata=ac full=1 empty=0
+[SCB-WR] BLOCK t=1213000 scenario=fill_burst full_pre=1 depth=16
+[MON-WR] t=1221000 scenario=fill_burst wr_en=0 wdata=ac full=1 empty=0
+[MON-RD] t=1226000 scenario=fill_burst rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1229000 scenario=fill_burst wr_en=0 wdata=ac full=1 empty=0
+[DRV] scenario=fill_burst wr_en=1 rd_en=0 wdata=ac @1232000
+[GEN][PHASE] iter=42 scenario=mixed_stress
+[MON-WR] t=1237000 scenario=mixed_stress wr_en=0 wdata=ac full=1 empty=0
+[MON-RD] t=1240000 scenario=mixed_stress rd_en=0 rdata=3f full=1 empty=0
+[MON-WR] t=1245000 scenario=mixed_stress wr_en=0 wdata=2e full=1 empty=0
+[MON-WR] t=1253000 scenario=mixed_stress wr_en=0 wdata=2e full=1 empty=0
+[MON-RD] t=1254000 scenario=mixed_stress rd_en=1 rdata=c5 full=1 empty=0
+[SCB-RD] PASS t=1254000 scenario=mixed_stress exp=c5 got=c5 depth_after=15
+[DRV] scenario=mixed_stress wr_en=0 rd_en=1 wdata=2e @1260000
+[MON-WR] t=1261000 scenario=mixed_stress wr_en=0 wdata=2e full=1 empty=0
+[MON-RD] t=1268000 scenario=mixed_stress rd_en=0 rdata=c5 full=1 empty=0
+[MON-WR] t=1269000 scenario=mixed_stress wr_en=1 wdata=a2 full=1 empty=0
+[SCB-WR] BLOCK t=1269000 scenario=mixed_stress full_pre=1 depth=15
+[MON-WR] t=1277000 scenario=mixed_stress wr_en=0 wdata=a2 full=0 empty=0
+[MON-RD] t=1282000 scenario=mixed_stress rd_en=1 rdata=61 full=0 empty=0
+[SCB-RD] PASS t=1282000 scenario=mixed_stress exp=61 got=61 depth_after=14
+[MON-WR] t=1285000 scenario=mixed_stress wr_en=0 wdata=a2 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=a2 @1288000
+[MON-WR] t=1293000 scenario=mixed_stress wr_en=0 wdata=a2 full=0 empty=0
+[MON-RD] t=1296000 scenario=mixed_stress rd_en=0 rdata=61 full=0 empty=0
+[MON-WR] t=1301000 scenario=mixed_stress wr_en=1 wdata=d8 full=0 empty=0
+[SCB-WR] PASS t=1301000 scenario=mixed_stress push=d8 depth=15
+[MON-WR] t=1309000 scenario=mixed_stress wr_en=0 wdata=d8 full=0 empty=0
+[MON-RD] t=1310000 scenario=mixed_stress rd_en=1 rdata=21 full=0 empty=0
+[SCB-RD] PASS t=1310000 scenario=mixed_stress exp=21 got=21 depth_after=14
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=d8 @1316000
+[MON-WR] t=1317000 scenario=mixed_stress wr_en=0 wdata=d8 full=0 empty=0
+[MON-RD] t=1324000 scenario=mixed_stress rd_en=0 rdata=21 full=0 empty=0
+[MON-WR] t=1325000 scenario=mixed_stress wr_en=1 wdata=7e full=1 empty=0
+[SCB-WR] PASS t=1325000 scenario=mixed_stress push=7e depth=15
+[MON-WR] t=1333000 scenario=mixed_stress wr_en=0 wdata=7e full=0 empty=0
+[MON-RD] t=1338000 scenario=mixed_stress rd_en=1 rdata=b4 full=0 empty=0
+[SCB-RD] PASS t=1338000 scenario=mixed_stress exp=b4 got=b4 depth_after=14
+[MON-WR] t=1341000 scenario=mixed_stress wr_en=0 wdata=7e full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=7e @1344000
+[MON-WR] t=1349000 scenario=mixed_stress wr_en=0 wdata=7e full=0 empty=0
+[MON-RD] t=1352000 scenario=mixed_stress rd_en=0 rdata=b4 full=0 empty=0
+[MON-WR] t=1357000 scenario=mixed_stress wr_en=1 wdata=4b full=0 empty=0
+[SCB-WR] PASS t=1357000 scenario=mixed_stress push=4b depth=15
+[MON-WR] t=1365000 scenario=mixed_stress wr_en=0 wdata=4b full=0 empty=0
+[MON-RD] t=1366000 scenario=mixed_stress rd_en=1 rdata=eb full=0 empty=0
+[SCB-RD] PASS t=1366000 scenario=mixed_stress exp=eb got=eb depth_after=14
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=4b @1372000
+[MON-WR] t=1373000 scenario=mixed_stress wr_en=0 wdata=4b full=0 empty=0
+[MON-RD] t=1380000 scenario=mixed_stress rd_en=0 rdata=eb full=0 empty=0
+[MON-WR] t=1381000 scenario=mixed_stress wr_en=1 wdata=df full=1 empty=0
+[SCB-WR] PASS t=1381000 scenario=mixed_stress push=df depth=15
+[MON-WR] t=1389000 scenario=mixed_stress wr_en=0 wdata=df full=0 empty=0
+[MON-RD] t=1394000 scenario=mixed_stress rd_en=0 rdata=eb full=0 empty=0
+[MON-WR] t=1397000 scenario=mixed_stress wr_en=0 wdata=df full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=df @1400000
+[MON-WR] t=1405000 scenario=mixed_stress wr_en=0 wdata=df full=0 empty=0
+[MON-RD] t=1408000 scenario=mixed_stress rd_en=0 rdata=eb full=0 empty=0
+[MON-WR] t=1413000 scenario=mixed_stress wr_en=1 wdata=28 full=1 empty=0
+[SCB-WR] PASS t=1413000 scenario=mixed_stress push=28 depth=16
+[MON-WR] t=1421000 scenario=mixed_stress wr_en=0 wdata=28 full=1 empty=0
+[MON-RD] t=1422000 scenario=mixed_stress rd_en=1 rdata=d0 full=1 empty=0
+[SCB-RD] PASS t=1422000 scenario=mixed_stress exp=d0 got=d0 depth_after=15
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=28 @1428000
+[MON-WR] t=1429000 scenario=mixed_stress wr_en=0 wdata=28 full=1 empty=0
+[MON-RD] t=1436000 scenario=mixed_stress rd_en=0 rdata=d0 full=1 empty=0
+[MON-WR] t=1437000 scenario=mixed_stress wr_en=1 wdata=c7 full=1 empty=0
+[SCB-WR] BLOCK t=1437000 scenario=mixed_stress full_pre=1 depth=15
+[MON-WR] t=1445000 scenario=mixed_stress wr_en=0 wdata=c7 full=0 empty=0
+[MON-RD] t=1450000 scenario=mixed_stress rd_en=1 rdata=3d full=0 empty=0
+[SCB-RD] PASS t=1450000 scenario=mixed_stress exp=3d got=3d depth_after=14
+[MON-WR] t=1453000 scenario=mixed_stress wr_en=0 wdata=c7 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=c7 @1456000
+[MON-WR] t=1461000 scenario=mixed_stress wr_en=0 wdata=c7 full=0 empty=0
+[MON-RD] t=1464000 scenario=mixed_stress rd_en=0 rdata=3d full=0 empty=0
+[MON-WR] t=1469000 scenario=mixed_stress wr_en=1 wdata=16 full=0 empty=0
+[SCB-WR] PASS t=1469000 scenario=mixed_stress push=16 depth=15
+[MON-WR] t=1477000 scenario=mixed_stress wr_en=0 wdata=16 full=0 empty=0
+[MON-RD] t=1478000 scenario=mixed_stress rd_en=1 rdata=65 full=0 empty=0
+[SCB-RD] PASS t=1478000 scenario=mixed_stress exp=65 got=65 depth_after=14
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=16 @1484000
+[MON-WR] t=1485000 scenario=mixed_stress wr_en=0 wdata=16 full=0 empty=0
+[MON-RD] t=1492000 scenario=mixed_stress rd_en=0 rdata=65 full=0 empty=0
+[MON-WR] t=1493000 scenario=mixed_stress wr_en=1 wdata=f full=1 empty=0
+[SCB-WR] PASS t=1493000 scenario=mixed_stress push=f depth=15
+[MON-WR] t=1501000 scenario=mixed_stress wr_en=0 wdata=f full=0 empty=0
+[MON-RD] t=1506000 scenario=mixed_stress rd_en=0 rdata=65 full=0 empty=0
+[MON-WR] t=1509000 scenario=mixed_stress wr_en=0 wdata=f full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=f @1512000
+[MON-WR] t=1517000 scenario=mixed_stress wr_en=0 wdata=f full=0 empty=0
+[MON-RD] t=1520000 scenario=mixed_stress rd_en=0 rdata=65 full=0 empty=0
+[MON-WR] t=1525000 scenario=mixed_stress wr_en=1 wdata=b3 full=1 empty=0
+[SCB-WR] PASS t=1525000 scenario=mixed_stress push=b3 depth=16
+[MON-WR] t=1533000 scenario=mixed_stress wr_en=0 wdata=b3 full=1 empty=0
+[MON-RD] t=1534000 scenario=mixed_stress rd_en=1 rdata=c3 full=1 empty=0
+[SCB-RD] PASS t=1534000 scenario=mixed_stress exp=c3 got=c3 depth_after=15
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=b3 @1540000
+[MON-WR] t=1541000 scenario=mixed_stress wr_en=0 wdata=b3 full=1 empty=0
+[MON-RD] t=1548000 scenario=mixed_stress rd_en=0 rdata=c3 full=1 empty=0
+[MON-WR] t=1549000 scenario=mixed_stress wr_en=1 wdata=16 full=1 empty=0
+[SCB-WR] BLOCK t=1549000 scenario=mixed_stress full_pre=1 depth=15
+[MON-WR] t=1557000 scenario=mixed_stress wr_en=0 wdata=16 full=0 empty=0
+[MON-RD] t=1562000 scenario=mixed_stress rd_en=1 rdata=aa full=0 empty=0
+[SCB-RD] PASS t=1562000 scenario=mixed_stress exp=aa got=aa depth_after=14
+[MON-WR] t=1565000 scenario=mixed_stress wr_en=0 wdata=16 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=16 @1568000
+[MON-WR] t=1573000 scenario=mixed_stress wr_en=0 wdata=16 full=0 empty=0
+[MON-RD] t=1576000 scenario=mixed_stress rd_en=0 rdata=aa full=0 empty=0
+[MON-WR] t=1581000 scenario=mixed_stress wr_en=0 wdata=1c full=0 empty=0
+[MON-WR] t=1589000 scenario=mixed_stress wr_en=0 wdata=1c full=0 empty=0
+[MON-RD] t=1590000 scenario=mixed_stress rd_en=1 rdata=e4 full=0 empty=0
+[SCB-RD] PASS t=1590000 scenario=mixed_stress exp=e4 got=e4 depth_after=13
+[DRV] scenario=mixed_stress wr_en=0 rd_en=1 wdata=1c @1596000
+[MON-WR] t=1597000 scenario=mixed_stress wr_en=0 wdata=1c full=0 empty=0
+[MON-RD] t=1604000 scenario=mixed_stress rd_en=0 rdata=e4 full=0 empty=0
+[MON-WR] t=1605000 scenario=mixed_stress wr_en=1 wdata=d6 full=0 empty=0
+[SCB-WR] PASS t=1605000 scenario=mixed_stress push=d6 depth=14
+[MON-WR] t=1613000 scenario=mixed_stress wr_en=0 wdata=d6 full=0 empty=0
+[MON-RD] t=1618000 scenario=mixed_stress rd_en=1 rdata=6a full=0 empty=0
+[SCB-RD] PASS t=1618000 scenario=mixed_stress exp=6a got=6a depth_after=13
+[MON-WR] t=1621000 scenario=mixed_stress wr_en=0 wdata=d6 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=d6 @1624000
+[MON-WR] t=1629000 scenario=mixed_stress wr_en=0 wdata=d6 full=0 empty=0
+[MON-RD] t=1632000 scenario=mixed_stress rd_en=0 rdata=6a full=0 empty=0
+[MON-WR] t=1637000 scenario=mixed_stress wr_en=1 wdata=5e full=0 empty=0
+[SCB-WR] PASS t=1637000 scenario=mixed_stress push=5e depth=14
+[MON-WR] t=1645000 scenario=mixed_stress wr_en=0 wdata=5e full=0 empty=0
+[MON-RD] t=1646000 scenario=mixed_stress rd_en=1 rdata=3a full=0 empty=0
+[SCB-RD] PASS t=1646000 scenario=mixed_stress exp=3a got=3a depth_after=13
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=5e @1652000
+[MON-WR] t=1653000 scenario=mixed_stress wr_en=0 wdata=5e full=0 empty=0
+[MON-RD] t=1660000 scenario=mixed_stress rd_en=0 rdata=3a full=0 empty=0
+[MON-WR] t=1661000 scenario=mixed_stress wr_en=1 wdata=5c full=0 empty=0
+[SCB-WR] PASS t=1661000 scenario=mixed_stress push=5c depth=14
+[MON-WR] t=1669000 scenario=mixed_stress wr_en=0 wdata=5c full=0 empty=0
+[MON-RD] t=1674000 scenario=mixed_stress rd_en=1 rdata=6e full=0 empty=0
+[SCB-RD] PASS t=1674000 scenario=mixed_stress exp=6e got=6e depth_after=13
+[MON-WR] t=1677000 scenario=mixed_stress wr_en=0 wdata=5c full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=5c @1680000
+[MON-WR] t=1685000 scenario=mixed_stress wr_en=0 wdata=5c full=0 empty=0
+[MON-RD] t=1688000 scenario=mixed_stress rd_en=0 rdata=6e full=0 empty=0
+[MON-WR] t=1693000 scenario=mixed_stress wr_en=1 wdata=da full=0 empty=0
+[SCB-WR] PASS t=1693000 scenario=mixed_stress push=da depth=14
+[MON-WR] t=1701000 scenario=mixed_stress wr_en=0 wdata=da full=0 empty=0
+[MON-RD] t=1702000 scenario=mixed_stress rd_en=1 rdata=8e full=0 empty=0
+[SCB-RD] PASS t=1702000 scenario=mixed_stress exp=8e got=8e depth_after=13
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=da @1708000
+[MON-WR] t=1709000 scenario=mixed_stress wr_en=0 wdata=da full=0 empty=0
+[MON-RD] t=1716000 scenario=mixed_stress rd_en=0 rdata=8e full=0 empty=0
+[MON-WR] t=1717000 scenario=mixed_stress wr_en=1 wdata=94 full=0 empty=0
+[SCB-WR] PASS t=1717000 scenario=mixed_stress push=94 depth=14
+[MON-WR] t=1725000 scenario=mixed_stress wr_en=0 wdata=94 full=0 empty=0
+[MON-RD] t=1730000 scenario=mixed_stress rd_en=0 rdata=8e full=0 empty=0
+[MON-WR] t=1733000 scenario=mixed_stress wr_en=0 wdata=94 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=94 @1736000
+[MON-WR] t=1741000 scenario=mixed_stress wr_en=0 wdata=94 full=0 empty=0
+[MON-RD] t=1744000 scenario=mixed_stress rd_en=0 rdata=8e full=0 empty=0
+[MON-WR] t=1749000 scenario=mixed_stress wr_en=1 wdata=40 full=0 empty=0
+[SCB-WR] PASS t=1749000 scenario=mixed_stress push=40 depth=15
+[MON-WR] t=1757000 scenario=mixed_stress wr_en=0 wdata=40 full=0 empty=0
+[MON-RD] t=1758000 scenario=mixed_stress rd_en=1 rdata=34 full=0 empty=0
+[SCB-RD] PASS t=1758000 scenario=mixed_stress exp=34 got=34 depth_after=14
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=40 @1764000
+[MON-WR] t=1765000 scenario=mixed_stress wr_en=0 wdata=40 full=0 empty=0
+[MON-RD] t=1772000 scenario=mixed_stress rd_en=0 rdata=34 full=0 empty=0
+[MON-WR] t=1773000 scenario=mixed_stress wr_en=1 wdata=ba full=1 empty=0
+[SCB-WR] PASS t=1773000 scenario=mixed_stress push=ba depth=15
+[MON-WR] t=1781000 scenario=mixed_stress wr_en=0 wdata=ba full=0 empty=0
+[MON-RD] t=1786000 scenario=mixed_stress rd_en=1 rdata=d8 full=0 empty=0
+[SCB-RD] PASS t=1786000 scenario=mixed_stress exp=d8 got=d8 depth_after=14
+[MON-WR] t=1789000 scenario=mixed_stress wr_en=0 wdata=ba full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=ba @1792000
+[MON-WR] t=1797000 scenario=mixed_stress wr_en=0 wdata=ba full=0 empty=0
+[MON-RD] t=1800000 scenario=mixed_stress rd_en=0 rdata=d8 full=0 empty=0
+[MON-WR] t=1805000 scenario=mixed_stress wr_en=1 wdata=8a full=0 empty=0
+[SCB-WR] PASS t=1805000 scenario=mixed_stress push=8a depth=15
+[MON-WR] t=1813000 scenario=mixed_stress wr_en=0 wdata=8a full=0 empty=0
+[MON-RD] t=1814000 scenario=mixed_stress rd_en=1 rdata=7e full=0 empty=0
+[SCB-RD] PASS t=1814000 scenario=mixed_stress exp=7e got=7e depth_after=14
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=8a @1820000
+[MON-WR] t=1821000 scenario=mixed_stress wr_en=0 wdata=8a full=0 empty=0
+[MON-RD] t=1828000 scenario=mixed_stress rd_en=0 rdata=7e full=0 empty=0
+[MON-WR] t=1829000 scenario=mixed_stress wr_en=1 wdata=c3 full=1 empty=0
+[SCB-WR] PASS t=1829000 scenario=mixed_stress push=c3 depth=15
+[MON-WR] t=1837000 scenario=mixed_stress wr_en=0 wdata=c3 full=0 empty=0
+[MON-RD] t=1842000 scenario=mixed_stress rd_en=1 rdata=4b full=0 empty=0
+[SCB-RD] PASS t=1842000 scenario=mixed_stress exp=4b got=4b depth_after=14
+[MON-WR] t=1845000 scenario=mixed_stress wr_en=0 wdata=c3 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=c3 @1848000
+[MON-WR] t=1853000 scenario=mixed_stress wr_en=0 wdata=c3 full=0 empty=0
+[MON-RD] t=1856000 scenario=mixed_stress rd_en=0 rdata=4b full=0 empty=0
+[MON-WR] t=1861000 scenario=mixed_stress wr_en=1 wdata=ea full=0 empty=0
+[SCB-WR] PASS t=1861000 scenario=mixed_stress push=ea depth=15
+[MON-WR] t=1869000 scenario=mixed_stress wr_en=0 wdata=ea full=0 empty=0
+[MON-RD] t=1870000 scenario=mixed_stress rd_en=1 rdata=df full=0 empty=0
+[SCB-RD] PASS t=1870000 scenario=mixed_stress exp=df got=df depth_after=14
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=ea @1876000
+[MON-WR] t=1877000 scenario=mixed_stress wr_en=0 wdata=ea full=0 empty=0
+[MON-RD] t=1884000 scenario=mixed_stress rd_en=0 rdata=df full=0 empty=0
+[MON-WR] t=1885000 scenario=mixed_stress wr_en=1 wdata=63 full=1 empty=0
+[SCB-WR] PASS t=1885000 scenario=mixed_stress push=63 depth=15
+[MON-WR] t=1893000 scenario=mixed_stress wr_en=0 wdata=63 full=0 empty=0
+[MON-RD] t=1898000 scenario=mixed_stress rd_en=0 rdata=df full=0 empty=0
+[MON-WR] t=1901000 scenario=mixed_stress wr_en=0 wdata=63 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=63 @1904000
+[MON-WR] t=1909000 scenario=mixed_stress wr_en=0 wdata=63 full=0 empty=0
+[MON-RD] t=1912000 scenario=mixed_stress rd_en=0 rdata=df full=0 empty=0
+[MON-WR] t=1917000 scenario=mixed_stress wr_en=1 wdata=dc full=1 empty=0
+[SCB-WR] PASS t=1917000 scenario=mixed_stress push=dc depth=16
+[MON-WR] t=1925000 scenario=mixed_stress wr_en=0 wdata=dc full=1 empty=0
+[MON-RD] t=1926000 scenario=mixed_stress rd_en=1 rdata=28 full=1 empty=0
+[SCB-RD] PASS t=1926000 scenario=mixed_stress exp=28 got=28 depth_after=15
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=dc @1932000
+[MON-WR] t=1933000 scenario=mixed_stress wr_en=0 wdata=dc full=1 empty=0
+[MON-RD] t=1940000 scenario=mixed_stress rd_en=0 rdata=28 full=1 empty=0
+[MON-WR] t=1941000 scenario=mixed_stress wr_en=1 wdata=31 full=1 empty=0
+[SCB-WR] BLOCK t=1941000 scenario=mixed_stress full_pre=1 depth=15
+[MON-WR] t=1949000 scenario=mixed_stress wr_en=0 wdata=31 full=0 empty=0
+[MON-RD] t=1954000 scenario=mixed_stress rd_en=1 rdata=16 full=0 empty=0
+[SCB-RD] PASS t=1954000 scenario=mixed_stress exp=16 got=16 depth_after=14
+[MON-WR] t=1957000 scenario=mixed_stress wr_en=0 wdata=31 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=31 @1960000
+[MON-WR] t=1965000 scenario=mixed_stress wr_en=0 wdata=31 full=0 empty=0
+[MON-RD] t=1968000 scenario=mixed_stress rd_en=0 rdata=16 full=0 empty=0
+[MON-WR] t=1973000 scenario=mixed_stress wr_en=1 wdata=8e full=0 empty=0
+[SCB-WR] PASS t=1973000 scenario=mixed_stress push=8e depth=15
+[MON-WR] t=1981000 scenario=mixed_stress wr_en=0 wdata=8e full=0 empty=0
+[MON-RD] t=1982000 scenario=mixed_stress rd_en=1 rdata=f full=0 empty=0
+[SCB-RD] PASS t=1982000 scenario=mixed_stress exp=f got=f depth_after=14
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=8e @1988000
+[MON-WR] t=1989000 scenario=mixed_stress wr_en=0 wdata=8e full=0 empty=0
+[MON-RD] t=1996000 scenario=mixed_stress rd_en=0 rdata=f full=0 empty=0
+[MON-WR] t=1997000 scenario=mixed_stress wr_en=1 wdata=1 full=1 empty=0
+[SCB-WR] PASS t=1997000 scenario=mixed_stress push=1 depth=15
+[MON-WR] t=2005000 scenario=mixed_stress wr_en=0 wdata=1 full=0 empty=0
+[MON-RD] t=2010000 scenario=mixed_stress rd_en=0 rdata=f full=0 empty=0
+[MON-WR] t=2013000 scenario=mixed_stress wr_en=0 wdata=1 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=1 @2016000
+[MON-WR] t=2021000 scenario=mixed_stress wr_en=0 wdata=1 full=0 empty=0
+[MON-RD] t=2024000 scenario=mixed_stress rd_en=0 rdata=f full=0 empty=0
+[MON-WR] t=2029000 scenario=mixed_stress wr_en=1 wdata=e7 full=1 empty=0
+[SCB-WR] PASS t=2029000 scenario=mixed_stress push=e7 depth=16
+[MON-WR] t=2037000 scenario=mixed_stress wr_en=0 wdata=e7 full=1 empty=0
+[MON-RD] t=2038000 scenario=mixed_stress rd_en=1 rdata=b3 full=1 empty=0
+[SCB-RD] PASS t=2038000 scenario=mixed_stress exp=b3 got=b3 depth_after=15
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=e7 @2044000
+[MON-WR] t=2045000 scenario=mixed_stress wr_en=0 wdata=e7 full=1 empty=0
+[MON-RD] t=2052000 scenario=mixed_stress rd_en=0 rdata=b3 full=1 empty=0
+[MON-WR] t=2053000 scenario=mixed_stress wr_en=1 wdata=ba full=1 empty=0
+[SCB-WR] BLOCK t=2053000 scenario=mixed_stress full_pre=1 depth=15
+[MON-WR] t=2061000 scenario=mixed_stress wr_en=0 wdata=ba full=0 empty=0
+[MON-RD] t=2066000 scenario=mixed_stress rd_en=0 rdata=b3 full=0 empty=0
+[MON-WR] t=2069000 scenario=mixed_stress wr_en=0 wdata=ba full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=ba @2072000
+[MON-WR] t=2077000 scenario=mixed_stress wr_en=0 wdata=ba full=0 empty=0
+[MON-RD] t=2080000 scenario=mixed_stress rd_en=0 rdata=b3 full=0 empty=0
+[MON-WR] t=2085000 scenario=mixed_stress wr_en=1 wdata=71 full=1 empty=0
+[SCB-WR] PASS t=2085000 scenario=mixed_stress push=71 depth=16
+[MON-WR] t=2093000 scenario=mixed_stress wr_en=0 wdata=71 full=1 empty=0
+[MON-RD] t=2094000 scenario=mixed_stress rd_en=1 rdata=d6 full=1 empty=0
+[SCB-RD] PASS t=2094000 scenario=mixed_stress exp=d6 got=d6 depth_after=15
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=71 @2100000
+[MON-WR] t=2101000 scenario=mixed_stress wr_en=0 wdata=71 full=1 empty=0
+[MON-RD] t=2108000 scenario=mixed_stress rd_en=0 rdata=d6 full=1 empty=0
+[MON-WR] t=2109000 scenario=mixed_stress wr_en=0 wdata=53 full=1 empty=0
+[MON-WR] t=2117000 scenario=mixed_stress wr_en=0 wdata=53 full=0 empty=0
+[MON-RD] t=2122000 scenario=mixed_stress rd_en=1 rdata=5e full=0 empty=0
+[SCB-RD] PASS t=2122000 scenario=mixed_stress exp=5e got=5e depth_after=14
+[MON-WR] t=2125000 scenario=mixed_stress wr_en=0 wdata=53 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=0 rd_en=1 wdata=53 @2128000
+[MON-WR] t=2133000 scenario=mixed_stress wr_en=0 wdata=53 full=0 empty=0
+[MON-RD] t=2136000 scenario=mixed_stress rd_en=0 rdata=5e full=0 empty=0
+[MON-WR] t=2141000 scenario=mixed_stress wr_en=1 wdata=21 full=0 empty=0
+[SCB-WR] PASS t=2141000 scenario=mixed_stress push=21 depth=15
+[MON-WR] t=2149000 scenario=mixed_stress wr_en=0 wdata=21 full=0 empty=0
+[MON-RD] t=2150000 scenario=mixed_stress rd_en=0 rdata=5e full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=21 @2156000
+[MON-WR] t=2157000 scenario=mixed_stress wr_en=0 wdata=21 full=0 empty=0
+[MON-RD] t=2164000 scenario=mixed_stress rd_en=0 rdata=5e full=0 empty=0
+[MON-WR] t=2165000 scenario=mixed_stress wr_en=1 wdata=5a full=1 empty=0
+[SCB-WR] PASS t=2165000 scenario=mixed_stress push=5a depth=16
+[MON-WR] t=2173000 scenario=mixed_stress wr_en=0 wdata=5a full=1 empty=0
+[MON-RD] t=2178000 scenario=mixed_stress rd_en=0 rdata=5e full=1 empty=0
+[MON-WR] t=2181000 scenario=mixed_stress wr_en=0 wdata=5a full=1 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=5a @2184000
+[MON-WR] t=2189000 scenario=mixed_stress wr_en=0 wdata=5a full=1 empty=0
+[MON-RD] t=2192000 scenario=mixed_stress rd_en=0 rdata=5e full=1 empty=0
+[MON-WR] t=2197000 scenario=mixed_stress wr_en=1 wdata=ad full=1 empty=0
+[SCB-WR] BLOCK t=2197000 scenario=mixed_stress full_pre=1 depth=16
+[MON-WR] t=2205000 scenario=mixed_stress wr_en=0 wdata=ad full=1 empty=0
+[MON-RD] t=2206000 scenario=mixed_stress rd_en=1 rdata=5c full=1 empty=0
+[SCB-RD] PASS t=2206000 scenario=mixed_stress exp=5c got=5c depth_after=15
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=ad @2212000
+[MON-WR] t=2213000 scenario=mixed_stress wr_en=0 wdata=ad full=1 empty=0
+[MON-RD] t=2220000 scenario=mixed_stress rd_en=0 rdata=5c full=1 empty=0
+[MON-WR] t=2221000 scenario=mixed_stress wr_en=1 wdata=ed full=1 empty=0
+[SCB-WR] BLOCK t=2221000 scenario=mixed_stress full_pre=1 depth=15
+[MON-WR] t=2229000 scenario=mixed_stress wr_en=0 wdata=ed full=0 empty=0
+[MON-RD] t=2234000 scenario=mixed_stress rd_en=1 rdata=da full=0 empty=0
+[SCB-RD] PASS t=2234000 scenario=mixed_stress exp=da got=da depth_after=14
+[MON-WR] t=2237000 scenario=mixed_stress wr_en=0 wdata=ed full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=ed @2240000
+[MON-WR] t=2245000 scenario=mixed_stress wr_en=0 wdata=ed full=0 empty=0
+[MON-RD] t=2248000 scenario=mixed_stress rd_en=0 rdata=da full=0 empty=0
+[MON-WR] t=2253000 scenario=mixed_stress wr_en=1 wdata=b2 full=0 empty=0
+[SCB-WR] PASS t=2253000 scenario=mixed_stress push=b2 depth=15
+[MON-WR] t=2261000 scenario=mixed_stress wr_en=0 wdata=b2 full=0 empty=0
+[MON-RD] t=2262000 scenario=mixed_stress rd_en=1 rdata=94 full=0 empty=0
+[SCB-RD] PASS t=2262000 scenario=mixed_stress exp=94 got=94 depth_after=14
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=b2 @2268000
+[MON-WR] t=2269000 scenario=mixed_stress wr_en=0 wdata=b2 full=0 empty=0
+[MON-RD] t=2276000 scenario=mixed_stress rd_en=0 rdata=94 full=0 empty=0
+[MON-WR] t=2277000 scenario=mixed_stress wr_en=1 wdata=df full=1 empty=0
+[SCB-WR] PASS t=2277000 scenario=mixed_stress push=df depth=15
+[MON-WR] t=2285000 scenario=mixed_stress wr_en=0 wdata=df full=0 empty=0
+[MON-RD] t=2290000 scenario=mixed_stress rd_en=0 rdata=94 full=0 empty=0
+[MON-WR] t=2293000 scenario=mixed_stress wr_en=0 wdata=df full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=0 wdata=df @2296000
+[MON-WR] t=2301000 scenario=mixed_stress wr_en=0 wdata=df full=0 empty=0
+[MON-RD] t=2304000 scenario=mixed_stress rd_en=0 rdata=94 full=0 empty=0
+[MON-WR] t=2309000 scenario=mixed_stress wr_en=1 wdata=c1 full=1 empty=0
+[SCB-WR] PASS t=2309000 scenario=mixed_stress push=c1 depth=16
+[MON-WR] t=2317000 scenario=mixed_stress wr_en=0 wdata=c1 full=1 empty=0
+[MON-RD] t=2318000 scenario=mixed_stress rd_en=1 rdata=40 full=1 empty=0
+[SCB-RD] PASS t=2318000 scenario=mixed_stress exp=40 got=40 depth_after=15
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=c1 @2324000
+[MON-WR] t=2325000 scenario=mixed_stress wr_en=0 wdata=c1 full=1 empty=0
+[MON-RD] t=2332000 scenario=mixed_stress rd_en=0 rdata=40 full=1 empty=0
+[MON-WR] t=2333000 scenario=mixed_stress wr_en=0 wdata=8 full=1 empty=0
+[MON-WR] t=2341000 scenario=mixed_stress wr_en=0 wdata=8 full=0 empty=0
+[MON-RD] t=2346000 scenario=mixed_stress rd_en=0 rdata=40 full=0 empty=0
+[MON-WR] t=2349000 scenario=mixed_stress wr_en=0 wdata=8 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=0 rd_en=0 wdata=8 @2352000
+[MON-WR] t=2357000 scenario=mixed_stress wr_en=0 wdata=8 full=0 empty=0
+[MON-RD] t=2360000 scenario=mixed_stress rd_en=0 rdata=40 full=0 empty=0
+[MON-WR] t=2365000 scenario=mixed_stress wr_en=1 wdata=5c full=1 empty=0
+[SCB-WR] PASS t=2365000 scenario=mixed_stress push=5c depth=16
+[MON-WR] t=2373000 scenario=mixed_stress wr_en=0 wdata=5c full=1 empty=0
+[MON-RD] t=2374000 scenario=mixed_stress rd_en=1 rdata=ba full=1 empty=0
+[SCB-RD] PASS t=2374000 scenario=mixed_stress exp=ba got=ba depth_after=15
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=5c @2380000
+[MON-WR] t=2381000 scenario=mixed_stress wr_en=0 wdata=5c full=1 empty=0
+[MON-RD] t=2388000 scenario=mixed_stress rd_en=0 rdata=ba full=1 empty=0
+[MON-WR] t=2389000 scenario=mixed_stress wr_en=1 wdata=32 full=1 empty=0
+[SCB-WR] BLOCK t=2389000 scenario=mixed_stress full_pre=1 depth=15
+[MON-WR] t=2397000 scenario=mixed_stress wr_en=0 wdata=32 full=0 empty=0
+[MON-RD] t=2402000 scenario=mixed_stress rd_en=1 rdata=8a full=0 empty=0
+[SCB-RD] PASS t=2402000 scenario=mixed_stress exp=8a got=8a depth_after=14
+[MON-WR] t=2405000 scenario=mixed_stress wr_en=0 wdata=32 full=0 empty=0
+[DRV] scenario=mixed_stress wr_en=1 rd_en=1 wdata=32 @2408000
+[GEN][PHASE] iter=84 scenario=drain_burst
+[MON-WR] t=2413000 scenario=drain_burst wr_en=0 wdata=32 full=0 empty=0
+[MON-RD] t=2416000 scenario=drain_burst rd_en=0 rdata=8a full=0 empty=0
+[MON-WR] t=2421000 scenario=drain_burst wr_en=0 wdata=c5 full=0 empty=0
+[MON-WR] t=2429000 scenario=drain_burst wr_en=0 wdata=c5 full=0 empty=0
+[MON-RD] t=2430000 scenario=drain_burst rd_en=1 rdata=c3 full=0 empty=0
+[SCB-RD] PASS t=2430000 scenario=drain_burst exp=c3 got=c3 depth_after=13
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=c5 @2436000
+[MON-WR] t=2437000 scenario=drain_burst wr_en=0 wdata=c5 full=0 empty=0
+[MON-RD] t=2444000 scenario=drain_burst rd_en=0 rdata=c3 full=0 empty=0
+[MON-WR] t=2445000 scenario=drain_burst wr_en=0 wdata=b9 full=0 empty=0
+[MON-WR] t=2453000 scenario=drain_burst wr_en=0 wdata=b9 full=0 empty=0
+[MON-RD] t=2458000 scenario=drain_burst rd_en=1 rdata=ea full=0 empty=0
+[SCB-RD] PASS t=2458000 scenario=drain_burst exp=ea got=ea depth_after=12
+[MON-WR] t=2461000 scenario=drain_burst wr_en=0 wdata=b9 full=0 empty=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=b9 @2464000
+[MON-WR] t=2469000 scenario=drain_burst wr_en=0 wdata=b9 full=0 empty=0
+[MON-RD] t=2472000 scenario=drain_burst rd_en=0 rdata=ea full=0 empty=0
+[MON-WR] t=2477000 scenario=drain_burst wr_en=0 wdata=6a full=0 empty=0
+[MON-WR] t=2485000 scenario=drain_burst wr_en=0 wdata=6a full=0 empty=0
+[MON-RD] t=2486000 scenario=drain_burst rd_en=1 rdata=63 full=0 empty=0
+[SCB-RD] PASS t=2486000 scenario=drain_burst exp=63 got=63 depth_after=11
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=6a @2492000
+[MON-WR] t=2493000 scenario=drain_burst wr_en=0 wdata=6a full=0 empty=0
+[MON-RD] t=2500000 scenario=drain_burst rd_en=0 rdata=63 full=0 empty=0
+[MON-WR] t=2501000 scenario=drain_burst wr_en=0 wdata=4f full=0 empty=0
+[MON-WR] t=2509000 scenario=drain_burst wr_en=0 wdata=4f full=0 empty=0
+[MON-RD] t=2514000 scenario=drain_burst rd_en=1 rdata=dc full=0 empty=0
+[SCB-RD] PASS t=2514000 scenario=drain_burst exp=dc got=dc depth_after=10
+[MON-WR] t=2517000 scenario=drain_burst wr_en=0 wdata=4f full=0 empty=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=4f @2520000
+[MON-WR] t=2525000 scenario=drain_burst wr_en=0 wdata=4f full=0 empty=0
+[MON-RD] t=2528000 scenario=drain_burst rd_en=0 rdata=dc full=0 empty=0
+[MON-WR] t=2533000 scenario=drain_burst wr_en=1 wdata=24 full=0 empty=0
+[SCB-WR] PASS t=2533000 scenario=drain_burst push=24 depth=11
+[MON-WR] t=2541000 scenario=drain_burst wr_en=0 wdata=24 full=0 empty=0
+[MON-RD] t=2542000 scenario=drain_burst rd_en=1 rdata=8e full=0 empty=0
+[SCB-RD] PASS t=2542000 scenario=drain_burst exp=8e got=8e depth_after=10
+[DRV] scenario=drain_burst wr_en=1 rd_en=1 wdata=24 @2548000
+[MON-WR] t=2549000 scenario=drain_burst wr_en=0 wdata=24 full=0 empty=0
+[MON-RD] t=2556000 scenario=drain_burst rd_en=0 rdata=8e full=0 empty=0
+[MON-WR] t=2557000 scenario=drain_burst wr_en=0 wdata=c3 full=0 empty=0
+[MON-WR] t=2565000 scenario=drain_burst wr_en=0 wdata=c3 full=0 empty=0
+[MON-RD] t=2570000 scenario=drain_burst rd_en=1 rdata=1 full=0 empty=0
+[SCB-RD] PASS t=2570000 scenario=drain_burst exp=1 got=1 depth_after=9
+[MON-WR] t=2573000 scenario=drain_burst wr_en=0 wdata=c3 full=0 empty=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=c3 @2576000
+[MON-WR] t=2581000 scenario=drain_burst wr_en=0 wdata=c3 full=0 empty=0
+[MON-RD] t=2584000 scenario=drain_burst rd_en=0 rdata=1 full=0 empty=0
+[MON-WR] t=2589000 scenario=drain_burst wr_en=0 wdata=4 full=0 empty=0
+[MON-WR] t=2597000 scenario=drain_burst wr_en=0 wdata=4 full=0 empty=0
+[MON-RD] t=2598000 scenario=drain_burst rd_en=1 rdata=e7 full=0 empty=0
+[SCB-RD] PASS t=2598000 scenario=drain_burst exp=e7 got=e7 depth_after=8
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=4 @2604000
+[MON-WR] t=2605000 scenario=drain_burst wr_en=0 wdata=4 full=0 empty=0
+[MON-RD] t=2612000 scenario=drain_burst rd_en=0 rdata=e7 full=0 empty=0
+[MON-WR] t=2613000 scenario=drain_burst wr_en=1 wdata=23 full=0 empty=0
+[SCB-WR] PASS t=2613000 scenario=drain_burst push=23 depth=9
+[MON-WR] t=2621000 scenario=drain_burst wr_en=0 wdata=23 full=0 empty=0
+[MON-RD] t=2626000 scenario=drain_burst rd_en=1 rdata=71 full=0 empty=0
+[SCB-RD] PASS t=2626000 scenario=drain_burst exp=71 got=71 depth_after=8
+[MON-WR] t=2629000 scenario=drain_burst wr_en=0 wdata=23 full=0 empty=0
+[DRV] scenario=drain_burst wr_en=1 rd_en=1 wdata=23 @2632000
+[MON-WR] t=2637000 scenario=drain_burst wr_en=0 wdata=23 full=0 empty=0
+[MON-RD] t=2640000 scenario=drain_burst rd_en=0 rdata=71 full=0 empty=0
+[MON-WR] t=2645000 scenario=drain_burst wr_en=0 wdata=5c full=0 empty=0
+[MON-WR] t=2653000 scenario=drain_burst wr_en=0 wdata=5c full=0 empty=0
+[MON-RD] t=2654000 scenario=drain_burst rd_en=1 rdata=21 full=0 empty=0
+[SCB-RD] PASS t=2654000 scenario=drain_burst exp=21 got=21 depth_after=7
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=5c @2660000
+[MON-WR] t=2661000 scenario=drain_burst wr_en=0 wdata=5c full=0 empty=0
+[MON-RD] t=2668000 scenario=drain_burst rd_en=0 rdata=21 full=0 empty=0
+[MON-WR] t=2669000 scenario=drain_burst wr_en=1 wdata=a1 full=0 empty=0
+[SCB-WR] PASS t=2669000 scenario=drain_burst push=a1 depth=8
+[MON-WR] t=2677000 scenario=drain_burst wr_en=0 wdata=a1 full=0 empty=0
+[MON-RD] t=2682000 scenario=drain_burst rd_en=1 rdata=5a full=0 empty=0
+[SCB-RD] PASS t=2682000 scenario=drain_burst exp=5a got=5a depth_after=7
+[MON-WR] t=2685000 scenario=drain_burst wr_en=0 wdata=a1 full=0 empty=0
+[DRV] scenario=drain_burst wr_en=1 rd_en=1 wdata=a1 @2688000
+[MON-WR] t=2693000 scenario=drain_burst wr_en=0 wdata=a1 full=0 empty=0
+[MON-RD] t=2696000 scenario=drain_burst rd_en=0 rdata=5a full=0 empty=0
+[MON-WR] t=2701000 scenario=drain_burst wr_en=0 wdata=42 full=0 empty=0
+[MON-WR] t=2709000 scenario=drain_burst wr_en=0 wdata=42 full=0 empty=0
+[MON-RD] t=2710000 scenario=drain_burst rd_en=1 rdata=b2 full=0 empty=0
+[SCB-RD] PASS t=2710000 scenario=drain_burst exp=b2 got=b2 depth_after=6
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=42 @2716000
+[MON-WR] t=2717000 scenario=drain_burst wr_en=0 wdata=42 full=0 empty=0
+[MON-RD] t=2724000 scenario=drain_burst rd_en=0 rdata=b2 full=0 empty=0
+[MON-WR] t=2725000 scenario=drain_burst wr_en=1 wdata=5 full=0 empty=0
+[SCB-WR] PASS t=2725000 scenario=drain_burst push=5 depth=7
+[MON-WR] t=2733000 scenario=drain_burst wr_en=0 wdata=5 full=0 empty=0
+[MON-RD] t=2738000 scenario=drain_burst rd_en=1 rdata=df full=0 empty=0
+[SCB-RD] PASS t=2738000 scenario=drain_burst exp=df got=df depth_after=6
+[MON-WR] t=2741000 scenario=drain_burst wr_en=0 wdata=5 full=0 empty=0
+[DRV] scenario=drain_burst wr_en=1 rd_en=1 wdata=5 @2744000
+[MON-WR] t=2749000 scenario=drain_burst wr_en=0 wdata=5 full=0 empty=0
+[MON-RD] t=2752000 scenario=drain_burst rd_en=0 rdata=df full=0 empty=0
+[MON-WR] t=2757000 scenario=drain_burst wr_en=0 wdata=5e full=0 empty=0
+[MON-WR] t=2765000 scenario=drain_burst wr_en=0 wdata=5e full=0 empty=0
+[MON-RD] t=2766000 scenario=drain_burst rd_en=1 rdata=c1 full=0 empty=0
+[SCB-RD] PASS t=2766000 scenario=drain_burst exp=c1 got=c1 depth_after=5
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=5e @2772000
+[MON-WR] t=2773000 scenario=drain_burst wr_en=0 wdata=5e full=0 empty=0
+[MON-RD] t=2780000 scenario=drain_burst rd_en=0 rdata=c1 full=0 empty=0
+[MON-WR] t=2781000 scenario=drain_burst wr_en=0 wdata=ac full=0 empty=0
+[MON-WR] t=2789000 scenario=drain_burst wr_en=0 wdata=ac full=0 empty=0
+[MON-RD] t=2794000 scenario=drain_burst rd_en=1 rdata=5c full=0 empty=0
+[SCB-RD] PASS t=2794000 scenario=drain_burst exp=5c got=5c depth_after=4
+[MON-WR] t=2797000 scenario=drain_burst wr_en=0 wdata=ac full=0 empty=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=ac @2800000
+[MON-WR] t=2805000 scenario=drain_burst wr_en=0 wdata=ac full=0 empty=0
+[MON-RD] t=2808000 scenario=drain_burst rd_en=0 rdata=5c full=0 empty=0
+[MON-WR] t=2813000 scenario=drain_burst wr_en=0 wdata=b1 full=0 empty=0
+[MON-WR] t=2821000 scenario=drain_burst wr_en=0 wdata=b1 full=0 empty=0
+[MON-RD] t=2822000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=0
+[SCB-RD] PASS t=2822000 scenario=drain_burst exp=24 got=24 depth_after=3
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=b1 @2828000
+[MON-WR] t=2829000 scenario=drain_burst wr_en=0 wdata=b1 full=0 empty=0
+[MON-RD] t=2836000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=0
+[MON-WR] t=2837000 scenario=drain_burst wr_en=1 wdata=f0 full=0 empty=0
+[SCB-WR] PASS t=2837000 scenario=drain_burst push=f0 depth=4
+[MON-WR] t=2845000 scenario=drain_burst wr_en=0 wdata=f0 full=0 empty=0
+[MON-RD] t=2850000 scenario=drain_burst rd_en=1 rdata=23 full=0 empty=0
+[SCB-RD] PASS t=2850000 scenario=drain_burst exp=23 got=23 depth_after=3
+[MON-WR] t=2853000 scenario=drain_burst wr_en=0 wdata=f0 full=0 empty=0
+[DRV] scenario=drain_burst wr_en=1 rd_en=1 wdata=f0 @2856000
+[MON-WR] t=2861000 scenario=drain_burst wr_en=0 wdata=f0 full=0 empty=0
+[MON-RD] t=2864000 scenario=drain_burst rd_en=0 rdata=23 full=0 empty=0
+[MON-WR] t=2869000 scenario=drain_burst wr_en=0 wdata=a1 full=0 empty=0
+[MON-WR] t=2877000 scenario=drain_burst wr_en=0 wdata=a1 full=0 empty=0
+[MON-RD] t=2878000 scenario=drain_burst rd_en=1 rdata=a1 full=0 empty=0
+[SCB-RD] PASS t=2878000 scenario=drain_burst exp=a1 got=a1 depth_after=2
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=a1 @2884000
+[MON-WR] t=2885000 scenario=drain_burst wr_en=0 wdata=a1 full=0 empty=0
+[MON-RD] t=2892000 scenario=drain_burst rd_en=0 rdata=a1 full=0 empty=0
+[MON-WR] t=2893000 scenario=drain_burst wr_en=1 wdata=24 full=0 empty=0
+[SCB-WR] PASS t=2893000 scenario=drain_burst push=24 depth=3
+[MON-WR] t=2901000 scenario=drain_burst wr_en=0 wdata=24 full=0 empty=0
+[MON-RD] t=2906000 scenario=drain_burst rd_en=1 rdata=5 full=0 empty=0
+[SCB-RD] PASS t=2906000 scenario=drain_burst exp=5 got=5 depth_after=2
+[MON-WR] t=2909000 scenario=drain_burst wr_en=0 wdata=24 full=0 empty=0
+[DRV] scenario=drain_burst wr_en=1 rd_en=1 wdata=24 @2912000
+[MON-WR] t=2917000 scenario=drain_burst wr_en=0 wdata=24 full=0 empty=0
+[MON-RD] t=2920000 scenario=drain_burst rd_en=0 rdata=5 full=0 empty=0
+[MON-WR] t=2925000 scenario=drain_burst wr_en=0 wdata=4e full=0 empty=0
+[MON-WR] t=2933000 scenario=drain_burst wr_en=0 wdata=4e full=0 empty=0
+[MON-RD] t=2934000 scenario=drain_burst rd_en=1 rdata=f0 full=0 empty=0
+[SCB-RD] PASS t=2934000 scenario=drain_burst exp=f0 got=f0 depth_after=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=4e @2940000
+[MON-WR] t=2941000 scenario=drain_burst wr_en=0 wdata=4e full=0 empty=0
+[MON-RD] t=2948000 scenario=drain_burst rd_en=0 rdata=f0 full=0 empty=0
+[MON-WR] t=2949000 scenario=drain_burst wr_en=0 wdata=cb full=0 empty=0
+[MON-WR] t=2957000 scenario=drain_burst wr_en=0 wdata=cb full=0 empty=0
+[MON-RD] t=2962000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=1
+[SCB-RD] PASS t=2962000 scenario=drain_burst exp=24 got=24 depth_after=0
+[MON-WR] t=2965000 scenario=drain_burst wr_en=0 wdata=cb full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=cb @2968000
+[MON-WR] t=2973000 scenario=drain_burst wr_en=0 wdata=cb full=0 empty=1
+[MON-RD] t=2976000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=1
+[MON-WR] t=2981000 scenario=drain_burst wr_en=0 wdata=82 full=0 empty=1
+[MON-WR] t=2989000 scenario=drain_burst wr_en=0 wdata=82 full=0 empty=1
+[MON-RD] t=2990000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=1
+[SCB-RD] BLOCK t=2990000 scenario=drain_burst empty_pre=1 depth=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=82 @2996000
+[MON-WR] t=2997000 scenario=drain_burst wr_en=0 wdata=82 full=0 empty=1
+[MON-RD] t=3004000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=1
+[MON-WR] t=3005000 scenario=drain_burst wr_en=0 wdata=dd full=0 empty=1
+[MON-WR] t=3013000 scenario=drain_burst wr_en=0 wdata=dd full=0 empty=1
+[MON-RD] t=3018000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=1
+[SCB-RD] BLOCK t=3018000 scenario=drain_burst empty_pre=1 depth=0
+[MON-WR] t=3021000 scenario=drain_burst wr_en=0 wdata=dd full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=dd @3024000
+[MON-WR] t=3029000 scenario=drain_burst wr_en=0 wdata=dd full=0 empty=1
+[MON-RD] t=3032000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=1
+[MON-WR] t=3037000 scenario=drain_burst wr_en=0 wdata=d3 full=0 empty=1
+[MON-WR] t=3045000 scenario=drain_burst wr_en=0 wdata=d3 full=0 empty=1
+[MON-RD] t=3046000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=1
+[SCB-RD] BLOCK t=3046000 scenario=drain_burst empty_pre=1 depth=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=d3 @3052000
+[MON-WR] t=3053000 scenario=drain_burst wr_en=0 wdata=d3 full=0 empty=1
+[MON-RD] t=3060000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=1
+[MON-WR] t=3061000 scenario=drain_burst wr_en=0 wdata=36 full=0 empty=1
+[MON-WR] t=3069000 scenario=drain_burst wr_en=0 wdata=36 full=0 empty=1
+[MON-RD] t=3074000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=1
+[SCB-RD] BLOCK t=3074000 scenario=drain_burst empty_pre=1 depth=0
+[MON-WR] t=3077000 scenario=drain_burst wr_en=0 wdata=36 full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=36 @3080000
+[MON-WR] t=3085000 scenario=drain_burst wr_en=0 wdata=36 full=0 empty=1
+[MON-RD] t=3088000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=1
+[MON-WR] t=3093000 scenario=drain_burst wr_en=0 wdata=e4 full=0 empty=1
+[MON-WR] t=3101000 scenario=drain_burst wr_en=0 wdata=e4 full=0 empty=1
+[MON-RD] t=3102000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=1
+[SCB-RD] BLOCK t=3102000 scenario=drain_burst empty_pre=1 depth=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=e4 @3108000
+[MON-WR] t=3109000 scenario=drain_burst wr_en=0 wdata=e4 full=0 empty=1
+[MON-RD] t=3116000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=1
+[MON-WR] t=3117000 scenario=drain_burst wr_en=0 wdata=ca full=0 empty=1
+[MON-WR] t=3125000 scenario=drain_burst wr_en=0 wdata=ca full=0 empty=1
+[MON-RD] t=3130000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=1
+[SCB-RD] BLOCK t=3130000 scenario=drain_burst empty_pre=1 depth=0
+[MON-WR] t=3133000 scenario=drain_burst wr_en=0 wdata=ca full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=ca @3136000
+[MON-WR] t=3141000 scenario=drain_burst wr_en=0 wdata=ca full=0 empty=1
+[MON-RD] t=3144000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=1
+[MON-WR] t=3149000 scenario=drain_burst wr_en=1 wdata=d full=0 empty=1
+[SCB-WR] PASS t=3149000 scenario=drain_burst push=d depth=1
+[MON-WR] t=3157000 scenario=drain_burst wr_en=0 wdata=d full=0 empty=1
+[MON-RD] t=3158000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=1
+[SCB-RD] BLOCK t=3158000 scenario=drain_burst empty_pre=1 depth=1
+[DRV] scenario=drain_burst wr_en=1 rd_en=1 wdata=d @3164000
+[MON-WR] t=3165000 scenario=drain_burst wr_en=0 wdata=d full=0 empty=1
+[MON-RD] t=3172000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=1
+[MON-WR] t=3173000 scenario=drain_burst wr_en=0 wdata=21 full=0 empty=1
+[MON-WR] t=3181000 scenario=drain_burst wr_en=0 wdata=21 full=0 empty=1
+[MON-RD] t=3186000 scenario=drain_burst rd_en=1 rdata=24 full=0 empty=0
+[SCB-RD] BLOCK t=3186000 scenario=drain_burst empty_pre=1 depth=1
+[MON-WR] t=3189000 scenario=drain_burst wr_en=0 wdata=21 full=0 empty=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=21 @3192000
+[MON-WR] t=3197000 scenario=drain_burst wr_en=0 wdata=21 full=0 empty=0
+[MON-RD] t=3200000 scenario=drain_burst rd_en=0 rdata=24 full=0 empty=0
+[MON-WR] t=3205000 scenario=drain_burst wr_en=0 wdata=72 full=0 empty=0
+[MON-WR] t=3213000 scenario=drain_burst wr_en=0 wdata=72 full=0 empty=0
+[MON-RD] t=3214000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] PASS t=3214000 scenario=drain_burst exp=d got=d depth_after=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=72 @3220000
+[MON-WR] t=3221000 scenario=drain_burst wr_en=0 wdata=72 full=0 empty=1
+[MON-RD] t=3228000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3229000 scenario=drain_burst wr_en=0 wdata=3e full=0 empty=1
+[MON-WR] t=3237000 scenario=drain_burst wr_en=0 wdata=3e full=0 empty=1
+[MON-RD] t=3242000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3242000 scenario=drain_burst empty_pre=1 depth=0
+[MON-WR] t=3245000 scenario=drain_burst wr_en=0 wdata=3e full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=3e @3248000
+[MON-WR] t=3253000 scenario=drain_burst wr_en=0 wdata=3e full=0 empty=1
+[MON-RD] t=3256000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3261000 scenario=drain_burst wr_en=0 wdata=b2 full=0 empty=1
+[MON-WR] t=3269000 scenario=drain_burst wr_en=0 wdata=b2 full=0 empty=1
+[MON-RD] t=3270000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3270000 scenario=drain_burst empty_pre=1 depth=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=b2 @3276000
+[MON-WR] t=3277000 scenario=drain_burst wr_en=0 wdata=b2 full=0 empty=1
+[MON-RD] t=3284000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3285000 scenario=drain_burst wr_en=0 wdata=35 full=0 empty=1
+[MON-WR] t=3293000 scenario=drain_burst wr_en=0 wdata=35 full=0 empty=1
+[MON-RD] t=3298000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3298000 scenario=drain_burst empty_pre=1 depth=0
+[MON-WR] t=3301000 scenario=drain_burst wr_en=0 wdata=35 full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=35 @3304000
+[MON-WR] t=3309000 scenario=drain_burst wr_en=0 wdata=35 full=0 empty=1
+[MON-RD] t=3312000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3317000 scenario=drain_burst wr_en=0 wdata=c0 full=0 empty=1
+[MON-WR] t=3325000 scenario=drain_burst wr_en=0 wdata=c0 full=0 empty=1
+[MON-RD] t=3326000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3326000 scenario=drain_burst empty_pre=1 depth=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=c0 @3332000
+[MON-WR] t=3333000 scenario=drain_burst wr_en=0 wdata=c0 full=0 empty=1
+[MON-RD] t=3340000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3341000 scenario=drain_burst wr_en=0 wdata=a5 full=0 empty=1
+[MON-WR] t=3349000 scenario=drain_burst wr_en=0 wdata=a5 full=0 empty=1
+[MON-RD] t=3354000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3354000 scenario=drain_burst empty_pre=1 depth=0
+[MON-WR] t=3357000 scenario=drain_burst wr_en=0 wdata=a5 full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=a5 @3360000
+[MON-WR] t=3365000 scenario=drain_burst wr_en=0 wdata=a5 full=0 empty=1
+[MON-RD] t=3368000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3373000 scenario=drain_burst wr_en=0 wdata=ea full=0 empty=1
+[MON-WR] t=3381000 scenario=drain_burst wr_en=0 wdata=ea full=0 empty=1
+[MON-RD] t=3382000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3382000 scenario=drain_burst empty_pre=1 depth=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=ea @3388000
+[MON-WR] t=3389000 scenario=drain_burst wr_en=0 wdata=ea full=0 empty=1
+[MON-RD] t=3396000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3397000 scenario=drain_burst wr_en=0 wdata=29 full=0 empty=1
+[MON-WR] t=3405000 scenario=drain_burst wr_en=0 wdata=29 full=0 empty=1
+[MON-RD] t=3410000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3410000 scenario=drain_burst empty_pre=1 depth=0
+[MON-WR] t=3413000 scenario=drain_burst wr_en=0 wdata=29 full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=29 @3416000
+[MON-WR] t=3421000 scenario=drain_burst wr_en=0 wdata=29 full=0 empty=1
+[MON-RD] t=3424000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3429000 scenario=drain_burst wr_en=0 wdata=ac full=0 empty=1
+[MON-WR] t=3437000 scenario=drain_burst wr_en=0 wdata=ac full=0 empty=1
+[MON-RD] t=3438000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3438000 scenario=drain_burst empty_pre=1 depth=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=ac @3444000
+[MON-WR] t=3445000 scenario=drain_burst wr_en=0 wdata=ac full=0 empty=1
+[MON-RD] t=3452000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3453000 scenario=drain_burst wr_en=1 wdata=89 full=0 empty=1
+[SCB-WR] PASS t=3453000 scenario=drain_burst push=89 depth=1
+[MON-WR] t=3461000 scenario=drain_burst wr_en=0 wdata=89 full=0 empty=1
+[MON-RD] t=3466000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=1
+[SCB-RD] BLOCK t=3466000 scenario=drain_burst empty_pre=1 depth=1
+[MON-WR] t=3469000 scenario=drain_burst wr_en=0 wdata=89 full=0 empty=1
+[DRV] scenario=drain_burst wr_en=1 rd_en=1 wdata=89 @3472000
+[MON-WR] t=3477000 scenario=drain_burst wr_en=0 wdata=89 full=0 empty=1
+[MON-RD] t=3480000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=1
+[MON-WR] t=3485000 scenario=drain_burst wr_en=0 wdata=af full=0 empty=1
+[MON-WR] t=3493000 scenario=drain_burst wr_en=0 wdata=af full=0 empty=1
+[MON-RD] t=3494000 scenario=drain_burst rd_en=1 rdata=d full=0 empty=0
+[SCB-RD] BLOCK t=3494000 scenario=drain_burst empty_pre=1 depth=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=af @3500000
+[MON-WR] t=3501000 scenario=drain_burst wr_en=0 wdata=af full=0 empty=0
+[MON-RD] t=3508000 scenario=drain_burst rd_en=0 rdata=d full=0 empty=0
+[MON-WR] t=3509000 scenario=drain_burst wr_en=0 wdata=7c full=0 empty=0
+[MON-WR] t=3517000 scenario=drain_burst wr_en=0 wdata=7c full=0 empty=0
+[MON-RD] t=3522000 scenario=drain_burst rd_en=1 rdata=89 full=0 empty=1
+[SCB-RD] PASS t=3522000 scenario=drain_burst exp=89 got=89 depth_after=0
+[MON-WR] t=3525000 scenario=drain_burst wr_en=0 wdata=7c full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=7c @3528000
+[MON-WR] t=3533000 scenario=drain_burst wr_en=0 wdata=7c full=0 empty=1
+[MON-RD] t=3536000 scenario=drain_burst rd_en=0 rdata=89 full=0 empty=1
+[MON-WR] t=3541000 scenario=drain_burst wr_en=0 wdata=75 full=0 empty=1
+[MON-WR] t=3549000 scenario=drain_burst wr_en=0 wdata=75 full=0 empty=1
+[MON-RD] t=3550000 scenario=drain_burst rd_en=1 rdata=89 full=0 empty=1
+[SCB-RD] BLOCK t=3550000 scenario=drain_burst empty_pre=1 depth=0
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=75 @3556000
+[MON-WR] t=3557000 scenario=drain_burst wr_en=0 wdata=75 full=0 empty=1
+[MON-RD] t=3564000 scenario=drain_burst rd_en=0 rdata=89 full=0 empty=1
+[MON-WR] t=3565000 scenario=drain_burst wr_en=0 wdata=81 full=0 empty=1
+[MON-WR] t=3573000 scenario=drain_burst wr_en=0 wdata=81 full=0 empty=1
+[MON-RD] t=3578000 scenario=drain_burst rd_en=1 rdata=89 full=0 empty=1
+[SCB-RD] BLOCK t=3578000 scenario=drain_burst empty_pre=1 depth=0
+[MON-WR] t=3581000 scenario=drain_burst wr_en=0 wdata=81 full=0 empty=1
+[DRV] scenario=drain_burst wr_en=0 rd_en=1 wdata=81 @3584000
+[GEN][PHASE] iter=126 scenario=full_pressure
+[MON-WR] t=3589000 scenario=full_pressure wr_en=0 wdata=81 full=0 empty=1
+[MON-RD] t=3592000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=1
+[MON-WR] t=3597000 scenario=full_pressure wr_en=1 wdata=79 full=0 empty=1
+[SCB-WR] PASS t=3597000 scenario=full_pressure push=79 depth=1
+[MON-WR] t=3605000 scenario=full_pressure wr_en=0 wdata=79 full=0 empty=1
+[MON-RD] t=3606000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=1
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=79 @3612000
+[MON-WR] t=3613000 scenario=full_pressure wr_en=0 wdata=79 full=0 empty=1
+[MON-RD] t=3620000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=1
+[MON-WR] t=3621000 scenario=full_pressure wr_en=1 wdata=4c full=0 empty=1
+[SCB-WR] PASS t=3621000 scenario=full_pressure push=4c depth=2
+[MON-WR] t=3629000 scenario=full_pressure wr_en=0 wdata=4c full=0 empty=1
+[MON-RD] t=3634000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[MON-WR] t=3637000 scenario=full_pressure wr_en=0 wdata=4c full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=4c @3640000
+[MON-WR] t=3645000 scenario=full_pressure wr_en=0 wdata=4c full=0 empty=0
+[MON-RD] t=3648000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[MON-WR] t=3653000 scenario=full_pressure wr_en=1 wdata=77 full=0 empty=0
+[SCB-WR] PASS t=3653000 scenario=full_pressure push=77 depth=3
+[MON-WR] t=3661000 scenario=full_pressure wr_en=0 wdata=77 full=0 empty=0
+[MON-RD] t=3662000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=77 @3668000
+[MON-WR] t=3669000 scenario=full_pressure wr_en=0 wdata=77 full=0 empty=0
+[MON-RD] t=3676000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[MON-WR] t=3677000 scenario=full_pressure wr_en=1 wdata=f3 full=0 empty=0
+[SCB-WR] PASS t=3677000 scenario=full_pressure push=f3 depth=4
+[MON-WR] t=3685000 scenario=full_pressure wr_en=0 wdata=f3 full=0 empty=0
+[MON-RD] t=3690000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[MON-WR] t=3693000 scenario=full_pressure wr_en=0 wdata=f3 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=f3 @3696000
+[MON-WR] t=3701000 scenario=full_pressure wr_en=0 wdata=f3 full=0 empty=0
+[MON-RD] t=3704000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[MON-WR] t=3709000 scenario=full_pressure wr_en=1 wdata=10 full=0 empty=0
+[SCB-WR] PASS t=3709000 scenario=full_pressure push=10 depth=5
+[MON-WR] t=3717000 scenario=full_pressure wr_en=0 wdata=10 full=0 empty=0
+[MON-RD] t=3718000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=10 @3724000
+[MON-WR] t=3725000 scenario=full_pressure wr_en=0 wdata=10 full=0 empty=0
+[MON-RD] t=3732000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[MON-WR] t=3733000 scenario=full_pressure wr_en=1 wdata=62 full=0 empty=0
+[SCB-WR] PASS t=3733000 scenario=full_pressure push=62 depth=6
+[MON-WR] t=3741000 scenario=full_pressure wr_en=0 wdata=62 full=0 empty=0
+[MON-RD] t=3746000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[MON-WR] t=3749000 scenario=full_pressure wr_en=0 wdata=62 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=62 @3752000
+[MON-WR] t=3757000 scenario=full_pressure wr_en=0 wdata=62 full=0 empty=0
+[MON-RD] t=3760000 scenario=full_pressure rd_en=0 rdata=89 full=0 empty=0
+[MON-WR] t=3765000 scenario=full_pressure wr_en=1 wdata=5f full=0 empty=0
+[SCB-WR] PASS t=3765000 scenario=full_pressure push=5f depth=7
+[MON-WR] t=3773000 scenario=full_pressure wr_en=0 wdata=5f full=0 empty=0
+[MON-RD] t=3774000 scenario=full_pressure rd_en=1 rdata=79 full=0 empty=0
+[SCB-RD] PASS t=3774000 scenario=full_pressure exp=79 got=79 depth_after=6
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=5f @3780000
+[MON-WR] t=3781000 scenario=full_pressure wr_en=0 wdata=5f full=0 empty=0
+[MON-RD] t=3788000 scenario=full_pressure rd_en=0 rdata=79 full=0 empty=0
+[MON-WR] t=3789000 scenario=full_pressure wr_en=1 wdata=0 full=0 empty=0
+[SCB-WR] PASS t=3789000 scenario=full_pressure push=0 depth=7
+[MON-WR] t=3797000 scenario=full_pressure wr_en=0 wdata=0 full=0 empty=0
+[MON-RD] t=3802000 scenario=full_pressure rd_en=1 rdata=4c full=0 empty=0
+[SCB-RD] PASS t=3802000 scenario=full_pressure exp=4c got=4c depth_after=6
+[MON-WR] t=3805000 scenario=full_pressure wr_en=0 wdata=0 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=0 @3808000
+[MON-WR] t=3813000 scenario=full_pressure wr_en=0 wdata=0 full=0 empty=0
+[MON-RD] t=3816000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=3821000 scenario=full_pressure wr_en=1 wdata=38 full=0 empty=0
+[SCB-WR] PASS t=3821000 scenario=full_pressure push=38 depth=7
+[MON-WR] t=3829000 scenario=full_pressure wr_en=0 wdata=38 full=0 empty=0
+[MON-RD] t=3830000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=38 @3836000
+[MON-WR] t=3837000 scenario=full_pressure wr_en=0 wdata=38 full=0 empty=0
+[MON-RD] t=3844000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=3845000 scenario=full_pressure wr_en=1 wdata=86 full=0 empty=0
+[SCB-WR] PASS t=3845000 scenario=full_pressure push=86 depth=8
+[MON-WR] t=3853000 scenario=full_pressure wr_en=0 wdata=86 full=0 empty=0
+[MON-RD] t=3858000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=3861000 scenario=full_pressure wr_en=0 wdata=86 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=86 @3864000
+[MON-WR] t=3869000 scenario=full_pressure wr_en=0 wdata=86 full=0 empty=0
+[MON-RD] t=3872000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=3877000 scenario=full_pressure wr_en=1 wdata=85 full=0 empty=0
+[SCB-WR] PASS t=3877000 scenario=full_pressure push=85 depth=9
+[MON-WR] t=3885000 scenario=full_pressure wr_en=0 wdata=85 full=0 empty=0
+[MON-RD] t=3886000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=85 @3892000
+[MON-WR] t=3893000 scenario=full_pressure wr_en=0 wdata=85 full=0 empty=0
+[MON-RD] t=3900000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=3901000 scenario=full_pressure wr_en=1 wdata=ff full=0 empty=0
+[SCB-WR] PASS t=3901000 scenario=full_pressure push=ff depth=10
+[MON-WR] t=3909000 scenario=full_pressure wr_en=0 wdata=ff full=0 empty=0
+[MON-RD] t=3914000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=3917000 scenario=full_pressure wr_en=0 wdata=ff full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=ff @3920000
+[MON-WR] t=3925000 scenario=full_pressure wr_en=0 wdata=ff full=0 empty=0
+[MON-RD] t=3928000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=3933000 scenario=full_pressure wr_en=1 wdata=b0 full=0 empty=0
+[SCB-WR] PASS t=3933000 scenario=full_pressure push=b0 depth=11
+[MON-WR] t=3941000 scenario=full_pressure wr_en=0 wdata=b0 full=0 empty=0
+[MON-RD] t=3942000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=b0 @3948000
+[MON-WR] t=3949000 scenario=full_pressure wr_en=0 wdata=b0 full=0 empty=0
+[MON-RD] t=3956000 scenario=full_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=3957000 scenario=full_pressure wr_en=1 wdata=23 full=0 empty=0
+[SCB-WR] PASS t=3957000 scenario=full_pressure push=23 depth=12
+[MON-WR] t=3965000 scenario=full_pressure wr_en=0 wdata=23 full=0 empty=0
+[MON-RD] t=3970000 scenario=full_pressure rd_en=1 rdata=77 full=0 empty=0
+[SCB-RD] PASS t=3970000 scenario=full_pressure exp=77 got=77 depth_after=11
+[MON-WR] t=3973000 scenario=full_pressure wr_en=0 wdata=23 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=23 @3976000
+[MON-WR] t=3981000 scenario=full_pressure wr_en=0 wdata=23 full=0 empty=0
+[MON-RD] t=3984000 scenario=full_pressure rd_en=0 rdata=77 full=0 empty=0
+[MON-WR] t=3989000 scenario=full_pressure wr_en=1 wdata=b7 full=0 empty=0
+[SCB-WR] PASS t=3989000 scenario=full_pressure push=b7 depth=12
+[MON-WR] t=3997000 scenario=full_pressure wr_en=0 wdata=b7 full=0 empty=0
+[MON-RD] t=3998000 scenario=full_pressure rd_en=0 rdata=77 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=b7 @4004000
+[MON-WR] t=4005000 scenario=full_pressure wr_en=0 wdata=b7 full=0 empty=0
+[MON-RD] t=4012000 scenario=full_pressure rd_en=0 rdata=77 full=0 empty=0
+[MON-WR] t=4013000 scenario=full_pressure wr_en=1 wdata=28 full=0 empty=0
+[SCB-WR] PASS t=4013000 scenario=full_pressure push=28 depth=13
+[MON-WR] t=4021000 scenario=full_pressure wr_en=0 wdata=28 full=0 empty=0
+[MON-RD] t=4026000 scenario=full_pressure rd_en=0 rdata=77 full=0 empty=0
+[MON-WR] t=4029000 scenario=full_pressure wr_en=0 wdata=28 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=28 @4032000
+[MON-WR] t=4037000 scenario=full_pressure wr_en=0 wdata=28 full=0 empty=0
+[MON-RD] t=4040000 scenario=full_pressure rd_en=0 rdata=77 full=0 empty=0
+[MON-WR] t=4045000 scenario=full_pressure wr_en=1 wdata=9 full=0 empty=0
+[SCB-WR] PASS t=4045000 scenario=full_pressure push=9 depth=14
+[MON-WR] t=4053000 scenario=full_pressure wr_en=0 wdata=9 full=0 empty=0
+[MON-RD] t=4054000 scenario=full_pressure rd_en=0 rdata=77 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=9 @4060000
+[MON-WR] t=4061000 scenario=full_pressure wr_en=0 wdata=9 full=0 empty=0
+[MON-RD] t=4068000 scenario=full_pressure rd_en=0 rdata=77 full=0 empty=0
+[MON-WR] t=4069000 scenario=full_pressure wr_en=1 wdata=4c full=0 empty=0
+[SCB-WR] PASS t=4069000 scenario=full_pressure push=4c depth=15
+[MON-WR] t=4077000 scenario=full_pressure wr_en=0 wdata=4c full=0 empty=0
+[MON-RD] t=4082000 scenario=full_pressure rd_en=1 rdata=f3 full=0 empty=0
+[SCB-RD] PASS t=4082000 scenario=full_pressure exp=f3 got=f3 depth_after=14
+[MON-WR] t=4085000 scenario=full_pressure wr_en=0 wdata=4c full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=4c @4088000
+[MON-WR] t=4093000 scenario=full_pressure wr_en=0 wdata=4c full=0 empty=0
+[MON-RD] t=4096000 scenario=full_pressure rd_en=0 rdata=f3 full=0 empty=0
+[MON-WR] t=4101000 scenario=full_pressure wr_en=1 wdata=78 full=0 empty=0
+[SCB-WR] PASS t=4101000 scenario=full_pressure push=78 depth=15
+[MON-WR] t=4109000 scenario=full_pressure wr_en=0 wdata=78 full=0 empty=0
+[MON-RD] t=4110000 scenario=full_pressure rd_en=0 rdata=f3 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=78 @4116000
+[MON-WR] t=4117000 scenario=full_pressure wr_en=0 wdata=78 full=0 empty=0
+[MON-RD] t=4124000 scenario=full_pressure rd_en=0 rdata=f3 full=0 empty=0
+[MON-WR] t=4125000 scenario=full_pressure wr_en=1 wdata=6b full=1 empty=0
+[SCB-WR] PASS t=4125000 scenario=full_pressure push=6b depth=16
+[MON-WR] t=4133000 scenario=full_pressure wr_en=0 wdata=6b full=1 empty=0
+[MON-RD] t=4138000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4141000 scenario=full_pressure wr_en=0 wdata=6b full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=6b @4144000
+[MON-WR] t=4149000 scenario=full_pressure wr_en=0 wdata=6b full=1 empty=0
+[MON-RD] t=4152000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4157000 scenario=full_pressure wr_en=1 wdata=1a full=1 empty=0
+[SCB-WR] BLOCK t=4157000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4165000 scenario=full_pressure wr_en=0 wdata=1a full=1 empty=0
+[MON-RD] t=4166000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=1a @4172000
+[MON-WR] t=4173000 scenario=full_pressure wr_en=0 wdata=1a full=1 empty=0
+[MON-RD] t=4180000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4181000 scenario=full_pressure wr_en=1 wdata=52 full=1 empty=0
+[SCB-WR] BLOCK t=4181000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4189000 scenario=full_pressure wr_en=0 wdata=52 full=1 empty=0
+[MON-RD] t=4194000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4197000 scenario=full_pressure wr_en=0 wdata=52 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=52 @4200000
+[MON-WR] t=4205000 scenario=full_pressure wr_en=0 wdata=52 full=1 empty=0
+[MON-RD] t=4208000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4213000 scenario=full_pressure wr_en=1 wdata=ec full=1 empty=0
+[SCB-WR] BLOCK t=4213000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4221000 scenario=full_pressure wr_en=0 wdata=ec full=1 empty=0
+[MON-RD] t=4222000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=ec @4228000
+[MON-WR] t=4229000 scenario=full_pressure wr_en=0 wdata=ec full=1 empty=0
+[MON-RD] t=4236000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4237000 scenario=full_pressure wr_en=1 wdata=86 full=1 empty=0
+[SCB-WR] BLOCK t=4237000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4245000 scenario=full_pressure wr_en=0 wdata=86 full=1 empty=0
+[MON-RD] t=4250000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4253000 scenario=full_pressure wr_en=0 wdata=86 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=86 @4256000
+[MON-WR] t=4261000 scenario=full_pressure wr_en=0 wdata=86 full=1 empty=0
+[MON-RD] t=4264000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4269000 scenario=full_pressure wr_en=1 wdata=78 full=1 empty=0
+[SCB-WR] BLOCK t=4269000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4277000 scenario=full_pressure wr_en=0 wdata=78 full=1 empty=0
+[MON-RD] t=4278000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=78 @4284000
+[MON-WR] t=4285000 scenario=full_pressure wr_en=0 wdata=78 full=1 empty=0
+[MON-RD] t=4292000 scenario=full_pressure rd_en=0 rdata=f3 full=1 empty=0
+[MON-WR] t=4293000 scenario=full_pressure wr_en=1 wdata=59 full=1 empty=0
+[SCB-WR] BLOCK t=4293000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4301000 scenario=full_pressure wr_en=0 wdata=59 full=1 empty=0
+[MON-RD] t=4306000 scenario=full_pressure rd_en=1 rdata=10 full=1 empty=0
+[SCB-RD] PASS t=4306000 scenario=full_pressure exp=10 got=10 depth_after=15
+[MON-WR] t=4309000 scenario=full_pressure wr_en=0 wdata=59 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=59 @4312000
+[MON-WR] t=4317000 scenario=full_pressure wr_en=0 wdata=59 full=1 empty=0
+[MON-RD] t=4320000 scenario=full_pressure rd_en=0 rdata=10 full=1 empty=0
+[MON-WR] t=4325000 scenario=full_pressure wr_en=1 wdata=45 full=0 empty=0
+[SCB-WR] BLOCK t=4325000 scenario=full_pressure full_pre=1 depth=15
+[MON-WR] t=4333000 scenario=full_pressure wr_en=0 wdata=45 full=0 empty=0
+[MON-RD] t=4334000 scenario=full_pressure rd_en=0 rdata=10 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=45 @4340000
+[MON-WR] t=4341000 scenario=full_pressure wr_en=0 wdata=45 full=0 empty=0
+[MON-RD] t=4348000 scenario=full_pressure rd_en=0 rdata=10 full=0 empty=0
+[MON-WR] t=4349000 scenario=full_pressure wr_en=1 wdata=79 full=1 empty=0
+[SCB-WR] PASS t=4349000 scenario=full_pressure push=79 depth=16
+[MON-WR] t=4357000 scenario=full_pressure wr_en=0 wdata=79 full=1 empty=0
+[MON-RD] t=4362000 scenario=full_pressure rd_en=0 rdata=10 full=1 empty=0
+[MON-WR] t=4365000 scenario=full_pressure wr_en=0 wdata=79 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=79 @4368000
+[MON-WR] t=4373000 scenario=full_pressure wr_en=0 wdata=79 full=1 empty=0
+[MON-RD] t=4376000 scenario=full_pressure rd_en=0 rdata=10 full=1 empty=0
+[MON-WR] t=4381000 scenario=full_pressure wr_en=1 wdata=d5 full=1 empty=0
+[SCB-WR] BLOCK t=4381000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4389000 scenario=full_pressure wr_en=0 wdata=d5 full=1 empty=0
+[MON-RD] t=4390000 scenario=full_pressure rd_en=1 rdata=62 full=1 empty=0
+[SCB-RD] PASS t=4390000 scenario=full_pressure exp=62 got=62 depth_after=15
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=d5 @4396000
+[MON-WR] t=4397000 scenario=full_pressure wr_en=0 wdata=d5 full=1 empty=0
+[MON-RD] t=4404000 scenario=full_pressure rd_en=0 rdata=62 full=1 empty=0
+[MON-WR] t=4405000 scenario=full_pressure wr_en=1 wdata=8b full=1 empty=0
+[SCB-WR] BLOCK t=4405000 scenario=full_pressure full_pre=1 depth=15
+[MON-WR] t=4413000 scenario=full_pressure wr_en=0 wdata=8b full=0 empty=0
+[MON-RD] t=4418000 scenario=full_pressure rd_en=0 rdata=62 full=0 empty=0
+[MON-WR] t=4421000 scenario=full_pressure wr_en=0 wdata=8b full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=8b @4424000
+[MON-WR] t=4429000 scenario=full_pressure wr_en=0 wdata=8b full=0 empty=0
+[MON-RD] t=4432000 scenario=full_pressure rd_en=0 rdata=62 full=0 empty=0
+[MON-WR] t=4437000 scenario=full_pressure wr_en=1 wdata=91 full=1 empty=0
+[SCB-WR] PASS t=4437000 scenario=full_pressure push=91 depth=16
+[MON-WR] t=4445000 scenario=full_pressure wr_en=0 wdata=91 full=1 empty=0
+[MON-RD] t=4446000 scenario=full_pressure rd_en=0 rdata=62 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=91 @4452000
+[MON-WR] t=4453000 scenario=full_pressure wr_en=0 wdata=91 full=1 empty=0
+[MON-RD] t=4460000 scenario=full_pressure rd_en=0 rdata=62 full=1 empty=0
+[MON-WR] t=4461000 scenario=full_pressure wr_en=1 wdata=c8 full=1 empty=0
+[SCB-WR] BLOCK t=4461000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4469000 scenario=full_pressure wr_en=0 wdata=c8 full=1 empty=0
+[MON-RD] t=4474000 scenario=full_pressure rd_en=0 rdata=62 full=1 empty=0
+[MON-WR] t=4477000 scenario=full_pressure wr_en=0 wdata=c8 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=c8 @4480000
+[MON-WR] t=4485000 scenario=full_pressure wr_en=0 wdata=c8 full=1 empty=0
+[MON-RD] t=4488000 scenario=full_pressure rd_en=0 rdata=62 full=1 empty=0
+[MON-WR] t=4493000 scenario=full_pressure wr_en=1 wdata=f2 full=1 empty=0
+[SCB-WR] BLOCK t=4493000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4501000 scenario=full_pressure wr_en=0 wdata=f2 full=1 empty=0
+[MON-RD] t=4502000 scenario=full_pressure rd_en=0 rdata=62 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=f2 @4508000
+[MON-WR] t=4509000 scenario=full_pressure wr_en=0 wdata=f2 full=1 empty=0
+[MON-RD] t=4516000 scenario=full_pressure rd_en=0 rdata=62 full=1 empty=0
+[MON-WR] t=4517000 scenario=full_pressure wr_en=1 wdata=c1 full=1 empty=0
+[SCB-WR] BLOCK t=4517000 scenario=full_pressure full_pre=1 depth=16
+[MON-WR] t=4525000 scenario=full_pressure wr_en=0 wdata=c1 full=1 empty=0
+[MON-RD] t=4530000 scenario=full_pressure rd_en=1 rdata=5f full=1 empty=0
+[SCB-RD] PASS t=4530000 scenario=full_pressure exp=5f got=5f depth_after=15
+[MON-WR] t=4533000 scenario=full_pressure wr_en=0 wdata=c1 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=c1 @4536000
+[MON-WR] t=4541000 scenario=full_pressure wr_en=0 wdata=c1 full=1 empty=0
+[MON-RD] t=4544000 scenario=full_pressure rd_en=0 rdata=5f full=1 empty=0
+[MON-WR] t=4549000 scenario=full_pressure wr_en=1 wdata=5c full=0 empty=0
+[SCB-WR] BLOCK t=4549000 scenario=full_pressure full_pre=1 depth=15
+[MON-WR] t=4557000 scenario=full_pressure wr_en=0 wdata=5c full=0 empty=0
+[MON-RD] t=4558000 scenario=full_pressure rd_en=1 rdata=0 full=0 empty=0
+[SCB-RD] PASS t=4558000 scenario=full_pressure exp=0 got=0 depth_after=14
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=5c @4564000
+[MON-WR] t=4565000 scenario=full_pressure wr_en=0 wdata=5c full=0 empty=0
+[MON-RD] t=4572000 scenario=full_pressure rd_en=0 rdata=0 full=0 empty=0
+[MON-WR] t=4573000 scenario=full_pressure wr_en=1 wdata=c5 full=1 empty=0
+[SCB-WR] PASS t=4573000 scenario=full_pressure push=c5 depth=15
+[MON-WR] t=4581000 scenario=full_pressure wr_en=0 wdata=c5 full=0 empty=0
+[MON-RD] t=4586000 scenario=full_pressure rd_en=1 rdata=38 full=0 empty=0
+[SCB-RD] PASS t=4586000 scenario=full_pressure exp=38 got=38 depth_after=14
+[MON-WR] t=4589000 scenario=full_pressure wr_en=0 wdata=c5 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=c5 @4592000
+[MON-WR] t=4597000 scenario=full_pressure wr_en=0 wdata=c5 full=0 empty=0
+[MON-RD] t=4600000 scenario=full_pressure rd_en=0 rdata=38 full=0 empty=0
+[MON-WR] t=4605000 scenario=full_pressure wr_en=1 wdata=6f full=0 empty=0
+[SCB-WR] PASS t=4605000 scenario=full_pressure push=6f depth=15
+[MON-WR] t=4613000 scenario=full_pressure wr_en=0 wdata=6f full=0 empty=0
+[MON-RD] t=4614000 scenario=full_pressure rd_en=0 rdata=38 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=6f @4620000
+[MON-WR] t=4621000 scenario=full_pressure wr_en=0 wdata=6f full=0 empty=0
+[MON-RD] t=4628000 scenario=full_pressure rd_en=0 rdata=38 full=0 empty=0
+[MON-WR] t=4629000 scenario=full_pressure wr_en=1 wdata=5b full=1 empty=0
+[SCB-WR] PASS t=4629000 scenario=full_pressure push=5b depth=16
+[MON-WR] t=4637000 scenario=full_pressure wr_en=0 wdata=5b full=1 empty=0
+[MON-RD] t=4642000 scenario=full_pressure rd_en=1 rdata=86 full=1 empty=0
+[SCB-RD] PASS t=4642000 scenario=full_pressure exp=86 got=86 depth_after=15
+[MON-WR] t=4645000 scenario=full_pressure wr_en=0 wdata=5b full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=5b @4648000
+[MON-WR] t=4653000 scenario=full_pressure wr_en=0 wdata=5b full=1 empty=0
+[MON-RD] t=4656000 scenario=full_pressure rd_en=0 rdata=86 full=1 empty=0
+[MON-WR] t=4661000 scenario=full_pressure wr_en=1 wdata=d7 full=0 empty=0
+[SCB-WR] BLOCK t=4661000 scenario=full_pressure full_pre=1 depth=15
+[MON-WR] t=4669000 scenario=full_pressure wr_en=0 wdata=d7 full=0 empty=0
+[MON-RD] t=4670000 scenario=full_pressure rd_en=0 rdata=86 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=d7 @4676000
+[MON-WR] t=4677000 scenario=full_pressure wr_en=0 wdata=d7 full=0 empty=0
+[MON-RD] t=4684000 scenario=full_pressure rd_en=0 rdata=86 full=0 empty=0
+[MON-WR] t=4685000 scenario=full_pressure wr_en=1 wdata=e full=1 empty=0
+[SCB-WR] PASS t=4685000 scenario=full_pressure push=e depth=16
+[MON-WR] t=4693000 scenario=full_pressure wr_en=0 wdata=e full=1 empty=0
+[MON-RD] t=4698000 scenario=full_pressure rd_en=1 rdata=85 full=1 empty=0
+[SCB-RD] PASS t=4698000 scenario=full_pressure exp=85 got=85 depth_after=15
+[MON-WR] t=4701000 scenario=full_pressure wr_en=0 wdata=e full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=e @4704000
+[MON-WR] t=4709000 scenario=full_pressure wr_en=0 wdata=e full=1 empty=0
+[MON-RD] t=4712000 scenario=full_pressure rd_en=0 rdata=85 full=1 empty=0
+[MON-WR] t=4717000 scenario=full_pressure wr_en=1 wdata=c4 full=0 empty=0
+[SCB-WR] BLOCK t=4717000 scenario=full_pressure full_pre=1 depth=15
+[MON-WR] t=4725000 scenario=full_pressure wr_en=0 wdata=c4 full=0 empty=0
+[MON-RD] t=4726000 scenario=full_pressure rd_en=0 rdata=85 full=0 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=0 wdata=c4 @4732000
+[MON-WR] t=4733000 scenario=full_pressure wr_en=0 wdata=c4 full=0 empty=0
+[MON-RD] t=4740000 scenario=full_pressure rd_en=0 rdata=85 full=0 empty=0
+[MON-WR] t=4741000 scenario=full_pressure wr_en=1 wdata=65 full=1 empty=0
+[SCB-WR] PASS t=4741000 scenario=full_pressure push=65 depth=16
+[MON-WR] t=4749000 scenario=full_pressure wr_en=0 wdata=65 full=1 empty=0
+[MON-RD] t=4754000 scenario=full_pressure rd_en=1 rdata=ff full=1 empty=0
+[SCB-RD] PASS t=4754000 scenario=full_pressure exp=ff got=ff depth_after=15
+[MON-WR] t=4757000 scenario=full_pressure wr_en=0 wdata=65 full=1 empty=0
+[DRV] scenario=full_pressure wr_en=1 rd_en=1 wdata=65 @4760000
+[GEN][PHASE] iter=168 scenario=empty_pressure
+[MON-WR] t=4765000 scenario=empty_pressure wr_en=0 wdata=65 full=1 empty=0
+[MON-RD] t=4768000 scenario=empty_pressure rd_en=0 rdata=ff full=1 empty=0
+[MON-WR] t=4773000 scenario=empty_pressure wr_en=0 wdata=f1 full=0 empty=0
+[MON-WR] t=4781000 scenario=empty_pressure wr_en=0 wdata=f1 full=0 empty=0
+[MON-RD] t=4782000 scenario=empty_pressure rd_en=1 rdata=b0 full=0 empty=0
+[SCB-RD] PASS t=4782000 scenario=empty_pressure exp=b0 got=b0 depth_after=14
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=f1 @4788000
+[MON-WR] t=4789000 scenario=empty_pressure wr_en=0 wdata=f1 full=0 empty=0
+[MON-RD] t=4796000 scenario=empty_pressure rd_en=0 rdata=b0 full=0 empty=0
+[MON-WR] t=4797000 scenario=empty_pressure wr_en=0 wdata=a full=0 empty=0
+[MON-WR] t=4805000 scenario=empty_pressure wr_en=0 wdata=a full=0 empty=0
+[MON-RD] t=4810000 scenario=empty_pressure rd_en=1 rdata=23 full=0 empty=0
+[SCB-RD] PASS t=4810000 scenario=empty_pressure exp=23 got=23 depth_after=13
+[MON-WR] t=4813000 scenario=empty_pressure wr_en=0 wdata=a full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=a @4816000
+[MON-WR] t=4821000 scenario=empty_pressure wr_en=0 wdata=a full=0 empty=0
+[MON-RD] t=4824000 scenario=empty_pressure rd_en=0 rdata=23 full=0 empty=0
+[MON-WR] t=4829000 scenario=empty_pressure wr_en=0 wdata=fe full=0 empty=0
+[MON-WR] t=4837000 scenario=empty_pressure wr_en=0 wdata=fe full=0 empty=0
+[MON-RD] t=4838000 scenario=empty_pressure rd_en=1 rdata=b7 full=0 empty=0
+[SCB-RD] PASS t=4838000 scenario=empty_pressure exp=b7 got=b7 depth_after=12
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=fe @4844000
+[MON-WR] t=4845000 scenario=empty_pressure wr_en=0 wdata=fe full=0 empty=0
+[MON-RD] t=4852000 scenario=empty_pressure rd_en=0 rdata=b7 full=0 empty=0
+[MON-WR] t=4853000 scenario=empty_pressure wr_en=0 wdata=cb full=0 empty=0
+[MON-WR] t=4861000 scenario=empty_pressure wr_en=0 wdata=cb full=0 empty=0
+[MON-RD] t=4866000 scenario=empty_pressure rd_en=1 rdata=28 full=0 empty=0
+[SCB-RD] PASS t=4866000 scenario=empty_pressure exp=28 got=28 depth_after=11
+[MON-WR] t=4869000 scenario=empty_pressure wr_en=0 wdata=cb full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=cb @4872000
+[MON-WR] t=4877000 scenario=empty_pressure wr_en=0 wdata=cb full=0 empty=0
+[MON-RD] t=4880000 scenario=empty_pressure rd_en=0 rdata=28 full=0 empty=0
+[MON-WR] t=4885000 scenario=empty_pressure wr_en=1 wdata=2 full=0 empty=0
+[SCB-WR] PASS t=4885000 scenario=empty_pressure push=2 depth=12
+[MON-WR] t=4893000 scenario=empty_pressure wr_en=0 wdata=2 full=0 empty=0
+[MON-RD] t=4894000 scenario=empty_pressure rd_en=1 rdata=9 full=0 empty=0
+[SCB-RD] PASS t=4894000 scenario=empty_pressure exp=9 got=9 depth_after=11
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=2 @4900000
+[MON-WR] t=4901000 scenario=empty_pressure wr_en=0 wdata=2 full=0 empty=0
+[MON-RD] t=4908000 scenario=empty_pressure rd_en=0 rdata=9 full=0 empty=0
+[MON-WR] t=4909000 scenario=empty_pressure wr_en=0 wdata=7c full=0 empty=0
+[MON-WR] t=4917000 scenario=empty_pressure wr_en=0 wdata=7c full=0 empty=0
+[MON-RD] t=4922000 scenario=empty_pressure rd_en=1 rdata=4c full=0 empty=0
+[SCB-RD] PASS t=4922000 scenario=empty_pressure exp=4c got=4c depth_after=10
+[MON-WR] t=4925000 scenario=empty_pressure wr_en=0 wdata=7c full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=7c @4928000
+[MON-WR] t=4933000 scenario=empty_pressure wr_en=0 wdata=7c full=0 empty=0
+[MON-RD] t=4936000 scenario=empty_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=4941000 scenario=empty_pressure wr_en=0 wdata=af full=0 empty=0
+[MON-WR] t=4949000 scenario=empty_pressure wr_en=0 wdata=af full=0 empty=0
+[MON-RD] t=4950000 scenario=empty_pressure rd_en=1 rdata=78 full=0 empty=0
+[SCB-RD] PASS t=4950000 scenario=empty_pressure exp=78 got=78 depth_after=9
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=af @4956000
+[MON-WR] t=4957000 scenario=empty_pressure wr_en=0 wdata=af full=0 empty=0
+[MON-RD] t=4964000 scenario=empty_pressure rd_en=0 rdata=78 full=0 empty=0
+[MON-WR] t=4965000 scenario=empty_pressure wr_en=1 wdata=bc full=0 empty=0
+[SCB-WR] PASS t=4965000 scenario=empty_pressure push=bc depth=10
+[MON-WR] t=4973000 scenario=empty_pressure wr_en=0 wdata=bc full=0 empty=0
+[MON-RD] t=4978000 scenario=empty_pressure rd_en=1 rdata=6b full=0 empty=0
+[SCB-RD] PASS t=4978000 scenario=empty_pressure exp=6b got=6b depth_after=9
+[MON-WR] t=4981000 scenario=empty_pressure wr_en=0 wdata=bc full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=bc @4984000
+[MON-WR] t=4989000 scenario=empty_pressure wr_en=0 wdata=bc full=0 empty=0
+[MON-RD] t=4992000 scenario=empty_pressure rd_en=0 rdata=6b full=0 empty=0
+[MON-WR] t=4997000 scenario=empty_pressure wr_en=1 wdata=b0 full=0 empty=0
+[SCB-WR] PASS t=4997000 scenario=empty_pressure push=b0 depth=10
+[MON-WR] t=5005000 scenario=empty_pressure wr_en=0 wdata=b0 full=0 empty=0
+[MON-RD] t=5006000 scenario=empty_pressure rd_en=1 rdata=79 full=0 empty=0
+[SCB-RD] PASS t=5006000 scenario=empty_pressure exp=79 got=79 depth_after=9
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=b0 @5012000
+[MON-WR] t=5013000 scenario=empty_pressure wr_en=0 wdata=b0 full=0 empty=0
+[MON-RD] t=5020000 scenario=empty_pressure rd_en=0 rdata=79 full=0 empty=0
+[MON-WR] t=5021000 scenario=empty_pressure wr_en=0 wdata=c4 full=0 empty=0
+[MON-WR] t=5029000 scenario=empty_pressure wr_en=0 wdata=c4 full=0 empty=0
+[MON-RD] t=5034000 scenario=empty_pressure rd_en=1 rdata=91 full=0 empty=0
+[SCB-RD] PASS t=5034000 scenario=empty_pressure exp=91 got=91 depth_after=8
+[MON-WR] t=5037000 scenario=empty_pressure wr_en=0 wdata=c4 full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=c4 @5040000
+[MON-WR] t=5045000 scenario=empty_pressure wr_en=0 wdata=c4 full=0 empty=0
+[MON-RD] t=5048000 scenario=empty_pressure rd_en=0 rdata=91 full=0 empty=0
+[MON-WR] t=5053000 scenario=empty_pressure wr_en=0 wdata=ff full=0 empty=0
+[MON-WR] t=5061000 scenario=empty_pressure wr_en=0 wdata=ff full=0 empty=0
+[MON-RD] t=5062000 scenario=empty_pressure rd_en=1 rdata=c5 full=0 empty=0
+[SCB-RD] PASS t=5062000 scenario=empty_pressure exp=c5 got=c5 depth_after=7
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=ff @5068000
+[MON-WR] t=5069000 scenario=empty_pressure wr_en=0 wdata=ff full=0 empty=0
+[MON-RD] t=5076000 scenario=empty_pressure rd_en=0 rdata=c5 full=0 empty=0
+[MON-WR] t=5077000 scenario=empty_pressure wr_en=0 wdata=7b full=0 empty=0
+[MON-WR] t=5085000 scenario=empty_pressure wr_en=0 wdata=7b full=0 empty=0
+[MON-RD] t=5090000 scenario=empty_pressure rd_en=1 rdata=6f full=0 empty=0
+[SCB-RD] PASS t=5090000 scenario=empty_pressure exp=6f got=6f depth_after=6
+[MON-WR] t=5093000 scenario=empty_pressure wr_en=0 wdata=7b full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=7b @5096000
+[MON-WR] t=5101000 scenario=empty_pressure wr_en=0 wdata=7b full=0 empty=0
+[MON-RD] t=5104000 scenario=empty_pressure rd_en=0 rdata=6f full=0 empty=0
+[MON-WR] t=5109000 scenario=empty_pressure wr_en=0 wdata=60 full=0 empty=0
+[MON-WR] t=5117000 scenario=empty_pressure wr_en=0 wdata=60 full=0 empty=0
+[MON-RD] t=5118000 scenario=empty_pressure rd_en=1 rdata=5b full=0 empty=0
+[SCB-RD] PASS t=5118000 scenario=empty_pressure exp=5b got=5b depth_after=5
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=60 @5124000
+[MON-WR] t=5125000 scenario=empty_pressure wr_en=0 wdata=60 full=0 empty=0
+[MON-RD] t=5132000 scenario=empty_pressure rd_en=0 rdata=5b full=0 empty=0
+[MON-WR] t=5133000 scenario=empty_pressure wr_en=0 wdata=36 full=0 empty=0
+[MON-WR] t=5141000 scenario=empty_pressure wr_en=0 wdata=36 full=0 empty=0
+[MON-RD] t=5146000 scenario=empty_pressure rd_en=1 rdata=e full=0 empty=0
+[SCB-RD] PASS t=5146000 scenario=empty_pressure exp=e got=e depth_after=4
+[MON-WR] t=5149000 scenario=empty_pressure wr_en=0 wdata=36 full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=36 @5152000
+[MON-WR] t=5157000 scenario=empty_pressure wr_en=0 wdata=36 full=0 empty=0
+[MON-RD] t=5160000 scenario=empty_pressure rd_en=0 rdata=e full=0 empty=0
+[MON-WR] t=5165000 scenario=empty_pressure wr_en=1 wdata=47 full=0 empty=0
+[SCB-WR] PASS t=5165000 scenario=empty_pressure push=47 depth=5
+[MON-WR] t=5173000 scenario=empty_pressure wr_en=0 wdata=47 full=0 empty=0
+[MON-RD] t=5174000 scenario=empty_pressure rd_en=1 rdata=65 full=0 empty=0
+[SCB-RD] PASS t=5174000 scenario=empty_pressure exp=65 got=65 depth_after=4
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=47 @5180000
+[MON-WR] t=5181000 scenario=empty_pressure wr_en=0 wdata=47 full=0 empty=0
+[MON-RD] t=5188000 scenario=empty_pressure rd_en=0 rdata=65 full=0 empty=0
+[MON-WR] t=5189000 scenario=empty_pressure wr_en=0 wdata=bf full=0 empty=0
+[MON-WR] t=5197000 scenario=empty_pressure wr_en=0 wdata=bf full=0 empty=0
+[MON-RD] t=5202000 scenario=empty_pressure rd_en=1 rdata=2 full=0 empty=0
+[SCB-RD] PASS t=5202000 scenario=empty_pressure exp=2 got=2 depth_after=3
+[MON-WR] t=5205000 scenario=empty_pressure wr_en=0 wdata=bf full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=bf @5208000
+[MON-WR] t=5213000 scenario=empty_pressure wr_en=0 wdata=bf full=0 empty=0
+[MON-RD] t=5216000 scenario=empty_pressure rd_en=0 rdata=2 full=0 empty=0
+[MON-WR] t=5221000 scenario=empty_pressure wr_en=0 wdata=25 full=0 empty=0
+[MON-WR] t=5229000 scenario=empty_pressure wr_en=0 wdata=25 full=0 empty=0
+[MON-RD] t=5230000 scenario=empty_pressure rd_en=1 rdata=bc full=0 empty=0
+[SCB-RD] PASS t=5230000 scenario=empty_pressure exp=bc got=bc depth_after=2
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=25 @5236000
+[MON-WR] t=5237000 scenario=empty_pressure wr_en=0 wdata=25 full=0 empty=0
+[MON-RD] t=5244000 scenario=empty_pressure rd_en=0 rdata=bc full=0 empty=0
+[MON-WR] t=5245000 scenario=empty_pressure wr_en=0 wdata=57 full=0 empty=0
+[MON-WR] t=5253000 scenario=empty_pressure wr_en=0 wdata=57 full=0 empty=0
+[MON-RD] t=5258000 scenario=empty_pressure rd_en=1 rdata=b0 full=0 empty=0
+[SCB-RD] PASS t=5258000 scenario=empty_pressure exp=b0 got=b0 depth_after=1
+[MON-WR] t=5261000 scenario=empty_pressure wr_en=0 wdata=57 full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=57 @5264000
+[MON-WR] t=5269000 scenario=empty_pressure wr_en=0 wdata=57 full=0 empty=0
+[MON-RD] t=5272000 scenario=empty_pressure rd_en=0 rdata=b0 full=0 empty=0
+[MON-WR] t=5277000 scenario=empty_pressure wr_en=0 wdata=a2 full=0 empty=0
+[MON-WR] t=5285000 scenario=empty_pressure wr_en=0 wdata=a2 full=0 empty=0
+[MON-RD] t=5286000 scenario=empty_pressure rd_en=1 rdata=47 full=0 empty=1
+[SCB-RD] PASS t=5286000 scenario=empty_pressure exp=47 got=47 depth_after=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=a2 @5292000
+[MON-WR] t=5293000 scenario=empty_pressure wr_en=0 wdata=a2 full=0 empty=1
+[MON-RD] t=5300000 scenario=empty_pressure rd_en=0 rdata=47 full=0 empty=1
+[MON-WR] t=5301000 scenario=empty_pressure wr_en=1 wdata=4c full=0 empty=1
+[SCB-WR] PASS t=5301000 scenario=empty_pressure push=4c depth=1
+[MON-WR] t=5309000 scenario=empty_pressure wr_en=0 wdata=4c full=0 empty=1
+[MON-RD] t=5314000 scenario=empty_pressure rd_en=1 rdata=47 full=0 empty=1
+[SCB-RD] BLOCK t=5314000 scenario=empty_pressure empty_pre=1 depth=1
+[MON-WR] t=5317000 scenario=empty_pressure wr_en=0 wdata=4c full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=4c @5320000
+[MON-WR] t=5325000 scenario=empty_pressure wr_en=0 wdata=4c full=0 empty=1
+[MON-RD] t=5328000 scenario=empty_pressure rd_en=0 rdata=47 full=0 empty=1
+[MON-WR] t=5333000 scenario=empty_pressure wr_en=0 wdata=8e full=0 empty=1
+[MON-WR] t=5341000 scenario=empty_pressure wr_en=0 wdata=8e full=0 empty=1
+[MON-RD] t=5342000 scenario=empty_pressure rd_en=1 rdata=47 full=0 empty=0
+[SCB-RD] BLOCK t=5342000 scenario=empty_pressure empty_pre=1 depth=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=8e @5348000
+[MON-WR] t=5349000 scenario=empty_pressure wr_en=0 wdata=8e full=0 empty=0
+[MON-RD] t=5356000 scenario=empty_pressure rd_en=0 rdata=47 full=0 empty=0
+[MON-WR] t=5357000 scenario=empty_pressure wr_en=1 wdata=28 full=0 empty=0
+[SCB-WR] PASS t=5357000 scenario=empty_pressure push=28 depth=2
+[MON-WR] t=5365000 scenario=empty_pressure wr_en=0 wdata=28 full=0 empty=0
+[MON-RD] t=5370000 scenario=empty_pressure rd_en=1 rdata=4c full=0 empty=1
+[SCB-RD] PASS t=5370000 scenario=empty_pressure exp=4c got=4c depth_after=1
+[MON-WR] t=5373000 scenario=empty_pressure wr_en=0 wdata=28 full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=28 @5376000
+[MON-WR] t=5381000 scenario=empty_pressure wr_en=0 wdata=28 full=0 empty=1
+[MON-RD] t=5384000 scenario=empty_pressure rd_en=0 rdata=4c full=0 empty=1
+[MON-WR] t=5389000 scenario=empty_pressure wr_en=0 wdata=96 full=0 empty=1
+[MON-WR] t=5397000 scenario=empty_pressure wr_en=0 wdata=96 full=0 empty=1
+[MON-RD] t=5398000 scenario=empty_pressure rd_en=1 rdata=4c full=0 empty=0
+[SCB-RD] BLOCK t=5398000 scenario=empty_pressure empty_pre=1 depth=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=96 @5404000
+[MON-WR] t=5405000 scenario=empty_pressure wr_en=0 wdata=96 full=0 empty=0
+[MON-RD] t=5412000 scenario=empty_pressure rd_en=0 rdata=4c full=0 empty=0
+[MON-WR] t=5413000 scenario=empty_pressure wr_en=0 wdata=e2 full=0 empty=0
+[MON-WR] t=5421000 scenario=empty_pressure wr_en=0 wdata=e2 full=0 empty=0
+[MON-RD] t=5426000 scenario=empty_pressure rd_en=1 rdata=28 full=0 empty=1
+[SCB-RD] PASS t=5426000 scenario=empty_pressure exp=28 got=28 depth_after=0
+[MON-WR] t=5429000 scenario=empty_pressure wr_en=0 wdata=e2 full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=e2 @5432000
+[MON-WR] t=5437000 scenario=empty_pressure wr_en=0 wdata=e2 full=0 empty=1
+[MON-RD] t=5440000 scenario=empty_pressure rd_en=0 rdata=28 full=0 empty=1
+[MON-WR] t=5445000 scenario=empty_pressure wr_en=0 wdata=f4 full=0 empty=1
+[MON-WR] t=5453000 scenario=empty_pressure wr_en=0 wdata=f4 full=0 empty=1
+[MON-RD] t=5454000 scenario=empty_pressure rd_en=1 rdata=28 full=0 empty=1
+[SCB-RD] BLOCK t=5454000 scenario=empty_pressure empty_pre=1 depth=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=f4 @5460000
+[MON-WR] t=5461000 scenario=empty_pressure wr_en=0 wdata=f4 full=0 empty=1
+[MON-RD] t=5468000 scenario=empty_pressure rd_en=0 rdata=28 full=0 empty=1
+[MON-WR] t=5469000 scenario=empty_pressure wr_en=0 wdata=a8 full=0 empty=1
+[MON-WR] t=5477000 scenario=empty_pressure wr_en=0 wdata=a8 full=0 empty=1
+[MON-RD] t=5482000 scenario=empty_pressure rd_en=1 rdata=28 full=0 empty=1
+[SCB-RD] BLOCK t=5482000 scenario=empty_pressure empty_pre=1 depth=0
+[MON-WR] t=5485000 scenario=empty_pressure wr_en=0 wdata=a8 full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=a8 @5488000
+[MON-WR] t=5493000 scenario=empty_pressure wr_en=0 wdata=a8 full=0 empty=1
+[MON-RD] t=5496000 scenario=empty_pressure rd_en=0 rdata=28 full=0 empty=1
+[MON-WR] t=5501000 scenario=empty_pressure wr_en=1 wdata=7f full=0 empty=1
+[SCB-WR] PASS t=5501000 scenario=empty_pressure push=7f depth=1
+[MON-WR] t=5509000 scenario=empty_pressure wr_en=0 wdata=7f full=0 empty=1
+[MON-RD] t=5510000 scenario=empty_pressure rd_en=1 rdata=28 full=0 empty=1
+[SCB-RD] BLOCK t=5510000 scenario=empty_pressure empty_pre=1 depth=1
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=7f @5516000
+[MON-WR] t=5517000 scenario=empty_pressure wr_en=0 wdata=7f full=0 empty=1
+[MON-RD] t=5524000 scenario=empty_pressure rd_en=0 rdata=28 full=0 empty=1
+[MON-WR] t=5525000 scenario=empty_pressure wr_en=0 wdata=4d full=0 empty=1
+[MON-WR] t=5533000 scenario=empty_pressure wr_en=0 wdata=4d full=0 empty=1
+[MON-RD] t=5538000 scenario=empty_pressure rd_en=1 rdata=28 full=0 empty=0
+[SCB-RD] BLOCK t=5538000 scenario=empty_pressure empty_pre=1 depth=1
+[MON-WR] t=5541000 scenario=empty_pressure wr_en=0 wdata=4d full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=4d @5544000
+[MON-WR] t=5549000 scenario=empty_pressure wr_en=0 wdata=4d full=0 empty=0
+[MON-RD] t=5552000 scenario=empty_pressure rd_en=0 rdata=28 full=0 empty=0
+[MON-WR] t=5557000 scenario=empty_pressure wr_en=0 wdata=e8 full=0 empty=0
+[MON-WR] t=5565000 scenario=empty_pressure wr_en=0 wdata=e8 full=0 empty=0
+[MON-RD] t=5566000 scenario=empty_pressure rd_en=1 rdata=7f full=0 empty=1
+[SCB-RD] PASS t=5566000 scenario=empty_pressure exp=7f got=7f depth_after=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=e8 @5572000
+[MON-WR] t=5573000 scenario=empty_pressure wr_en=0 wdata=e8 full=0 empty=1
+[MON-RD] t=5580000 scenario=empty_pressure rd_en=0 rdata=7f full=0 empty=1
+[MON-WR] t=5581000 scenario=empty_pressure wr_en=0 wdata=59 full=0 empty=1
+[MON-WR] t=5589000 scenario=empty_pressure wr_en=0 wdata=59 full=0 empty=1
+[MON-RD] t=5594000 scenario=empty_pressure rd_en=1 rdata=7f full=0 empty=1
+[SCB-RD] BLOCK t=5594000 scenario=empty_pressure empty_pre=1 depth=0
+[MON-WR] t=5597000 scenario=empty_pressure wr_en=0 wdata=59 full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=59 @5600000
+[MON-WR] t=5605000 scenario=empty_pressure wr_en=0 wdata=59 full=0 empty=1
+[MON-RD] t=5608000 scenario=empty_pressure rd_en=0 rdata=7f full=0 empty=1
+[MON-WR] t=5613000 scenario=empty_pressure wr_en=1 wdata=68 full=0 empty=1
+[SCB-WR] PASS t=5613000 scenario=empty_pressure push=68 depth=1
+[MON-WR] t=5621000 scenario=empty_pressure wr_en=0 wdata=68 full=0 empty=1
+[MON-RD] t=5622000 scenario=empty_pressure rd_en=1 rdata=7f full=0 empty=1
+[SCB-RD] BLOCK t=5622000 scenario=empty_pressure empty_pre=1 depth=1
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=68 @5628000
+[MON-WR] t=5629000 scenario=empty_pressure wr_en=0 wdata=68 full=0 empty=1
+[MON-RD] t=5636000 scenario=empty_pressure rd_en=0 rdata=7f full=0 empty=1
+[MON-WR] t=5637000 scenario=empty_pressure wr_en=0 wdata=d2 full=0 empty=1
+[MON-WR] t=5645000 scenario=empty_pressure wr_en=0 wdata=d2 full=0 empty=1
+[MON-RD] t=5650000 scenario=empty_pressure rd_en=1 rdata=7f full=0 empty=0
+[SCB-RD] BLOCK t=5650000 scenario=empty_pressure empty_pre=1 depth=1
+[MON-WR] t=5653000 scenario=empty_pressure wr_en=0 wdata=d2 full=0 empty=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=d2 @5656000
+[MON-WR] t=5661000 scenario=empty_pressure wr_en=0 wdata=d2 full=0 empty=0
+[MON-RD] t=5664000 scenario=empty_pressure rd_en=0 rdata=7f full=0 empty=0
+[MON-WR] t=5669000 scenario=empty_pressure wr_en=0 wdata=a5 full=0 empty=0
+[MON-WR] t=5677000 scenario=empty_pressure wr_en=0 wdata=a5 full=0 empty=0
+[MON-RD] t=5678000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] PASS t=5678000 scenario=empty_pressure exp=68 got=68 depth_after=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=a5 @5684000
+[MON-WR] t=5685000 scenario=empty_pressure wr_en=0 wdata=a5 full=0 empty=1
+[MON-RD] t=5692000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5693000 scenario=empty_pressure wr_en=0 wdata=7e full=0 empty=1
+[MON-WR] t=5701000 scenario=empty_pressure wr_en=0 wdata=7e full=0 empty=1
+[MON-RD] t=5706000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5706000 scenario=empty_pressure empty_pre=1 depth=0
+[MON-WR] t=5709000 scenario=empty_pressure wr_en=0 wdata=7e full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=7e @5712000
+[MON-WR] t=5717000 scenario=empty_pressure wr_en=0 wdata=7e full=0 empty=1
+[MON-RD] t=5720000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5725000 scenario=empty_pressure wr_en=0 wdata=ee full=0 empty=1
+[MON-WR] t=5733000 scenario=empty_pressure wr_en=0 wdata=ee full=0 empty=1
+[MON-RD] t=5734000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5734000 scenario=empty_pressure empty_pre=1 depth=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=ee @5740000
+[MON-WR] t=5741000 scenario=empty_pressure wr_en=0 wdata=ee full=0 empty=1
+[MON-RD] t=5748000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5749000 scenario=empty_pressure wr_en=0 wdata=f0 full=0 empty=1
+[MON-WR] t=5757000 scenario=empty_pressure wr_en=0 wdata=f0 full=0 empty=1
+[MON-RD] t=5762000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5762000 scenario=empty_pressure empty_pre=1 depth=0
+[MON-WR] t=5765000 scenario=empty_pressure wr_en=0 wdata=f0 full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=f0 @5768000
+[MON-WR] t=5773000 scenario=empty_pressure wr_en=0 wdata=f0 full=0 empty=1
+[MON-RD] t=5776000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5781000 scenario=empty_pressure wr_en=0 wdata=3d full=0 empty=1
+[MON-WR] t=5789000 scenario=empty_pressure wr_en=0 wdata=3d full=0 empty=1
+[MON-RD] t=5790000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5790000 scenario=empty_pressure empty_pre=1 depth=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=3d @5796000
+[MON-WR] t=5797000 scenario=empty_pressure wr_en=0 wdata=3d full=0 empty=1
+[MON-RD] t=5804000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5805000 scenario=empty_pressure wr_en=0 wdata=f2 full=0 empty=1
+[MON-WR] t=5813000 scenario=empty_pressure wr_en=0 wdata=f2 full=0 empty=1
+[MON-RD] t=5818000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5818000 scenario=empty_pressure empty_pre=1 depth=0
+[MON-WR] t=5821000 scenario=empty_pressure wr_en=0 wdata=f2 full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=f2 @5824000
+[MON-WR] t=5829000 scenario=empty_pressure wr_en=0 wdata=f2 full=0 empty=1
+[MON-RD] t=5832000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5837000 scenario=empty_pressure wr_en=0 wdata=8d full=0 empty=1
+[MON-WR] t=5845000 scenario=empty_pressure wr_en=0 wdata=8d full=0 empty=1
+[MON-RD] t=5846000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5846000 scenario=empty_pressure empty_pre=1 depth=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=8d @5852000
+[MON-WR] t=5853000 scenario=empty_pressure wr_en=0 wdata=8d full=0 empty=1
+[MON-RD] t=5860000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5861000 scenario=empty_pressure wr_en=0 wdata=8f full=0 empty=1
+[MON-WR] t=5869000 scenario=empty_pressure wr_en=0 wdata=8f full=0 empty=1
+[MON-RD] t=5874000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5874000 scenario=empty_pressure empty_pre=1 depth=0
+[MON-WR] t=5877000 scenario=empty_pressure wr_en=0 wdata=8f full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=8f @5880000
+[MON-WR] t=5885000 scenario=empty_pressure wr_en=0 wdata=8f full=0 empty=1
+[MON-RD] t=5888000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5893000 scenario=empty_pressure wr_en=0 wdata=36 full=0 empty=1
+[MON-WR] t=5901000 scenario=empty_pressure wr_en=0 wdata=36 full=0 empty=1
+[MON-RD] t=5902000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5902000 scenario=empty_pressure empty_pre=1 depth=0
+[DRV] scenario=empty_pressure wr_en=0 rd_en=1 wdata=36 @5908000
+[MON-WR] t=5909000 scenario=empty_pressure wr_en=0 wdata=36 full=0 empty=1
+[MON-RD] t=5916000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[MON-WR] t=5917000 scenario=empty_pressure wr_en=1 wdata=6e full=0 empty=1
+[SCB-WR] PASS t=5917000 scenario=empty_pressure push=6e depth=1
+[MON-WR] t=5925000 scenario=empty_pressure wr_en=0 wdata=6e full=0 empty=1
+[MON-RD] t=5930000 scenario=empty_pressure rd_en=1 rdata=68 full=0 empty=1
+[SCB-RD] BLOCK t=5930000 scenario=empty_pressure empty_pre=1 depth=1
+[MON-WR] t=5933000 scenario=empty_pressure wr_en=0 wdata=6e full=0 empty=1
+[DRV] scenario=empty_pressure wr_en=1 rd_en=1 wdata=6e @5936000
+[MON-WR] t=5941000 scenario=empty_pressure wr_en=0 wdata=6e full=0 empty=1
+[MON-RD] t=5944000 scenario=empty_pressure rd_en=0 rdata=68 full=0 empty=1
+[SCB][SUMMARY] sample=1155 rd_tick=420 pass=185 fail=0 wr_acc=93 rd_acc=92 wr_block=46 rd_block=40 depth_left=1 full_seen=293 empty_seen=236
+[SCB][COVERAGE] functional_coverage=0.00%
+[SCB][SCENARIO] id=1 name=fill_burst sample=229 wr_acc=19 rd_acc=3 wr_block=23 rd_block=1
+[SCB][SCENARIO] id=2 name=mixed_stress sample=231 wr_acc=30 rd_acc=32 wr_block=8 rd_block=0
+[SCB][SCENARIO] id=3 name=drain_burst sample=231 wr_acc=8 rd_acc=22 wr_block=0 rd_block=20
+[SCB][SCENARIO] id=4 name=full_pressure sample=231 wr_acc=27 rd_acc=12 wr_block=15 rd_block=0
+[SCB][SCENARIO] id=5 name=empty_pressure sample=233 wr_acc=9 rd_acc=23 wr_block=0 rd_block=19
+[SCB][PASS] Async FIFO scoreboard completed without mismatches
+[ENV] run finished
+[TB] tb_fifo finished successfully
+$finish called at time : 5964 ns : File "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/fifo/tb_fifo.sv" Line 64
+[INFO] Auto replay run all completed.
+INFO: [Simtcl 6-16] Simulation closed
+[SUCCESS] Auto replay completed for top: tb_fifo
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 12:53:15 2026...

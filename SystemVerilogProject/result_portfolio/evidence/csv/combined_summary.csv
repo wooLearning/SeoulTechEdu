@@ -1,0 +1,4 @@
+module_name,sample_count,rd_tick,pass_count,fail_count,wr_acc_count,rd_acc_count,wr_block_count,rd_block_count,depth_left,full_seen_count,empty_seen_count,coverage_pct,status,module_label
+async_fifo_src,1153,420,190,0,96,94,41,39,2,255,228,0.0,PASS,Async FIFO (Dedicated RTL)
+async_fifo,1153,420,190,0,96,94,41,39,2,255,228,0.0,PASS,Async FIFO (Showcase)
+sync_fifo,320,0,838,0,202,198,35,40,4,128,40,0.0,PASS,Sync FIFO
