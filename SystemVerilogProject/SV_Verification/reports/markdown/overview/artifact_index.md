@@ -1,9 +1,11 @@
 # 산출물 인덱스
 
-이 문서는 `result_portfolio` 패키지에서 확인해야 할 핵심 산출물만 간단히 정리한 문서입니다.
+이 문서는 `SV_Verification` 폴더에서 확인해야 할 핵심 산출물만 간단히 정리한 문서입니다.
 
 ## 핵심 보고서
 
+- PDF 메인 보고서
+  - `reports/pdf/systemverilog_python_visual_report_ko.pdf`
 - HTML 메인 보고서
   - `reports/html/index.html`
   - `reports/html/systemverilog_python_visual_report_ko.html`
@@ -74,4 +76,4 @@
 ## 참고 메모
 
 - 이 프로젝트의 메인 증빙 기준은 Vivado/xsim입니다.
-- 이 패키지는 showcase 코드와 핵심 증빙만 남긴 GitHub 업로드용 최종본입니다.
+- 이 패키지는 핵심 코드와 증빙 위주로 정리한 GitHub 업로드용 최종본입니다.

@@ -1,32 +1,33 @@
 # Verilog & SystemVerilog Project Archive
-> FPGA RTL design, CPU implementation, and verification practice repository
+> FPGA RTL design, CPU implementation, and verification repository
 
-이 저장소는 Verilog / SystemVerilog 기반 디지털 설계 결과물을 폴더별로 정리한 아카이브입니다.  
-GitHub에서 바로 구조를 이해할 수 있도록, 상위 폴더를 중심으로 프로젝트 성격과 포함 자료를 한눈에 볼 수 있게 정리했습니다.
+이 저장소는 Verilog / SystemVerilog 기반 디지털 설계 결과물을 폴더별로 모아 둔 아카이브입니다.  
+상위 폴더 기준으로 프로젝트 성격과 포함 자료를 확인할 수 있습니다.
 
 ## 📂 Repository Overview
 
 | 폴더 | 설명 | 주요 내용 |
 | --- | --- | --- |
 | [VerilogProject](./VerilogProject) | Verilog 기반 FPGA 통합 설계 모음 | Stopwatch/Clock, UART, Sensor 연동, RTL/TB/XDC/PDF 보고서 |
-| [SystemVerilogProject](./SystemVerilogProject) | SystemVerilog 기반 CPU/검증 프로젝트 모음 | RV32I Single-Cycle CPU, verification portfolio, 보고서 |
+| [SystemVerilogProject](./SystemVerilogProject) | SystemVerilog 기반 CPU/검증 프로젝트 모음 | RV32I Single-Cycle CPU, 검증 프로젝트, 보고서 |
 
-## 🌟 Featured Verification Project
+## 주요 검증 프로젝트
 
-[SV_Verification](./SystemVerilogProject/SV_Verification)은 이 저장소에서 가장 바로 보여주기 좋은 검증 중심 showcase입니다.  
-FIFO / UART 기반 RTL에 대해 `interface`, `generator`, `driver`, `monitor`, `scoreboard`, `coverage` 구조를 적용했고, 결과를 HTML/Markdown 보고서와 시뮬레이션 로그까지 포함해 정리했습니다.
+[SV_Verification](./SystemVerilogProject/SV_Verification)은 FIFO / UART 기반 RTL을 대상으로 만든 SystemVerilog 검증 프로젝트입니다.  
+`interface`, `generator`, `driver`, `monitor`, `scoreboard`, `coverage`로 역할을 나눠 testbench를 구성했고, 결과는 HTML/Markdown 보고서와 시뮬레이션 로그로 남겨 두었습니다.
 
 바로 보기:
 - [SV_Verification](./SystemVerilogProject/SV_Verification)
 - [상세 README](./SystemVerilogProject/SV_Verification/README.md)
-- [HTML Report](./SystemVerilogProject/SV_Verification/reports/html/index.html)
+- [PDF 보고서](./SystemVerilogProject/SV_Verification/reports/pdf/systemverilog_python_visual_report_ko.pdf)
+- [HTML 보고서](./SystemVerilogProject/SV_Verification/reports/html/index.html)
 
-## 🧩 Folder Guide
+## 폴더 안내
 
 ### 1. [VerilogProject](./VerilogProject)
 
-기본 Verilog 문법과 FPGA 주변장치 제어를 중심으로 구성된 프로젝트 폴더입니다.  
-시계/스톱워치, UART 통신, 초음파 센서(HC-SR04), 온습도 센서(DHT11) 등을 하나의 시스템으로 확장해가는 흐름을 담고 있습니다.
+기본 Verilog 문법과 FPGA 주변장치 제어를 중심으로 구성한 프로젝트 폴더입니다.  
+시계/스톱워치, UART 통신, 초음파 센서(HC-SR04), 온습도 센서(DHT11)를 하나의 시스템으로 확장한 내용을 담고 있습니다.
 
 주요 구성:
 - [SourceCode](./VerilogProject/SourceCode): 실제 RTL, testbench, 제약 파일
@@ -43,20 +44,20 @@ FIFO / UART 기반 RTL에 대해 `interface`, `generator`, `driver`, `monitor`, 
 
 ### 2. [SystemVerilogProject](./SystemVerilogProject)
 
-SystemVerilog를 활용한 CPU 설계와 verification 포트폴리오를 함께 정리한 폴더입니다.  
-설계(RTL)와 검증(Testbench/Report)을 분리해서 보여줄 수 있도록 두 개의 하위 프로젝트로 구성되어 있습니다.
+SystemVerilog를 사용한 CPU 설계와 검증 프로젝트를 함께 모아둔 폴더입니다.  
+설계(RTL)와 검증(Testbench/Report)을 나눠 볼 수 있도록 두 개의 하위 프로젝트로 구성했습니다.
 
 주요 구성:
-- [SV_Verification](./SystemVerilogProject/SV_Verification): FIFO/UART 중심 verification portfolio
+- [SV_Verification](./SystemVerilogProject/SV_Verification): FIFO/UART 중심 검증 프로젝트
 - [RV32I_SingleSycle](./SystemVerilogProject/RV32I_SingleSycle): RV32I single-cycle CPU 구현
 
 핵심 포인트:
 - 단일 사이클 구조의 PC, ALU, Register File, ROM/RAM 구성
-- FIFO / UART 기반 self-checking verification environment
+- FIFO / UART 기반 self-checking testbench 구성
 - CSV 로그, HTML/Markdown 보고서, Vivado xsim 실행 결과 정리
 - `Top.sv`, `Datapath.sv`, `ControlUnit.sv` 기반 RV32I CPU 설계
 
-## 🌲 Directory Layout
+## 디렉터리 구조
 
 ```text
 Git_SeoulEduRepo/
@@ -68,24 +69,24 @@ Git_SeoulEduRepo/
 │  └─ *.pdf          # project documents
 ├─ SystemVerilogProject/
 │  ├─ SV_Verification/
-│     ├─ src/        # showcase RTL
-│     ├─ tb/         # verification environments
-│     ├─ reports/    # markdown/html reports
-│     ├─ evidence/   # logs and CSV artifacts
-│     └─ tools/      # analysis scripts
+│  │  ├─ src/        # verification target RTL
+│  │  ├─ tb/         # testbench
+│  │  ├─ reports/    # markdown/html reports
+│  │  ├─ evidence/   # logs and CSV artifacts
+│  │  └─ tools/      # analysis scripts
 │  └─ RV32I_SingleSycle/
 │     ├─ src/        # RV32I CPU RTL
 │     └─ tb/         # CPU testbench and sample programs
 └─ README.md
 ```
 
-## 📌 Recommended Reading Order
+## 읽는 순서
 
 1. 저장소 전체 구조는 이 문서에서 먼저 확인
 2. 검증 역량은 [SV_Verification](./SystemVerilogProject/SV_Verification)와 해당 [README](./SystemVerilogProject/SV_Verification/README.md) 확인
 3. Verilog 설계는 [VerilogProject](./VerilogProject)부터 확인
 4. CPU 구현은 [RV32I_SingleSycle](./SystemVerilogProject/RV32I_SingleSycle) 확인
 
-## 🛠️ Tech Stack
+## 기술 스택
 
 `Verilog` `SystemVerilog` `FPGA` `UART` `FIFO` `RISC-V` `Vivado` `xsim` `Python`

@@ -223,6 +223,7 @@ UART 추가분은 아래 문서에서 자세히 확인할 수 있습니다.
 
 ## 포트폴리오 패키지 경로
 
+- PDF: `reports/pdf/systemverilog_python_visual_report_ko.pdf`
 - HTML: `reports/html/systemverilog_python_visual_report_ko.html`
 - Markdown: `reports/markdown/overview/systemverilog_python_visual_report_ko.md`
 - 차트 폴더: `reports/html/assets`
