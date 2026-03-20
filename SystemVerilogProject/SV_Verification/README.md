@@ -1,6 +1,6 @@
 # SystemVerilog Verification Portfolio
 
-비동기 FIFO, 동기 FIFO, UART RX, UART+FIFO 통합 경로를 대상으로 직접 구성한 SystemVerilog 검증 포트폴리오입니다.
+비동기 FIFO, 동기 FIFO, UART RX, UART+FIFO 통합 경로를 대상으로 작성한 SystemVerilog 검증 문서입니다.
 정식 IEEE UVM 라이브러리를 사용한 프로젝트는 아니지만, `transaction / generator / driver / monitor / scoreboard / environment` 역할 분리와 `interface + clocking block + self-checking` 구조를 참고해 testbench를 구성했습니다.
 
 ![Verification Dashboard](reports/html/assets/python_dashboard.png)
@@ -8,6 +8,7 @@
 ## 시작하기
 
 - 메인 안내: [START_HERE_ko.md](START_HERE_ko.md)
+- Markdown 보고서: [reports/markdown/overview/systemverilog_python_visual_report_ko.md](reports/markdown/overview/systemverilog_python_visual_report_ko.md)
 - PDF 보고서: [reports/pdf/systemverilog_python_visual_report_ko.pdf](reports/pdf/systemverilog_python_visual_report_ko.pdf)
 - HTML 보고서: [reports/html/index.html](reports/html/index.html)
 - 검증 개요: [reports/markdown/overview/verification_overview.md](reports/markdown/overview/verification_overview.md)
@@ -16,6 +17,7 @@
 
 ## 구성 내용
 
+- GitHub에서 바로 볼 수 있는 Markdown 보고서
 - Async FIFO와 Sync FIFO를 대상으로 한 self-checking testbench
 - UART RX 단독 검증과 UART+FIFO 통합 검증
 - `clocking block` 기반 drive / pre-sample / post-sample 타이밍 분리
@@ -132,6 +134,6 @@ SV_Verification/
 
 ## 참고
 
-- 이 폴더는 GitHub 업로드용으로 재패키징한 최종본입니다.
-- `reference`, `generated_docs` 같은 보조 자료는 제외하고 주요 결과물 위주로 남겼습니다.
-- Python 대시보드는 FIFO 계열 CSV를 중심으로 구성돼 있고, UART 케이스는 모듈 보고서와 Vivado 로그에서 상세 설명을 이어갑니다.
+- `reference`, `generated_docs` 같은 보조 자료는 제외했습니다.
+- Python 대시보드는 FIFO 계열 CSV를 중심으로 구성되어 있습니다.
+- UART 케이스는 모듈 보고서와 Vivado 로그에서 이어서 확인할 수 있습니다.

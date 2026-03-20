@@ -19,6 +19,7 @@
 바로 보기:
 - [SV_Verification](./SystemVerilogProject/SV_Verification)
 - [상세 README](./SystemVerilogProject/SV_Verification/README.md)
+- [Markdown 보고서](./SystemVerilogProject/SV_Verification/reports/markdown/overview/systemverilog_python_visual_report_ko.md)
 - [PDF 보고서](./SystemVerilogProject/SV_Verification/reports/pdf/systemverilog_python_visual_report_ko.pdf)
 - [HTML 보고서](./SystemVerilogProject/SV_Verification/reports/html/index.html)
 
@@ -45,7 +46,7 @@
 ### 2. [SystemVerilogProject](./SystemVerilogProject)
 
 SystemVerilog를 사용한 CPU 설계와 검증 프로젝트를 함께 모아둔 폴더입니다.  
-설계(RTL)와 검증(Testbench/Report)을 나눠 볼 수 있도록 두 개의 하위 프로젝트로 구성했습니다.
+설계(RTL)와 검증(Testbench/Report) 기준으로 두 개의 하위 프로젝트로 나뉘어 있습니다.
 
 주요 구성:
 - [SV_Verification](./SystemVerilogProject/SV_Verification): FIFO/UART 중심 검증 프로젝트

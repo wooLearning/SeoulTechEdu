@@ -369,9 +369,9 @@ def build_html_report(
         )
 
     hero_points = """
-    <li>TB scoreboard가 직접 만든 CSV를 기반으로 Python에서 다시 시각화해 재현 가능한 분석 흐름을 구성했습니다.</li>
-    <li>accepted path와 blocked path를 함께 집계해 full/empty boundary behavior까지 근거 자료로 남겼습니다.</li>
-    <li>clocking block을 drive, pre-sample, post-sample 단계로 분리해 XSim 기준 clean pass가 유지되도록 정렬했습니다.</li>
+    <li>TB scoreboard가 생성한 CSV를 Python으로 다시 시각화했습니다.</li>
+    <li>accepted path와 blocked path를 함께 집계했습니다.</li>
+    <li>`clocking block`을 drive, pre-sample, post-sample 단계로 나눠 사용했습니다.</li>
     """
 
     chart_card = lambda title, file_name, desc: f"""
@@ -392,35 +392,35 @@ def build_html_report(
         <p class="eyebrow">Chart Guide</p>
         <h3>1. Verification Dashboard</h3>
         <p class="card-copy">
-          4개 핵심 그래프를 한 화면에 모은 요약판입니다. 발표나 포트폴리오 첫 장에서 전체 검증 범위를 빠르게 설명하기 위해 넣었습니다.
+          4개 핵심 그래프를 한 화면에 모아 둔 요약 화면입니다.
         </p>
       </article>
       <article class="info-card">
         <p class="eyebrow">Chart Guide</p>
         <h3>2. Module Transfer Overview</h3>
         <p class="card-copy">
-          x축은 모듈, y축은 횟수입니다. WR/RD accepted와 WR/RD blocked를 함께 보여줘 정상 경로뿐 아니라 full/empty 경계 조건까지 실제로 검증했는지 설명하기 위해 선택했습니다.
+          x축은 모듈, y축은 횟수입니다. WR/RD accepted와 WR/RD blocked를 함께 표시합니다.
         </p>
       </article>
       <article class="info-card">
         <p class="eyebrow">Chart Guide</p>
         <h3>3. Scenario Activity Heatmap</h3>
         <p class="card-copy">
-          x축은 시나리오, y축은 모듈이며 각 셀의 색과 숫자는 accepted activity 양입니다. 어떤 시나리오가 실제로 활발히 수행되었는지 한눈에 보이게 하려는 의도입니다.
+          x축은 시나리오, y축은 모듈이며 각 셀의 색과 숫자는 accepted activity 양입니다.
         </p>
       </article>
       <article class="info-card">
         <p class="eyebrow">Chart Guide</p>
         <h3>4. Reference Model Depth Trend</h3>
         <p class="card-copy">
-          x축은 sample index, y축은 transaction 이후의 reference model depth입니다. FIFO가 fill, mixed, drain 흐름을 따라 실제로 차고 비는지를 시간 순서로 보여주기 위해 넣었습니다.
+          x축은 sample index, y축은 transaction 이후의 reference model depth입니다.
         </p>
       </article>
       <article class="info-card">
         <p class="eyebrow">Chart Guide</p>
         <h3>5. Depth Histogram</h3>
         <p class="card-copy">
-          x축은 depth 값, y축은 해당 depth가 등장한 빈도입니다. 테스트가 특정 구간에만 몰리지 않고 empty/full 근처 경계 상태까지 얼마나 넓게 밟았는지 설명하기 위한 분포 그래프입니다.
+          x축은 depth 값, y축은 해당 depth가 등장한 빈도입니다.
         </p>
       </article>
     """
@@ -628,6 +628,113 @@ def build_html_report(
       font-size: 13px;
       color: #2f3a48;
     }}
+    @page {{
+      size: A4 landscape;
+      margin: 10mm;
+    }}
+    @media print {{
+      :root {{
+        --bg: #ffffff;
+        --panel: #ffffff;
+        --panel-strong: #ffffff;
+        --text: #111111;
+        --muted: #555555;
+        --line: #d7dbe0;
+        --shadow: none;
+      }}
+      body {{
+        background: #ffffff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }}
+      .page {{
+        max-width: none;
+        padding: 0;
+      }}
+      .hero,
+      .section,
+      .metric-card,
+      .info-card,
+      .table-wrap,
+      .path-item {{
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+        backdrop-filter: none;
+      }}
+      .hero,
+      .metric-card,
+      .chart-card,
+      .info-card,
+      .table-wrap {{
+        background: #ffffff;
+        border: 1px solid var(--line);
+      }}
+      .section {{
+        margin-top: 16px;
+      }}
+      .section-title {{
+        font-size: 22px;
+        margin-bottom: 10px;
+      }}
+      h1 {{
+        font-size: 30px;
+        margin-bottom: 10px;
+      }}
+      .hero-copy,
+      .card-copy,
+      table {{
+        font-size: 12px;
+      }}
+      .card-grid {{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }}
+      .chart-stack {{
+        gap: 12px;
+      }}
+      .chart-card {{
+        break-inside: auto;
+        page-break-inside: auto;
+        padding: 18px;
+      }}
+      .card-head {{
+        display: block;
+      }}
+      .card-copy {{
+        margin-top: 6px;
+      }}
+      .chart-card img {{
+        width: 92%;
+        display: block;
+        margin: 12px auto 0;
+        margin-top: 12px;
+        max-height: 95mm;
+        object-fit: contain;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }}
+      .metric-grid {{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px 8px;
+      }}
+      .metric-grid dd {{
+        font-size: 16px;
+      }}
+      .table-wrap {{
+        overflow: visible;
+        padding: 8px;
+      }}
+      th, td {{
+        padding: 8px 6px;
+        white-space: normal;
+        word-break: break-word;
+      }}
+      .path-item {{
+        font-size: 11px;
+        padding: 10px 12px;
+      }}
+    }}
     @media (max-width: 1024px) {{
       .card-grid {{
         grid-template-columns: 1fr;
@@ -644,8 +751,8 @@ def build_html_report(
       <p class="eyebrow">SystemVerilog Portfolio</p>
       <h1>Python 시각화 검증 보고서</h1>
       <p class="hero-copy">
-        TB scoreboard가 직접 생성한 CSV를 Python으로 다시 시각화해 만든 포트폴리오용 보고서입니다.
-        PASS/FAIL만 보여주는 수준을 넘어서, scenario별 activity, accepted/blocked path, depth 변화까지 정리했습니다.
+        TB scoreboard가 생성한 CSV를 Python으로 다시 시각화한 보고서입니다.
+        scenario별 activity, accepted/blocked path, depth 변화를 함께 확인할 수 있습니다.
       </p>
       <ul>
         {hero_points}
@@ -661,7 +768,7 @@ def build_html_report(
 
     <section class="section chart-stack">
       <h2 class="section-title">차트</h2>
-      {chart_card("Verification Dashboard", "python_dashboard.png", "대표 차트 4개를 한 화면에서 볼 수 있는 메인 대시보드입니다.")}
+      {chart_card("Verification Dashboard", "python_dashboard.png", "핵심 차트 4개를 한 화면에 모은 대시보드입니다.")}
       {chart_card("Module Transfer Overview", "python_module_overview.png", "모듈별 accepted와 blocked count를 비교해 검증 범위를 설명합니다.")}
       {chart_card("Scenario Activity Heatmap", "python_scenario_heatmap.png", "시나리오별 activity 분포를 통해 pressure path와 정상 path가 모두 발생했는지 보여줍니다.")}
       {chart_card("Reference Model Depth Trend", "python_trace_timeseries.png", "trace CSV를 기준으로 queue depth의 시계열 변화를 시각화했습니다.")}
@@ -704,23 +811,21 @@ def build_html_report(
         <h3>Clocking Block 기반 샘플링</h3>
         <p class="card-copy">
           driver는 `negedge` 기반 clocking block으로 입력을 인가하고, monitor는 `pre_cb`와 `mon_cb`를 분리해
-          acceptance 판정 근거와 post-update 결과를 각각 수집합니다. 수동 지연 대신 clocking block에 타이밍 의도를 담았습니다.
+          acceptance 판정 근거와 post-update 결과를 각각 수집합니다.
         </p>
       </article>
       <article class="info-card">
         <p class="eyebrow">Coverage Note</p>
         <h3>숫자보다 관측 범위를 설명</h3>
         <p class="card-copy">
-          covergroup 항목과 scoreboard summary를 함께 사용해 scenario hit, accepted/blocked path, flag state를 읽을 수 있게 했습니다.
-          포트폴리오에서는 단일 퍼센트보다 어떤 검증 경로가 실제로 관측되었는지가 더 중요합니다.
+          covergroup 항목과 scoreboard summary를 함께 사용해 scenario hit, accepted/blocked path, flag state를 확인할 수 있습니다.
         </p>
       </article>
       <article class="info-card">
-        <p class="eyebrow">Portfolio Folder</p>
-        <h3>바로 가져다 쓸 수 있는 패키지</h3>
+        <p class="eyebrow">Report Files</p>
+        <h3>관련 파일</h3>
         <p class="card-copy">
-          이 HTML, Markdown, 차트 PNG, 통합 CSV는 모두 같은 폴더에 정리해 두었습니다.
-          이후 GitHub 업로드나 발표 자료로 바로 재사용하기 쉽게 구성했습니다.
+          HTML, Markdown, 차트 PNG, 통합 CSV를 같은 폴더 아래에 두었습니다.
         </p>
       </article>
     </section>
@@ -748,7 +853,7 @@ def build_markdown_report(summary_df: pd.DataFrame, scenario_df: pd.DataFrame, r
     lines = [
         "# SystemVerilog Python 시각화 보고서",
         "",
-        "> Toss 스타일의 가독성을 의식해 정리한 포트폴리오용 Python 시각화 보고서입니다.",
+        "> Python으로 생성한 검증 결과 시각화 보고서입니다.",
         "",
         "## 요약",
         "",
@@ -769,14 +874,14 @@ def build_markdown_report(summary_df: pd.DataFrame, scenario_df: pd.DataFrame, r
         "### 1. Verification Dashboard",
         "",
         "- 의미: 4개 핵심 그래프를 한 화면에 모은 요약판입니다.",
-        "- 의도: 발표나 포트폴리오 첫 장에서 전체 검증 범위를 한 번에 설명하기 위해 선택했습니다.",
+        "- 설명: 전체 결과를 한 화면에서 확인할 수 있습니다.",
         "",
         "### 2. Module Transfer Overview",
         "",
         "- x축: 모듈",
         "- y축: 횟수(count)",
         "- 의미: WR/RD accepted와 WR/RD blocked를 함께 비교합니다.",
-        "- 의도: 정상 경로만이 아니라 full/empty 경계 조건까지 실제로 검증했는지 보여주기 위해 선택했습니다.",
+        "- 설명: 정상 경로와 경계 조건을 함께 비교할 수 있습니다.",
         "",
         "### 3. Scenario Activity Heatmap",
         "",
@@ -784,21 +889,21 @@ def build_markdown_report(summary_df: pd.DataFrame, scenario_df: pd.DataFrame, r
         "- y축: 모듈",
         "- 색/숫자: `wr_acc + rd_acc` 기준 activity",
         "- 의미: 어떤 시나리오가 실제로 활발히 수행됐는지 보여줍니다.",
-        "- 의도: 단순 랜덤이 아니라 phase-aware scenario가 제대로 실행됐음을 설명하기 위해 넣었습니다.",
+        "- 설명: 시나리오별 activity 분포를 확인할 수 있습니다.",
         "",
         "### 4. Reference Model Depth Trend",
         "",
         "- x축: sample index",
         "- y축: transaction 이후 reference model depth",
         "- 의미: 시간 순서에 따라 FIFO가 차고 비는 흐름을 보여줍니다.",
-        "- 의도: fill, mixed, drain 흐름이 실제 depth 변화로 이어졌는지 설명하기 위해 선택했습니다.",
+        "- 설명: 시간 순서에 따른 depth 변화를 확인할 수 있습니다.",
         "",
         "### 5. Depth Histogram",
         "",
         "- x축: depth 값",
         "- y축: 빈도(frequency)",
         "- 의미: 특정 depth 구간이 얼마나 자주 관찰됐는지 보여줍니다.",
-        "- 의도: 테스트가 중간 구간만 본 것이 아니라 empty/full 근처 경계 상태까지 넓게 밟았는지 설명하기 위해 넣었습니다.",
+        "- 설명: depth 분포를 구간별로 확인할 수 있습니다.",
         "",
         "## 모듈 요약",
         "",
@@ -829,7 +934,7 @@ def build_markdown_report(summary_df: pd.DataFrame, scenario_df: pd.DataFrame, r
         "- sync FIFO도 같은 discipline을 유지하되 single-clock 정책에 맞춰 pre-count 기반 scoreboard를 사용합니다.",
         "- 따라서 그래프에 보이는 depth 변화는 DUT가 실제로 받아들인 transaction 흐름과 정합됩니다.",
         "",
-        "## 포트폴리오 패키지 경로",
+        "## 관련 경로",
         "",
         f"- PDF: `{rel_to(root, root / 'reports' / 'pdf' / 'systemverilog_python_visual_report_ko.pdf')}`",
         f"- HTML: `{rel_to(root, report_dir / 'systemverilog_python_visual_report_ko.html')}`",
@@ -854,14 +959,14 @@ def build_start_here(root: Path, paths: ReportPaths) -> str:
         [
             "# START HERE",
             "",
-            "이 폴더는 Python 시각화 보고서를 포함한 SystemVerilog 검증 패키지입니다.",
+            "이 폴더는 Python 시각화 보고서를 포함한 SystemVerilog 검증 결과 폴더입니다.",
             "",
             "## 가장 먼저 볼 파일",
             "",
             f"- PDF 보고서: `reports/pdf/systemverilog_python_visual_report_ko.pdf`",
             f"- 메인 HTML: `{rel_to(root, paths.package_html_path)}`",
             f"- 메인 Markdown: `{rel_to(root, paths.package_md_path)}`",
-            f"- 대표 대시보드 PNG: `{rel_to(root, paths.package_assets_dir / 'python_dashboard.png')}`",
+            f"- 대시보드 PNG: `{rel_to(root, paths.package_assets_dir / 'python_dashboard.png')}`",
             "",
             "## 폴더 구성",
             "",
@@ -878,8 +983,7 @@ def build_start_here(root: Path, paths: ReportPaths) -> str:
             "",
             "## 참고",
             "",
-            "- 본 패키지는 Toss 스타일의 가독성을 의식해 정리했습니다.",
-            "- 그래프는 `TB scoreboard -> CSV -> Python(pandas, matplotlib)` 흐름으로 생성됐습니다.",
+            "- 그래프는 `TB scoreboard -> CSV -> Python(pandas, matplotlib)` 흐름으로 생성했습니다.",
         ]
     ) + "\n"
 
