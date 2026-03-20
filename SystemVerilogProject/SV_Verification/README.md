@@ -112,7 +112,7 @@
 ## Repository Layout
 
 ```text
-result_portfolio/
+SV_Verification/
 ├─ src/                         # showcase RTL
 ├─ tb/                          # showcase verification env
 ├─ reports/
