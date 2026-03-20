@@ -80,3 +80,4 @@ Git_SeoulEduRepo/
 
 `Verilog` `SystemVerilog` `FPGA` `UART` `FIFO` `RISC-V` `Vivado` `xsim` `Python`
 # SeoulTechEdu
+# SeoulTechEdu
