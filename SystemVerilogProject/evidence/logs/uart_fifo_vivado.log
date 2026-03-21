@@ -1,0 +1,184 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Mar 21 02:25:27 2026
+# Process ID: 21008
+# Current directory: D:/02_learning_lab/fpga/portfoloio_uvm1
+# Command line: vivado.exe -mode batch -source D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\templates\contexts\simulation\adapters\tcl\sim_run_vivado_nogui.tcl -log D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\Project\veri1\log\portfolio\uart_fifo_vivado.log -journal D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\Project\veri1\log\portfolio\uart_fifo_vivado.jou -notrace -tclargs D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\Project\veri1 tb_uart_fifo D:\Xilinx\Vivado\2024.1 D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\Project\Veri1\output\manifest\manifest_src_files.lst D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\Project\Veri1\output\manifest\manifest_tb_files.lst D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\Project\Veri1\output\manifest\manifest_inc_dirs.lst D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\Project\veri1\tb\uart_fifo\tb_uart_fifo.sv -testplusarg TESTNAME all
+# Log file: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/veri1/log/portfolio/uart_fifo_vivado.log
+# Journal file: D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\Project\veri1\log\portfolio\uart_fifo_vivado.jou
+#-----------------------------------------------------------
+source {D:\02_learning_lab\fpga\portfoloio_uvm1\FPGA_Auto_Project\templates\contexts\simulation\adapters\tcl\sim_run_vivado_nogui.tcl} -notrace
+[INFO] Loading build config: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/templates/contexts/vivado/domain/project_build_config.tcl
+[INFO] Applying TB scope filter by selected file folder: D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/uart_fifo
+[INFO] Creating Vivado project: sim_nogui_tb_uart_fifo
+[INFO] Project directory: D:/Xilinx/Vivado/2024.1/project/sim_nogui_tb_uart_fifo
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1103.676 ; gain = 0.000
+[INFO] Adding source files: 12
+[INFO] Adding testbench files: 3
+[INFO] Setting include dirs: 1
+[INFO] Setting simulation top: tb_uart_fifo
+[INFO] Setting xsim.more_options: -testplusarg TESTNAME=all
+[INFO] Initial launch runtime set to 0ns (auto replay mode)
+[INFO] Launching simulation in batch mode...
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Xilinx/Vivado/2024.1/project/sim_nogui_tb_uart_fifo/sim_nogui_tb_uart_fifo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_uart_fifo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Xilinx/Vivado/2024.1/project/sim_nogui_tb_uart_fifo/sim_nogui_tb_uart_fifo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_uart_fifo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/src/baud_rate_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module baud_rate_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/src/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/src/sync_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/uart_fifo/uart_fifo_tb_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/uart_fifo/uart_fifo_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/src/uart_rx_fifo_bridge.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx_fifo_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/uart_fifo/tb_uart_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_uart_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx/Vivado/2024.1/project/sim_nogui_tb_uart_fifo/sim_nogui_tb_uart_fifo.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Xilinx/Vivado/2024.1/project/sim_nogui_tb_uart_fifo/sim_nogui_tb_uart_fifo.sim/sim_1/behav/xsim'
+"xelab -wto c9028915c8d6480dae9e7cb95ade7d80 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_uart_fifo_behav xil_defaultlib.tb_uart_fifo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c9028915c8d6480dae9e7cb95ade7d80 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_uart_fifo_behav xil_defaultlib.tb_uart_fifo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.uart_fifo_tb_pkg
+Compiling package std.std
+Compiling module xil_defaultlib.uart_fifo_if
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.sync_fifo_default
+Compiling module xil_defaultlib.uart_rx_fifo_bridge
+Compiling module xil_defaultlib.baud_rate_gen_default
+Compiling module xil_defaultlib.tb_uart_fifo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_uart_fifo_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vivado/2024.1/project/sim_nogui_tb_uart_fifo/sim_nogui_tb_uart_fifo.sim/sim_1/behav/xsim/xsim.dir/tb_uart_fifo_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Mar 21 02:25:51 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1103.676 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Xilinx/Vivado/2024.1/project/sim_nogui_tb_uart_fifo/sim_nogui_tb_uart_fifo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_uart_fifo_behav -key {Behavioral:sim_1:Functional:tb_uart_fifo} -tclbatch {tb_uart_fifo.tcl} -log {simulate.log} -testplusarg TESTNAME=all"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_uart_fifo.tcl
+WARNING: Simulation object /tb_uart_fifo/env was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+[TB] Starting UART+FIFO bridge verification
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_uart_fifo_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1103.676 ; gain = 0.000
+[INFO] Auto replay: restart + run all
+INFO: [Simtcl 6-17] Simulation restarted
+[TB] Starting UART+FIFO bridge verification
+[UART-FIFO][DRV] reset released
+[UART-FIFO][DRV] sent byte=d6 scenario=fill_then_drain pop_after=0 t=1041705000
+[UART-FIFO][DRV] sent byte=b scenario=fill_then_drain pop_after=0 t=2083305000
+[UART-FIFO][DRV] sent byte=8e scenario=fill_then_drain pop_after=0 t=3124905000
+[UART-FIFO][MON] popped byte=d6 full=0 empty=0 t=4166525000
+[UART-FIFO][SCB] PASS idx=0 scenario=fill_then_drain data=d6
+[UART-FIFO][MON] popped byte=b full=0 empty=0 t=4166545000
+[UART-FIFO][SCB] PASS idx=1 scenario=fill_then_drain data=b
+[UART-FIFO][MON] popped byte=8e full=0 empty=0 t=4166565000
+[UART-FIFO][SCB] PASS idx=2 scenario=fill_then_drain data=8e
+[UART-FIFO][DRV] sent byte=5b scenario=fill_then_drain pop_after=4 t=4166580000
+[UART-FIFO][MON] popped byte=5b full=0 empty=1 t=4166585000
+[UART-FIFO][SCB] PASS idx=3 scenario=fill_then_drain data=5b
+[UART-FIFO][DRV] sent byte=94 scenario=fill_then_drain pop_after=0 t=5208105000
+[UART-FIFO][DRV] sent byte=c7 scenario=fill_then_drain pop_after=0 t=6249705000
+[UART-FIFO][DRV] sent byte=e scenario=fill_then_drain pop_after=0 t=7291305000
+[UART-FIFO][MON] popped byte=94 full=0 empty=0 t=8332925000
+[UART-FIFO][SCB] PASS idx=4 scenario=fill_then_drain data=94
+[UART-FIFO][MON] popped byte=c7 full=0 empty=0 t=8332945000
+[UART-FIFO][SCB] PASS idx=5 scenario=fill_then_drain data=c7
+[UART-FIFO][MON] popped byte=e full=0 empty=0 t=8332965000
+[UART-FIFO][SCB] PASS idx=6 scenario=fill_then_drain data=e
+[UART-FIFO][DRV] sent byte=34 scenario=fill_then_drain pop_after=4 t=8332980000
+[UART-FIFO][MON] popped byte=34 full=0 empty=1 t=8332985000
+[UART-FIFO][SCB] PASS idx=7 scenario=fill_then_drain data=34
+[UART-FIFO][DRV] sent byte=f5 scenario=balanced pop_after=1 t=9374520000
+[UART-FIFO][MON] popped byte=f5 full=0 empty=1 t=9374525000
+[UART-FIFO][SCB] PASS idx=8 scenario=balanced data=f5
+[UART-FIFO][DRV] sent byte=f0 scenario=balanced pop_after=1 t=10416120000
+[UART-FIFO][MON] popped byte=f0 full=0 empty=1 t=10416125000
+[UART-FIFO][SCB] PASS idx=9 scenario=balanced data=f0
+[UART-FIFO][DRV] sent byte=8b scenario=balanced pop_after=1 t=11457720000
+[UART-FIFO][MON] popped byte=8b full=0 empty=1 t=11457725000
+[UART-FIFO][SCB] PASS idx=10 scenario=balanced data=8b
+[UART-FIFO][DRV] sent byte=3a scenario=balanced pop_after=1 t=12499320000
+[UART-FIFO][MON] popped byte=3a full=0 empty=1 t=12499325000
+[UART-FIFO][SCB] PASS idx=11 scenario=balanced data=3a
+[UART-FIFO][DRV] sent byte=7b scenario=balanced pop_after=1 t=13540920000
+[UART-FIFO][MON] popped byte=7b full=0 empty=1 t=13540925000
+[UART-FIFO][SCB] PASS idx=12 scenario=balanced data=7b
+[UART-FIFO][DRV] sent byte=1e scenario=balanced pop_after=1 t=14582520000
+[UART-FIFO][MON] popped byte=1e full=0 empty=1 t=14582525000
+[UART-FIFO][SCB] PASS idx=13 scenario=balanced data=1e
+[UART-FIFO][DRV] sent byte=20 scenario=balanced pop_after=1 t=15624120000
+[UART-FIFO][MON] popped byte=20 full=0 empty=1 t=15624125000
+[UART-FIFO][SCB] PASS idx=14 scenario=balanced data=20
+[UART-FIFO][DRV] sent byte=c9 scenario=balanced pop_after=1 t=16665720000
+[UART-FIFO][MON] popped byte=c9 full=0 empty=1 t=16665725000
+[UART-FIFO][SCB] PASS idx=15 scenario=balanced data=c9
+[UART-FIFO][DRV] sent byte=dc scenario=burst_drain pop_after=0 t=17707305000
+[UART-FIFO][MON] popped byte=dc full=0 empty=0 t=18748925000
+[UART-FIFO][SCB] PASS idx=16 scenario=burst_drain data=dc
+[UART-FIFO][DRV] sent byte=fc scenario=burst_drain pop_after=2 t=18748940000
+[UART-FIFO][MON] popped byte=fc full=0 empty=1 t=18748945000
+[UART-FIFO][SCB] PASS idx=17 scenario=burst_drain data=fc
+[UART-FIFO][DRV] sent byte=98 scenario=burst_drain pop_after=0 t=19790505000
+[UART-FIFO][MON] popped byte=98 full=0 empty=0 t=20832125000
+[UART-FIFO][SCB] PASS idx=18 scenario=burst_drain data=98
+[UART-FIFO][DRV] sent byte=66 scenario=burst_drain pop_after=2 t=20832140000
+[UART-FIFO][MON] popped byte=66 full=0 empty=1 t=20832145000
+[UART-FIFO][SCB] PASS idx=19 scenario=burst_drain data=66
+[UART-FIFO][DRV] sent byte=ce scenario=burst_drain pop_after=0 t=21873705000
+[UART-FIFO][MON] popped byte=ce full=0 empty=0 t=22915325000
+[UART-FIFO][SCB] PASS idx=20 scenario=burst_drain data=ce
+[UART-FIFO][DRV] sent byte=18 scenario=burst_drain pop_after=2 t=22915340000
+[UART-FIFO][MON] popped byte=18 full=0 empty=1 t=22915345000
+[UART-FIFO][SCB] PASS idx=21 scenario=burst_drain data=18
+[UART-FIFO][DRV] sent byte=65 scenario=burst_drain pop_after=0 t=23956905000
+[UART-FIFO][MON] popped byte=65 full=0 empty=0 t=24998525000
+[UART-FIFO][SCB] PASS idx=22 scenario=burst_drain data=65
+[UART-FIFO][DRV] sent byte=7 scenario=burst_drain pop_after=2 t=24998540000
+[UART-FIFO][DRV] drained remaining FIFO content
+[UART-FIFO][GEN] finished run_count=24
+[UART-FIFO][MON] popped byte=7 full=0 empty=1 t=24998545000
+[UART-FIFO][SCB] PASS idx=23 scenario=burst_drain data=7
+[UART-FIFO][SCB][SUMMARY] sample=24 pass=24 fail=0
+[UART-FIFO][SCB][COVERAGE] functional_coverage=100.00%
+[UART-FIFO][SCB][PASS] UART+FIFO scoreboard completed without mismatches
+[UART-FIFO][ENV] run finished
+[TB] tb_uart_fifo finished
+$finish called at time : 24998565 ns : File "D:/02_learning_lab/fpga/portfoloio_uvm1/FPGA_Auto_Project/Project/Veri1/tb/uart_fifo/tb_uart_fifo.sv" Line 91
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1103.676 ; gain = 0.000
+[INFO] Auto replay run all completed.
+INFO: [Simtcl 6-16] Simulation closed
+[SUCCESS] Auto replay completed for top: tb_uart_fifo
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 21 02:26:02 2026...

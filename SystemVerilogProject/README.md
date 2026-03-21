@@ -1,51 +1,90 @@
-# SystemVerilogProject
-> CPU design and verification projects in SystemVerilog
+# SystemVerilog Verification Project
 
-이 폴더는 SystemVerilog 기반 프로젝트를 모아둔 공간입니다.  
-직접 구현한 RV32I CPU 설계와 FIFO/UART 중심 검증 프로젝트를 함께 담고 있습니다.
+비동기 FIFO, 동기 FIFO, UART RX, UART+FIFO 통합 경로를 대상으로 구성한 SystemVerilog 검증 프로젝트입니다.  
+검증 환경, 시뮬레이션 로그, CSV 결과, 시각화 자료, 모듈별 문서를 한 폴더에 정리했습니다.
 
-## 폴더 구성
+![Verification Dashboard](reports/html/assets/python_dashboard.png)
 
-| 경로 | 설명 |
-| --- | --- |
-| [SV_Verification](./SV_Verification) | FIFO/UART 중심 SystemVerilog 검증 프로젝트 |
-| [RV32I_SingleSycle](./RV32I_SingleSycle) | RV32I single-cycle CPU RTL 및 testbench |
+## 개요
 
-## 1. [SV_Verification](./SV_Verification)
+- 대상 RTL: `fifo`, `async_fifo`, `sync_fifo`, `uart_rx`, `uart_rx_fifo_bridge`, `uart_tx_fifo_bridge`, `uart_rx_async_fifo_bridge`
+- 검증 방식: `transaction / generator / driver / monitor / scoreboard / environment`
+- 보조 자료: Vivado xsim 로그, CSV 결과, Python 차트, Markdown/HTML/PDF 문서
 
-FIFO/UART 계열 모듈을 대상으로 작성한 검증 프로젝트입니다.  
-테스트벤치, 시뮬레이션 로그, 시각화 보고서를 함께 포함하고 있습니다.
+## 문서
 
-포함 내용:
-- [src](./SV_Verification/src): 검증 대상 RTL
-- [tb](./SV_Verification/tb): interface / generator / driver / monitor / scoreboard 기반 TB
-- [reports/markdown/overview/systemverilog_python_visual_report_ko.md](./SV_Verification/reports/markdown/overview/systemverilog_python_visual_report_ko.md): GitHub에서 바로 볼 수 있는 Markdown 보고서
-- [reports/pdf/systemverilog_python_visual_report_ko.pdf](./SV_Verification/reports/pdf/systemverilog_python_visual_report_ko.pdf): PDF 보고서
-- [reports](./SV_Verification/reports): HTML 및 Markdown 보고서
-- [evidence](./SV_Verification/evidence): Vivado xsim 로그 및 CSV 결과
-- [README.md](./SV_Verification/README.md): 상세 소개 문서
+- [START_HERE_ko.md](START_HERE_ko.md)
+- [Markdown 시각화 보고서](reports/markdown/overview/systemverilog_python_visual_report_ko.md)
+- [검증 개요](reports/markdown/overview/verification_overview.md)
+- [전체 상세 보고서](reports/markdown/overview/portfolio_report_ko.md)
+- [모듈 보고서 인덱스](reports/markdown/overview/module_reports_index_ko.md)
+- [HTML 보고서](reports/html/index.html)
+- [PDF 보고서](reports/pdf/systemverilog_python_visual_report_ko.pdf)
 
-핵심 포인트:
-- 역할을 나눈 testbench 구조
-- FIFO / UART 대상 self-checking scoreboard 및 coverage 구성
-- 보고서와 로그를 함께 정리한 문서 구조
+UART 상세 문서:
+- [UART RX](reports/markdown/module_reports/uart_rx_report_ko.md)
+- [UART RX + FIFO](reports/markdown/module_reports/uart_fifo_report_ko.md)
+- [UART TX + FIFO](reports/markdown/module_reports/uart_tx_fifo_report_ko.md)
+- [UART + Async FIFO](reports/markdown/module_reports/uart_async_fifo_report_ko.md)
 
-## 2. [RV32I_SingleSycle](./RV32I_SingleSycle)
+## 폴더 구조
 
-RV32I 명령어 집합을 대상으로 한 single-cycle CPU 구현 프로젝트입니다.
+```text
+SystemVerilogProject/
+├─ src/                         # 검증 대상 RTL
+├─ tb/                          # testbench
+├─ reports/
+│  ├─ markdown/                 # 개요/상세 문서
+│  ├─ html/                     # 브라우저용 보고서
+│  └─ pdf/                      # PDF 산출물
+├─ evidence/
+│  ├─ logs/                     # Vivado xsim 로그
+│  └─ csv/                      # summary/scenario/trace CSV
+├─ tools/                       # Python 분석 스크립트
+├─ fpga_auto.yml
+├─ requirements.txt
+├─ README.md
+└─ START_HERE_ko.md
+```
 
-포함 내용:
-- [src](./RV32I_SingleSycle/src): `Top.sv`, `Datapath.sv`, `ControlUnit.sv`, `Alu.sv`, `Regfile.sv` 등 주요 RTL
-- [tb](./RV32I_SingleSycle/tb): 테스트벤치 및 어셈블리 예제
-- `RV32I CPU 설계 보고서.pdf`: 설계 정리 문서
+## 검증 대상
 
-핵심 포인트:
-- PC, Instruction ROM, Control Unit, Datapath, Data RAM으로 구성
-- bubble sort 시나리오용 ROM 선택 구조 포함
-- single-cycle CPU 데이터 경로와 제어 경로를 분리해 구현
+### FIFO 계열
 
-## 읽는 순서
+- `src/fifo.sv`: Async FIFO
+- `src/async_fifo.sv`: 별도 RTL 구현의 Async FIFO
+- `src/sync_fifo.sv`: Sync FIFO
 
-1. 검증 결과를 보고 싶으면 [SV_Verification](./SV_Verification)
-2. CPU 구현을 보고 싶으면 [RV32I_SingleSycle](./RV32I_SingleSycle)
-3. 상세 문서는 각 폴더 내부 `README`와 PDF 보고서 확인
+### UART 계열
+
+- `src/uart_rx.v`: UART RX
+- `src/uart_rx_fifo_bridge.sv`: UART RX + Sync FIFO
+- `src/uart_tx_fifo_bridge.sv`: UART TX + Sync FIFO
+- `src/uart_rx_async_fifo_bridge.sv`: UART RX + Async FIFO
+
+## 검증 결과
+
+| Target | Status | Sample | PASS | FAIL |
+| --- | --- | ---: | ---: | ---: |
+| Async FIFO | PASS | 1153 | 190 | 0 |
+| Async FIFO (Dedicated RTL) | PASS | 1153 | 190 | 0 |
+| Sync FIFO | PASS | 320 | 838 | 0 |
+| UART RX | PASS | 16 | 16 | 0 |
+| UART RX + FIFO | PASS | 24 | 24 | 0 |
+| UART TX + FIFO | PASS | 18 | 18 | 0 |
+| UART + Async FIFO | PASS | 18 | 18 | 0 |
+
+관련 로그:
+- [async_fifo_vivado.log](evidence/logs/async_fifo_vivado.log)
+- [async_fifo_src_vivado.log](evidence/logs/async_fifo_src_vivado.log)
+- [sync_fifo_vivado.log](evidence/logs/sync_fifo_vivado.log)
+- [uart_rx_vivado.log](evidence/logs/uart_rx_vivado.log)
+- [uart_fifo_vivado.log](evidence/logs/uart_fifo_vivado.log)
+- [uart_tx_fifo_vivado.log](evidence/logs/uart_tx_fifo_vivado.log)
+- [uart_async_fifo_vivado.log](evidence/logs/uart_async_fifo_vivado.log)
+
+## 메모
+
+- Coverage는 커스텀 퍼센트 함수가 아니라 Vivado native `get_inst_coverage()` 기준으로 확인했습니다.
+- Python 차트는 `evidence/csv` 결과를 바탕으로 생성했습니다.
+- Markdown 문서는 GitHub에서 바로 읽을 수 있는 형태로 정리했습니다.
