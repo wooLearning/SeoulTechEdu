@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RV32I Spike Visual Report</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --panel: rgba(255,255,255,0.88);
+      --text: #191f28;
+      --muted: #6b7684;
+      --line: #e5e8eb;
+      --blue: #3182f6;
+      --green: #08b47f;
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(49,130,246,0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(8,180,127,0.10), transparent 22%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .page {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+    .hero, .card, .table-wrap {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(16px);
+    }
+    .hero {
+      padding: 40px;
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: 40px;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+    .hero-copy {
+      margin: 0 0 18px;
+      max-width: 880px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .section {
+      margin-top: 28px;
+    }
+    .section-title {
+      margin: 0 0 16px;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .metric-card, .chart-card {
+      padding: 24px;
+    }
+    .metric-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .metric-card h3, .chart-card h3 {
+      margin: 10px 0 10px;
+      font-size: 24px;
+      letter-spacing: -0.02em;
+    }
+    .card-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .metric-grid {
+      margin: 18px 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px 10px;
+    }
+    .metric-grid dt {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .metric-grid dd {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #016b4a;
+      background: rgba(8,180,127,0.12);
+    }
+    .chart-card img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      padding: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 14px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      white-space: nowrap;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .path-list {
+      display: grid;
+      gap: 10px;
+      padding: 24px;
+    }
+    .path-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(49,130,246,0.06);
+      border: 1px solid rgba(49,130,246,0.10);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 13px;
+      color: #2f3a48;
+    }
+    @media (max-width: 980px) {
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <p class="eyebrow">RV32I / Spike / XSIM / matplotlib</p>
+      <h1>RV32I Spike 로그 기반 시각화 보고서</h1>
+      <p class="hero-copy">
+        참고 레포 방식에 맞춰 pandas와 matplotlib로 다시 만든 검증 보고서입니다. 두 verification flow의 scoreboard PASS,
+        retire row 정합성, 메모리 check, coverage, instruction mix, pipeline event를 한 번에 읽을 수 있도록 정리했습니다.
+      </p>
+      <ul>
+        <li>Pipeline TB: 84/84 row match, final memory 2건 통과</li>
+        <li>Top_tb: rows=84, errors=0, coverage=76.82%</li>
+        <li>차트 생성: pandas + matplotlib</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Flow Cards</h2>
+      <div class="card-grid">
+        <article class="card metric-card">
+          <div class="metric-top">
+            <div><p class="eyebrow">Flow 1</p><h3>Pipeline TB</h3></div>
+            <span class="status-pill">PASS</span>
+          </div>
+          <p class="card-copy">Procedural scoreboard flow for quick Spike alignment checks.</p>
+          <dl class="metric-grid">
+            <div><dt>Rows</dt><dd>84</dd></div>
+            <div><dt>Row Pass</dt><dd>84</dd></div>
+            <div><dt>Errors</dt><dd>0</dd></div>
+            <div><dt>Mem Checks</dt><dd>2</dd></div>
+            <div><dt>Branches</dt><dd>14</dd></div>
+            <div><dt>Jumps</dt><dd>3</dd></div>
+            <div><dt>Cycles</dt><dd>4->105</dd></div>
+            <div><dt>Word0</dt><dd>0x00000014</dd></div>
+            <div><dt>Word1</dt><dd>0xf2347f80</dd></div>
+          </dl>
+        </article>
+        <article class="card metric-card">
+          <div class="metric-top">
+            <div><p class="eyebrow">Flow 2</p><h3>Top_tb Class Env</h3></div>
+            <span class="status-pill">PASS</span>
+          </div>
+          <p class="card-copy">Passive class-based environment with monitor, scoreboard, and coverage.</p>
+          <dl class="metric-grid">
+            <div><dt>Rows</dt><dd>84</dd></div>
+            <div><dt>Row Pass</dt><dd>84</dd></div>
+            <div><dt>Errors</dt><dd>0</dd></div>
+            <div><dt>Coverage</dt><dd>76.82%</dd></div>
+            <div><dt>Redirect</dt><dd>11</dd></div>
+            <div><dt>Stall</dt><dd>0</dd></div>
+            <div><dt>fwdA 1/2</dt><dd>3/7</dd></div>
+            <div><dt>fwdB 1/2</dt><dd>1/3</dd></div>
+            <div><dt>Mem Writes</dt><dd>4</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Charts</h2>
+      <article class="card chart-card">
+        <h3>Dashboard</h3>
+        <p class="card-copy">한 화면에서 flow summary, opcode heatmap, retire timeline, Top_tb events를 함께 보여줍니다.</p>
+        <img src="assets/rv32i_dashboard.png" alt="RV32I dashboard">
+      </article>
+      <article class="card chart-card">
+        <h3>Flow Summary</h3>
+        <p class="card-copy">Retire rows, row pass, mem checks, coverage를 비교합니다.</p>
+        <img src="assets/rv32i_flow_summary.png" alt="RV32I flow summary">
+      </article>
+      <article class="card chart-card">
+        <h3>Instruction Mix</h3>
+        <p class="card-copy">두 flow의 retired instruction mix를 stacked bar로 비교합니다.</p>
+        <img src="assets/rv32i_opcode_mix.png" alt="RV32I opcode mix">
+      </article>
+      <article class="card chart-card">
+        <h3>Opcode Heatmap</h3>
+        <p class="card-copy">flow별 opcode activity를 heatmap으로 보여줍니다.</p>
+        <img src="assets/rv32i_opcode_heatmap.png" alt="RV32I opcode heatmap">
+      </article>
+      <article class="card chart-card">
+        <h3>Retire Timeline</h3>
+        <p class="card-copy">retire index 대비 cycle 흐름을 line chart로 비교합니다.</p>
+        <img src="assets/rv32i_retire_timeline.png" alt="RV32I retire timeline">
+      </article>
+      <article class="card chart-card">
+        <h3>Top_tb Events</h3>
+        <p class="card-copy">redirect, stall, forwarding, memwrite 관측 횟수를 정리합니다.</p>
+        <img src="assets/rv32i_top_tb_events.png" alt="RV32I top tb events">
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Artifacts</h2>
+      <div class="card">
+        <div class="path-list">
+          <div class="path-item">evidence/logs/pipeline_spike_xsim.log</div>
+          <div class="path-item">evidence/logs/top_tb_class_xsim.log</div>
+          <div class="path-item">evidence/csv/combined_summary.csv</div>
+          <div class="path-item">evidence/csv/combined_instruction_mix.csv</div>
+          <div class="path-item">evidence/csv/top_tb_event_summary.csv</div>
+          <div class="path-item">tools/rv32i_spike_report.py</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

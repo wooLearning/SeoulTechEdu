@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560">
+<defs>
+<linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+<stop offset="100%" stop-color="#f6f8fb" stop-opacity="0.98"/>
+</linearGradient>
+</defs>
+<rect x="0" y="0" width="1180" height="560" rx="28" fill="#eef3f8"/>
+<rect x="18" y="18" width="1144" height="524" rx="24" fill="url(#card)" stroke="#dfe6ee"/>
+<text x="40" y="58" font-family="Segoe UI, Pretendard, sans-serif" font-size="26" font-weight="700" fill="#191f28">Instruction Mix Comparison</text>
+<text x="44" y="156" font-family="Segoe UI, Pretendard, sans-serif" font-size="24" font-weight="700" fill="#191f28">Pipeline TB</text>
+<rect x="180" y="110" width="399" height="72" rx="10" fill="#3182f6"/>
+<text x="379.5" y="153" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" font-weight="700" fill="#ffffff">43</text>
+<rect x="579" y="110" width="92" height="72" rx="10" fill="#4cc9a6"/>
+<text x="625.0" y="153" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" font-weight="700" fill="#ffffff">10</text>
+<rect x="671" y="110" width="130" height="72" rx="10" fill="#191f28"/>
+<text x="736.0" y="153" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" font-weight="700" fill="#ffffff">14</text>
+<rect x="801" y="110" width="46" height="72" rx="10" fill="#ffb020"/>
+<rect x="847" y="110" width="37" height="72" rx="10" fill="#f04452"/>
+<rect x="884" y="110" width="37" height="72" rx="10" fill="#735bf2"/>
+<rect x="921" y="110" width="18" height="72" rx="10" fill="#00a3ad"/>
+<rect x="939" y="110" width="9" height="72" rx="10" fill="#ff7a00"/>
+<rect x="948" y="110" width="9" height="72" rx="10" fill="#8b95a1"/>
+<rect x="180" y="110" width="780" height="72" rx="10" fill="none" stroke="#d7dce2"/>
+<text x="44" y="276" font-family="Segoe UI, Pretendard, sans-serif" font-size="24" font-weight="700" fill="#191f28">Top_tb Class Env</text>
+<rect x="180" y="230" width="399" height="72" rx="10" fill="#3182f6"/>
+<text x="379.5" y="273" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" font-weight="700" fill="#ffffff">43</text>
+<rect x="579" y="230" width="92" height="72" rx="10" fill="#4cc9a6"/>
+<text x="625.0" y="273" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" font-weight="700" fill="#ffffff">10</text>
+<rect x="671" y="230" width="130" height="72" rx="10" fill="#191f28"/>
+<text x="736.0" y="273" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" font-weight="700" fill="#ffffff">14</text>
+<rect x="801" y="230" width="46" height="72" rx="10" fill="#ffb020"/>
+<rect x="847" y="230" width="37" height="72" rx="10" fill="#f04452"/>
+<rect x="884" y="230" width="37" height="72" rx="10" fill="#735bf2"/>
+<rect x="921" y="230" width="18" height="72" rx="10" fill="#00a3ad"/>
+<rect x="939" y="230" width="9" height="72" rx="10" fill="#ff7a00"/>
+<rect x="948" y="230" width="9" height="72" rx="10" fill="#8b95a1"/>
+<rect x="180" y="230" width="780" height="72" rx="10" fill="none" stroke="#d7dce2"/>
+<rect x="184" y="380" width="22" height="22" rx="6" fill="#3182f6"/>
+<text x="218" y="397" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">ALUI</text>
+<rect x="464" y="380" width="22" height="22" rx="6" fill="#4cc9a6"/>
+<text x="498" y="397" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">ALUR</text>
+<rect x="744" y="380" width="22" height="22" rx="6" fill="#191f28"/>
+<text x="778" y="397" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">BRANCH</text>
+<rect x="184" y="434" width="22" height="22" rx="6" fill="#ffb020"/>
+<text x="218" y="451" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">LOAD</text>
+<rect x="464" y="434" width="22" height="22" rx="6" fill="#f04452"/>
+<text x="498" y="451" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">STORE</text>
+<rect x="744" y="434" width="22" height="22" rx="6" fill="#735bf2"/>
+<text x="778" y="451" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">AUIPC</text>
+<rect x="184" y="488" width="22" height="22" rx="6" fill="#00a3ad"/>
+<text x="218" y="505" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">JAL</text>
+<rect x="464" y="488" width="22" height="22" rx="6" fill="#ff7a00"/>
+<text x="498" y="505" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">JALR</text>
+<rect x="744" y="488" width="22" height="22" rx="6" fill="#8b95a1"/>
+<text x="778" y="505" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">LUI</text>
+</svg>

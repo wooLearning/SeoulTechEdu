@@ -1,0 +1,5 @@
+case_name=test_top
+report_html=reports/html/rv32i_spike_visual_report_ko.html
+report_md=reports/markdown/overview/rv32i_spike_visual_report_ko.md
+summary_csv=evidence/csv/combined_summary.csv
+source_csv=tb/spike_test_top.csv

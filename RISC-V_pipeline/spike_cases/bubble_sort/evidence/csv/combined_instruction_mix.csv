@@ -1,0 +1,19 @@
+flow_name,flow_label,opcode,count
+pipeline_spike,Pipeline TB,ALUI,160
+pipeline_spike,Pipeline TB,ALUR,62
+pipeline_spike,Pipeline TB,AUIPC,1
+pipeline_spike,Pipeline TB,BRANCH,29
+pipeline_spike,Pipeline TB,JAL,7
+pipeline_spike,Pipeline TB,JALR,1
+pipeline_spike,Pipeline TB,LOAD,138
+pipeline_spike,Pipeline TB,LUI,50
+pipeline_spike,Pipeline TB,STORE,42
+top_tb_class,Top_tb Class Env,ALUI,160
+top_tb_class,Top_tb Class Env,ALUR,62
+top_tb_class,Top_tb Class Env,AUIPC,1
+top_tb_class,Top_tb Class Env,BRANCH,29
+top_tb_class,Top_tb Class Env,JAL,7
+top_tb_class,Top_tb Class Env,JALR,1
+top_tb_class,Top_tb Class Env,LOAD,138
+top_tb_class,Top_tb Class Env,LUI,50
+top_tb_class,Top_tb Class Env,STORE,42

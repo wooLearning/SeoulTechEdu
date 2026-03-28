@@ -1,0 +1,26 @@
+# auto-generated for Codex compile smoke
+sv xil_defaultlib -i "D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/tb/pipeline" -i "D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/tb" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/tb/spike_trace_pkg.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/rv32i_pkg.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/InstrMemPathsPkg.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/Alu.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/ControlUnit.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/DataRam.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/DecodeStage.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/ExecuteStage.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/FetchStage.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/ForwardingUnit.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/HazardUnit.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/ImmGen.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/InstrFields.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/InstrRom.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/MemStage.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/Pc.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/Regfile.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/Top.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/WbStage.sv" \
+"D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/tb/pipeline/tb_top_spike.sv" \
+
+verilog xil_defaultlib "C:/AMDDesignTools/2025.2/Vivado/data/verilog/src/glbl.v"
+
+nosort

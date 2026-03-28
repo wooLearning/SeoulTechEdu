@@ -1,0 +1,1014 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Mar 27 16:57:24 2026
+# Process ID         : 31960
+# Current directory  : D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i
+# Command line       : xsim.exe -log tb\pipeline\xsim_tb_top_spike.log -mode tcl -source {xsim.dir/tb_top_spike_behav/xsim_script.tcl}
+# Log file           : D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/tb/pipeline/xsim_tb_top_spike.log
+# Journal file       : D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i\xsim.jou
+# Running On         : DESKTOP-7CFQ9ND
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-1260P
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16847 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 34027 MB
+# Available Virtual  : 6544 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_top_spike_behav/xsim_script.tcl
+# xsim {tb_top_spike_behav} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+[INFO] InstrRom loaded D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/mem/InstructionSpikeTop.mem
+[TRACE][RETIRE 1/490][C4] step=5 class=AUIPC pc=0x80000000 inst=0x00010117 regwr=1 rd=x2 data=0x80010000 memwr=0 mem_addr=0x80010000 mem_data=0x00000000 illegal=0
+[PASS][ROW 0] retire matched Spike trace
+[TRACE][RETIRE 2/490][C5] step=6 class=ALUI pc=0x80000004 inst=0x00010113 regwr=1 rd=x2 data=0x80010000 memwr=0 mem_addr=0x80010000 mem_data=0x00000000 illegal=0
+[PASS][ROW 1] retire matched Spike trace
+[TRACE][RETIRE 3/490][C6] step=7 class=JAL pc=0x80000008 inst=0x008000ef regwr=1 rd=x1 data=0x8000000c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 2] retire matched Spike trace
+[TRACE][RETIRE 4/490][C9] step=8 class=ALUI pc=0x80000010 inst=0xfe010113 regwr=1 rd=x2 data=0x8000ffe0 memwr=0 mem_addr=0x8000ffe0 mem_data=0x00000000 illegal=0
+[PASS][ROW 3] retire matched Spike trace
+[TRACE][RETIRE 5/490][C10] step=9 class=STORE pc=0x80000014 inst=0x00812e23 regwr=0 rd=x28 data=0x8000fffc memwr=1 mem_addr=0x8000fffc mem_data=0x00000000 illegal=0
+[PASS][ROW 4] retire matched Spike trace
+[TRACE][RETIRE 6/490][C11] step=10 class=ALUI pc=0x80000018 inst=0x02010413 regwr=1 rd=x8 data=0x80010000 memwr=0 mem_addr=0x80010000 mem_data=0x00000000 illegal=0
+[PASS][ROW 5] retire matched Spike trace
+[TRACE][RETIRE 7/490][C12] step=11 class=STORE pc=0x8000001c inst=0xfe042623 regwr=0 rd=x12 data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 6] retire matched Spike trace
+[TRACE][RETIRE 8/490][C13] step=12 class=JAL pc=0x80000020 inst=0x0e00006f regwr=1 rd=x0 data=0x80000024 memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 7] retire matched Spike trace
+[TRACE][RETIRE 9/490][C16] step=13 class=LOAD pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 8] retire matched Spike trace
+[TRACE][RETIRE 10/490][C17] step=14 class=ALUI pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0
+[PASS][ROW 9] retire matched Spike trace
+[TRACE][RETIRE 11/490][C18] step=15 class=BRANCH pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0
+[PASS][ROW 10] retire matched Spike trace
+[TRACE][RETIRE 12/490][C21] step=16 class=STORE pc=0x80000024 inst=0xfe042423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000000 illegal=0
+[PASS][ROW 11] retire matched Spike trace
+[TRACE][RETIRE 13/490][C22] step=17 class=JAL pc=0x80000028 inst=0x0b80006f regwr=1 rd=x0 data=0x8000002c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 12] retire matched Spike trace
+[TRACE][RETIRE 14/490][C25] step=18 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 13] retire matched Spike trace
+[TRACE][RETIRE 15/490][C26] step=19 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 14] retire matched Spike trace
+[TRACE][RETIRE 16/490][C28] step=20 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 15] retire matched Spike trace
+[TRACE][RETIRE 17/490][C29] step=21 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 16] retire matched Spike trace
+[TRACE][RETIRE 18/490][C31] step=22 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000004 illegal=0
+[PASS][ROW 17] retire matched Spike trace
+[TRACE][RETIRE 19/490][C34] step=23 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 18] retire matched Spike trace
+[TRACE][RETIRE 20/490][C35] step=24 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 19] retire matched Spike trace
+[TRACE][RETIRE 21/490][C36] step=25 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 20] retire matched Spike trace
+[TRACE][RETIRE 22/490][C38] step=26 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 21] retire matched Spike trace
+[TRACE][RETIRE 23/490][C39] step=27 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 22] retire matched Spike trace
+[TRACE][RETIRE 24/490][C40] step=28 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000009 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 23] retire matched Spike trace
+[TRACE][RETIRE 25/490][C41] step=29 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 24] retire matched Spike trace
+[TRACE][RETIRE 26/490][C43] step=30 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 25] retire matched Spike trace
+[TRACE][RETIRE 27/490][C44] step=31 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 26] retire matched Spike trace
+[TRACE][RETIRE 28/490][C45] step=32 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 27] retire matched Spike trace
+[TRACE][RETIRE 29/490][C46] step=33 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 28] retire matched Spike trace
+[TRACE][RETIRE 30/490][C47] step=34 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 29] retire matched Spike trace
+[TRACE][RETIRE 31/490][C48] step=35 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 30] retire matched Spike trace
+[TRACE][RETIRE 32/490][C50] step=36 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x00000009 illegal=0
+[PASS][ROW 31] retire matched Spike trace
+[TRACE][RETIRE 33/490][C51] step=37 class=LUI pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 32] retire matched Spike trace
+[TRACE][RETIRE 34/490][C52] step=38 class=ALUI pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 33] retire matched Spike trace
+[TRACE][RETIRE 35/490][C53] step=39 class=LOAD pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 34] retire matched Spike trace
+[TRACE][RETIRE 36/490][C55] step=40 class=ALUI pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 35] retire matched Spike trace
+[TRACE][RETIRE 37/490][C56] step=41 class=ALUR pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 36] retire matched Spike trace
+[TRACE][RETIRE 38/490][C57] step=42 class=LOAD pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 data=0x00000009 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 37] retire matched Spike trace
+[TRACE][RETIRE 39/490][C59] step=43 class=STORE pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000009 illegal=0
+[PASS][ROW 38] retire matched Spike trace
+[TRACE][RETIRE 40/490][C60] step=44 class=LOAD pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 39] retire matched Spike trace
+[TRACE][RETIRE 41/490][C62] step=45 class=ALUI pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 40] retire matched Spike trace
+[TRACE][RETIRE 42/490][C63] step=46 class=LUI pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 41] retire matched Spike trace
+[TRACE][RETIRE 43/490][C64] step=47 class=ALUI pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 42] retire matched Spike trace
+[TRACE][RETIRE 44/490][C65] step=48 class=ALUI pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 43] retire matched Spike trace
+[TRACE][RETIRE 45/490][C66] step=49 class=ALUR pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 44] retire matched Spike trace
+[TRACE][RETIRE 46/490][C67] step=50 class=LOAD pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 data=0x00000003 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 45] retire matched Spike trace
+[TRACE][RETIRE 47/490][C68] step=51 class=LUI pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 46] retire matched Spike trace
+[TRACE][RETIRE 48/490][C69] step=52 class=ALUI pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 47] retire matched Spike trace
+[TRACE][RETIRE 49/490][C70] step=53 class=LOAD pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 48] retire matched Spike trace
+[TRACE][RETIRE 50/490][C72] step=54 class=ALUI pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 49] retire matched Spike trace
+[TRACE][RETIRE 51/490][C73] step=55 class=ALUR pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 50] retire matched Spike trace
+[TRACE][RETIRE 52/490][C74] step=56 class=STORE pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000134 memwr=1 mem_addr=0x80000134 mem_data=0x00000003 illegal=0
+[PASS][ROW 51] retire matched Spike trace
+[TRACE][RETIRE 53/490][C75] step=57 class=LOAD pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 52] retire matched Spike trace
+[TRACE][RETIRE 54/490][C77] step=58 class=ALUI pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 53] retire matched Spike trace
+[TRACE][RETIRE 55/490][C78] step=59 class=LUI pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 54] retire matched Spike trace
+[TRACE][RETIRE 56/490][C79] step=60 class=ALUI pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 55] retire matched Spike trace
+[TRACE][RETIRE 57/490][C80] step=61 class=ALUI pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 56] retire matched Spike trace
+[TRACE][RETIRE 58/490][C81] step=62 class=ALUR pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 57] retire matched Spike trace
+[TRACE][RETIRE 59/490][C82] step=63 class=LOAD pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 data=0x00000009 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0
+[PASS][ROW 58] retire matched Spike trace
+[TRACE][RETIRE 60/490][C84] step=64 class=STORE pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000138 memwr=1 mem_addr=0x80000138 mem_data=0x00000009 illegal=0
+[PASS][ROW 59] retire matched Spike trace
+[TRACE][RETIRE 61/490][C85] step=65 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 60] retire matched Spike trace
+[TRACE][RETIRE 62/490][C87] step=66 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 61] retire matched Spike trace
+[TRACE][RETIRE 63/490][C88] step=67 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000001 illegal=0
+[PASS][ROW 62] retire matched Spike trace
+[TRACE][RETIRE 64/490][C89] step=68 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 63] retire matched Spike trace
+[TRACE][RETIRE 65/490][C90] step=69 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 64] retire matched Spike trace
+[TRACE][RETIRE 66/490][C92] step=70 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 65] retire matched Spike trace
+[TRACE][RETIRE 67/490][C93] step=71 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 66] retire matched Spike trace
+[TRACE][RETIRE 68/490][C95] step=72 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000005 memwr=0 mem_addr=0x00000005 mem_data=0x00000004 illegal=0
+[PASS][ROW 67] retire matched Spike trace
+[TRACE][RETIRE 69/490][C98] step=73 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 68] retire matched Spike trace
+[TRACE][RETIRE 70/490][C99] step=74 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 69] retire matched Spike trace
+[TRACE][RETIRE 71/490][C100] step=75 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 70] retire matched Spike trace
+[TRACE][RETIRE 72/490][C102] step=76 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 71] retire matched Spike trace
+[TRACE][RETIRE 73/490][C103] step=77 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 72] retire matched Spike trace
+[TRACE][RETIRE 74/490][C104] step=78 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000009 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 73] retire matched Spike trace
+[TRACE][RETIRE 75/490][C105] step=79 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 74] retire matched Spike trace
+[TRACE][RETIRE 76/490][C107] step=80 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 75] retire matched Spike trace
+[TRACE][RETIRE 77/490][C108] step=81 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 76] retire matched Spike trace
+[TRACE][RETIRE 78/490][C109] step=82 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 77] retire matched Spike trace
+[TRACE][RETIRE 79/490][C110] step=83 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 78] retire matched Spike trace
+[TRACE][RETIRE 80/490][C111] step=84 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 79] retire matched Spike trace
+[TRACE][RETIRE 81/490][C112] step=85 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000007 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 80] retire matched Spike trace
+[TRACE][RETIRE 82/490][C114] step=86 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x00000010 memwr=0 mem_addr=0x00000010 mem_data=0x00000009 illegal=0
+[PASS][ROW 81] retire matched Spike trace
+[TRACE][RETIRE 83/490][C115] step=87 class=LUI pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 82] retire matched Spike trace
+[TRACE][RETIRE 84/490][C116] step=88 class=ALUI pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 83] retire matched Spike trace
+[TRACE][RETIRE 85/490][C117] step=89 class=LOAD pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 84] retire matched Spike trace
+[TRACE][RETIRE 86/490][C119] step=90 class=ALUI pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 85] retire matched Spike trace
+[TRACE][RETIRE 87/490][C120] step=91 class=ALUR pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 86] retire matched Spike trace
+[TRACE][RETIRE 88/490][C121] step=92 class=LOAD pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 data=0x00000009 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 87] retire matched Spike trace
+[TRACE][RETIRE 89/490][C123] step=93 class=STORE pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000009 illegal=0
+[PASS][ROW 88] retire matched Spike trace
+[TRACE][RETIRE 90/490][C124] step=94 class=LOAD pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 89] retire matched Spike trace
+[TRACE][RETIRE 91/490][C126] step=95 class=ALUI pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 90] retire matched Spike trace
+[TRACE][RETIRE 92/490][C127] step=96 class=LUI pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 91] retire matched Spike trace
+[TRACE][RETIRE 93/490][C128] step=97 class=ALUI pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 92] retire matched Spike trace
+[TRACE][RETIRE 94/490][C129] step=98 class=ALUI pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 93] retire matched Spike trace
+[TRACE][RETIRE 95/490][C130] step=99 class=ALUR pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 94] retire matched Spike trace
+[TRACE][RETIRE 96/490][C131] step=100 class=LOAD pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 data=0x00000007 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 95] retire matched Spike trace
+[TRACE][RETIRE 97/490][C132] step=101 class=LUI pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 96] retire matched Spike trace
+[TRACE][RETIRE 98/490][C133] step=102 class=ALUI pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 97] retire matched Spike trace
+[TRACE][RETIRE 99/490][C134] step=103 class=LOAD pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 98] retire matched Spike trace
+[TRACE][RETIRE 100/490][C136] step=104 class=ALUI pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 99] retire matched Spike trace
+[TRACE][RETIRE 101/490][C137] step=105 class=ALUR pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 100] retire matched Spike trace
+[TRACE][RETIRE 102/490][C138] step=106 class=STORE pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000138 memwr=1 mem_addr=0x80000138 mem_data=0x00000007 illegal=0
+[PASS][ROW 101] retire matched Spike trace
+[TRACE][RETIRE 103/490][C139] step=107 class=LOAD pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 102] retire matched Spike trace
+[TRACE][RETIRE 104/490][C141] step=108 class=ALUI pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 103] retire matched Spike trace
+[TRACE][RETIRE 105/490][C142] step=109 class=LUI pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 104] retire matched Spike trace
+[TRACE][RETIRE 106/490][C143] step=110 class=ALUI pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 105] retire matched Spike trace
+[TRACE][RETIRE 107/490][C144] step=111 class=ALUI pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 106] retire matched Spike trace
+[TRACE][RETIRE 108/490][C145] step=112 class=ALUR pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 107] retire matched Spike trace
+[TRACE][RETIRE 109/490][C146] step=113 class=LOAD pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 data=0x00000009 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0
+[PASS][ROW 108] retire matched Spike trace
+[TRACE][RETIRE 110/490][C148] step=114 class=STORE pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 data=0x8000013c memwr=1 mem_addr=0x8000013c mem_data=0x00000009 illegal=0
+[PASS][ROW 109] retire matched Spike trace
+[TRACE][RETIRE 111/490][C149] step=115 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 110] retire matched Spike trace
+[TRACE][RETIRE 112/490][C151] step=116 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 111] retire matched Spike trace
+[TRACE][RETIRE 113/490][C152] step=117 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000002 illegal=0
+[PASS][ROW 112] retire matched Spike trace
+[TRACE][RETIRE 114/490][C153] step=118 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 113] retire matched Spike trace
+[TRACE][RETIRE 115/490][C154] step=119 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 114] retire matched Spike trace
+[TRACE][RETIRE 116/490][C156] step=120 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 115] retire matched Spike trace
+[TRACE][RETIRE 117/490][C157] step=121 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 116] retire matched Spike trace
+[TRACE][RETIRE 118/490][C159] step=122 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000006 memwr=0 mem_addr=0x00000006 mem_data=0x00000004 illegal=0
+[PASS][ROW 117] retire matched Spike trace
+[TRACE][RETIRE 119/490][C162] step=123 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 118] retire matched Spike trace
+[TRACE][RETIRE 120/490][C163] step=124 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 119] retire matched Spike trace
+[TRACE][RETIRE 121/490][C164] step=125 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 120] retire matched Spike trace
+[TRACE][RETIRE 122/490][C166] step=126 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 121] retire matched Spike trace
+[TRACE][RETIRE 123/490][C167] step=127 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 122] retire matched Spike trace
+[TRACE][RETIRE 124/490][C168] step=128 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000009 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 123] retire matched Spike trace
+[TRACE][RETIRE 125/490][C169] step=129 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 124] retire matched Spike trace
+[TRACE][RETIRE 126/490][C171] step=130 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 125] retire matched Spike trace
+[TRACE][RETIRE 127/490][C172] step=131 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 126] retire matched Spike trace
+[TRACE][RETIRE 128/490][C173] step=132 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 127] retire matched Spike trace
+[TRACE][RETIRE 129/490][C174] step=133 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 128] retire matched Spike trace
+[TRACE][RETIRE 130/490][C175] step=134 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 129] retire matched Spike trace
+[TRACE][RETIRE 131/490][C176] step=135 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0
+[PASS][ROW 130] retire matched Spike trace
+[TRACE][RETIRE 132/490][C178] step=136 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x0000000a memwr=0 mem_addr=0x0000000a mem_data=0x00000009 illegal=0
+[PASS][ROW 131] retire matched Spike trace
+[TRACE][RETIRE 133/490][C179] step=137 class=LUI pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 132] retire matched Spike trace
+[TRACE][RETIRE 134/490][C180] step=138 class=ALUI pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 133] retire matched Spike trace
+[TRACE][RETIRE 135/490][C181] step=139 class=LOAD pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 134] retire matched Spike trace
+[TRACE][RETIRE 136/490][C183] step=140 class=ALUI pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 135] retire matched Spike trace
+[TRACE][RETIRE 137/490][C184] step=141 class=ALUR pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 136] retire matched Spike trace
+[TRACE][RETIRE 138/490][C185] step=142 class=LOAD pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 data=0x00000009 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 137] retire matched Spike trace
+[TRACE][RETIRE 139/490][C187] step=143 class=STORE pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000009 illegal=0
+[PASS][ROW 138] retire matched Spike trace
+[TRACE][RETIRE 140/490][C188] step=144 class=LOAD pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 139] retire matched Spike trace
+[TRACE][RETIRE 141/490][C190] step=145 class=ALUI pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 140] retire matched Spike trace
+[TRACE][RETIRE 142/490][C191] step=146 class=LUI pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 141] retire matched Spike trace
+[TRACE][RETIRE 143/490][C192] step=147 class=ALUI pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 142] retire matched Spike trace
+[TRACE][RETIRE 144/490][C193] step=148 class=ALUI pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 143] retire matched Spike trace
+[TRACE][RETIRE 145/490][C194] step=149 class=ALUR pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 144] retire matched Spike trace
+[TRACE][RETIRE 146/490][C195] step=150 class=LOAD pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0
+[PASS][ROW 145] retire matched Spike trace
+[TRACE][RETIRE 147/490][C196] step=151 class=LUI pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 146] retire matched Spike trace
+[TRACE][RETIRE 148/490][C197] step=152 class=ALUI pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 147] retire matched Spike trace
+[TRACE][RETIRE 149/490][C198] step=153 class=LOAD pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 148] retire matched Spike trace
+[TRACE][RETIRE 150/490][C200] step=154 class=ALUI pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 149] retire matched Spike trace
+[TRACE][RETIRE 151/490][C201] step=155 class=ALUR pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 150] retire matched Spike trace
+[TRACE][RETIRE 152/490][C202] step=156 class=STORE pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 data=0x8000013c memwr=1 mem_addr=0x8000013c mem_data=0x00000001 illegal=0
+[PASS][ROW 151] retire matched Spike trace
+[TRACE][RETIRE 153/490][C203] step=157 class=LOAD pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 152] retire matched Spike trace
+[TRACE][RETIRE 154/490][C205] step=158 class=ALUI pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 153] retire matched Spike trace
+[TRACE][RETIRE 155/490][C206] step=159 class=LUI pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 154] retire matched Spike trace
+[TRACE][RETIRE 156/490][C207] step=160 class=ALUI pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 155] retire matched Spike trace
+[TRACE][RETIRE 157/490][C208] step=161 class=ALUI pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 156] retire matched Spike trace
+[TRACE][RETIRE 158/490][C209] step=162 class=ALUR pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 157] retire matched Spike trace
+[TRACE][RETIRE 159/490][C210] step=163 class=LOAD pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 data=0x00000009 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0
+[PASS][ROW 158] retire matched Spike trace
+[TRACE][RETIRE 160/490][C212] step=164 class=STORE pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000140 memwr=1 mem_addr=0x80000140 mem_data=0x00000009 illegal=0
+[PASS][ROW 159] retire matched Spike trace
+[TRACE][RETIRE 161/490][C213] step=165 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 160] retire matched Spike trace
+[TRACE][RETIRE 162/490][C215] step=166 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 161] retire matched Spike trace
+[TRACE][RETIRE 163/490][C216] step=167 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000003 illegal=0
+[PASS][ROW 162] retire matched Spike trace
+[TRACE][RETIRE 164/490][C217] step=168 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 163] retire matched Spike trace
+[TRACE][RETIRE 165/490][C218] step=169 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 164] retire matched Spike trace
+[TRACE][RETIRE 166/490][C220] step=170 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 165] retire matched Spike trace
+[TRACE][RETIRE 167/490][C221] step=171 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 166] retire matched Spike trace
+[TRACE][RETIRE 168/490][C223] step=172 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000007 memwr=0 mem_addr=0x00000007 mem_data=0x00000004 illegal=0
+[PASS][ROW 167] retire matched Spike trace
+[TRACE][RETIRE 169/490][C226] step=173 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 168] retire matched Spike trace
+[TRACE][RETIRE 170/490][C227] step=174 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 169] retire matched Spike trace
+[TRACE][RETIRE 171/490][C228] step=175 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 170] retire matched Spike trace
+[TRACE][RETIRE 172/490][C230] step=176 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 171] retire matched Spike trace
+[TRACE][RETIRE 173/490][C231] step=177 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 172] retire matched Spike trace
+[TRACE][RETIRE 174/490][C232] step=178 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000009 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0
+[PASS][ROW 173] retire matched Spike trace
+[TRACE][RETIRE 175/490][C233] step=179 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 174] retire matched Spike trace
+[TRACE][RETIRE 176/490][C235] step=180 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0
+[PASS][ROW 175] retire matched Spike trace
+[TRACE][RETIRE 177/490][C236] step=181 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 176] retire matched Spike trace
+[TRACE][RETIRE 178/490][C237] step=182 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 177] retire matched Spike trace
+[TRACE][RETIRE 179/490][C238] step=183 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x00000010 memwr=0 mem_addr=0x00000010 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 178] retire matched Spike trace
+[TRACE][RETIRE 180/490][C239] step=184 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x80000144 memwr=0 mem_addr=0x80000144 mem_data=0x00000010 illegal=0
+[PASS][ROW 179] retire matched Spike trace
+[TRACE][RETIRE 181/490][C240] step=185 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000005 memwr=0 mem_addr=0x80000144 mem_data=0x00000000 illegal=0
+[PASS][ROW 180] retire matched Spike trace
+[TRACE][RETIRE 182/490][C242] step=186 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x0000000e memwr=0 mem_addr=0x0000000e mem_data=0x00000009 illegal=0
+[PASS][ROW 181] retire matched Spike trace
+[TRACE][RETIRE 183/490][C243] step=187 class=LUI pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 182] retire matched Spike trace
+[TRACE][RETIRE 184/490][C244] step=188 class=ALUI pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 183] retire matched Spike trace
+[TRACE][RETIRE 185/490][C245] step=189 class=LOAD pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 184] retire matched Spike trace
+[TRACE][RETIRE 186/490][C247] step=190 class=ALUI pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 185] retire matched Spike trace
+[TRACE][RETIRE 187/490][C248] step=191 class=ALUR pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 186] retire matched Spike trace
+[TRACE][RETIRE 188/490][C249] step=192 class=LOAD pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 data=0x00000009 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0
+[PASS][ROW 187] retire matched Spike trace
+[TRACE][RETIRE 189/490][C251] step=193 class=STORE pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000009 illegal=0
+[PASS][ROW 188] retire matched Spike trace
+[TRACE][RETIRE 190/490][C252] step=194 class=LOAD pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 189] retire matched Spike trace
+[TRACE][RETIRE 191/490][C254] step=195 class=ALUI pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0
+[PASS][ROW 190] retire matched Spike trace
+[TRACE][RETIRE 192/490][C255] step=196 class=LUI pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 191] retire matched Spike trace
+[TRACE][RETIRE 193/490][C256] step=197 class=ALUI pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 192] retire matched Spike trace
+[TRACE][RETIRE 194/490][C257] step=198 class=ALUI pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 data=0x00000010 memwr=0 mem_addr=0x00000010 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 193] retire matched Spike trace
+[TRACE][RETIRE 195/490][C258] step=199 class=ALUR pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000144 memwr=0 mem_addr=0x80000144 mem_data=0x00000010 illegal=0
+[PASS][ROW 194] retire matched Spike trace
+[TRACE][RETIRE 196/490][C259] step=200 class=LOAD pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 data=0x00000005 memwr=0 mem_addr=0x80000144 mem_data=0x00000000 illegal=0
+[PASS][ROW 195] retire matched Spike trace
+[TRACE][RETIRE 197/490][C260] step=201 class=LUI pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 196] retire matched Spike trace
+[TRACE][RETIRE 198/490][C261] step=202 class=ALUI pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 197] retire matched Spike trace
+[TRACE][RETIRE 199/490][C262] step=203 class=LOAD pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 198] retire matched Spike trace
+[TRACE][RETIRE 200/490][C264] step=204 class=ALUI pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 199] retire matched Spike trace
+[TRACE][RETIRE 201/490][C265] step=205 class=ALUR pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 200] retire matched Spike trace
+[TRACE][RETIRE 202/490][C266] step=206 class=STORE pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000140 memwr=1 mem_addr=0x80000140 mem_data=0x00000005 illegal=0
+[PASS][ROW 201] retire matched Spike trace
+[TRACE][RETIRE 203/490][C267] step=207 class=LOAD pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 202] retire matched Spike trace
+[TRACE][RETIRE 204/490][C269] step=208 class=ALUI pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0
+[PASS][ROW 203] retire matched Spike trace
+[TRACE][RETIRE 205/490][C270] step=209 class=LUI pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 204] retire matched Spike trace
+[TRACE][RETIRE 206/490][C271] step=210 class=ALUI pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 205] retire matched Spike trace
+[TRACE][RETIRE 207/490][C272] step=211 class=ALUI pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 data=0x00000010 memwr=0 mem_addr=0x00000010 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 206] retire matched Spike trace
+[TRACE][RETIRE 208/490][C273] step=212 class=ALUR pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000144 memwr=0 mem_addr=0x80000144 mem_data=0x00000010 illegal=0
+[PASS][ROW 207] retire matched Spike trace
+[TRACE][RETIRE 209/490][C274] step=213 class=LOAD pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 data=0x00000009 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0
+[PASS][ROW 208] retire matched Spike trace
+[TRACE][RETIRE 210/490][C276] step=214 class=STORE pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000144 memwr=1 mem_addr=0x80000144 mem_data=0x00000009 illegal=0
+[PASS][ROW 209] retire matched Spike trace
+[TRACE][RETIRE 211/490][C277] step=215 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 210] retire matched Spike trace
+[TRACE][RETIRE 212/490][C279] step=216 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0
+[PASS][ROW 211] retire matched Spike trace
+[TRACE][RETIRE 213/490][C280] step=217 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000004 illegal=0
+[PASS][ROW 212] retire matched Spike trace
+[TRACE][RETIRE 214/490][C281] step=218 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 213] retire matched Spike trace
+[TRACE][RETIRE 215/490][C282] step=219 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 214] retire matched Spike trace
+[TRACE][RETIRE 216/490][C284] step=220 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 215] retire matched Spike trace
+[TRACE][RETIRE 217/490][C285] step=221 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 216] retire matched Spike trace
+[TRACE][RETIRE 218/490][C287] step=222 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x00000004 illegal=0
+[PASS][ROW 217] retire matched Spike trace
+[TRACE][RETIRE 219/490][C288] step=223 class=LOAD pc=0x800000f4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 218] retire matched Spike trace
+[TRACE][RETIRE 220/490][C290] step=224 class=ALUI pc=0x800000f8 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 219] retire matched Spike trace
+[TRACE][RETIRE 221/490][C291] step=225 class=STORE pc=0x800000fc inst=0xfef42623 regwr=0 rd=x12 data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000001 illegal=0
+[PASS][ROW 220] retire matched Spike trace
+[TRACE][RETIRE 222/490][C292] step=226 class=LOAD pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 221] retire matched Spike trace
+[TRACE][RETIRE 223/490][C293] step=227 class=ALUI pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0
+[PASS][ROW 222] retire matched Spike trace
+[TRACE][RETIRE 224/490][C294] step=228 class=BRANCH pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000001 illegal=0
+[PASS][ROW 223] retire matched Spike trace
+[TRACE][RETIRE 225/490][C297] step=229 class=STORE pc=0x80000024 inst=0xfe042423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000000 illegal=0
+[PASS][ROW 224] retire matched Spike trace
+[TRACE][RETIRE 226/490][C298] step=230 class=JAL pc=0x80000028 inst=0x0b80006f regwr=1 rd=x0 data=0x8000002c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 225] retire matched Spike trace
+[TRACE][RETIRE 227/490][C301] step=231 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 226] retire matched Spike trace
+[TRACE][RETIRE 228/490][C302] step=232 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 227] retire matched Spike trace
+[TRACE][RETIRE 229/490][C304] step=233 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000001 illegal=0
+[PASS][ROW 228] retire matched Spike trace
+[TRACE][RETIRE 230/490][C305] step=234 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 229] retire matched Spike trace
+[TRACE][RETIRE 231/490][C307] step=235 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000003 illegal=0
+[PASS][ROW 230] retire matched Spike trace
+[TRACE][RETIRE 232/490][C310] step=236 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 231] retire matched Spike trace
+[TRACE][RETIRE 233/490][C311] step=237 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 232] retire matched Spike trace
+[TRACE][RETIRE 234/490][C312] step=238 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 233] retire matched Spike trace
+[TRACE][RETIRE 235/490][C314] step=239 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 234] retire matched Spike trace
+[TRACE][RETIRE 236/490][C315] step=240 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 235] retire matched Spike trace
+[TRACE][RETIRE 237/490][C316] step=241 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000003 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 236] retire matched Spike trace
+[TRACE][RETIRE 238/490][C317] step=242 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 237] retire matched Spike trace
+[TRACE][RETIRE 239/490][C319] step=243 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 238] retire matched Spike trace
+[TRACE][RETIRE 240/490][C320] step=244 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 239] retire matched Spike trace
+[TRACE][RETIRE 241/490][C321] step=245 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 240] retire matched Spike trace
+[TRACE][RETIRE 242/490][C322] step=246 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 241] retire matched Spike trace
+[TRACE][RETIRE 243/490][C323] step=247 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 242] retire matched Spike trace
+[TRACE][RETIRE 244/490][C324] step=248 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000007 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 243] retire matched Spike trace
+[TRACE][RETIRE 245/490][C326] step=249 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x0000000a memwr=0 mem_addr=0x0000000a mem_data=0x00000003 illegal=0
+[PASS][ROW 244] retire matched Spike trace
+[TRACE][RETIRE 246/490][C329] step=250 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 245] retire matched Spike trace
+[TRACE][RETIRE 247/490][C331] step=251 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 246] retire matched Spike trace
+[TRACE][RETIRE 248/490][C332] step=252 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000001 illegal=0
+[PASS][ROW 247] retire matched Spike trace
+[TRACE][RETIRE 249/490][C333] step=253 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 248] retire matched Spike trace
+[TRACE][RETIRE 250/490][C334] step=254 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 249] retire matched Spike trace
+[TRACE][RETIRE 251/490][C336] step=255 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000001 illegal=0
+[PASS][ROW 250] retire matched Spike trace
+[TRACE][RETIRE 252/490][C337] step=256 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 251] retire matched Spike trace
+[TRACE][RETIRE 253/490][C339] step=257 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000003 illegal=0
+[PASS][ROW 252] retire matched Spike trace
+[TRACE][RETIRE 254/490][C342] step=258 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 253] retire matched Spike trace
+[TRACE][RETIRE 255/490][C343] step=259 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 254] retire matched Spike trace
+[TRACE][RETIRE 256/490][C344] step=260 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 255] retire matched Spike trace
+[TRACE][RETIRE 257/490][C346] step=261 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 256] retire matched Spike trace
+[TRACE][RETIRE 258/490][C347] step=262 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 257] retire matched Spike trace
+[TRACE][RETIRE 259/490][C348] step=263 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000007 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 258] retire matched Spike trace
+[TRACE][RETIRE 260/490][C349] step=264 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 259] retire matched Spike trace
+[TRACE][RETIRE 261/490][C351] step=265 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 260] retire matched Spike trace
+[TRACE][RETIRE 262/490][C352] step=266 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 261] retire matched Spike trace
+[TRACE][RETIRE 263/490][C353] step=267 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 262] retire matched Spike trace
+[TRACE][RETIRE 264/490][C354] step=268 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 263] retire matched Spike trace
+[TRACE][RETIRE 265/490][C355] step=269 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 264] retire matched Spike trace
+[TRACE][RETIRE 266/490][C356] step=270 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 265] retire matched Spike trace
+[TRACE][RETIRE 267/490][C358] step=271 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x00000007 illegal=0
+[PASS][ROW 266] retire matched Spike trace
+[TRACE][RETIRE 268/490][C359] step=272 class=LUI pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 267] retire matched Spike trace
+[TRACE][RETIRE 269/490][C360] step=273 class=ALUI pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 268] retire matched Spike trace
+[TRACE][RETIRE 270/490][C361] step=274 class=LOAD pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 269] retire matched Spike trace
+[TRACE][RETIRE 271/490][C363] step=275 class=ALUI pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 270] retire matched Spike trace
+[TRACE][RETIRE 272/490][C364] step=276 class=ALUR pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 271] retire matched Spike trace
+[TRACE][RETIRE 273/490][C365] step=277 class=LOAD pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 data=0x00000007 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 272] retire matched Spike trace
+[TRACE][RETIRE 274/490][C367] step=278 class=STORE pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000007 illegal=0
+[PASS][ROW 273] retire matched Spike trace
+[TRACE][RETIRE 275/490][C368] step=279 class=LOAD pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 274] retire matched Spike trace
+[TRACE][RETIRE 276/490][C370] step=280 class=ALUI pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 275] retire matched Spike trace
+[TRACE][RETIRE 277/490][C371] step=281 class=LUI pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 276] retire matched Spike trace
+[TRACE][RETIRE 278/490][C372] step=282 class=ALUI pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 277] retire matched Spike trace
+[TRACE][RETIRE 279/490][C373] step=283 class=ALUI pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 278] retire matched Spike trace
+[TRACE][RETIRE 280/490][C374] step=284 class=ALUR pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 279] retire matched Spike trace
+[TRACE][RETIRE 281/490][C375] step=285 class=LOAD pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 280] retire matched Spike trace
+[TRACE][RETIRE 282/490][C376] step=286 class=LUI pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 281] retire matched Spike trace
+[TRACE][RETIRE 283/490][C377] step=287 class=ALUI pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 282] retire matched Spike trace
+[TRACE][RETIRE 284/490][C378] step=288 class=LOAD pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 283] retire matched Spike trace
+[TRACE][RETIRE 285/490][C380] step=289 class=ALUI pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 284] retire matched Spike trace
+[TRACE][RETIRE 286/490][C381] step=290 class=ALUR pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 285] retire matched Spike trace
+[TRACE][RETIRE 287/490][C382] step=291 class=STORE pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000138 memwr=1 mem_addr=0x80000138 mem_data=0x00000001 illegal=0
+[PASS][ROW 286] retire matched Spike trace
+[TRACE][RETIRE 288/490][C383] step=292 class=LOAD pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 287] retire matched Spike trace
+[TRACE][RETIRE 289/490][C385] step=293 class=ALUI pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 288] retire matched Spike trace
+[TRACE][RETIRE 290/490][C386] step=294 class=LUI pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 289] retire matched Spike trace
+[TRACE][RETIRE 291/490][C387] step=295 class=ALUI pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 290] retire matched Spike trace
+[TRACE][RETIRE 292/490][C388] step=296 class=ALUI pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 291] retire matched Spike trace
+[TRACE][RETIRE 293/490][C389] step=297 class=ALUR pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 292] retire matched Spike trace
+[TRACE][RETIRE 294/490][C390] step=298 class=LOAD pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 data=0x00000007 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0
+[PASS][ROW 293] retire matched Spike trace
+[TRACE][RETIRE 295/490][C392] step=299 class=STORE pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 data=0x8000013c memwr=1 mem_addr=0x8000013c mem_data=0x00000007 illegal=0
+[PASS][ROW 294] retire matched Spike trace
+[TRACE][RETIRE 296/490][C393] step=300 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 295] retire matched Spike trace
+[TRACE][RETIRE 297/490][C395] step=301 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 296] retire matched Spike trace
+[TRACE][RETIRE 298/490][C396] step=302 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000002 illegal=0
+[PASS][ROW 297] retire matched Spike trace
+[TRACE][RETIRE 299/490][C397] step=303 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 298] retire matched Spike trace
+[TRACE][RETIRE 300/490][C398] step=304 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 299] retire matched Spike trace
+[TRACE][RETIRE 301/490][C400] step=305 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000001 illegal=0
+[PASS][ROW 300] retire matched Spike trace
+[TRACE][RETIRE 302/490][C401] step=306 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 301] retire matched Spike trace
+[TRACE][RETIRE 303/490][C403] step=307 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000005 memwr=0 mem_addr=0x00000005 mem_data=0x00000003 illegal=0
+[PASS][ROW 302] retire matched Spike trace
+[TRACE][RETIRE 304/490][C406] step=308 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 303] retire matched Spike trace
+[TRACE][RETIRE 305/490][C407] step=309 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 304] retire matched Spike trace
+[TRACE][RETIRE 306/490][C408] step=310 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 305] retire matched Spike trace
+[TRACE][RETIRE 307/490][C410] step=311 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 306] retire matched Spike trace
+[TRACE][RETIRE 308/490][C411] step=312 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 307] retire matched Spike trace
+[TRACE][RETIRE 309/490][C412] step=313 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000007 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 308] retire matched Spike trace
+[TRACE][RETIRE 310/490][C413] step=314 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 309] retire matched Spike trace
+[TRACE][RETIRE 311/490][C415] step=315 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 310] retire matched Spike trace
+[TRACE][RETIRE 312/490][C416] step=316 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 311] retire matched Spike trace
+[TRACE][RETIRE 313/490][C417] step=317 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 312] retire matched Spike trace
+[TRACE][RETIRE 314/490][C418] step=318 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 313] retire matched Spike trace
+[TRACE][RETIRE 315/490][C419] step=319 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 314] retire matched Spike trace
+[TRACE][RETIRE 316/490][C420] step=320 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000005 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0
+[PASS][ROW 315] retire matched Spike trace
+[TRACE][RETIRE 317/490][C422] step=321 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x00000007 illegal=0
+[PASS][ROW 316] retire matched Spike trace
+[TRACE][RETIRE 318/490][C423] step=322 class=LUI pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 317] retire matched Spike trace
+[TRACE][RETIRE 319/490][C424] step=323 class=ALUI pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 318] retire matched Spike trace
+[TRACE][RETIRE 320/490][C425] step=324 class=LOAD pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 319] retire matched Spike trace
+[TRACE][RETIRE 321/490][C427] step=325 class=ALUI pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 320] retire matched Spike trace
+[TRACE][RETIRE 322/490][C428] step=326 class=ALUR pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 321] retire matched Spike trace
+[TRACE][RETIRE 323/490][C429] step=327 class=LOAD pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 data=0x00000007 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 322] retire matched Spike trace
+[TRACE][RETIRE 324/490][C431] step=328 class=STORE pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000007 illegal=0
+[PASS][ROW 323] retire matched Spike trace
+[TRACE][RETIRE 325/490][C432] step=329 class=LOAD pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 324] retire matched Spike trace
+[TRACE][RETIRE 326/490][C434] step=330 class=ALUI pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 325] retire matched Spike trace
+[TRACE][RETIRE 327/490][C435] step=331 class=LUI pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 326] retire matched Spike trace
+[TRACE][RETIRE 328/490][C436] step=332 class=ALUI pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 327] retire matched Spike trace
+[TRACE][RETIRE 329/490][C437] step=333 class=ALUI pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 328] retire matched Spike trace
+[TRACE][RETIRE 330/490][C438] step=334 class=ALUR pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 329] retire matched Spike trace
+[TRACE][RETIRE 331/490][C439] step=335 class=LOAD pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 data=0x00000005 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0
+[PASS][ROW 330] retire matched Spike trace
+[TRACE][RETIRE 332/490][C440] step=336 class=LUI pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 331] retire matched Spike trace
+[TRACE][RETIRE 333/490][C441] step=337 class=ALUI pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 332] retire matched Spike trace
+[TRACE][RETIRE 334/490][C442] step=338 class=LOAD pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 333] retire matched Spike trace
+[TRACE][RETIRE 335/490][C444] step=339 class=ALUI pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 334] retire matched Spike trace
+[TRACE][RETIRE 336/490][C445] step=340 class=ALUR pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 335] retire matched Spike trace
+[TRACE][RETIRE 337/490][C446] step=341 class=STORE pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 data=0x8000013c memwr=1 mem_addr=0x8000013c mem_data=0x00000005 illegal=0
+[PASS][ROW 336] retire matched Spike trace
+[TRACE][RETIRE 338/490][C447] step=342 class=LOAD pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 337] retire matched Spike trace
+[TRACE][RETIRE 339/490][C449] step=343 class=ALUI pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 338] retire matched Spike trace
+[TRACE][RETIRE 340/490][C450] step=344 class=LUI pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 339] retire matched Spike trace
+[TRACE][RETIRE 341/490][C451] step=345 class=ALUI pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 340] retire matched Spike trace
+[TRACE][RETIRE 342/490][C452] step=346 class=ALUI pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 341] retire matched Spike trace
+[TRACE][RETIRE 343/490][C453] step=347 class=ALUR pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0
+[PASS][ROW 342] retire matched Spike trace
+[TRACE][RETIRE 344/490][C454] step=348 class=LOAD pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 data=0x00000007 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0
+[PASS][ROW 343] retire matched Spike trace
+[TRACE][RETIRE 345/490][C456] step=349 class=STORE pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000140 memwr=1 mem_addr=0x80000140 mem_data=0x00000007 illegal=0
+[PASS][ROW 344] retire matched Spike trace
+[TRACE][RETIRE 346/490][C457] step=350 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 345] retire matched Spike trace
+[TRACE][RETIRE 347/490][C459] step=351 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 346] retire matched Spike trace
+[TRACE][RETIRE 348/490][C460] step=352 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000003 illegal=0
+[PASS][ROW 347] retire matched Spike trace
+[TRACE][RETIRE 349/490][C461] step=353 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 348] retire matched Spike trace
+[TRACE][RETIRE 350/490][C462] step=354 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 349] retire matched Spike trace
+[TRACE][RETIRE 351/490][C464] step=355 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000001 illegal=0
+[PASS][ROW 350] retire matched Spike trace
+[TRACE][RETIRE 352/490][C465] step=356 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 351] retire matched Spike trace
+[TRACE][RETIRE 353/490][C467] step=357 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000006 memwr=0 mem_addr=0x00000006 mem_data=0x00000003 illegal=0
+[PASS][ROW 352] retire matched Spike trace
+[TRACE][RETIRE 354/490][C468] step=358 class=LOAD pc=0x800000f4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 353] retire matched Spike trace
+[TRACE][RETIRE 355/490][C470] step=359 class=ALUI pc=0x800000f8 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 354] retire matched Spike trace
+[TRACE][RETIRE 356/490][C471] step=360 class=STORE pc=0x800000fc inst=0xfef42623 regwr=0 rd=x12 data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000002 illegal=0
+[PASS][ROW 355] retire matched Spike trace
+[TRACE][RETIRE 357/490][C472] step=361 class=LOAD pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 356] retire matched Spike trace
+[TRACE][RETIRE 358/490][C473] step=362 class=ALUI pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0
+[PASS][ROW 357] retire matched Spike trace
+[TRACE][RETIRE 359/490][C474] step=363 class=BRANCH pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 data=0x00000005 memwr=0 mem_addr=0x00000005 mem_data=0x00000002 illegal=0
+[PASS][ROW 358] retire matched Spike trace
+[TRACE][RETIRE 360/490][C477] step=364 class=STORE pc=0x80000024 inst=0xfe042423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000000 illegal=0
+[PASS][ROW 359] retire matched Spike trace
+[TRACE][RETIRE 361/490][C478] step=365 class=JAL pc=0x80000028 inst=0x0b80006f regwr=1 rd=x0 data=0x8000002c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 360] retire matched Spike trace
+[TRACE][RETIRE 362/490][C481] step=366 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 361] retire matched Spike trace
+[TRACE][RETIRE 363/490][C482] step=367 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 362] retire matched Spike trace
+[TRACE][RETIRE 364/490][C484] step=368 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000002 illegal=0
+[PASS][ROW 363] retire matched Spike trace
+[TRACE][RETIRE 365/490][C485] step=369 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 364] retire matched Spike trace
+[TRACE][RETIRE 366/490][C487] step=370 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000002 illegal=0
+[PASS][ROW 365] retire matched Spike trace
+[TRACE][RETIRE 367/490][C490] step=371 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 366] retire matched Spike trace
+[TRACE][RETIRE 368/490][C491] step=372 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 367] retire matched Spike trace
+[TRACE][RETIRE 369/490][C492] step=373 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 368] retire matched Spike trace
+[TRACE][RETIRE 370/490][C494] step=374 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 369] retire matched Spike trace
+[TRACE][RETIRE 371/490][C495] step=375 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 370] retire matched Spike trace
+[TRACE][RETIRE 372/490][C496] step=376 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000003 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 371] retire matched Spike trace
+[TRACE][RETIRE 373/490][C497] step=377 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 372] retire matched Spike trace
+[TRACE][RETIRE 374/490][C499] step=378 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 373] retire matched Spike trace
+[TRACE][RETIRE 375/490][C500] step=379 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 374] retire matched Spike trace
+[TRACE][RETIRE 376/490][C501] step=380 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 375] retire matched Spike trace
+[TRACE][RETIRE 377/490][C502] step=381 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 376] retire matched Spike trace
+[TRACE][RETIRE 378/490][C503] step=382 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 377] retire matched Spike trace
+[TRACE][RETIRE 379/490][C504] step=383 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 378] retire matched Spike trace
+[TRACE][RETIRE 380/490][C506] step=384 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000003 illegal=0
+[PASS][ROW 379] retire matched Spike trace
+[TRACE][RETIRE 381/490][C507] step=385 class=LUI pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 380] retire matched Spike trace
+[TRACE][RETIRE 382/490][C508] step=386 class=ALUI pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 381] retire matched Spike trace
+[TRACE][RETIRE 383/490][C509] step=387 class=LOAD pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 382] retire matched Spike trace
+[TRACE][RETIRE 384/490][C511] step=388 class=ALUI pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 383] retire matched Spike trace
+[TRACE][RETIRE 385/490][C512] step=389 class=ALUR pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 384] retire matched Spike trace
+[TRACE][RETIRE 386/490][C513] step=390 class=LOAD pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 385] retire matched Spike trace
+[TRACE][RETIRE 387/490][C515] step=391 class=STORE pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000003 illegal=0
+[PASS][ROW 386] retire matched Spike trace
+[TRACE][RETIRE 388/490][C516] step=392 class=LOAD pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 387] retire matched Spike trace
+[TRACE][RETIRE 389/490][C518] step=393 class=ALUI pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 388] retire matched Spike trace
+[TRACE][RETIRE 390/490][C519] step=394 class=LUI pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 389] retire matched Spike trace
+[TRACE][RETIRE 391/490][C520] step=395 class=ALUI pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 390] retire matched Spike trace
+[TRACE][RETIRE 392/490][C521] step=396 class=ALUI pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 391] retire matched Spike trace
+[TRACE][RETIRE 393/490][C522] step=397 class=ALUR pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 392] retire matched Spike trace
+[TRACE][RETIRE 394/490][C523] step=398 class=LOAD pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 393] retire matched Spike trace
+[TRACE][RETIRE 395/490][C524] step=399 class=LUI pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 394] retire matched Spike trace
+[TRACE][RETIRE 396/490][C525] step=400 class=ALUI pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 395] retire matched Spike trace
+[TRACE][RETIRE 397/490][C526] step=401 class=LOAD pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 396] retire matched Spike trace
+[TRACE][RETIRE 398/490][C528] step=402 class=ALUI pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 397] retire matched Spike trace
+[TRACE][RETIRE 399/490][C529] step=403 class=ALUR pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 398] retire matched Spike trace
+[TRACE][RETIRE 400/490][C530] step=404 class=STORE pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000134 memwr=1 mem_addr=0x80000134 mem_data=0x00000001 illegal=0
+[PASS][ROW 399] retire matched Spike trace
+[TRACE][RETIRE 401/490][C531] step=405 class=LOAD pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 400] retire matched Spike trace
+[TRACE][RETIRE 402/490][C533] step=406 class=ALUI pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 401] retire matched Spike trace
+[TRACE][RETIRE 403/490][C534] step=407 class=LUI pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 402] retire matched Spike trace
+[TRACE][RETIRE 404/490][C535] step=408 class=ALUI pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 403] retire matched Spike trace
+[TRACE][RETIRE 405/490][C536] step=409 class=ALUI pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 404] retire matched Spike trace
+[TRACE][RETIRE 406/490][C537] step=410 class=ALUR pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 405] retire matched Spike trace
+[TRACE][RETIRE 407/490][C538] step=411 class=LOAD pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 data=0x00000003 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0
+[PASS][ROW 406] retire matched Spike trace
+[TRACE][RETIRE 408/490][C540] step=412 class=STORE pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 data=0x80000138 memwr=1 mem_addr=0x80000138 mem_data=0x00000003 illegal=0
+[PASS][ROW 407] retire matched Spike trace
+[TRACE][RETIRE 409/490][C541] step=413 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 408] retire matched Spike trace
+[TRACE][RETIRE 410/490][C543] step=414 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 409] retire matched Spike trace
+[TRACE][RETIRE 411/490][C544] step=415 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000001 illegal=0
+[PASS][ROW 410] retire matched Spike trace
+[TRACE][RETIRE 412/490][C545] step=416 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 411] retire matched Spike trace
+[TRACE][RETIRE 413/490][C546] step=417 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 412] retire matched Spike trace
+[TRACE][RETIRE 414/490][C548] step=418 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000002 illegal=0
+[PASS][ROW 413] retire matched Spike trace
+[TRACE][RETIRE 415/490][C549] step=419 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 414] retire matched Spike trace
+[TRACE][RETIRE 416/490][C551] step=420 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000002 illegal=0
+[PASS][ROW 415] retire matched Spike trace
+[TRACE][RETIRE 417/490][C554] step=421 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 416] retire matched Spike trace
+[TRACE][RETIRE 418/490][C555] step=422 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 417] retire matched Spike trace
+[TRACE][RETIRE 419/490][C556] step=423 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 418] retire matched Spike trace
+[TRACE][RETIRE 420/490][C558] step=424 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 419] retire matched Spike trace
+[TRACE][RETIRE 421/490][C559] step=425 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 420] retire matched Spike trace
+[TRACE][RETIRE 422/490][C560] step=426 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000003 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 421] retire matched Spike trace
+[TRACE][RETIRE 423/490][C561] step=427 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 422] retire matched Spike trace
+[TRACE][RETIRE 424/490][C563] step=428 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 423] retire matched Spike trace
+[TRACE][RETIRE 425/490][C564] step=429 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 424] retire matched Spike trace
+[TRACE][RETIRE 426/490][C565] step=430 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 425] retire matched Spike trace
+[TRACE][RETIRE 427/490][C566] step=431 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 426] retire matched Spike trace
+[TRACE][RETIRE 428/490][C567] step=432 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0
+[PASS][ROW 427] retire matched Spike trace
+[TRACE][RETIRE 429/490][C568] step=433 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000005 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0
+[PASS][ROW 428] retire matched Spike trace
+[TRACE][RETIRE 430/490][C570] step=434 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x00000003 illegal=0
+[PASS][ROW 429] retire matched Spike trace
+[TRACE][RETIRE 431/490][C573] step=435 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 430] retire matched Spike trace
+[TRACE][RETIRE 432/490][C575] step=436 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0
+[PASS][ROW 431] retire matched Spike trace
+[TRACE][RETIRE 433/490][C576] step=437 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000002 illegal=0
+[PASS][ROW 432] retire matched Spike trace
+[TRACE][RETIRE 434/490][C577] step=438 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 433] retire matched Spike trace
+[TRACE][RETIRE 435/490][C578] step=439 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 434] retire matched Spike trace
+[TRACE][RETIRE 436/490][C580] step=440 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000002 illegal=0
+[PASS][ROW 435] retire matched Spike trace
+[TRACE][RETIRE 437/490][C581] step=441 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 436] retire matched Spike trace
+[TRACE][RETIRE 438/490][C583] step=442 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000002 illegal=0
+[PASS][ROW 437] retire matched Spike trace
+[TRACE][RETIRE 439/490][C584] step=443 class=LOAD pc=0x800000f4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 438] retire matched Spike trace
+[TRACE][RETIRE 440/490][C586] step=444 class=ALUI pc=0x800000f8 inst=0x00178793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0
+[PASS][ROW 439] retire matched Spike trace
+[TRACE][RETIRE 441/490][C587] step=445 class=STORE pc=0x800000fc inst=0xfef42623 regwr=0 rd=x12 data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000003 illegal=0
+[PASS][ROW 440] retire matched Spike trace
+[TRACE][RETIRE 442/490][C588] step=446 class=LOAD pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 data=0x00000003 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 441] retire matched Spike trace
+[TRACE][RETIRE 443/490][C589] step=447 class=ALUI pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0
+[PASS][ROW 442] retire matched Spike trace
+[TRACE][RETIRE 444/490][C590] step=448 class=BRANCH pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 data=0x00000006 memwr=0 mem_addr=0x00000006 mem_data=0x00000003 illegal=0
+[PASS][ROW 443] retire matched Spike trace
+[TRACE][RETIRE 445/490][C593] step=449 class=STORE pc=0x80000024 inst=0xfe042423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000000 illegal=0
+[PASS][ROW 444] retire matched Spike trace
+[TRACE][RETIRE 446/490][C594] step=450 class=JAL pc=0x80000028 inst=0x0b80006f regwr=1 rd=x0 data=0x8000002c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 445] retire matched Spike trace
+[TRACE][RETIRE 447/490][C597] step=451 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 446] retire matched Spike trace
+[TRACE][RETIRE 448/490][C598] step=452 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 447] retire matched Spike trace
+[TRACE][RETIRE 449/490][C600] step=453 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x00000003 illegal=0
+[PASS][ROW 448] retire matched Spike trace
+[TRACE][RETIRE 450/490][C601] step=454 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 449] retire matched Spike trace
+[TRACE][RETIRE 451/490][C603] step=455 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x00000001 illegal=0
+[PASS][ROW 450] retire matched Spike trace
+[TRACE][RETIRE 452/490][C606] step=456 class=LUI pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 451] retire matched Spike trace
+[TRACE][RETIRE 453/490][C607] step=457 class=ALUI pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 452] retire matched Spike trace
+[TRACE][RETIRE 454/490][C608] step=458 class=LOAD pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 453] retire matched Spike trace
+[TRACE][RETIRE 455/490][C610] step=459 class=ALUI pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 454] retire matched Spike trace
+[TRACE][RETIRE 456/490][C611] step=460 class=ALUR pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 455] retire matched Spike trace
+[TRACE][RETIRE 457/490][C612] step=461 class=LOAD pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 456] retire matched Spike trace
+[TRACE][RETIRE 458/490][C613] step=462 class=LOAD pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 457] retire matched Spike trace
+[TRACE][RETIRE 459/490][C615] step=463 class=ALUI pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 458] retire matched Spike trace
+[TRACE][RETIRE 460/490][C616] step=464 class=LUI pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 459] retire matched Spike trace
+[TRACE][RETIRE 461/490][C617] step=465 class=ALUI pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 460] retire matched Spike trace
+[TRACE][RETIRE 462/490][C618] step=466 class=ALUI pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0
+[PASS][ROW 461] retire matched Spike trace
+[TRACE][RETIRE 463/490][C619] step=467 class=ALUR pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0
+[PASS][ROW 462] retire matched Spike trace
+[TRACE][RETIRE 464/490][C620] step=468 class=LOAD pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0
+[PASS][ROW 463] retire matched Spike trace
+[TRACE][RETIRE 465/490][C622] step=469 class=BRANCH pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000001 illegal=0
+[PASS][ROW 464] retire matched Spike trace
+[TRACE][RETIRE 466/490][C625] step=470 class=LOAD pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 465] retire matched Spike trace
+[TRACE][RETIRE 467/490][C627] step=471 class=ALUI pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 466] retire matched Spike trace
+[TRACE][RETIRE 468/490][C628] step=472 class=STORE pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000001 illegal=0
+[PASS][ROW 467] retire matched Spike trace
+[TRACE][RETIRE 469/490][C629] step=473 class=ALUI pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0
+[PASS][ROW 468] retire matched Spike trace
+[TRACE][RETIRE 470/490][C630] step=474 class=LOAD pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 469] retire matched Spike trace
+[TRACE][RETIRE 471/490][C632] step=475 class=ALUR pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x00000003 illegal=0
+[PASS][ROW 470] retire matched Spike trace
+[TRACE][RETIRE 472/490][C633] step=476 class=LOAD pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0
+[PASS][ROW 471] retire matched Spike trace
+[TRACE][RETIRE 473/490][C635] step=477 class=BRANCH pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000001 illegal=0
+[PASS][ROW 472] retire matched Spike trace
+[TRACE][RETIRE 474/490][C636] step=478 class=LOAD pc=0x800000f4 inst=0xfec42783 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 473] retire matched Spike trace
+[TRACE][RETIRE 475/490][C638] step=479 class=ALUI pc=0x800000f8 inst=0x00178793 regwr=1 rd=x15 data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0
+[PASS][ROW 474] retire matched Spike trace
+[TRACE][RETIRE 476/490][C639] step=480 class=STORE pc=0x800000fc inst=0xfef42623 regwr=0 rd=x12 data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000004 illegal=0
+[PASS][ROW 475] retire matched Spike trace
+[TRACE][RETIRE 477/490][C640] step=481 class=LOAD pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 data=0x00000004 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0
+[PASS][ROW 476] retire matched Spike trace
+[TRACE][RETIRE 478/490][C641] step=482 class=ALUI pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0
+[PASS][ROW 477] retire matched Spike trace
+[TRACE][RETIRE 479/490][C642] step=483 class=BRANCH pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 data=0x00000007 memwr=0 mem_addr=0x00000007 mem_data=0x00000004 illegal=0
+[PASS][ROW 478] retire matched Spike trace
+[TRACE][RETIRE 480/490][C643] step=484 class=LUI pc=0x8000010c inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 479] retire matched Spike trace
+[TRACE][RETIRE 481/490][C644] step=485 class=ALUI pc=0x80000110 inst=0x00100713 regwr=1 rd=x14 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0
+[PASS][ROW 480] retire matched Spike trace
+[TRACE][RETIRE 482/490][C645] step=486 class=STORE pc=0x80000114 inst=0x14e7a423 regwr=0 rd=x8 data=0x80000148 memwr=1 mem_addr=0x80000148 mem_data=0x00000001 illegal=0
+[PASS][ROW 481] retire matched Spike trace
+[TRACE][RETIRE 483/490][C646] step=487 class=LUI pc=0x80000118 inst=0x800007b7 regwr=1 rd=x15 data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 482] retire matched Spike trace
+[TRACE][RETIRE 484/490][C647] step=488 class=ALUI pc=0x8000011c inst=0x13478793 regwr=1 rd=x15 data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 483] retire matched Spike trace
+[TRACE][RETIRE 485/490][C648] step=489 class=LOAD pc=0x80000120 inst=0x0007a783 regwr=1 rd=x15 data=0x00000001 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0
+[PASS][ROW 484] retire matched Spike trace
+[TRACE][RETIRE 486/490][C650] step=490 class=ALUI pc=0x80000124 inst=0x00078513 regwr=1 rd=x10 data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x00000000 illegal=0
+[PASS][ROW 485] retire matched Spike trace
+[TRACE][RETIRE 487/490][C651] step=491 class=LOAD pc=0x80000128 inst=0x01c12403 regwr=1 rd=x8 data=0x00000000 memwr=0 mem_addr=0x8000fffc mem_data=0x00000000 illegal=0
+[PASS][ROW 486] retire matched Spike trace
+[TRACE][RETIRE 488/490][C652] step=492 class=ALUI pc=0x8000012c inst=0x02010113 regwr=1 rd=x2 data=0x80010000 memwr=0 mem_addr=0x80010000 mem_data=0x00000000 illegal=0
+[PASS][ROW 487] retire matched Spike trace
+[TRACE][RETIRE 489/490][C653] step=493 class=JALR pc=0x80000130 inst=0x00008067 regwr=1 rd=x0 data=0x80000134 memwr=0 mem_addr=0x8000000c mem_data=0x00000000 illegal=0
+[PASS][ROW 488] retire matched Spike trace
+[TRACE][RETIRE 490/490][C656] step=494 class=JAL pc=0x8000000c inst=0x0000006f regwr=1 rd=x0 data=0x80000010 memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0
+[PASS][ROW 489] retire matched Spike trace
+[INFO] Final memory check disabled for this trace package
+[PASS] Retire count matched Spike trace depth (490)
+tb_top_spike PASSED
+$finish called at time : 6596 ns : File "D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/tb/pipeline/tb_top_spike.sv" Line 259
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Mar 27 16:57:30 2026...

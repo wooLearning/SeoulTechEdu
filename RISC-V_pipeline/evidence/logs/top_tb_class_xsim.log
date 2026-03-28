@@ -1,0 +1,1015 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Mar 27 16:57:42 2026
+# Process ID         : 15456
+# Current directory  : D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i
+# Command line       : xsim.exe -log tb\Top_tb\xsim_tb_top_class.log -mode tcl -source {xsim.dir/tb_top_class_behav/xsim_script.tcl}
+# Log file           : D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/tb/Top_tb/xsim_tb_top_class.log
+# Journal file       : D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i\xsim.jou
+# Running On         : DESKTOP-7CFQ9ND
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-1260P
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16847 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 34027 MB
+# Available Virtual  : 6796 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_top_class_behav/xsim_script.tcl
+# xsim {tb_top_class_behav} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+[INFO] InstrRom loaded D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/src/mem/InstructionSpikeTop.mem
+[95000][TB][INFO] SCB TRACE #1/490 : step=0 cycle=5 pc=0x80000000 inst=0x00010117 regwr=1 rd=x2 rd_data=0x80010000 memwr=0 mem_addr=0x80010000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=AUIPC
+[95000][TB][INFO] SCB PASS #1
+[105000][TB][INFO] SCB TRACE #2/490 : step=1 cycle=6 pc=0x80000004 inst=0x00010113 regwr=1 rd=x2 rd_data=0x80010000 memwr=0 mem_addr=0x80010000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[105000][TB][INFO] SCB PASS #2
+[115000][TB][INFO] SCB TRACE #3/490 : step=2 cycle=7 pc=0x80000008 inst=0x008000ef regwr=1 rd=x1 rd_data=0x8000000c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=JAL
+[115000][TB][INFO] SCB PASS #3
+[145000][TB][INFO] SCB TRACE #4/490 : step=3 cycle=10 pc=0x80000010 inst=0xfe010113 regwr=1 rd=x2 rd_data=0x8000ffe0 memwr=0 mem_addr=0x8000ffe0 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[145000][TB][INFO] SCB PASS #4
+[155000][TB][INFO] SCB TRACE #5/490 : step=4 cycle=11 pc=0x80000014 inst=0x00812e23 regwr=0 rd=x28 rd_data=0x8000fffc memwr=1 mem_addr=0x8000fffc mem_data=0x00000000 illegal=0 stall=0 redirect=1 fwdA=0 fwdB=0 class=STORE
+[155000][TB][INFO] SCB PASS #5
+[165000][TB][INFO] SCB TRACE #6/490 : step=5 cycle=12 pc=0x80000018 inst=0x02010413 regwr=1 rd=x8 rd_data=0x80010000 memwr=0 mem_addr=0x80010000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[165000][TB][INFO] SCB PASS #6
+[175000][TB][INFO] SCB TRACE #7/490 : step=6 cycle=13 pc=0x8000001c inst=0xfe042623 regwr=0 rd=x12 rd_data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[175000][TB][INFO] SCB PASS #7
+[185000][TB][INFO] SCB TRACE #8/490 : step=7 cycle=14 pc=0x80000020 inst=0x0e00006f regwr=1 rd=x0 rd_data=0x80000024 memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=JAL
+[185000][TB][INFO] SCB PASS #8
+[215000][TB][INFO] SCB TRACE #9/490 : step=8 cycle=17 pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[215000][TB][INFO] SCB PASS #9
+[225000][TB][INFO] SCB TRACE #10/490 : step=9 cycle=18 pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[225000][TB][INFO] SCB PASS #10
+[235000][TB][INFO] SCB TRACE #11/490 : step=10 cycle=19 pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[235000][TB][INFO] SCB PASS #11
+[265000][TB][INFO] SCB TRACE #12/490 : step=11 cycle=22 pc=0x80000024 inst=0xfe042423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[265000][TB][INFO] SCB PASS #12
+[275000][TB][INFO] SCB TRACE #13/490 : step=12 cycle=23 pc=0x80000028 inst=0x0b80006f regwr=1 rd=x0 rd_data=0x8000002c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=JAL
+[275000][TB][INFO] SCB PASS #13
+[305000][TB][INFO] SCB TRACE #14/490 : step=13 cycle=26 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[305000][TB][INFO] SCB PASS #14
+[315000][TB][INFO] SCB TRACE #15/490 : step=14 cycle=27 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[315000][TB][INFO] SCB PASS #15
+[335000][TB][INFO] SCB TRACE #16/490 : step=15 cycle=29 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[335000][TB][INFO] SCB PASS #16
+[345000][TB][INFO] SCB TRACE #17/490 : step=16 cycle=30 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[345000][TB][INFO] SCB PASS #17
+[365000][TB][INFO] SCB TRACE #18/490 : step=17 cycle=32 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[365000][TB][INFO] SCB PASS #18
+[395000][TB][INFO] SCB TRACE #19/490 : step=18 cycle=35 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[395000][TB][INFO] SCB PASS #19
+[405000][TB][INFO] SCB TRACE #20/490 : step=19 cycle=36 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[405000][TB][INFO] SCB PASS #20
+[415000][TB][INFO] SCB TRACE #21/490 : step=20 cycle=37 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[415000][TB][INFO] SCB PASS #21
+[435000][TB][INFO] SCB TRACE #22/490 : step=21 cycle=39 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[435000][TB][INFO] SCB PASS #22
+[445000][TB][INFO] SCB TRACE #23/490 : step=22 cycle=40 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[445000][TB][INFO] SCB PASS #23
+[455000][TB][INFO] SCB TRACE #24/490 : step=23 cycle=41 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000009 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[455000][TB][INFO] SCB PASS #24
+[465000][TB][INFO] SCB TRACE #25/490 : step=24 cycle=42 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[465000][TB][INFO] SCB PASS #25
+[485000][TB][INFO] SCB TRACE #26/490 : step=25 cycle=44 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[485000][TB][INFO] SCB PASS #26
+[495000][TB][INFO] SCB TRACE #27/490 : step=26 cycle=45 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[495000][TB][INFO] SCB PASS #27
+[505000][TB][INFO] SCB TRACE #28/490 : step=27 cycle=46 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[505000][TB][INFO] SCB PASS #28
+[515000][TB][INFO] SCB TRACE #29/490 : step=28 cycle=47 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[515000][TB][INFO] SCB PASS #29
+[525000][TB][INFO] SCB TRACE #30/490 : step=29 cycle=48 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[525000][TB][INFO] SCB PASS #30
+[535000][TB][INFO] SCB TRACE #31/490 : step=30 cycle=49 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[535000][TB][INFO] SCB PASS #31
+[555000][TB][INFO] SCB TRACE #32/490 : step=31 cycle=51 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x00000009 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[555000][TB][INFO] SCB PASS #32
+[565000][TB][INFO] SCB TRACE #33/490 : step=32 cycle=52 pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[565000][TB][INFO] SCB PASS #33
+[575000][TB][INFO] SCB TRACE #34/490 : step=33 cycle=53 pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[575000][TB][INFO] SCB PASS #34
+[585000][TB][INFO] SCB TRACE #35/490 : step=34 cycle=54 pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[585000][TB][INFO] SCB PASS #35
+[605000][TB][INFO] SCB TRACE #36/490 : step=35 cycle=56 pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[605000][TB][INFO] SCB PASS #36
+[615000][TB][INFO] SCB TRACE #37/490 : step=36 cycle=57 pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[615000][TB][INFO] SCB PASS #37
+[625000][TB][INFO] SCB TRACE #38/490 : step=37 cycle=58 pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000009 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[625000][TB][INFO] SCB PASS #38
+[645000][TB][INFO] SCB TRACE #39/490 : step=38 cycle=60 pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 rd_data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000009 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[645000][TB][INFO] SCB PASS #39
+[655000][TB][INFO] SCB TRACE #40/490 : step=39 cycle=61 pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[655000][TB][INFO] SCB PASS #40
+[675000][TB][INFO] SCB TRACE #41/490 : step=40 cycle=63 pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[675000][TB][INFO] SCB PASS #41
+[685000][TB][INFO] SCB TRACE #42/490 : step=41 cycle=64 pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[685000][TB][INFO] SCB PASS #42
+[695000][TB][INFO] SCB TRACE #43/490 : step=42 cycle=65 pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[695000][TB][INFO] SCB PASS #43
+[705000][TB][INFO] SCB TRACE #44/490 : step=43 cycle=66 pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[705000][TB][INFO] SCB PASS #44
+[715000][TB][INFO] SCB TRACE #45/490 : step=44 cycle=67 pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUR
+[715000][TB][INFO] SCB PASS #45
+[725000][TB][INFO] SCB TRACE #46/490 : step=45 cycle=68 pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000003 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[725000][TB][INFO] SCB PASS #46
+[735000][TB][INFO] SCB TRACE #47/490 : step=46 cycle=69 pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[735000][TB][INFO] SCB PASS #47
+[745000][TB][INFO] SCB TRACE #48/490 : step=47 cycle=70 pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[745000][TB][INFO] SCB PASS #48
+[755000][TB][INFO] SCB TRACE #49/490 : step=48 cycle=71 pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[755000][TB][INFO] SCB PASS #49
+[775000][TB][INFO] SCB TRACE #50/490 : step=49 cycle=73 pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[775000][TB][INFO] SCB PASS #50
+[785000][TB][INFO] SCB TRACE #51/490 : step=50 cycle=74 pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[785000][TB][INFO] SCB PASS #51
+[795000][TB][INFO] SCB TRACE #52/490 : step=51 cycle=75 pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000134 memwr=1 mem_addr=0x80000134 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[795000][TB][INFO] SCB PASS #52
+[805000][TB][INFO] SCB TRACE #53/490 : step=52 cycle=76 pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[805000][TB][INFO] SCB PASS #53
+[825000][TB][INFO] SCB TRACE #54/490 : step=53 cycle=78 pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[825000][TB][INFO] SCB PASS #54
+[835000][TB][INFO] SCB TRACE #55/490 : step=54 cycle=79 pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[835000][TB][INFO] SCB PASS #55
+[845000][TB][INFO] SCB TRACE #56/490 : step=55 cycle=80 pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[845000][TB][INFO] SCB PASS #56
+[855000][TB][INFO] SCB TRACE #57/490 : step=56 cycle=81 pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[855000][TB][INFO] SCB PASS #57
+[865000][TB][INFO] SCB TRACE #58/490 : step=57 cycle=82 pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[865000][TB][INFO] SCB PASS #58
+[875000][TB][INFO] SCB TRACE #59/490 : step=58 cycle=83 pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 rd_data=0x00000009 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[875000][TB][INFO] SCB PASS #59
+[895000][TB][INFO] SCB TRACE #60/490 : step=59 cycle=85 pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000138 memwr=1 mem_addr=0x80000138 mem_data=0x00000009 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[895000][TB][INFO] SCB PASS #60
+[905000][TB][INFO] SCB TRACE #61/490 : step=60 cycle=86 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[905000][TB][INFO] SCB PASS #61
+[925000][TB][INFO] SCB TRACE #62/490 : step=61 cycle=88 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[925000][TB][INFO] SCB PASS #62
+[935000][TB][INFO] SCB TRACE #63/490 : step=62 cycle=89 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[935000][TB][INFO] SCB PASS #63
+[945000][TB][INFO] SCB TRACE #64/490 : step=63 cycle=90 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[945000][TB][INFO] SCB PASS #64
+[955000][TB][INFO] SCB TRACE #65/490 : step=64 cycle=91 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[955000][TB][INFO] SCB PASS #65
+[975000][TB][INFO] SCB TRACE #66/490 : step=65 cycle=93 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[975000][TB][INFO] SCB PASS #66
+[985000][TB][INFO] SCB TRACE #67/490 : step=66 cycle=94 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[985000][TB][INFO] SCB PASS #67
+[1005000][TB][INFO] SCB TRACE #68/490 : step=67 cycle=96 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000005 memwr=0 mem_addr=0x00000005 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[1005000][TB][INFO] SCB PASS #68
+[1035000][TB][INFO] SCB TRACE #69/490 : step=68 cycle=99 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[1035000][TB][INFO] SCB PASS #69
+[1045000][TB][INFO] SCB TRACE #70/490 : step=69 cycle=100 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[1045000][TB][INFO] SCB PASS #70
+[1055000][TB][INFO] SCB TRACE #71/490 : step=70 cycle=101 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[1055000][TB][INFO] SCB PASS #71
+[1075000][TB][INFO] SCB TRACE #72/490 : step=71 cycle=103 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1075000][TB][INFO] SCB PASS #72
+[1085000][TB][INFO] SCB TRACE #73/490 : step=72 cycle=104 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[1085000][TB][INFO] SCB PASS #73
+[1095000][TB][INFO] SCB TRACE #74/490 : step=73 cycle=105 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000009 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[1095000][TB][INFO] SCB PASS #74
+[1105000][TB][INFO] SCB TRACE #75/490 : step=74 cycle=106 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1105000][TB][INFO] SCB PASS #75
+[1125000][TB][INFO] SCB TRACE #76/490 : step=75 cycle=108 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1125000][TB][INFO] SCB PASS #76
+[1135000][TB][INFO] SCB TRACE #77/490 : step=76 cycle=109 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[1135000][TB][INFO] SCB PASS #77
+[1145000][TB][INFO] SCB TRACE #78/490 : step=77 cycle=110 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[1145000][TB][INFO] SCB PASS #78
+[1155000][TB][INFO] SCB TRACE #79/490 : step=78 cycle=111 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1155000][TB][INFO] SCB PASS #79
+[1165000][TB][INFO] SCB TRACE #80/490 : step=79 cycle=112 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[1165000][TB][INFO] SCB PASS #80
+[1175000][TB][INFO] SCB TRACE #81/490 : step=80 cycle=113 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000007 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1175000][TB][INFO] SCB PASS #81
+[1195000][TB][INFO] SCB TRACE #82/490 : step=81 cycle=115 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x00000010 memwr=0 mem_addr=0x00000010 mem_data=0x00000009 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[1195000][TB][INFO] SCB PASS #82
+[1205000][TB][INFO] SCB TRACE #83/490 : step=82 cycle=116 pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[1205000][TB][INFO] SCB PASS #83
+[1215000][TB][INFO] SCB TRACE #84/490 : step=83 cycle=117 pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[1215000][TB][INFO] SCB PASS #84
+[1225000][TB][INFO] SCB TRACE #85/490 : step=84 cycle=118 pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[1225000][TB][INFO] SCB PASS #85
+[1245000][TB][INFO] SCB TRACE #86/490 : step=85 cycle=120 pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1245000][TB][INFO] SCB PASS #86
+[1255000][TB][INFO] SCB TRACE #87/490 : step=86 cycle=121 pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[1255000][TB][INFO] SCB PASS #87
+[1265000][TB][INFO] SCB TRACE #88/490 : step=87 cycle=122 pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000009 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1265000][TB][INFO] SCB PASS #88
+[1285000][TB][INFO] SCB TRACE #89/490 : step=88 cycle=124 pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 rd_data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000009 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[1285000][TB][INFO] SCB PASS #89
+[1295000][TB][INFO] SCB TRACE #90/490 : step=89 cycle=125 pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1295000][TB][INFO] SCB PASS #90
+[1315000][TB][INFO] SCB TRACE #91/490 : step=90 cycle=127 pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1315000][TB][INFO] SCB PASS #91
+[1325000][TB][INFO] SCB TRACE #92/490 : step=91 cycle=128 pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[1325000][TB][INFO] SCB PASS #92
+[1335000][TB][INFO] SCB TRACE #93/490 : step=92 cycle=129 pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[1335000][TB][INFO] SCB PASS #93
+[1345000][TB][INFO] SCB TRACE #94/490 : step=93 cycle=130 pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1345000][TB][INFO] SCB PASS #94
+[1355000][TB][INFO] SCB TRACE #95/490 : step=94 cycle=131 pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUR
+[1355000][TB][INFO] SCB PASS #95
+[1365000][TB][INFO] SCB TRACE #96/490 : step=95 cycle=132 pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000007 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1365000][TB][INFO] SCB PASS #96
+[1375000][TB][INFO] SCB TRACE #97/490 : step=96 cycle=133 pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[1375000][TB][INFO] SCB PASS #97
+[1385000][TB][INFO] SCB TRACE #98/490 : step=97 cycle=134 pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[1385000][TB][INFO] SCB PASS #98
+[1395000][TB][INFO] SCB TRACE #99/490 : step=98 cycle=135 pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[1395000][TB][INFO] SCB PASS #99
+[1415000][TB][INFO] SCB TRACE #100/490 : step=99 cycle=137 pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1415000][TB][INFO] SCB PASS #100
+[1425000][TB][INFO] SCB TRACE #101/490 : step=100 cycle=138 pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[1425000][TB][INFO] SCB PASS #101
+[1435000][TB][INFO] SCB TRACE #102/490 : step=101 cycle=139 pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000138 memwr=1 mem_addr=0x80000138 mem_data=0x00000007 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[1435000][TB][INFO] SCB PASS #102
+[1445000][TB][INFO] SCB TRACE #103/490 : step=102 cycle=140 pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1445000][TB][INFO] SCB PASS #103
+[1465000][TB][INFO] SCB TRACE #104/490 : step=103 cycle=142 pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1465000][TB][INFO] SCB PASS #104
+[1475000][TB][INFO] SCB TRACE #105/490 : step=104 cycle=143 pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[1475000][TB][INFO] SCB PASS #105
+[1485000][TB][INFO] SCB TRACE #106/490 : step=105 cycle=144 pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1485000][TB][INFO] SCB PASS #106
+[1495000][TB][INFO] SCB TRACE #107/490 : step=106 cycle=145 pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1495000][TB][INFO] SCB PASS #107
+[1505000][TB][INFO] SCB TRACE #108/490 : step=107 cycle=146 pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[1505000][TB][INFO] SCB PASS #108
+[1515000][TB][INFO] SCB TRACE #109/490 : step=108 cycle=147 pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 rd_data=0x00000009 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1515000][TB][INFO] SCB PASS #109
+[1535000][TB][INFO] SCB TRACE #110/490 : step=109 cycle=149 pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x8000013c memwr=1 mem_addr=0x8000013c mem_data=0x00000009 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[1535000][TB][INFO] SCB PASS #110
+[1545000][TB][INFO] SCB TRACE #111/490 : step=110 cycle=150 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[1545000][TB][INFO] SCB PASS #111
+[1565000][TB][INFO] SCB TRACE #112/490 : step=111 cycle=152 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1565000][TB][INFO] SCB PASS #112
+[1575000][TB][INFO] SCB TRACE #113/490 : step=112 cycle=153 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000002 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[1575000][TB][INFO] SCB PASS #113
+[1585000][TB][INFO] SCB TRACE #114/490 : step=113 cycle=154 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[1585000][TB][INFO] SCB PASS #114
+[1595000][TB][INFO] SCB TRACE #115/490 : step=114 cycle=155 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1595000][TB][INFO] SCB PASS #115
+[1615000][TB][INFO] SCB TRACE #116/490 : step=115 cycle=157 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[1615000][TB][INFO] SCB PASS #116
+[1625000][TB][INFO] SCB TRACE #117/490 : step=116 cycle=158 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1625000][TB][INFO] SCB PASS #117
+[1645000][TB][INFO] SCB TRACE #118/490 : step=117 cycle=160 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000006 memwr=0 mem_addr=0x00000006 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[1645000][TB][INFO] SCB PASS #118
+[1675000][TB][INFO] SCB TRACE #119/490 : step=118 cycle=163 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[1675000][TB][INFO] SCB PASS #119
+[1685000][TB][INFO] SCB TRACE #120/490 : step=119 cycle=164 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[1685000][TB][INFO] SCB PASS #120
+[1695000][TB][INFO] SCB TRACE #121/490 : step=120 cycle=165 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[1695000][TB][INFO] SCB PASS #121
+[1715000][TB][INFO] SCB TRACE #122/490 : step=121 cycle=167 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1715000][TB][INFO] SCB PASS #122
+[1725000][TB][INFO] SCB TRACE #123/490 : step=122 cycle=168 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[1725000][TB][INFO] SCB PASS #123
+[1735000][TB][INFO] SCB TRACE #124/490 : step=123 cycle=169 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000009 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[1735000][TB][INFO] SCB PASS #124
+[1745000][TB][INFO] SCB TRACE #125/490 : step=124 cycle=170 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1745000][TB][INFO] SCB PASS #125
+[1765000][TB][INFO] SCB TRACE #126/490 : step=125 cycle=172 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1765000][TB][INFO] SCB PASS #126
+[1775000][TB][INFO] SCB TRACE #127/490 : step=126 cycle=173 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[1775000][TB][INFO] SCB PASS #127
+[1785000][TB][INFO] SCB TRACE #128/490 : step=127 cycle=174 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[1785000][TB][INFO] SCB PASS #128
+[1795000][TB][INFO] SCB TRACE #129/490 : step=128 cycle=175 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1795000][TB][INFO] SCB PASS #129
+[1805000][TB][INFO] SCB TRACE #130/490 : step=129 cycle=176 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[1805000][TB][INFO] SCB PASS #130
+[1815000][TB][INFO] SCB TRACE #131/490 : step=130 cycle=177 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1815000][TB][INFO] SCB PASS #131
+[1835000][TB][INFO] SCB TRACE #132/490 : step=131 cycle=179 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x0000000a memwr=0 mem_addr=0x0000000a mem_data=0x00000009 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[1835000][TB][INFO] SCB PASS #132
+[1845000][TB][INFO] SCB TRACE #133/490 : step=132 cycle=180 pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[1845000][TB][INFO] SCB PASS #133
+[1855000][TB][INFO] SCB TRACE #134/490 : step=133 cycle=181 pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[1855000][TB][INFO] SCB PASS #134
+[1865000][TB][INFO] SCB TRACE #135/490 : step=134 cycle=182 pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[1865000][TB][INFO] SCB PASS #135
+[1885000][TB][INFO] SCB TRACE #136/490 : step=135 cycle=184 pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1885000][TB][INFO] SCB PASS #136
+[1895000][TB][INFO] SCB TRACE #137/490 : step=136 cycle=185 pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[1895000][TB][INFO] SCB PASS #137
+[1905000][TB][INFO] SCB TRACE #138/490 : step=137 cycle=186 pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000009 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1905000][TB][INFO] SCB PASS #138
+[1925000][TB][INFO] SCB TRACE #139/490 : step=138 cycle=188 pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 rd_data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000009 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[1925000][TB][INFO] SCB PASS #139
+[1935000][TB][INFO] SCB TRACE #140/490 : step=139 cycle=189 pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[1935000][TB][INFO] SCB PASS #140
+[1955000][TB][INFO] SCB TRACE #141/490 : step=140 cycle=191 pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1955000][TB][INFO] SCB PASS #141
+[1965000][TB][INFO] SCB TRACE #142/490 : step=141 cycle=192 pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[1965000][TB][INFO] SCB PASS #142
+[1975000][TB][INFO] SCB TRACE #143/490 : step=142 cycle=193 pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[1975000][TB][INFO] SCB PASS #143
+[1985000][TB][INFO] SCB TRACE #144/490 : step=143 cycle=194 pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[1985000][TB][INFO] SCB PASS #144
+[1995000][TB][INFO] SCB TRACE #145/490 : step=144 cycle=195 pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUR
+[1995000][TB][INFO] SCB PASS #145
+[2005000][TB][INFO] SCB TRACE #146/490 : step=145 cycle=196 pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2005000][TB][INFO] SCB PASS #146
+[2015000][TB][INFO] SCB TRACE #147/490 : step=146 cycle=197 pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[2015000][TB][INFO] SCB PASS #147
+[2025000][TB][INFO] SCB TRACE #148/490 : step=147 cycle=198 pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[2025000][TB][INFO] SCB PASS #148
+[2035000][TB][INFO] SCB TRACE #149/490 : step=148 cycle=199 pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[2035000][TB][INFO] SCB PASS #149
+[2055000][TB][INFO] SCB TRACE #150/490 : step=149 cycle=201 pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2055000][TB][INFO] SCB PASS #150
+[2065000][TB][INFO] SCB TRACE #151/490 : step=150 cycle=202 pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[2065000][TB][INFO] SCB PASS #151
+[2075000][TB][INFO] SCB TRACE #152/490 : step=151 cycle=203 pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x8000013c memwr=1 mem_addr=0x8000013c mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[2075000][TB][INFO] SCB PASS #152
+[2085000][TB][INFO] SCB TRACE #153/490 : step=152 cycle=204 pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2085000][TB][INFO] SCB PASS #153
+[2105000][TB][INFO] SCB TRACE #154/490 : step=153 cycle=206 pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2105000][TB][INFO] SCB PASS #154
+[2115000][TB][INFO] SCB TRACE #155/490 : step=154 cycle=207 pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[2115000][TB][INFO] SCB PASS #155
+[2125000][TB][INFO] SCB TRACE #156/490 : step=155 cycle=208 pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2125000][TB][INFO] SCB PASS #156
+[2135000][TB][INFO] SCB TRACE #157/490 : step=156 cycle=209 pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2135000][TB][INFO] SCB PASS #157
+[2145000][TB][INFO] SCB TRACE #158/490 : step=157 cycle=210 pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[2145000][TB][INFO] SCB PASS #158
+[2155000][TB][INFO] SCB TRACE #159/490 : step=158 cycle=211 pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 rd_data=0x00000009 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2155000][TB][INFO] SCB PASS #159
+[2175000][TB][INFO] SCB TRACE #160/490 : step=159 cycle=213 pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000140 memwr=1 mem_addr=0x80000140 mem_data=0x00000009 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[2175000][TB][INFO] SCB PASS #160
+[2185000][TB][INFO] SCB TRACE #161/490 : step=160 cycle=214 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[2185000][TB][INFO] SCB PASS #161
+[2205000][TB][INFO] SCB TRACE #162/490 : step=161 cycle=216 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2205000][TB][INFO] SCB PASS #162
+[2215000][TB][INFO] SCB TRACE #163/490 : step=162 cycle=217 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[2215000][TB][INFO] SCB PASS #163
+[2225000][TB][INFO] SCB TRACE #164/490 : step=163 cycle=218 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[2225000][TB][INFO] SCB PASS #164
+[2235000][TB][INFO] SCB TRACE #165/490 : step=164 cycle=219 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2235000][TB][INFO] SCB PASS #165
+[2255000][TB][INFO] SCB TRACE #166/490 : step=165 cycle=221 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[2255000][TB][INFO] SCB PASS #166
+[2265000][TB][INFO] SCB TRACE #167/490 : step=166 cycle=222 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2265000][TB][INFO] SCB PASS #167
+[2285000][TB][INFO] SCB TRACE #168/490 : step=167 cycle=224 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000007 memwr=0 mem_addr=0x00000007 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[2285000][TB][INFO] SCB PASS #168
+[2315000][TB][INFO] SCB TRACE #169/490 : step=168 cycle=227 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[2315000][TB][INFO] SCB PASS #169
+[2325000][TB][INFO] SCB TRACE #170/490 : step=169 cycle=228 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[2325000][TB][INFO] SCB PASS #170
+[2335000][TB][INFO] SCB TRACE #171/490 : step=170 cycle=229 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[2335000][TB][INFO] SCB PASS #171
+[2355000][TB][INFO] SCB TRACE #172/490 : step=171 cycle=231 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2355000][TB][INFO] SCB PASS #172
+[2365000][TB][INFO] SCB TRACE #173/490 : step=172 cycle=232 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[2365000][TB][INFO] SCB PASS #173
+[2375000][TB][INFO] SCB TRACE #174/490 : step=173 cycle=233 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000009 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[2375000][TB][INFO] SCB PASS #174
+[2385000][TB][INFO] SCB TRACE #175/490 : step=174 cycle=234 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2385000][TB][INFO] SCB PASS #175
+[2405000][TB][INFO] SCB TRACE #176/490 : step=175 cycle=236 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2405000][TB][INFO] SCB PASS #176
+[2415000][TB][INFO] SCB TRACE #177/490 : step=176 cycle=237 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[2415000][TB][INFO] SCB PASS #177
+[2425000][TB][INFO] SCB TRACE #178/490 : step=177 cycle=238 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[2425000][TB][INFO] SCB PASS #178
+[2435000][TB][INFO] SCB TRACE #179/490 : step=178 cycle=239 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000010 memwr=0 mem_addr=0x00000010 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2435000][TB][INFO] SCB PASS #179
+[2445000][TB][INFO] SCB TRACE #180/490 : step=179 cycle=240 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000144 memwr=0 mem_addr=0x80000144 mem_data=0x00000010 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[2445000][TB][INFO] SCB PASS #180
+[2455000][TB][INFO] SCB TRACE #181/490 : step=180 cycle=241 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000005 memwr=0 mem_addr=0x80000144 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2455000][TB][INFO] SCB PASS #181
+[2475000][TB][INFO] SCB TRACE #182/490 : step=181 cycle=243 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x0000000e memwr=0 mem_addr=0x0000000e mem_data=0x00000009 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[2475000][TB][INFO] SCB PASS #182
+[2485000][TB][INFO] SCB TRACE #183/490 : step=182 cycle=244 pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[2485000][TB][INFO] SCB PASS #183
+[2495000][TB][INFO] SCB TRACE #184/490 : step=183 cycle=245 pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[2495000][TB][INFO] SCB PASS #184
+[2505000][TB][INFO] SCB TRACE #185/490 : step=184 cycle=246 pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[2505000][TB][INFO] SCB PASS #185
+[2525000][TB][INFO] SCB TRACE #186/490 : step=185 cycle=248 pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2525000][TB][INFO] SCB PASS #186
+[2535000][TB][INFO] SCB TRACE #187/490 : step=186 cycle=249 pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[2535000][TB][INFO] SCB PASS #187
+[2545000][TB][INFO] SCB TRACE #188/490 : step=187 cycle=250 pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000009 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2545000][TB][INFO] SCB PASS #188
+[2565000][TB][INFO] SCB TRACE #189/490 : step=188 cycle=252 pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 rd_data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000009 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[2565000][TB][INFO] SCB PASS #189
+[2575000][TB][INFO] SCB TRACE #190/490 : step=189 cycle=253 pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2575000][TB][INFO] SCB PASS #190
+[2595000][TB][INFO] SCB TRACE #191/490 : step=190 cycle=255 pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2595000][TB][INFO] SCB PASS #191
+[2605000][TB][INFO] SCB TRACE #192/490 : step=191 cycle=256 pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[2605000][TB][INFO] SCB PASS #192
+[2615000][TB][INFO] SCB TRACE #193/490 : step=192 cycle=257 pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[2615000][TB][INFO] SCB PASS #193
+[2625000][TB][INFO] SCB TRACE #194/490 : step=193 cycle=258 pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000010 memwr=0 mem_addr=0x00000010 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2625000][TB][INFO] SCB PASS #194
+[2635000][TB][INFO] SCB TRACE #195/490 : step=194 cycle=259 pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000144 memwr=0 mem_addr=0x80000144 mem_data=0x00000010 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUR
+[2635000][TB][INFO] SCB PASS #195
+[2645000][TB][INFO] SCB TRACE #196/490 : step=195 cycle=260 pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000005 memwr=0 mem_addr=0x80000144 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2645000][TB][INFO] SCB PASS #196
+[2655000][TB][INFO] SCB TRACE #197/490 : step=196 cycle=261 pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[2655000][TB][INFO] SCB PASS #197
+[2665000][TB][INFO] SCB TRACE #198/490 : step=197 cycle=262 pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[2665000][TB][INFO] SCB PASS #198
+[2675000][TB][INFO] SCB TRACE #199/490 : step=198 cycle=263 pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[2675000][TB][INFO] SCB PASS #199
+[2695000][TB][INFO] SCB TRACE #200/490 : step=199 cycle=265 pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2695000][TB][INFO] SCB PASS #200
+[2705000][TB][INFO] SCB TRACE #201/490 : step=200 cycle=266 pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[2705000][TB][INFO] SCB PASS #201
+[2715000][TB][INFO] SCB TRACE #202/490 : step=201 cycle=267 pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000140 memwr=1 mem_addr=0x80000140 mem_data=0x00000005 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[2715000][TB][INFO] SCB PASS #202
+[2725000][TB][INFO] SCB TRACE #203/490 : step=202 cycle=268 pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2725000][TB][INFO] SCB PASS #203
+[2745000][TB][INFO] SCB TRACE #204/490 : step=203 cycle=270 pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2745000][TB][INFO] SCB PASS #204
+[2755000][TB][INFO] SCB TRACE #205/490 : step=204 cycle=271 pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[2755000][TB][INFO] SCB PASS #205
+[2765000][TB][INFO] SCB TRACE #206/490 : step=205 cycle=272 pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2765000][TB][INFO] SCB PASS #206
+[2775000][TB][INFO] SCB TRACE #207/490 : step=206 cycle=273 pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000010 memwr=0 mem_addr=0x00000010 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2775000][TB][INFO] SCB PASS #207
+[2785000][TB][INFO] SCB TRACE #208/490 : step=207 cycle=274 pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000144 memwr=0 mem_addr=0x80000144 mem_data=0x00000010 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[2785000][TB][INFO] SCB PASS #208
+[2795000][TB][INFO] SCB TRACE #209/490 : step=208 cycle=275 pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 rd_data=0x00000009 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2795000][TB][INFO] SCB PASS #209
+[2815000][TB][INFO] SCB TRACE #210/490 : step=209 cycle=277 pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000144 memwr=1 mem_addr=0x80000144 mem_data=0x00000009 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[2815000][TB][INFO] SCB PASS #210
+[2825000][TB][INFO] SCB TRACE #211/490 : step=210 cycle=278 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[2825000][TB][INFO] SCB PASS #211
+[2845000][TB][INFO] SCB TRACE #212/490 : step=211 cycle=280 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2845000][TB][INFO] SCB PASS #212
+[2855000][TB][INFO] SCB TRACE #213/490 : step=212 cycle=281 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[2855000][TB][INFO] SCB PASS #213
+[2865000][TB][INFO] SCB TRACE #214/490 : step=213 cycle=282 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[2865000][TB][INFO] SCB PASS #214
+[2875000][TB][INFO] SCB TRACE #215/490 : step=214 cycle=283 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2875000][TB][INFO] SCB PASS #215
+[2895000][TB][INFO] SCB TRACE #216/490 : step=215 cycle=285 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[2895000][TB][INFO] SCB PASS #216
+[2905000][TB][INFO] SCB TRACE #217/490 : step=216 cycle=286 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2905000][TB][INFO] SCB PASS #217
+[2925000][TB][INFO] SCB TRACE #218/490 : step=217 cycle=288 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=BRANCH
+[2925000][TB][INFO] SCB PASS #218
+[2935000][TB][INFO] SCB TRACE #219/490 : step=218 cycle=289 pc=0x800000f4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[2935000][TB][INFO] SCB PASS #219
+[2955000][TB][INFO] SCB TRACE #220/490 : step=219 cycle=291 pc=0x800000f8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2955000][TB][INFO] SCB PASS #220
+[2965000][TB][INFO] SCB TRACE #221/490 : step=220 cycle=292 pc=0x800000fc inst=0xfef42623 regwr=0 rd=x12 rd_data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000001 illegal=0 stall=0 redirect=1 fwdA=2 fwdB=1 class=STORE
+[2965000][TB][INFO] SCB PASS #221
+[2975000][TB][INFO] SCB TRACE #222/490 : step=221 cycle=293 pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[2975000][TB][INFO] SCB PASS #222
+[2985000][TB][INFO] SCB TRACE #223/490 : step=222 cycle=294 pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[2985000][TB][INFO] SCB PASS #223
+[2995000][TB][INFO] SCB TRACE #224/490 : step=223 cycle=295 pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[2995000][TB][INFO] SCB PASS #224
+[3025000][TB][INFO] SCB TRACE #225/490 : step=224 cycle=298 pc=0x80000024 inst=0xfe042423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[3025000][TB][INFO] SCB PASS #225
+[3035000][TB][INFO] SCB TRACE #226/490 : step=225 cycle=299 pc=0x80000028 inst=0x0b80006f regwr=1 rd=x0 rd_data=0x8000002c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=JAL
+[3035000][TB][INFO] SCB PASS #226
+[3065000][TB][INFO] SCB TRACE #227/490 : step=226 cycle=302 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[3065000][TB][INFO] SCB PASS #227
+[3075000][TB][INFO] SCB TRACE #228/490 : step=227 cycle=303 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3075000][TB][INFO] SCB PASS #228
+[3095000][TB][INFO] SCB TRACE #229/490 : step=228 cycle=305 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000001 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[3095000][TB][INFO] SCB PASS #229
+[3105000][TB][INFO] SCB TRACE #230/490 : step=229 cycle=306 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3105000][TB][INFO] SCB PASS #230
+[3125000][TB][INFO] SCB TRACE #231/490 : step=230 cycle=308 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[3125000][TB][INFO] SCB PASS #231
+[3155000][TB][INFO] SCB TRACE #232/490 : step=231 cycle=311 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[3155000][TB][INFO] SCB PASS #232
+[3165000][TB][INFO] SCB TRACE #233/490 : step=232 cycle=312 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[3165000][TB][INFO] SCB PASS #233
+[3175000][TB][INFO] SCB TRACE #234/490 : step=233 cycle=313 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[3175000][TB][INFO] SCB PASS #234
+[3195000][TB][INFO] SCB TRACE #235/490 : step=234 cycle=315 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3195000][TB][INFO] SCB PASS #235
+[3205000][TB][INFO] SCB TRACE #236/490 : step=235 cycle=316 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[3205000][TB][INFO] SCB PASS #236
+[3215000][TB][INFO] SCB TRACE #237/490 : step=236 cycle=317 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000003 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[3215000][TB][INFO] SCB PASS #237
+[3225000][TB][INFO] SCB TRACE #238/490 : step=237 cycle=318 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3225000][TB][INFO] SCB PASS #238
+[3245000][TB][INFO] SCB TRACE #239/490 : step=238 cycle=320 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3245000][TB][INFO] SCB PASS #239
+[3255000][TB][INFO] SCB TRACE #240/490 : step=239 cycle=321 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[3255000][TB][INFO] SCB PASS #240
+[3265000][TB][INFO] SCB TRACE #241/490 : step=240 cycle=322 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[3265000][TB][INFO] SCB PASS #241
+[3275000][TB][INFO] SCB TRACE #242/490 : step=241 cycle=323 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3275000][TB][INFO] SCB PASS #242
+[3285000][TB][INFO] SCB TRACE #243/490 : step=242 cycle=324 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[3285000][TB][INFO] SCB PASS #243
+[3295000][TB][INFO] SCB TRACE #244/490 : step=243 cycle=325 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000007 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3295000][TB][INFO] SCB PASS #244
+[3315000][TB][INFO] SCB TRACE #245/490 : step=244 cycle=327 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x0000000a memwr=0 mem_addr=0x0000000a mem_data=0x00000003 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[3315000][TB][INFO] SCB PASS #245
+[3345000][TB][INFO] SCB TRACE #246/490 : step=245 cycle=330 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[3345000][TB][INFO] SCB PASS #246
+[3365000][TB][INFO] SCB TRACE #247/490 : step=246 cycle=332 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3365000][TB][INFO] SCB PASS #247
+[3375000][TB][INFO] SCB TRACE #248/490 : step=247 cycle=333 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[3375000][TB][INFO] SCB PASS #248
+[3385000][TB][INFO] SCB TRACE #249/490 : step=248 cycle=334 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[3385000][TB][INFO] SCB PASS #249
+[3395000][TB][INFO] SCB TRACE #250/490 : step=249 cycle=335 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3395000][TB][INFO] SCB PASS #250
+[3415000][TB][INFO] SCB TRACE #251/490 : step=250 cycle=337 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000001 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[3415000][TB][INFO] SCB PASS #251
+[3425000][TB][INFO] SCB TRACE #252/490 : step=251 cycle=338 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3425000][TB][INFO] SCB PASS #252
+[3445000][TB][INFO] SCB TRACE #253/490 : step=252 cycle=340 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[3445000][TB][INFO] SCB PASS #253
+[3475000][TB][INFO] SCB TRACE #254/490 : step=253 cycle=343 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[3475000][TB][INFO] SCB PASS #254
+[3485000][TB][INFO] SCB TRACE #255/490 : step=254 cycle=344 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[3485000][TB][INFO] SCB PASS #255
+[3495000][TB][INFO] SCB TRACE #256/490 : step=255 cycle=345 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[3495000][TB][INFO] SCB PASS #256
+[3515000][TB][INFO] SCB TRACE #257/490 : step=256 cycle=347 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3515000][TB][INFO] SCB PASS #257
+[3525000][TB][INFO] SCB TRACE #258/490 : step=257 cycle=348 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[3525000][TB][INFO] SCB PASS #258
+[3535000][TB][INFO] SCB TRACE #259/490 : step=258 cycle=349 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000007 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[3535000][TB][INFO] SCB PASS #259
+[3545000][TB][INFO] SCB TRACE #260/490 : step=259 cycle=350 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3545000][TB][INFO] SCB PASS #260
+[3565000][TB][INFO] SCB TRACE #261/490 : step=260 cycle=352 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3565000][TB][INFO] SCB PASS #261
+[3575000][TB][INFO] SCB TRACE #262/490 : step=261 cycle=353 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[3575000][TB][INFO] SCB PASS #262
+[3585000][TB][INFO] SCB TRACE #263/490 : step=262 cycle=354 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[3585000][TB][INFO] SCB PASS #263
+[3595000][TB][INFO] SCB TRACE #264/490 : step=263 cycle=355 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3595000][TB][INFO] SCB PASS #264
+[3605000][TB][INFO] SCB TRACE #265/490 : step=264 cycle=356 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[3605000][TB][INFO] SCB PASS #265
+[3615000][TB][INFO] SCB TRACE #266/490 : step=265 cycle=357 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3615000][TB][INFO] SCB PASS #266
+[3635000][TB][INFO] SCB TRACE #267/490 : step=266 cycle=359 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x00000007 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[3635000][TB][INFO] SCB PASS #267
+[3645000][TB][INFO] SCB TRACE #268/490 : step=267 cycle=360 pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[3645000][TB][INFO] SCB PASS #268
+[3655000][TB][INFO] SCB TRACE #269/490 : step=268 cycle=361 pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[3655000][TB][INFO] SCB PASS #269
+[3665000][TB][INFO] SCB TRACE #270/490 : step=269 cycle=362 pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[3665000][TB][INFO] SCB PASS #270
+[3685000][TB][INFO] SCB TRACE #271/490 : step=270 cycle=364 pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3685000][TB][INFO] SCB PASS #271
+[3695000][TB][INFO] SCB TRACE #272/490 : step=271 cycle=365 pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[3695000][TB][INFO] SCB PASS #272
+[3705000][TB][INFO] SCB TRACE #273/490 : step=272 cycle=366 pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000007 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3705000][TB][INFO] SCB PASS #273
+[3725000][TB][INFO] SCB TRACE #274/490 : step=273 cycle=368 pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 rd_data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000007 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[3725000][TB][INFO] SCB PASS #274
+[3735000][TB][INFO] SCB TRACE #275/490 : step=274 cycle=369 pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3735000][TB][INFO] SCB PASS #275
+[3755000][TB][INFO] SCB TRACE #276/490 : step=275 cycle=371 pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3755000][TB][INFO] SCB PASS #276
+[3765000][TB][INFO] SCB TRACE #277/490 : step=276 cycle=372 pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[3765000][TB][INFO] SCB PASS #277
+[3775000][TB][INFO] SCB TRACE #278/490 : step=277 cycle=373 pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[3775000][TB][INFO] SCB PASS #278
+[3785000][TB][INFO] SCB TRACE #279/490 : step=278 cycle=374 pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3785000][TB][INFO] SCB PASS #279
+[3795000][TB][INFO] SCB TRACE #280/490 : step=279 cycle=375 pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUR
+[3795000][TB][INFO] SCB PASS #280
+[3805000][TB][INFO] SCB TRACE #281/490 : step=280 cycle=376 pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3805000][TB][INFO] SCB PASS #281
+[3815000][TB][INFO] SCB TRACE #282/490 : step=281 cycle=377 pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[3815000][TB][INFO] SCB PASS #282
+[3825000][TB][INFO] SCB TRACE #283/490 : step=282 cycle=378 pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[3825000][TB][INFO] SCB PASS #283
+[3835000][TB][INFO] SCB TRACE #284/490 : step=283 cycle=379 pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[3835000][TB][INFO] SCB PASS #284
+[3855000][TB][INFO] SCB TRACE #285/490 : step=284 cycle=381 pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3855000][TB][INFO] SCB PASS #285
+[3865000][TB][INFO] SCB TRACE #286/490 : step=285 cycle=382 pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[3865000][TB][INFO] SCB PASS #286
+[3875000][TB][INFO] SCB TRACE #287/490 : step=286 cycle=383 pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000138 memwr=1 mem_addr=0x80000138 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[3875000][TB][INFO] SCB PASS #287
+[3885000][TB][INFO] SCB TRACE #288/490 : step=287 cycle=384 pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3885000][TB][INFO] SCB PASS #288
+[3905000][TB][INFO] SCB TRACE #289/490 : step=288 cycle=386 pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3905000][TB][INFO] SCB PASS #289
+[3915000][TB][INFO] SCB TRACE #290/490 : step=289 cycle=387 pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[3915000][TB][INFO] SCB PASS #290
+[3925000][TB][INFO] SCB TRACE #291/490 : step=290 cycle=388 pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3925000][TB][INFO] SCB PASS #291
+[3935000][TB][INFO] SCB TRACE #292/490 : step=291 cycle=389 pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[3935000][TB][INFO] SCB PASS #292
+[3945000][TB][INFO] SCB TRACE #293/490 : step=292 cycle=390 pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[3945000][TB][INFO] SCB PASS #293
+[3955000][TB][INFO] SCB TRACE #294/490 : step=293 cycle=391 pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 rd_data=0x00000007 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[3955000][TB][INFO] SCB PASS #294
+[3975000][TB][INFO] SCB TRACE #295/490 : step=294 cycle=393 pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x8000013c memwr=1 mem_addr=0x8000013c mem_data=0x00000007 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[3975000][TB][INFO] SCB PASS #295
+[3985000][TB][INFO] SCB TRACE #296/490 : step=295 cycle=394 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[3985000][TB][INFO] SCB PASS #296
+[4005000][TB][INFO] SCB TRACE #297/490 : step=296 cycle=396 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4005000][TB][INFO] SCB PASS #297
+[4015000][TB][INFO] SCB TRACE #298/490 : step=297 cycle=397 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000002 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[4015000][TB][INFO] SCB PASS #298
+[4025000][TB][INFO] SCB TRACE #299/490 : step=298 cycle=398 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[4025000][TB][INFO] SCB PASS #299
+[4035000][TB][INFO] SCB TRACE #300/490 : step=299 cycle=399 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4035000][TB][INFO] SCB PASS #300
+[4055000][TB][INFO] SCB TRACE #301/490 : step=300 cycle=401 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000001 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[4055000][TB][INFO] SCB PASS #301
+[4065000][TB][INFO] SCB TRACE #302/490 : step=301 cycle=402 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4065000][TB][INFO] SCB PASS #302
+[4085000][TB][INFO] SCB TRACE #303/490 : step=302 cycle=404 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000005 memwr=0 mem_addr=0x00000005 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[4085000][TB][INFO] SCB PASS #303
+[4115000][TB][INFO] SCB TRACE #304/490 : step=303 cycle=407 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[4115000][TB][INFO] SCB PASS #304
+[4125000][TB][INFO] SCB TRACE #305/490 : step=304 cycle=408 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[4125000][TB][INFO] SCB PASS #305
+[4135000][TB][INFO] SCB TRACE #306/490 : step=305 cycle=409 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[4135000][TB][INFO] SCB PASS #306
+[4155000][TB][INFO] SCB TRACE #307/490 : step=306 cycle=411 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4155000][TB][INFO] SCB PASS #307
+[4165000][TB][INFO] SCB TRACE #308/490 : step=307 cycle=412 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[4165000][TB][INFO] SCB PASS #308
+[4175000][TB][INFO] SCB TRACE #309/490 : step=308 cycle=413 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000007 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[4175000][TB][INFO] SCB PASS #309
+[4185000][TB][INFO] SCB TRACE #310/490 : step=309 cycle=414 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4185000][TB][INFO] SCB PASS #310
+[4205000][TB][INFO] SCB TRACE #311/490 : step=310 cycle=416 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4205000][TB][INFO] SCB PASS #311
+[4215000][TB][INFO] SCB TRACE #312/490 : step=311 cycle=417 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[4215000][TB][INFO] SCB PASS #312
+[4225000][TB][INFO] SCB TRACE #313/490 : step=312 cycle=418 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[4225000][TB][INFO] SCB PASS #313
+[4235000][TB][INFO] SCB TRACE #314/490 : step=313 cycle=419 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4235000][TB][INFO] SCB PASS #314
+[4245000][TB][INFO] SCB TRACE #315/490 : step=314 cycle=420 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[4245000][TB][INFO] SCB PASS #315
+[4255000][TB][INFO] SCB TRACE #316/490 : step=315 cycle=421 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000005 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4255000][TB][INFO] SCB PASS #316
+[4275000][TB][INFO] SCB TRACE #317/490 : step=316 cycle=423 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x00000007 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[4275000][TB][INFO] SCB PASS #317
+[4285000][TB][INFO] SCB TRACE #318/490 : step=317 cycle=424 pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[4285000][TB][INFO] SCB PASS #318
+[4295000][TB][INFO] SCB TRACE #319/490 : step=318 cycle=425 pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[4295000][TB][INFO] SCB PASS #319
+[4305000][TB][INFO] SCB TRACE #320/490 : step=319 cycle=426 pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[4305000][TB][INFO] SCB PASS #320
+[4325000][TB][INFO] SCB TRACE #321/490 : step=320 cycle=428 pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4325000][TB][INFO] SCB PASS #321
+[4335000][TB][INFO] SCB TRACE #322/490 : step=321 cycle=429 pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[4335000][TB][INFO] SCB PASS #322
+[4345000][TB][INFO] SCB TRACE #323/490 : step=322 cycle=430 pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000007 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4345000][TB][INFO] SCB PASS #323
+[4365000][TB][INFO] SCB TRACE #324/490 : step=323 cycle=432 pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 rd_data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000007 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[4365000][TB][INFO] SCB PASS #324
+[4375000][TB][INFO] SCB TRACE #325/490 : step=324 cycle=433 pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4375000][TB][INFO] SCB PASS #325
+[4395000][TB][INFO] SCB TRACE #326/490 : step=325 cycle=435 pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4395000][TB][INFO] SCB PASS #326
+[4405000][TB][INFO] SCB TRACE #327/490 : step=326 cycle=436 pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[4405000][TB][INFO] SCB PASS #327
+[4415000][TB][INFO] SCB TRACE #328/490 : step=327 cycle=437 pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[4415000][TB][INFO] SCB PASS #328
+[4425000][TB][INFO] SCB TRACE #329/490 : step=328 cycle=438 pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4425000][TB][INFO] SCB PASS #329
+[4435000][TB][INFO] SCB TRACE #330/490 : step=329 cycle=439 pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUR
+[4435000][TB][INFO] SCB PASS #330
+[4445000][TB][INFO] SCB TRACE #331/490 : step=330 cycle=440 pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000005 memwr=0 mem_addr=0x80000140 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4445000][TB][INFO] SCB PASS #331
+[4455000][TB][INFO] SCB TRACE #332/490 : step=331 cycle=441 pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[4455000][TB][INFO] SCB PASS #332
+[4465000][TB][INFO] SCB TRACE #333/490 : step=332 cycle=442 pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[4465000][TB][INFO] SCB PASS #333
+[4475000][TB][INFO] SCB TRACE #334/490 : step=333 cycle=443 pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[4475000][TB][INFO] SCB PASS #334
+[4495000][TB][INFO] SCB TRACE #335/490 : step=334 cycle=445 pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4495000][TB][INFO] SCB PASS #335
+[4505000][TB][INFO] SCB TRACE #336/490 : step=335 cycle=446 pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[4505000][TB][INFO] SCB PASS #336
+[4515000][TB][INFO] SCB TRACE #337/490 : step=336 cycle=447 pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x8000013c memwr=1 mem_addr=0x8000013c mem_data=0x00000005 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[4515000][TB][INFO] SCB PASS #337
+[4525000][TB][INFO] SCB TRACE #338/490 : step=337 cycle=448 pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4525000][TB][INFO] SCB PASS #338
+[4545000][TB][INFO] SCB TRACE #339/490 : step=338 cycle=450 pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4545000][TB][INFO] SCB PASS #339
+[4555000][TB][INFO] SCB TRACE #340/490 : step=339 cycle=451 pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[4555000][TB][INFO] SCB PASS #340
+[4565000][TB][INFO] SCB TRACE #341/490 : step=340 cycle=452 pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4565000][TB][INFO] SCB PASS #341
+[4575000][TB][INFO] SCB TRACE #342/490 : step=341 cycle=453 pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 rd_data=0x0000000c memwr=0 mem_addr=0x0000000c mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4575000][TB][INFO] SCB PASS #342
+[4585000][TB][INFO] SCB TRACE #343/490 : step=342 cycle=454 pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000140 memwr=0 mem_addr=0x80000140 mem_data=0x0000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[4585000][TB][INFO] SCB PASS #343
+[4595000][TB][INFO] SCB TRACE #344/490 : step=343 cycle=455 pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 rd_data=0x00000007 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4595000][TB][INFO] SCB PASS #344
+[4615000][TB][INFO] SCB TRACE #345/490 : step=344 cycle=457 pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000140 memwr=1 mem_addr=0x80000140 mem_data=0x00000007 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[4615000][TB][INFO] SCB PASS #345
+[4625000][TB][INFO] SCB TRACE #346/490 : step=345 cycle=458 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[4625000][TB][INFO] SCB PASS #346
+[4645000][TB][INFO] SCB TRACE #347/490 : step=346 cycle=460 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4645000][TB][INFO] SCB PASS #347
+[4655000][TB][INFO] SCB TRACE #348/490 : step=347 cycle=461 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[4655000][TB][INFO] SCB PASS #348
+[4665000][TB][INFO] SCB TRACE #349/490 : step=348 cycle=462 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[4665000][TB][INFO] SCB PASS #349
+[4675000][TB][INFO] SCB TRACE #350/490 : step=349 cycle=463 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4675000][TB][INFO] SCB PASS #350
+[4695000][TB][INFO] SCB TRACE #351/490 : step=350 cycle=465 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[4695000][TB][INFO] SCB PASS #351
+[4705000][TB][INFO] SCB TRACE #352/490 : step=351 cycle=466 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4705000][TB][INFO] SCB PASS #352
+[4725000][TB][INFO] SCB TRACE #353/490 : step=352 cycle=468 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000006 memwr=0 mem_addr=0x00000006 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=BRANCH
+[4725000][TB][INFO] SCB PASS #353
+[4735000][TB][INFO] SCB TRACE #354/490 : step=353 cycle=469 pc=0x800000f4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[4735000][TB][INFO] SCB PASS #354
+[4755000][TB][INFO] SCB TRACE #355/490 : step=354 cycle=471 pc=0x800000f8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4755000][TB][INFO] SCB PASS #355
+[4765000][TB][INFO] SCB TRACE #356/490 : step=355 cycle=472 pc=0x800000fc inst=0xfef42623 regwr=0 rd=x12 rd_data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000002 illegal=0 stall=0 redirect=1 fwdA=2 fwdB=1 class=STORE
+[4765000][TB][INFO] SCB PASS #356
+[4775000][TB][INFO] SCB TRACE #357/490 : step=356 cycle=473 pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4775000][TB][INFO] SCB PASS #357
+[4785000][TB][INFO] SCB TRACE #358/490 : step=357 cycle=474 pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4785000][TB][INFO] SCB PASS #358
+[4795000][TB][INFO] SCB TRACE #359/490 : step=358 cycle=475 pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 rd_data=0x00000005 memwr=0 mem_addr=0x00000005 mem_data=0x00000002 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[4795000][TB][INFO] SCB PASS #359
+[4825000][TB][INFO] SCB TRACE #360/490 : step=359 cycle=478 pc=0x80000024 inst=0xfe042423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[4825000][TB][INFO] SCB PASS #360
+[4835000][TB][INFO] SCB TRACE #361/490 : step=360 cycle=479 pc=0x80000028 inst=0x0b80006f regwr=1 rd=x0 rd_data=0x8000002c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=JAL
+[4835000][TB][INFO] SCB PASS #361
+[4865000][TB][INFO] SCB TRACE #362/490 : step=361 cycle=482 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[4865000][TB][INFO] SCB PASS #362
+[4875000][TB][INFO] SCB TRACE #363/490 : step=362 cycle=483 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4875000][TB][INFO] SCB PASS #363
+[4895000][TB][INFO] SCB TRACE #364/490 : step=363 cycle=485 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000002 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[4895000][TB][INFO] SCB PASS #364
+[4905000][TB][INFO] SCB TRACE #365/490 : step=364 cycle=486 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[4905000][TB][INFO] SCB PASS #365
+[4925000][TB][INFO] SCB TRACE #366/490 : step=365 cycle=488 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000002 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[4925000][TB][INFO] SCB PASS #366
+[4955000][TB][INFO] SCB TRACE #367/490 : step=366 cycle=491 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[4955000][TB][INFO] SCB PASS #367
+[4965000][TB][INFO] SCB TRACE #368/490 : step=367 cycle=492 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[4965000][TB][INFO] SCB PASS #368
+[4975000][TB][INFO] SCB TRACE #369/490 : step=368 cycle=493 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[4975000][TB][INFO] SCB PASS #369
+[4995000][TB][INFO] SCB TRACE #370/490 : step=369 cycle=495 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[4995000][TB][INFO] SCB PASS #370
+[5005000][TB][INFO] SCB TRACE #371/490 : step=370 cycle=496 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[5005000][TB][INFO] SCB PASS #371
+[5015000][TB][INFO] SCB TRACE #372/490 : step=371 cycle=497 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000003 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[5015000][TB][INFO] SCB PASS #372
+[5025000][TB][INFO] SCB TRACE #373/490 : step=372 cycle=498 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5025000][TB][INFO] SCB PASS #373
+[5045000][TB][INFO] SCB TRACE #374/490 : step=373 cycle=500 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5045000][TB][INFO] SCB PASS #374
+[5055000][TB][INFO] SCB TRACE #375/490 : step=374 cycle=501 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[5055000][TB][INFO] SCB PASS #375
+[5065000][TB][INFO] SCB TRACE #376/490 : step=375 cycle=502 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[5065000][TB][INFO] SCB PASS #376
+[5075000][TB][INFO] SCB TRACE #377/490 : step=376 cycle=503 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5075000][TB][INFO] SCB PASS #377
+[5085000][TB][INFO] SCB TRACE #378/490 : step=377 cycle=504 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[5085000][TB][INFO] SCB PASS #378
+[5095000][TB][INFO] SCB TRACE #379/490 : step=378 cycle=505 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5095000][TB][INFO] SCB PASS #379
+[5115000][TB][INFO] SCB TRACE #380/490 : step=379 cycle=507 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000003 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[5115000][TB][INFO] SCB PASS #380
+[5125000][TB][INFO] SCB TRACE #381/490 : step=380 cycle=508 pc=0x80000064 inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[5125000][TB][INFO] SCB PASS #381
+[5135000][TB][INFO] SCB TRACE #382/490 : step=381 cycle=509 pc=0x80000068 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[5135000][TB][INFO] SCB PASS #382
+[5145000][TB][INFO] SCB TRACE #383/490 : step=382 cycle=510 pc=0x8000006c inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[5145000][TB][INFO] SCB PASS #383
+[5165000][TB][INFO] SCB TRACE #384/490 : step=383 cycle=512 pc=0x80000070 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5165000][TB][INFO] SCB PASS #384
+[5175000][TB][INFO] SCB TRACE #385/490 : step=384 cycle=513 pc=0x80000074 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[5175000][TB][INFO] SCB PASS #385
+[5185000][TB][INFO] SCB TRACE #386/490 : step=385 cycle=514 pc=0x80000078 inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5185000][TB][INFO] SCB PASS #386
+[5205000][TB][INFO] SCB TRACE #387/490 : step=386 cycle=516 pc=0x8000007c inst=0xfef42223 regwr=0 rd=x4 rd_data=0x8000ffe4 memwr=1 mem_addr=0x8000ffe4 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[5205000][TB][INFO] SCB PASS #387
+[5215000][TB][INFO] SCB TRACE #388/490 : step=387 cycle=517 pc=0x80000080 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5215000][TB][INFO] SCB PASS #388
+[5235000][TB][INFO] SCB TRACE #389/490 : step=388 cycle=519 pc=0x80000084 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5235000][TB][INFO] SCB PASS #389
+[5245000][TB][INFO] SCB TRACE #390/490 : step=389 cycle=520 pc=0x80000088 inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[5245000][TB][INFO] SCB PASS #390
+[5255000][TB][INFO] SCB TRACE #391/490 : step=390 cycle=521 pc=0x8000008c inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[5255000][TB][INFO] SCB PASS #391
+[5265000][TB][INFO] SCB TRACE #392/490 : step=391 cycle=522 pc=0x80000090 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5265000][TB][INFO] SCB PASS #392
+[5275000][TB][INFO] SCB TRACE #393/490 : step=392 cycle=523 pc=0x80000094 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUR
+[5275000][TB][INFO] SCB PASS #393
+[5285000][TB][INFO] SCB TRACE #394/490 : step=393 cycle=524 pc=0x80000098 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5285000][TB][INFO] SCB PASS #394
+[5295000][TB][INFO] SCB TRACE #395/490 : step=394 cycle=525 pc=0x8000009c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[5295000][TB][INFO] SCB PASS #395
+[5305000][TB][INFO] SCB TRACE #396/490 : step=395 cycle=526 pc=0x800000a0 inst=0x13478693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[5305000][TB][INFO] SCB PASS #396
+[5315000][TB][INFO] SCB TRACE #397/490 : step=396 cycle=527 pc=0x800000a4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[5315000][TB][INFO] SCB PASS #397
+[5335000][TB][INFO] SCB TRACE #398/490 : step=397 cycle=529 pc=0x800000a8 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5335000][TB][INFO] SCB PASS #398
+[5345000][TB][INFO] SCB TRACE #399/490 : step=398 cycle=530 pc=0x800000ac inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[5345000][TB][INFO] SCB PASS #399
+[5355000][TB][INFO] SCB TRACE #400/490 : step=399 cycle=531 pc=0x800000b0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000134 memwr=1 mem_addr=0x80000134 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[5355000][TB][INFO] SCB PASS #400
+[5365000][TB][INFO] SCB TRACE #401/490 : step=400 cycle=532 pc=0x800000b4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5365000][TB][INFO] SCB PASS #401
+[5385000][TB][INFO] SCB TRACE #402/490 : step=401 cycle=534 pc=0x800000b8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5385000][TB][INFO] SCB PASS #402
+[5395000][TB][INFO] SCB TRACE #403/490 : step=402 cycle=535 pc=0x800000bc inst=0x80000737 regwr=1 rd=x14 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[5395000][TB][INFO] SCB PASS #403
+[5405000][TB][INFO] SCB TRACE #404/490 : step=403 cycle=536 pc=0x800000c0 inst=0x13470713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5405000][TB][INFO] SCB PASS #404
+[5415000][TB][INFO] SCB TRACE #405/490 : step=404 cycle=537 pc=0x800000c4 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5415000][TB][INFO] SCB PASS #405
+[5425000][TB][INFO] SCB TRACE #406/490 : step=405 cycle=538 pc=0x800000c8 inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUR
+[5425000][TB][INFO] SCB PASS #406
+[5435000][TB][INFO] SCB TRACE #407/490 : step=406 cycle=539 pc=0x800000cc inst=0xfe442703 regwr=1 rd=x14 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffe4 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5435000][TB][INFO] SCB PASS #407
+[5455000][TB][INFO] SCB TRACE #408/490 : step=407 cycle=541 pc=0x800000d0 inst=0x00e7a023 regwr=0 rd=x0 rd_data=0x80000138 memwr=1 mem_addr=0x80000138 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=STORE
+[5455000][TB][INFO] SCB PASS #408
+[5465000][TB][INFO] SCB TRACE #409/490 : step=408 cycle=542 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[5465000][TB][INFO] SCB PASS #409
+[5485000][TB][INFO] SCB TRACE #410/490 : step=409 cycle=544 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5485000][TB][INFO] SCB PASS #410
+[5495000][TB][INFO] SCB TRACE #411/490 : step=410 cycle=545 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[5495000][TB][INFO] SCB PASS #411
+[5505000][TB][INFO] SCB TRACE #412/490 : step=411 cycle=546 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[5505000][TB][INFO] SCB PASS #412
+[5515000][TB][INFO] SCB TRACE #413/490 : step=412 cycle=547 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5515000][TB][INFO] SCB PASS #413
+[5535000][TB][INFO] SCB TRACE #414/490 : step=413 cycle=549 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000002 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[5535000][TB][INFO] SCB PASS #414
+[5545000][TB][INFO] SCB TRACE #415/490 : step=414 cycle=550 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5545000][TB][INFO] SCB PASS #415
+[5565000][TB][INFO] SCB TRACE #416/490 : step=415 cycle=552 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000002 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[5565000][TB][INFO] SCB PASS #416
+[5595000][TB][INFO] SCB TRACE #417/490 : step=416 cycle=555 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[5595000][TB][INFO] SCB PASS #417
+[5605000][TB][INFO] SCB TRACE #418/490 : step=417 cycle=556 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[5605000][TB][INFO] SCB PASS #418
+[5615000][TB][INFO] SCB TRACE #419/490 : step=418 cycle=557 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[5615000][TB][INFO] SCB PASS #419
+[5635000][TB][INFO] SCB TRACE #420/490 : step=419 cycle=559 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5635000][TB][INFO] SCB PASS #420
+[5645000][TB][INFO] SCB TRACE #421/490 : step=420 cycle=560 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[5645000][TB][INFO] SCB PASS #421
+[5655000][TB][INFO] SCB TRACE #422/490 : step=421 cycle=561 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000003 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[5655000][TB][INFO] SCB PASS #422
+[5665000][TB][INFO] SCB TRACE #423/490 : step=422 cycle=562 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5665000][TB][INFO] SCB PASS #423
+[5685000][TB][INFO] SCB TRACE #424/490 : step=423 cycle=564 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5685000][TB][INFO] SCB PASS #424
+[5695000][TB][INFO] SCB TRACE #425/490 : step=424 cycle=565 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[5695000][TB][INFO] SCB PASS #425
+[5705000][TB][INFO] SCB TRACE #426/490 : step=425 cycle=566 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[5705000][TB][INFO] SCB PASS #426
+[5715000][TB][INFO] SCB TRACE #427/490 : step=426 cycle=567 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5715000][TB][INFO] SCB PASS #427
+[5725000][TB][INFO] SCB TRACE #428/490 : step=427 cycle=568 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x8000013c memwr=0 mem_addr=0x8000013c mem_data=0x00000008 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[5725000][TB][INFO] SCB PASS #428
+[5735000][TB][INFO] SCB TRACE #429/490 : step=428 cycle=569 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000005 memwr=0 mem_addr=0x8000013c mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5735000][TB][INFO] SCB PASS #429
+[5755000][TB][INFO] SCB TRACE #430/490 : step=429 cycle=571 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x00000008 memwr=0 mem_addr=0x00000008 mem_data=0x00000003 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[5755000][TB][INFO] SCB PASS #430
+[5785000][TB][INFO] SCB TRACE #431/490 : step=430 cycle=574 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[5785000][TB][INFO] SCB PASS #431
+[5805000][TB][INFO] SCB TRACE #432/490 : step=431 cycle=576 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5805000][TB][INFO] SCB PASS #432
+[5815000][TB][INFO] SCB TRACE #433/490 : step=432 cycle=577 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000002 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[5815000][TB][INFO] SCB PASS #433
+[5825000][TB][INFO] SCB TRACE #434/490 : step=433 cycle=578 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[5825000][TB][INFO] SCB PASS #434
+[5835000][TB][INFO] SCB TRACE #435/490 : step=434 cycle=579 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5835000][TB][INFO] SCB PASS #435
+[5855000][TB][INFO] SCB TRACE #436/490 : step=435 cycle=581 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000002 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[5855000][TB][INFO] SCB PASS #436
+[5865000][TB][INFO] SCB TRACE #437/490 : step=436 cycle=582 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5865000][TB][INFO] SCB PASS #437
+[5885000][TB][INFO] SCB TRACE #438/490 : step=437 cycle=584 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000002 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=BRANCH
+[5885000][TB][INFO] SCB PASS #438
+[5895000][TB][INFO] SCB TRACE #439/490 : step=438 cycle=585 pc=0x800000f4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000002 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[5895000][TB][INFO] SCB PASS #439
+[5915000][TB][INFO] SCB TRACE #440/490 : step=439 cycle=587 pc=0x800000f8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5915000][TB][INFO] SCB PASS #440
+[5925000][TB][INFO] SCB TRACE #441/490 : step=440 cycle=588 pc=0x800000fc inst=0xfef42623 regwr=0 rd=x12 rd_data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000003 illegal=0 stall=0 redirect=1 fwdA=2 fwdB=1 class=STORE
+[5925000][TB][INFO] SCB PASS #441
+[5935000][TB][INFO] SCB TRACE #442/490 : step=441 cycle=589 pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[5935000][TB][INFO] SCB PASS #442
+[5945000][TB][INFO] SCB TRACE #443/490 : step=442 cycle=590 pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[5945000][TB][INFO] SCB PASS #443
+[5955000][TB][INFO] SCB TRACE #444/490 : step=443 cycle=591 pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 rd_data=0x00000006 memwr=0 mem_addr=0x00000006 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[5955000][TB][INFO] SCB PASS #444
+[5985000][TB][INFO] SCB TRACE #445/490 : step=444 cycle=594 pc=0x80000024 inst=0xfe042423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[5985000][TB][INFO] SCB PASS #445
+[5995000][TB][INFO] SCB TRACE #446/490 : step=445 cycle=595 pc=0x80000028 inst=0x0b80006f regwr=1 rd=x0 rd_data=0x8000002c memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=JAL
+[5995000][TB][INFO] SCB PASS #446
+[6025000][TB][INFO] SCB TRACE #447/490 : step=446 cycle=598 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[6025000][TB][INFO] SCB PASS #447
+[6035000][TB][INFO] SCB TRACE #448/490 : step=447 cycle=599 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6035000][TB][INFO] SCB PASS #448
+[6055000][TB][INFO] SCB TRACE #449/490 : step=448 cycle=601 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x00000003 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[6055000][TB][INFO] SCB PASS #449
+[6065000][TB][INFO] SCB TRACE #450/490 : step=449 cycle=602 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6065000][TB][INFO] SCB PASS #450
+[6085000][TB][INFO] SCB TRACE #451/490 : step=450 cycle=604 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[6085000][TB][INFO] SCB PASS #451
+[6115000][TB][INFO] SCB TRACE #452/490 : step=451 cycle=607 pc=0x8000002c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[6115000][TB][INFO] SCB PASS #452
+[6125000][TB][INFO] SCB TRACE #453/490 : step=452 cycle=608 pc=0x80000030 inst=0x13478713 regwr=1 rd=x14 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[6125000][TB][INFO] SCB PASS #453
+[6135000][TB][INFO] SCB TRACE #454/490 : step=453 cycle=609 pc=0x80000034 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[6135000][TB][INFO] SCB PASS #454
+[6155000][TB][INFO] SCB TRACE #455/490 : step=454 cycle=611 pc=0x80000038 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x00000000 mem_data=0x8000ffe0 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[6155000][TB][INFO] SCB PASS #455
+[6165000][TB][INFO] SCB TRACE #456/490 : step=455 cycle=612 pc=0x8000003c inst=0x00f707b3 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUR
+[6165000][TB][INFO] SCB PASS #456
+[6175000][TB][INFO] SCB TRACE #457/490 : step=456 cycle=613 pc=0x80000040 inst=0x0007a703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=LOAD
+[6175000][TB][INFO] SCB PASS #457
+[6185000][TB][INFO] SCB TRACE #458/490 : step=457 cycle=614 pc=0x80000044 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6185000][TB][INFO] SCB PASS #458
+[6205000][TB][INFO] SCB TRACE #459/490 : step=458 cycle=616 pc=0x80000048 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[6205000][TB][INFO] SCB PASS #459
+[6215000][TB][INFO] SCB TRACE #460/490 : step=459 cycle=617 pc=0x8000004c inst=0x800006b7 regwr=1 rd=x13 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=LUI
+[6215000][TB][INFO] SCB PASS #460
+[6225000][TB][INFO] SCB TRACE #461/490 : step=460 cycle=618 pc=0x80000050 inst=0x13468693 regwr=1 rd=x13 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[6225000][TB][INFO] SCB PASS #461
+[6235000][TB][INFO] SCB TRACE #462/490 : step=461 cycle=619 pc=0x80000054 inst=0x00279793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000ffe0 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[6235000][TB][INFO] SCB PASS #462
+[6245000][TB][INFO] SCB TRACE #463/490 : step=462 cycle=620 pc=0x80000058 inst=0x00f687b3 regwr=1 rd=x15 rd_data=0x80000138 memwr=0 mem_addr=0x80000138 mem_data=0x00000004 illegal=0 stall=0 redirect=1 fwdA=1 fwdB=0 class=ALUR
+[6245000][TB][INFO] SCB PASS #463
+[6255000][TB][INFO] SCB TRACE #464/490 : step=463 cycle=621 pc=0x8000005c inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x80000138 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6255000][TB][INFO] SCB PASS #464
+[6275000][TB][INFO] SCB TRACE #465/490 : step=464 cycle=623 pc=0x80000060 inst=0x06e7da63 regwr=0 rd=x20 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000001 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=BRANCH
+[6275000][TB][INFO] SCB PASS #465
+[6305000][TB][INFO] SCB TRACE #466/490 : step=465 cycle=626 pc=0x800000d4 inst=0xfe842783 regwr=1 rd=x15 rd_data=0x00000000 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[6305000][TB][INFO] SCB PASS #466
+[6325000][TB][INFO] SCB TRACE #467/490 : step=466 cycle=628 pc=0x800000d8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[6325000][TB][INFO] SCB PASS #467
+[6335000][TB][INFO] SCB TRACE #468/490 : step=467 cycle=629 pc=0x800000dc inst=0xfef42423 regwr=0 rd=x8 rd_data=0x8000ffe8 memwr=1 mem_addr=0x8000ffe8 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=STORE
+[6335000][TB][INFO] SCB PASS #468
+[6345000][TB][INFO] SCB TRACE #469/490 : step=468 cycle=630 pc=0x800000e0 inst=0x00400713 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=1 class=ALUI
+[6345000][TB][INFO] SCB PASS #469
+[6355000][TB][INFO] SCB TRACE #470/490 : step=469 cycle=631 pc=0x800000e4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6355000][TB][INFO] SCB PASS #470
+[6375000][TB][INFO] SCB TRACE #471/490 : step=470 cycle=633 pc=0x800000e8 inst=0x40f707b3 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x00000003 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUR
+[6375000][TB][INFO] SCB PASS #471
+[6385000][TB][INFO] SCB TRACE #472/490 : step=471 cycle=634 pc=0x800000ec inst=0xfe842703 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x8000ffe8 mem_data=0x80010000 illegal=0 stall=1 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6385000][TB][INFO] SCB PASS #472
+[6405000][TB][INFO] SCB TRACE #473/490 : step=472 cycle=636 pc=0x800000f0 inst=0xf2f74ee3 regwr=0 rd=x29 rd_data=0x00000002 memwr=0 mem_addr=0x00000002 mem_data=0x00000001 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=BRANCH
+[6405000][TB][INFO] SCB PASS #473
+[6415000][TB][INFO] SCB TRACE #474/490 : step=473 cycle=637 pc=0x800000f4 inst=0xfec42783 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=2 class=LOAD
+[6415000][TB][INFO] SCB PASS #474
+[6435000][TB][INFO] SCB TRACE #475/490 : step=474 cycle=639 pc=0x800000f8 inst=0x00178793 regwr=1 rd=x15 rd_data=0x00000004 memwr=0 mem_addr=0x00000004 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[6435000][TB][INFO] SCB PASS #475
+[6445000][TB][INFO] SCB TRACE #476/490 : step=475 cycle=640 pc=0x800000fc inst=0xfef42623 regwr=0 rd=x12 rd_data=0x8000ffec memwr=1 mem_addr=0x8000ffec mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=2 fwdB=1 class=STORE
+[6445000][TB][INFO] SCB PASS #476
+[6455000][TB][INFO] SCB TRACE #477/490 : step=476 cycle=641 pc=0x80000100 inst=0xfec42703 regwr=1 rd=x14 rd_data=0x00000004 memwr=0 mem_addr=0x8000ffec mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6455000][TB][INFO] SCB PASS #477
+[6465000][TB][INFO] SCB TRACE #478/490 : step=477 cycle=642 pc=0x80000104 inst=0x00300793 regwr=1 rd=x15 rd_data=0x00000003 memwr=0 mem_addr=0x00000003 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[6465000][TB][INFO] SCB PASS #478
+[6475000][TB][INFO] SCB TRACE #479/490 : step=478 cycle=643 pc=0x80000108 inst=0xf0e7dee3 regwr=0 rd=x29 rd_data=0x00000007 memwr=0 mem_addr=0x00000007 mem_data=0x00000004 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=2 class=BRANCH
+[6475000][TB][INFO] SCB PASS #479
+[6485000][TB][INFO] SCB TRACE #480/490 : step=479 cycle=644 pc=0x8000010c inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[6485000][TB][INFO] SCB PASS #480
+[6495000][TB][INFO] SCB TRACE #481/490 : step=480 cycle=645 pc=0x80000110 inst=0x00100713 regwr=1 rd=x14 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x8000000c illegal=0 stall=0 redirect=0 fwdA=2 fwdB=0 class=ALUI
+[6495000][TB][INFO] SCB PASS #481
+[6505000][TB][INFO] SCB TRACE #482/490 : step=481 cycle=646 pc=0x80000114 inst=0x14e7a423 regwr=0 rd=x8 rd_data=0x80000148 memwr=1 mem_addr=0x80000148 mem_data=0x00000001 illegal=0 stall=1 redirect=0 fwdA=2 fwdB=0 class=STORE
+[6505000][TB][INFO] SCB PASS #482
+[6515000][TB][INFO] SCB TRACE #483/490 : step=482 cycle=647 pc=0x80000118 inst=0x800007b7 regwr=1 rd=x15 rd_data=0x80000000 memwr=0 mem_addr=0x80000000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LUI
+[6515000][TB][INFO] SCB PASS #483
+[6525000][TB][INFO] SCB TRACE #484/490 : step=483 cycle=648 pc=0x8000011c inst=0x13478793 regwr=1 rd=x15 rd_data=0x80000134 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=1 fwdB=0 class=ALUI
+[6525000][TB][INFO] SCB PASS #484
+[6535000][TB][INFO] SCB TRACE #485/490 : step=484 cycle=649 pc=0x80000120 inst=0x0007a783 regwr=1 rd=x15 rd_data=0x00000001 memwr=0 mem_addr=0x80000134 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6535000][TB][INFO] SCB PASS #485
+[6555000][TB][INFO] SCB TRACE #486/490 : step=485 cycle=651 pc=0x80000124 inst=0x00078513 regwr=1 rd=x10 rd_data=0x00000001 memwr=0 mem_addr=0x00000001 mem_data=0x00000000 illegal=0 stall=0 redirect=1 fwdA=0 fwdB=0 class=ALUI
+[6555000][TB][INFO] SCB PASS #486
+[6565000][TB][INFO] SCB TRACE #487/490 : step=486 cycle=652 pc=0x80000128 inst=0x01c12403 regwr=1 rd=x8 rd_data=0x00000000 memwr=0 mem_addr=0x8000fffc mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=LOAD
+[6565000][TB][INFO] SCB PASS #487
+[6575000][TB][INFO] SCB TRACE #488/490 : step=487 cycle=653 pc=0x8000012c inst=0x02010113 regwr=1 rd=x2 rd_data=0x80010000 memwr=0 mem_addr=0x80010000 mem_data=0x00000000 illegal=0 stall=0 redirect=0 fwdA=0 fwdB=0 class=ALUI
+[6575000][TB][INFO] SCB PASS #488
+[6585000][TB][INFO] SCB TRACE #489/490 : step=488 cycle=654 pc=0x80000130 inst=0x00008067 regwr=1 rd=x0 rd_data=0x80000134 memwr=0 mem_addr=0x8000000c mem_data=0x00000000 illegal=0 stall=0 redirect=1 fwdA=0 fwdB=0 class=JALR
+[6585000][TB][INFO] SCB PASS #489
+[6615000][TB][INFO] SCB TRACE #490/490 : step=489 cycle=657 pc=0x8000000c inst=0x0000006f regwr=1 rd=x0 rd_data=0x80000010 memwr=0 mem_addr=0x00000000 mem_data=0x00000000 illegal=0 stall=0 redirect=1 fwdA=0 fwdB=0 class=JAL
+[6615000][TB][INFO] SCB PASS #490
+[6615000][TB][INFO] Final memory check disabled for this trace package
+[6615000][TB][INFO] Scoreboard completed successfully: rows=490 errors=0
+[6625000][TB][INFO] Coverage summary: 81.36%
+[6625000][TB][INFO] Top_tb completed successfully
+$finish called at time : 6825 ns : File "D:/02_learning_lab/RV32I_PIPELINE_ONLY/FPGA_Auto_Project/Project/rv32i/tb/Top_tb/tb_top.sv" Line 124
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Mar 27 16:57:48 2026...

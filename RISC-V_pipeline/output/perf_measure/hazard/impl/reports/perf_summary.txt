@@ -1,0 +1,6 @@
+mode=impl
+rom_variant=hazard
+clk_period_ns=10.000
+slack_ns=0.429
+delay_ns=9.571
+fmax_mhz=104.482

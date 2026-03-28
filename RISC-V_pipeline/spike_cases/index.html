@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spike Case Index</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Segoe UI", sans-serif;
+      background: #f6f8fb;
+      color: #191f28;
+    }
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e8eb;
+      border-radius: 20px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+      padding: 22px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+    }
+    p {
+      margin: 8px 0;
+      color: #4b5563;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    code {
+      font-family: Consolas, monospace;
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Spike Case Reports</h1>
+    <p>케이스별 보고서와 로그를 덮어쓰지 않고 보관한 인덱스입니다.</p>
+    <p><a href="../reports/html/rv32i_case_matrix_report_ko.html">ROM 통합 검증 보고서 열기</a></p>
+    <p><a href="../reports/html/rv32i_exec_compact_report_ko.html">Compact 검증 + 성능 보고서 열기</a></p>
+    <div class="card-grid">
+      
+        <article class="card">
+          <h2>bubble_sort</h2>
+          <p>CSV: <code>tb/bubble_sort.csv</code></p>
+          <p><a href="bubble_sort/reports/html/rv32i_spike_visual_report_ko.html">HTML 보고서 열기</a></p>
+          <p><a href="bubble_sort/reports/markdown/overview/rv32i_spike_visual_report_ko.md">Markdown 보고서 열기</a></p>
+        </article>
+
+        <article class="card">
+          <h2>test_top</h2>
+          <p>CSV: <code>tb/spike_test_top.csv</code></p>
+          <p><a href="test_top/reports/html/rv32i_spike_visual_report_ko.html">HTML 보고서 열기</a></p>
+          <p><a href="test_top/reports/markdown/overview/rv32i_spike_visual_report_ko.md">Markdown 보고서 열기</a></p>
+        </article>
+
+    </div>
+  </div>
+</body>
+</html>

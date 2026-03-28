@@ -1,0 +1,3 @@
+case_name,source_csv,overall_result,retire_rows,pipeline_cycle_span,top_cycle_span,coverage_pct,mem_checks,regwrite_count,memwrite_count,stall_count,redirect_count,illegal_count,fwdA1_count,fwdA2_count,fwdB1_count,fwdB2_count,branch_count,jump_count,report_html,report_md
+bubble_sort,tb/bubble_sort.csv,PASS,490,653,653,81.36,0,419,42,94,20,0,109,31,32,63,29,8,spike_cases/bubble_sort/reports/html/rv32i_spike_visual_report_ko.html,spike_cases/bubble_sort/reports/markdown/overview/rv32i_spike_visual_report_ko.md
+test_top,tb/spike_test_top.csv,PASS,84,102,102,76.82,2,66,4,0,11,0,3,7,1,3,14,3,spike_cases/test_top/reports/html/rv32i_spike_visual_report_ko.html,spike_cases/test_top/reports/markdown/overview/rv32i_spike_visual_report_ko.md

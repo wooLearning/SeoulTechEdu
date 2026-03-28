@@ -1,0 +1,16 @@
+# Simulator / tool outputs
+.Xil/
+xsim.dir/
+*.jou
+*.pb
+*.wdb
+*.vcd
+
+# Build outputs
+obj*/
+
+# Python
+__pycache__/
+*.pyc
+
+requirements.txt

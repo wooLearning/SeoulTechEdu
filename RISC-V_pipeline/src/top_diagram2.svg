@@ -1,0 +1,371 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="1480" viewBox="0 -80 2600 1480">
+  <defs>
+    <marker id="arrow" viewBox="0 0 14 14" refX="14" refY="7" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="#333" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 14 14" refX="14" refY="7" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="#d32f2f" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 14 14" refX="14" refY="7" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="#e65100" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 14 14" refX="14" refY="7" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="#6a1b9a" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 14 14" refX="14" refY="7" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="#2e7d32" />
+    </marker>
+    <marker id="arrow-yellow" viewBox="0 0 14 14" refX="14" refY="7" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 14 7 L 0 14 z" fill="#fbc02d" />
+    </marker>
+
+    <style>
+      .bg { fill: #fcfcfc; }
+      .wrapper { fill: none; stroke: #90a4ae; stroke-width: 4; stroke-dasharray: 12,8; rx: 16; ry: 16; }
+      .bar { fill: #eceff1; stroke: #607d8b; stroke-width: 4; rx: 8; ry: 8; }
+      .box { fill: #ffffff; stroke: #37474f; stroke-width: 4; rx: 8; ry: 8; }
+      .logic { fill: #fff8e1; stroke: #f57c00; stroke-width: 4; rx: 8; ry: 8; }
+      .mux { fill: #e0f2f1; stroke: #00796b; stroke-width: 4; }
+      .alu { fill: #fce4ec; stroke: #c2185b; stroke-width: 4; }
+      .mem { fill: #f3e5f5; stroke: #512da8; stroke-width: 4; }
+
+      .w-main { fill: none; stroke: #455a64; stroke-width: 2.5; marker-end: url(#arrow); }
+      .w-target { fill: none; stroke: #d32f2f; stroke-width: 3; stroke-dasharray: 8,8; marker-end: url(#arrow-red); }
+      .w-stall { fill: none; stroke: #fbc02d; stroke-width: 3; marker-end: url(#arrow-yellow); }
+      .w-fwd-ex { fill: none; stroke: #e65100; stroke-width: 3; marker-end: url(#arrow-orange); }
+      .w-fwd-mem { fill: none; stroke: #6a1b9a; stroke-width: 3; marker-end: url(#arrow-purple); }
+      .w-wb { fill: none; stroke: #2e7d32; stroke-width: 3; marker-end: url(#arrow-green); }
+
+      /* Magical Halo Class for Texts to ensure perfect readability over lines */
+      .halo { paint-order: stroke fill; stroke: rgba(252,252,252,0.9); stroke-width: 6px; stroke-linejoin: round; }
+
+      .text-wrap { font-family: "Segoe UI", sans-serif; font-size: 32px; font-weight: bold; fill: #455a64; text-anchor: middle; }
+      .text-box { font-family: "Segoe UI", sans-serif; font-size: 24px; font-weight: bold; fill: #263238; text-anchor: middle; }
+      .text-file { font-family: monospace; font-size: 18px; font-weight: bold; fill: #546e7a; text-anchor: middle; }
+      .text-lbl { font-family: "Courier New", Courier, monospace; font-size: 22px; font-weight: bold; fill: #455a64; }
+      .text-desc { font-family: "Segoe UI", sans-serif; font-size: 24px; font-weight: bold; fill: #616161; }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="0" y="-80" width="2600" height="1480" class="bg" />
+  <text x="1300" y="-30" class="text-wrap halo" fill="#212121" font-size="44">RV32I Pipeline Module Architecture (Top.sv Instantiations)</text>
+
+  <!-- ===============================
+       STAGE WRAPPERS
+       =============================== -->
+  <!-- FetchStage -->
+  <rect x="40" y="110" width="540" height="740" class="wrapper" />
+  <text x="310" y="150" class="text-wrap halo">FetchStage (uFetchStage)</text>
+
+  <!-- DecodeStage -->
+  <rect x="620" y="110" width="520" height="740" class="wrapper" />
+  <text x="880" y="150" class="text-wrap halo">DecodeStage (uDecodeStage)</text>
+
+  <!-- ExecuteStage -->
+  <rect x="1180" y="110" width="540" height="740" class="wrapper" />
+  <text x="1450" y="150" class="text-wrap halo">ExecuteStage (uExecuteStage)</text>
+
+  <!-- MemStage -->
+  <rect x="1760" y="110" width="440" height="740" class="wrapper" />
+  <text x="1980" y="150" class="text-wrap halo">MemStage (uMemStage)</text>
+
+  <!-- WbStage -->
+  <rect x="2240" y="110" width="220" height="740" class="wrapper" />
+  <text x="2350" y="150" class="text-wrap halo">WbStage</text>
+
+
+  <!-- ===============================
+       PIPELINE REGISTERS (Insides Wrappers)
+       =============================== -->
+  <rect x="540" y="180" width="30" height="650" class="bar"/>
+  <text x="565" y="490" class="text-box halo" transform="rotate(-90, 565, 490)">IF/ID Reg</text>
+
+  <rect x="1100" y="180" width="30" height="650" class="bar"/>
+  <text x="1125" y="490" class="text-box halo" transform="rotate(-90, 1125, 490)">ID/EX Reg</text>
+
+  <rect x="1680" y="180" width="30" height="650" class="bar"/>
+  <text x="1705" y="490" class="text-box halo" transform="rotate(-90, 1705, 490)">EX/MEM Reg</text>
+
+  <rect x="2160" y="180" width="30" height="650" class="bar"/>
+  <text x="2185" y="490" class="text-box halo" transform="rotate(-90, 2185, 490)">MEM/WB Reg</text>
+
+
+  <!-- ===============================
+       FETCH STAGE 
+       =============================== -->
+  <!-- Target Mux (Combo) -->
+  <polygon points="140,440 180,460 180,560 140,580" class="mux"/>
+  <text x="160" y="520" class="text-box halo" font-size="18">MUX</text>
+
+  <!-- uPc -->
+  <rect x="240" y="360" width="140" height="150" class="box" />
+  <text x="310" y="395" class="text-box halo">Pc</text>
+  <text x="310" y="495" class="text-file halo">Pc.sv</text>
+  <!-- Pseudo PC and Add4 inside uPc -->
+  <rect x="250" y="415" width="40" height="40" class="bar" stroke-width="2"/>
+  <text x="270" y="443" font-family="sans-serif" font-size="16" class="halo" text-anchor="middle">PC</text>
+  <polygon points="295,415 330,425 330,445 295,455" class="logic" stroke-width="2"/>
+  <text x="315" y="442" font-family="sans-serif" font-size="14" class="halo" text-anchor="middle">+4</text>
+  
+  <!-- uInstrRom -->
+  <rect x="400" y="520" width="120" height="110" class="mem" />
+  <text x="460" y="570" class="text-box halo">InstrRom</text>
+  <text x="460" y="590" class="text-file halo">InstrRom*.sv</text>
+
+  <!-- Fetch Routing -->
+  <!-- Target Mux to uPc -->
+  <path d="M 180 510 L 240 510" class="w-main" />
+  
+  <!-- uPc outputs (explicit coordinates completely dodging boxes) -->
+  <path d="M 380 480 L 400 480" class="w-main" /> <!-- PC Out stub -->
+  <path d="M 380 400 L 540 400" class="w-main" /> <!-- PC+4 Out straight -->
+  <text x="475" y="390" class="text-lbl halo">wPcPlus4</text>
+
+  <!-- PC paths -->
+  <path d="M 400 480 L 400 570 L 400 570" class="w-main" /> <!-- To IMEM -->
+  <path d="M 400 480 L 540 480" class="w-main" /> <!-- To IF/ID -->
+  <circle cx="400" cy="480" r="5" fill="#333" />
+  
+  <!-- PC+4 Feedback -->
+  <path d="M 410 400 L 410 340 L 90 340 L 90 540 L 140 540" class="w-main" />
+  <circle cx="410" cy="400" r="5" fill="#333" />
+  <text x="280" y="325" class="text-desc halo">Next PC Target</text>
+
+  <!-- IMEM Out -->
+  <path d="M 520 570 L 540 570" class="w-main" />
+
+
+  <!-- ===============================
+       DECODE STAGE
+       =============================== -->
+  <!-- uHazardUnit -->
+  <rect x="650" y="270" width="150" height="70" class="logic" />
+  <text x="725" y="305" class="text-box halo">HazardUnit</text>
+  <text x="725" y="325" class="text-file halo">HazardUnit.sv</text>
+
+  <!-- uInstrFields -->
+  <rect x="650" y="580" width="150" height="80" class="logic" />
+  <text x="725" y="615" class="text-box halo">InstrFields</text>
+  <text x="725" y="635" class="text-file halo">InstrFields.sv</text>
+
+  <!-- uControlUnit -->
+  <rect x="800" y="180" width="150" height="70" class="logic" />
+  <text x="875" y="215" class="text-box halo">ControlUnit</text>
+  <text x="875" y="235" class="text-file halo">ControlUnit.sv</text>
+
+  <!-- uRegfile -->
+  <rect x="840" y="420" width="140" height="190" class="box" />
+  <text x="910" y="515" class="text-box halo">Regfile</text>
+  <text x="910" y="535" class="text-file halo">Regfile.sv</text>
+  <text x="860" y="460" class="text-lbl halo">rs1</text>
+  <text x="860" y="560" class="text-lbl halo">rs2</text>
+  <text x="860" y="597" class="text-lbl halo">wd</text>
+  <text x="890" y="597" class="text-lbl halo">wa</text>
+  <text x="920" y="597" class="text-lbl halo">we</text>
+
+  <!-- uImmGen -->
+  <rect x="820" y="680" width="140" height="70" class="logic" />
+  <text x="890" y="715" class="text-box halo">ImmGen</text>
+  <text x="890" y="735" class="text-file halo">ImmGen.sv</text>
+
+
+  <!-- Decode Routing -->
+  <!-- Passes -->
+  <path d="M 570 400 L 1100 400" class="w-main" /> <!-- PC+4 pass -->
+  
+  <!-- Route PC high safely between modules -->
+  <path d="M 570 480 L 590 480 L 590 380 L 1100 380" class="w-main" />
+  <text x="610" y="370" class="text-lbl halo">PC bypass</text>
+
+  <!-- Instr Fanouts -->
+  <path d="M 570 570 L 600 570 L 600 620 L 650 620" class="w-main" /> <!-- To InstrFields -->
+  <path d="M 600 570 L 600 710 L 820 710" class="w-main" /> <!-- To ImmGen -->
+  <circle cx="600" cy="570" r="5" fill="#333" />
+  <path d="M 600 570 L 600 300 L 650 300" class="w-main" /> <!-- To HazardUnit -->
+  <circle cx="600" cy="570" r="5" fill="#333" />
+
+  <!-- InstrFields Extraction -->
+  <path d="M 800 590 L 820 590 L 820 450 L 840 450" class="w-main" /> <!-- rs1 -->
+  <path d="M 800 610 L 820 610 L 820 550 L 840 550" class="w-main" /> <!-- rs2 -->
+  <path d="M 800 640 L 820 640 L 820 780 L 1100 780" class="w-main" /> <!-- rd -->
+  
+  <path d="M 800 580 L 810 580 L 810 210 L 800 210" class="w-main" /> <!-- to ControlUnit -->
+  
+  <path d="M 950 210 L 1100 210" class="w-main" /> <!-- ControlUnit Out -->
+  <text x="1030" y="200" class="text-lbl halo">Control Bus</text>
+
+  <!-- Regfile Out -->
+  <path d="M 980 450 L 1100 450" class="w-main" />
+  <text x="1040" y="440" class="text-lbl halo">RD1</text>
+  
+  <path d="M 980 550 L 1100 550" class="w-main" />
+  <text x="1040" y="540" class="text-lbl halo">RD2</text>
+  
+  <!-- ImmGen Out -->
+  <path d="M 960 710 L 1100 710" class="w-main" />
+  <text x="1040" y="700" class="text-lbl halo">Imm</text>
+
+  <!-- Hazard Feedback -->
+  <path d="M 650 300 L 590 300" class="w-stall" /> 
+  <path d="M 590 300 L 590 20 L 310 20 L 310 360" class="w-stall" /> <!-- Freeze PC centrally in uPc top -->
+  <circle cx="590" cy="300" r="5" fill="#fbc02d" />
+  <text x="440" y="12" class="text-desc halo" fill="#fbc02d">Load-Use Stall (Freeze PC)</text>
+
+
+  <!-- ===============================
+       EXECUTE STAGE 
+       =============================== -->
+  <!-- uForwardingUnit -->
+  <rect x="1220" y="200" width="180" height="70" class="logic" />
+  <text x="1310" y="235" class="text-box halo">ForwardingUnit</text>
+  <text x="1310" y="255" class="text-file halo">ForwardingUnit.sv</text>
+
+  <!-- Branch Adder (Combo) -->
+  <polygon points="1360,310 1420,330 1420,380 1360,400" class="logic"/>
+  <text x="1395" y="365" class="text-box halo">ADD</text>
+
+  <!-- Zero? (Combo) -->
+  <rect x="1450" y="220" width="90" height="70" class="logic" />
+  <text x="1495" y="255" class="text-box halo">Eval</text>
+  <text x="1495" y="275" class="text-box halo">Branch?</text>
+
+  <!-- Muxes (Combo) -->
+  <polygon points="1300,430 1340,440 1340,520 1300,530" class="mux"/>
+  <text x="1320" y="485" class="text-box halo" font-size="18">FwdA</text>
+  
+  <polygon points="1300,530 1340,540 1340,620 1300,630" class="mux"/>
+  <text x="1320" y="585" class="text-box halo" font-size="18">FwdB</text>
+
+  <polygon points="1400,560 1440,570 1440,650 1400,660" class="mux"/>
+  <text x="1420" y="615" class="text-box halo" font-size="16">SrcB</text>
+
+  <!-- uExAlu -->
+  <path d="M 1480 460 L 1540 480 L 1540 620 L 1480 640 L 1480 560 L 1500 550 L 1480 540 Z" class="alu"/>
+  <text x="1515" y="560" class="text-box halo" font-size="28">ALU</text>
+  <text x="1515" y="585" class="text-file halo">Alu.sv</text>
+
+  <!-- EX Paths -->
+  <path d="M 1130 400 L 1680 400" class="w-main" /> <!-- PC+4 pass -->
+  <path d="M 1130 780 L 1680 780" class="w-main" /> <!-- Rd pass -->
+
+  <!-- Branch Adder Inputs -->
+  <path d="M 1130 380 L 1150 380 L 1150 330 L 1360 330" class="w-main" /> <!-- PC in -->
+  <path d="M 1130 710 L 1170 710 L 1170 370 L 1360 370" class="w-main" /> <!-- Imm in -->
+  <circle cx="1170" cy="710" r="5" fill="#333" />
+
+  <!-- Mux Inputs -->
+  <path d="M 1130 450 L 1300 450" class="w-main" /> <!-- RD1 to FwdA -->
+  <path d="M 1130 550 L 1300 550" class="w-main" /> <!-- RD2 to FwdB -->
+  <path d="M 1170 710 L 1380 710 L 1380 630 L 1400 630" class="w-main" /> <!-- Imm to SrcB -->
+
+  <!-- Fwd Mux Outputs -->
+  <!-- FwdA -->
+  <path d="M 1340 480 L 1480 480" class="w-main" /> <!-- ALU Top -->
+  <path d="M 1360 480 L 1360 240 L 1450 240" class="w-main" /> <!-- Eval -->
+  <circle cx="1360" cy="480" r="5" fill="#333" />
+  
+  <!-- FwdB -->
+  <path d="M 1340 580 L 1400 580" class="w-main" /> <!-- AluSrc Top -->
+  <path d="M 1350 580 L 1350 270 L 1450 270" class="w-main" /> <!-- Eval -->
+  <path d="M 1350 580 L 1350 670 L 1680 670" class="w-main" /> <!-- StoreData -->
+  <circle cx="1350" cy="580" r="5" fill="#333" />
+  <text x="1620" y="660" class="text-lbl halo">wExStoreData</text>
+
+  <!-- AluSrc Out -->
+  <path d="M 1440 600 L 1480 600" class="w-main" />
+  
+  <!-- ALU Out -->
+  <path d="M 1540 550 L 1680 550" class="w-main" />
+  <text x="1620" y="540" class="text-lbl halo">wExAluResult</text>
+
+  <!-- Branch Feedbacks -->
+  <path d="M 1420 350 L 1440 350 L 1440 40 L 100 40 L 100 450 L 140 450" class="w-target" /> 
+  <text x="730" y="32" class="text-desc halo" fill="#d32f2f">oPcRedirectTarget</text>
+
+  <path d="M 1540 250 L 1570 250 L 1570 80 L 160 80 L 160 430" class="w-target" /> 
+  <text x="730" y="72" class="text-desc halo" fill="#d32f2f">oPcRedirectEn</text>
+
+  <!-- Fwd Unit Control Selectors -->
+  <path d="M 1310 270 L 1310 430" stroke="#90a4ae" stroke-dasharray="4,4" stroke-width="2" fill="none" />
+  <path d="M 1320 270 L 1320 530" stroke="#90a4ae" stroke-dasharray="4,4" stroke-width="2" fill="none" />
+
+
+  <!-- ===============================
+       MEM STAGE
+       =============================== -->
+  <!-- uDataRam -->
+  <rect x="1860" y="480" width="140" height="140" class="mem" />
+  <text x="1930" y="535" class="text-box halo">DataRam</text>
+  <text x="1930" y="565" class="text-file halo">DataRam.sv</text>
+
+  <!-- Combo Mux -->
+  <polygon points="2040,500 2060,510 2060,590 2040,600" class="mux"/>
+  <text x="2050" y="555" class="text-box halo" font-size="14">WB Sel</text>
+
+  <!-- MEM Paths -->
+  <path d="M 1710 400 L 2160 400" class="w-main" /> <!-- PC+4 pass -->
+  <path d="M 1710 780 L 2160 780" class="w-main" /> <!-- Rd pass -->
+
+  <path d="M 1710 550 L 1760 550 L 1760 520 L 1860 520" class="w-main" /> <!-- AluRes to Addr -->
+  <path d="M 1760 550 L 1760 440 L 2010 440 L 2010 520 L 2040 520" class="w-main" /> <!-- AluRes Bypass over top -->
+  <circle cx="1760" cy="550" r="5" fill="#333" />
+  <text x="1920" y="430" class="text-lbl halo">Bypass AluRes</text>
+
+  <path d="M 1710 670 L 1780 670 L 1780 600 L 1860 600" class="w-main" /> <!-- StoreData to WrData bot -->
+
+  <path d="M 2000 550 L 2020 550 L 2020 570 L 2040 570" class="w-main" /> <!-- MemOut -->
+
+  <path d="M 2060 550 L 2160 550" class="w-main" /> <!-- WB Data Out -->
+  <text x="2110" y="540" class="text-lbl halo">wMemWbData</text>
+
+  <!-- EX/MEM Fwd Extrapolate -->
+  <path d="M 1730 550 L 1730 940 L 1260 940" class="w-fwd-ex" marker-end="" />
+  <circle cx="1730" cy="550" r="5" fill="#e65100" />
+  <text x="1510" y="930" class="text-desc halo" fill="#e65100">EX/MEM Forwarding</text>
+
+
+  <!-- ===============================
+       WB STAGE & FEEDBACKS
+       =============================== -->
+  <!-- uWbStage Combinational Block -->
+  <rect x="2280" y="500" width="80" height="320" class="logic" />
+  <text x="2320" y="660" class="text-box halo" font-size="20" transform="rotate(-90, 2320, 660)">WbStage.sv</text>
+
+  <!-- Inputs to uWbStage -->
+  <path d="M 2190 550 L 2280 550" class="w-main" /> <!-- iMemWbWrData -->
+  <path d="M 2190 700 L 2280 700" class="w-main" /> <!-- iMemWbRegWrite -->
+  <path d="M 2190 780 L 2280 780" class="w-main" /> <!-- iMemWbRdAddr -->
+
+  <!-- Wb Data out -->
+  <path d="M 2360 550 L 2440 550 L 2440 1150 L 860 1150 L 860 610" class="w-wb" /> <!-- WD -->
+  <text x="1550" y="1140" class="text-desc halo" fill="#2e7d32">oRegfileWrData</text>
+
+  <!-- WA / RD Address -->
+  <path d="M 2360 780 L 2420 780 L 2420 1200 L 890 1200 L 890 610" class="w-wb" /> <!-- WA -->
+  <text x="1550" y="1190" class="text-desc halo" fill="#2e7d32">oRegfileRdAddr</text>
+
+  <!-- Write Enable Extrapolated -->
+  <path d="M 2360 700 L 2400 700 L 2400 1250 L 920 1250 L 920 610" class="w-wb" /> <!-- WE -->
+  <text x="1550" y="1240" class="text-desc halo" fill="#2e7d32">oRegfileWrEn</text>
+
+  <!-- MEM/WB FWD -->
+  <path d="M 2220 550 L 2220 1020 L 1280 1020" class="w-fwd-mem" marker-end="" />
+  <circle cx="2220" cy="550" r="5" fill="#6a1b9a" />
+  <text x="1510" y="1010" class="text-desc halo" fill="#6a1b9a">MEM/WB Forwarding</text>
+
+  
+  <!-- ===============================
+       EX MUX FWD INPUTS ROUTING
+       =============================== -->
+  <!-- EX/MEM (Orange) jumps to Mid -->
+  <path d="M 1260 940 L 1260 480 L 1300 480" class="w-fwd-ex" />
+  <path d="M 1260 940 L 1260 580 L 1300 580" class="w-fwd-ex" />
+  <circle cx="1260" cy="580" r="5" fill="#e65100" />
+  
+  <!-- MEM/WB (Purple) jumps to Bot -->
+  <path d="M 1280 1020 L 1280 500 L 1300 500" class="w-fwd-mem" />
+  <path d="M 1280 1020 L 1280 600 L 1300 600" class="w-fwd-mem" />
+  <circle cx="1280" cy="600" r="5" fill="#6a1b9a" />
+
+</svg>

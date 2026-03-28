@@ -1,0 +1,10 @@
+event,count
+redirect,11
+stall,0
+memwrite,4
+regwrite,66
+illegal,0
+fwdA=1,3
+fwdA=2,7
+fwdB=1,1
+fwdB=2,3

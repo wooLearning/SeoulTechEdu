@@ -1,0 +1,18 @@
+{
+  "default": {
+    "cycles": 99,
+    "retired": 79
+  },
+  "bubble": {
+    "cycles": 160,
+    "retired": 102
+  },
+  "hazard": {
+    "cycles": 47,
+    "retired": 35
+  },
+  "test2": {
+    "cycles": 117,
+    "retired": 92
+  }
+}

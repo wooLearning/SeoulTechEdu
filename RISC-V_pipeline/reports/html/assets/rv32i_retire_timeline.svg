@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560">
+<defs>
+<linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+<stop offset="100%" stop-color="#f6f8fb" stop-opacity="0.98"/>
+</linearGradient>
+</defs>
+<rect x="0" y="0" width="1180" height="560" rx="28" fill="#eef3f8"/>
+<rect x="18" y="18" width="1144" height="524" rx="24" fill="url(#card)" stroke="#dfe6ee"/>
+<text x="40" y="58" font-family="Segoe UI, Pretendard, sans-serif" font-size="26" font-weight="700" fill="#191f28">Retire Timeline</text>
+<rect x="120" y="110" width="980" height="360" rx="14" fill="#ffffff" stroke="#dfe6ee"/>
+<line x1="120" y1="110" x2="1100" y2="110" stroke="#edf2f7"/>
+<text x="102" y="115" text-anchor="end" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">106</text>
+<line x1="120" y1="182" x2="1100" y2="182" stroke="#edf2f7"/>
+<text x="102" y="187" text-anchor="end" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">85</text>
+<line x1="120" y1="254" x2="1100" y2="254" stroke="#edf2f7"/>
+<text x="102" y="259" text-anchor="end" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">65</text>
+<line x1="120" y1="326" x2="1100" y2="326" stroke="#edf2f7"/>
+<text x="102" y="331" text-anchor="end" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">44</text>
+<line x1="120" y1="398" x2="1100" y2="398" stroke="#edf2f7"/>
+<text x="102" y="403" text-anchor="end" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">24</text>
+<line x1="120" y1="470" x2="1100" y2="470" stroke="#edf2f7"/>
+<text x="102" y="475" text-anchor="end" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">4</text>
+<line x1="120" y1="110" x2="120" y2="470" stroke="#f4f6f8"/>
+<text x="120" y="498" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">1</text>
+<line x1="356" y1="110" x2="356" y2="470" stroke="#f4f6f8"/>
+<text x="356" y="498" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">21</text>
+<line x1="604" y1="110" x2="604" y2="470" stroke="#f4f6f8"/>
+<text x="604" y="498" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">42</text>
+<line x1="852" y1="110" x2="852" y2="470" stroke="#f4f6f8"/>
+<text x="852" y="498" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">63</text>
+<line x1="1100" y1="110" x2="1100" y2="470" stroke="#f4f6f8"/>
+<text x="1100" y="498" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="14" fill="#6b7684">84</text>
+<polyline fill="none" stroke="#191f28" stroke-width="3" points="120.0,470.0 131.8,466.5 143.6,462.9 155.4,459.4 167.2,455.9 179.0,452.4 190.8,448.8 202.7,445.3 214.5,441.8 226.3,438.2 238.1,434.7 249.9,431.2 261.7,427.6 273.5,424.1 285.3,420.6 297.1,417.1 308.9,413.5 320.7,410.0 332.5,406.5 344.3,402.9 356.1,399.4 368.0,395.9 379.8,392.4 391.6,388.8 403.4,385.3 415.2,381.8 427.0,378.2 438.8,374.7 450.6,371.2 462.4,367.6 474.2,364.1 486.0,353.5 497.8,350.0 509.6,346.5 521.4,342.9 533.3,332.4 545.1,328.8 556.9,325.3 568.7,321.8 580.5,311.2 592.3,307.6 604.1,304.1 615.9,300.6 627.7,290.0 639.5,286.5 651.3,282.9 663.1,279.4 674.9,268.8 686.7,265.3 698.6,261.8 710.4,258.2 722.2,247.6 734.0,244.1 745.8,240.6 757.6,237.1 769.4,233.5 781.2,222.9 793.0,219.4 804.8,215.9 816.6,212.4 828.4,208.8 840.2,205.3 852.0,201.8 863.9,198.2 875.7,194.7 887.5,191.2 899.3,187.6 911.1,184.1 922.9,180.6 934.7,177.1 946.5,173.5 958.3,170.0 970.1,166.5 981.9,162.9 993.7,159.4 1005.5,148.8 1017.3,145.3 1029.2,141.8 1041.0,138.2 1052.8,127.6 1064.6,124.1 1076.4,120.6 1088.2,117.1 1100.0,113.5"/>
+<circle cx="120.0" cy="470.0" r="4.5" fill="#191f28"/>
+<circle cx="214.5" cy="441.8" r="4.5" fill="#191f28"/>
+<circle cx="308.9" cy="413.5" r="4.5" fill="#191f28"/>
+<circle cx="403.4" cy="385.3" r="4.5" fill="#191f28"/>
+<circle cx="497.8" cy="350.0" r="4.5" fill="#191f28"/>
+<circle cx="592.3" cy="307.6" r="4.5" fill="#191f28"/>
+<circle cx="686.7" cy="265.3" r="4.5" fill="#191f28"/>
+<circle cx="781.2" cy="222.9" r="4.5" fill="#191f28"/>
+<circle cx="875.7" cy="194.7" r="4.5" fill="#191f28"/>
+<circle cx="970.1" cy="166.5" r="4.5" fill="#191f28"/>
+<circle cx="1064.6" cy="124.1" r="4.5" fill="#191f28"/>
+<polyline fill="none" stroke="#3182f6" stroke-width="3" points="120.0,466.5 131.8,462.9 143.6,459.4 155.4,455.9 167.2,452.4 179.0,448.8 190.8,445.3 202.7,441.8 214.5,438.2 226.3,434.7 238.1,431.2 249.9,427.6 261.7,424.1 273.5,420.6 285.3,417.1 297.1,413.5 308.9,410.0 320.7,406.5 332.5,402.9 344.3,399.4 356.1,395.9 368.0,392.4 379.8,388.8 391.6,385.3 403.4,381.8 415.2,378.2 427.0,374.7 438.8,371.2 450.6,367.6 462.4,364.1 474.2,360.6 486.0,350.0 497.8,346.5 509.6,342.9 521.4,339.4 533.3,328.8 545.1,325.3 556.9,321.8 568.7,318.2 580.5,307.6 592.3,304.1 604.1,300.6 615.9,297.1 627.7,286.5 639.5,282.9 651.3,279.4 663.1,275.9 674.9,265.3 686.7,261.8 698.6,258.2 710.4,254.7 722.2,244.1 734.0,240.6 745.8,237.1 757.6,233.5 769.4,230.0 781.2,219.4 793.0,215.9 804.8,212.4 816.6,208.8 828.4,205.3 840.2,201.8 852.0,198.2 863.9,194.7 875.7,191.2 887.5,187.6 899.3,184.1 911.1,180.6 922.9,177.1 934.7,173.5 946.5,170.0 958.3,166.5 970.1,162.9 981.9,159.4 993.7,155.9 1005.5,145.3 1017.3,141.8 1029.2,138.2 1041.0,134.7 1052.8,124.1 1064.6,120.6 1076.4,117.1 1088.2,113.5 1100.0,110.0"/>
+<circle cx="120.0" cy="466.5" r="4.5" fill="#3182f6"/>
+<circle cx="214.5" cy="438.2" r="4.5" fill="#3182f6"/>
+<circle cx="308.9" cy="410.0" r="4.5" fill="#3182f6"/>
+<circle cx="403.4" cy="381.8" r="4.5" fill="#3182f6"/>
+<circle cx="497.8" cy="346.5" r="4.5" fill="#3182f6"/>
+<circle cx="592.3" cy="304.1" r="4.5" fill="#3182f6"/>
+<circle cx="686.7" cy="261.8" r="4.5" fill="#3182f6"/>
+<circle cx="781.2" cy="219.4" r="4.5" fill="#3182f6"/>
+<circle cx="875.7" cy="191.2" r="4.5" fill="#3182f6"/>
+<circle cx="970.1" cy="162.9" r="4.5" fill="#3182f6"/>
+<circle cx="1064.6" cy="120.6" r="4.5" fill="#3182f6"/>
+<line x1="160" y1="500" x2="202" y2="500" stroke="#191f28" stroke-width="4"/>
+<circle cx="181" cy="500" r="5" fill="#191f28"/>
+<text x="218" y="506" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">Pipeline TB</text>
+<line x1="440" y1="500" x2="482" y2="500" stroke="#3182f6" stroke-width="4"/>
+<circle cx="461" cy="500" r="5" fill="#3182f6"/>
+<text x="498" y="506" font-family="Segoe UI, Pretendard, sans-serif" font-size="18" fill="#191f28">Top_tb Class Env</text>
+<text x="610.0" y="526" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="16" fill="#6b7684">Retire index</text>
+<text x="36" y="290.0" transform="rotate(-90 36 290.0)" text-anchor="middle" font-family="Segoe UI, Pretendard, sans-serif" font-size="16" fill="#6b7684">Cycle</text>
+</svg>

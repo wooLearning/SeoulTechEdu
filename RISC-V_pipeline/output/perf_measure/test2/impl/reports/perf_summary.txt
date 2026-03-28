@@ -1,0 +1,6 @@
+mode=impl
+rom_variant=test2
+clk_period_ns=10.000
+slack_ns=0.010
+delay_ns=9.990
+fmax_mhz=100.100
