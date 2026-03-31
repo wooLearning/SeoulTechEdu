@@ -255,7 +255,7 @@ short bit, long bit, short bit, long bit, ...
 파형 예시는 아래 자료를 같이 보면 가장 직관적입니다.
 
 - [UART RX jitter 파형 설명](./uart_rx_jitter_waveform_explanation_ko.md)
-- ![UART RX Jitter Waveform](./report_assets/uart_rx_jitter_waveform.svg)
+- ![UART RX Jitter Waveform](./report_assets/uart_rx_jitter_waveform.png)
 
 ### 5.1 숫자 예시
 

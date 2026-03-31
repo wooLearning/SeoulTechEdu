@@ -8,11 +8,11 @@
 
 ## 1. Program Flow
 
-![Program Flow](../visuals/figures/test_peri_repeat_program_flow.svg)
+![Program Flow](../visuals/figures/test_peri_repeat_program_flow.png)
 
 ## 2. APB Access Sequence
 
-![APB Access Sequence](../visuals/figures/test_peri_repeat_apb_sequence.svg)
+![APB Access Sequence](../visuals/figures/test_peri_repeat_apb_sequence.png)
 
 ## 3. 요약
 

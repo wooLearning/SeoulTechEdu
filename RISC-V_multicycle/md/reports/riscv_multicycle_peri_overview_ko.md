@@ -7,7 +7,7 @@
 
 ## 2. 시스템 구성
 
-<img src="../visuals/diagrams/top_module_overview.svg" alt="Top Module Overview" width="760">
+<img src="../visuals/diagrams/top_module_overview.png" alt="Top Module Overview" width="760">
 
 상위 구조는 아래와 같이 볼 수 있습니다.
 

@@ -1,6 +1,6 @@
 # UART RX Jitter 파형 설명
 
-![UART RX Jitter Waveform](./report_assets/uart_rx_jitter_waveform.svg)
+![UART RX Jitter Waveform](./report_assets/uart_rx_jitter_waveform.png)
 
 ## 핵심 의미
 
