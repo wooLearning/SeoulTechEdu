@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="760" viewBox="0 0 1500 760">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#111111"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2.2; rx: 16; ry: 16; }
+      .label { fill: #111111; font-family: "Segoe UI", "Malgun Gothic", sans-serif; font-size: 22px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+      .small { fill: #111111; font-family: "Segoe UI", "Malgun Gothic", sans-serif; font-size: 18px; font-weight: 500; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { fill: none; stroke: #111111; stroke-width: 2.6; marker-end: url(#arrow); stroke-linecap: round; stroke-linejoin: round; }
+      .title { fill: #111111; font-family: "Segoe UI", "Malgun Gothic", sans-serif; font-size: 32px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1500" height="760"/>
+  <text class="title" x="40" y="52">test_peri_repeat.c Program Flow</text>
+
+  <rect class="box" x="40" y="110" width="180" height="82"/>
+  <text class="label" x="130" y="151">main() start</text>
+
+  <rect class="box" x="260" y="110" width="220" height="82"/>
+  <text class="label" x="370" y="142">MMIO init</text>
+  <text class="small" x="370" y="170">GPO / GPI / GPIO / FND / UART</text>
+
+  <rect class="box" x="520" y="110" width="200" height="82"/>
+  <text class="label" x="620" y="142">Boot banner</text>
+  <text class="small" x="620" y="170">UART text output</text>
+
+  <rect class="box" x="760" y="110" width="210" height="82"/>
+  <text class="label" x="865" y="142">Register dump</text>
+  <text class="small" x="865" y="170">UART_ID / GPI_CTL / ...</text>
+
+  <rect class="box" x="1010" y="110" width="190" height="82"/>
+  <text class="label" x="1105" y="151">while(1) enter</text>
+
+  <rect class="box" x="1240" y="110" width="220" height="82"/>
+  <text class="label" x="1350" y="142">Clear UART errors</text>
+  <text class="small" x="1350" y="170">if sticky flags are set</text>
+
+  <rect class="box" x="118" y="360" width="190" height="82"/>
+  <text class="label" x="213" y="392">GPI_IDATA read</text>
+  <text class="small" x="213" y="420">sample switches</text>
+
+  <rect class="box" x="348" y="360" width="220" height="82"/>
+  <text class="label" x="458" y="392">GPO_ODATA write</text>
+  <text class="small" x="458" y="420">iter + gpi + fnd state</text>
+
+  <rect class="box" x="608" y="360" width="220" height="82"/>
+  <text class="label" x="718" y="392">GPIO write pair</text>
+  <text class="small" x="718" y="420">GPIO_CTL + GPIO_ODATA</text>
+
+  <rect class="box" x="868" y="360" width="200" height="82"/>
+  <text class="label" x="968" y="392">GPIO_IDATA read</text>
+  <text class="small" x="968" y="420">observe pin state</text>
+
+  <rect class="box" x="1108" y="360" width="180" height="82"/>
+  <text class="label" x="1198" y="392">FND_RUN write</text>
+  <text class="small" x="1198" y="420">toggle run / stop</text>
+
+  <rect class="box" x="1328" y="360" width="132" height="82"/>
+  <text class="label" x="1394" y="392">BAUDCFG</text>
+  <text class="small" x="1394" y="420">write + read</text>
+
+  <rect class="box" x="170" y="570" width="220" height="82"/>
+  <text class="label" x="280" y="602">Status line log</text>
+  <text class="small" x="280" y="630">ITER / GPI / GPO / GPIO / FND</text>
+
+  <rect class="box" x="450" y="570" width="220" height="82"/>
+  <text class="label" x="560" y="602">Optional RX echo</text>
+  <text class="small" x="560" y="630">if RX byte exists</text>
+
+  <rect class="box" x="730" y="570" width="220" height="82"/>
+  <text class="label" x="840" y="602">Heartbeat log</text>
+  <text class="small" x="840" y="630">every selected iteration</text>
+
+  <rect class="box" x="1010" y="570" width="240" height="82"/>
+  <text class="label" x="1130" y="602">Pattern update</text>
+  <text class="small" x="1130" y="630">shift gpo_pat / gpio_pat, iter++</text>
+
+  <line class="arrow" x1="220" y1="151" x2="260" y2="151"/>
+  <line class="arrow" x1="480" y1="151" x2="520" y2="151"/>
+  <line class="arrow" x1="720" y1="151" x2="760" y2="151"/>
+  <line class="arrow" x1="970" y1="151" x2="1010" y2="151"/>
+  <line class="arrow" x1="1200" y1="151" x2="1240" y2="151"/>
+
+  <path class="arrow" d="M 1350 192 L 1350 250 L 213 250 L 213 360"/>
+  <line class="arrow" x1="308" y1="401" x2="348" y2="401"/>
+  <line class="arrow" x1="568" y1="401" x2="608" y2="401"/>
+  <line class="arrow" x1="828" y1="401" x2="868" y2="401"/>
+  <line class="arrow" x1="1068" y1="401" x2="1108" y2="401"/>
+  <line class="arrow" x1="1288" y1="401" x2="1328" y2="401"/>
+
+  <path class="arrow" d="M 1394 442 L 1394 500 L 280 500 L 280 570"/>
+  <line class="arrow" x1="390" y1="611" x2="450" y2="611"/>
+  <line class="arrow" x1="670" y1="611" x2="730" y2="611"/>
+  <line class="arrow" x1="950" y1="611" x2="1010" y2="611"/>
+  <path class="arrow" d="M 1130 570 L 1130 530 L 1105 530 L 1105 192"/>
+</svg>

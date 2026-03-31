@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="980" viewBox="0 0 900 980">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .line { stroke: #7a7a7a; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .box { fill: #ffffff; stroke: #7a7a7a; stroke-width: 3; }
+      .text { font: 24px "Noto Sans KR", Arial, sans-serif; fill: #4a4a4a; text-anchor: middle; dominant-baseline: middle; }
+      .small { font: 18px "Noto Sans KR", Arial, sans-serif; fill: #6a6a6a; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#7a7a7a"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="980" class="bg"/>
+
+  <circle cx="450" cy="64" r="24" class="box"/>
+  <path d="M450 88 L450 132" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="315" y="132" width="270" height="70" rx="16" ry="16" class="box"/>
+  <text x="450" y="167" class="text">while(1)</text>
+
+  <path d="M450 202 L450 246" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="205" y="246" width="490" height="86" rx="16" ry="16" class="box"/>
+  <text x="450" y="279" class="text">스위치 입력 읽기</text>
+  <text x="450" y="309" class="small">GPI_IDATA에서 baud / source / run / pattern 해석</text>
+
+  <path d="M450 332 L450 376" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="255" y="376" width="390" height="70" rx="16" ry="16" class="box"/>
+  <text x="450" y="411" class="text">UART 에러 정리</text>
+
+  <path d="M450 446 L450 490" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="205" y="490" width="490" height="86" rx="16" ry="16" class="box"/>
+  <text x="450" y="523" class="text">설정 반영</text>
+  <text x="450" y="553" class="small">UART_BAUDCFG, FND_RUN, GPO_ODATA, GPIO_ODATA 갱신</text>
+
+  <path d="M450 576 L450 620" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="205" y="620" width="490" height="86" rx="16" ry="16" class="box"/>
+  <text x="450" y="653" class="text">UART 처리</text>
+  <text x="450" y="683" class="small">baud 변경 로그, RX echo, heartbeat 로그 출력</text>
+
+  <path d="M450 706 L450 750" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="255" y="750" width="390" height="70" rx="16" ry="16" class="box"/>
+  <text x="450" y="785" class="text">delay + blink 증가</text>
+
+  <path d="M255 785 L120 785 L120 167 L315 167" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="155" y="886" width="590" height="16" class="box"/>
+  <text x="450" y="942" class="small">반복되는 핵심: 입력 읽기 → 설정 반영 → UART 로그/echo → delay</text>
+</svg>

@@ -1,0 +1,61 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Mar 31 03:16:09 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_Top_module_peri_repeat_log_verify/xsim_script.tcl
+# xsim {tb_Top_module_peri_repeat_log_verify} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+[195000][TOP_TB] Reset released
+[1695000][PERI_MMIO] pc=0000053c WR addr=20000000 wdata=0000ffff rdata=00000000 err=0
+[1835000][PERI_MMIO] pc=00000544 WR addr=20000004 wdata=00000000 rdata=00000000 err=0
+[2035000][PERI_MMIO] pc=00000550 WR addr=20001000 wdata=000007ff rdata=00000000 err=0
+[2235000][PERI_MMIO] pc=0000055c WR addr=20002000 wdata=0000000f rdata=00000000 err=0
+[2375000][PERI_MMIO] pc=00000564 WR addr=20002004 wdata=00000000 rdata=00000000 err=0
+[2575000][PERI_MMIO] pc=00000570 WR addr=20003000 wdata=00000001 rdata=00000000 err=0
+[2775000][PERI_MMIO] pc=0000057c WR addr=20004010 wdata=00000003 rdata=00000000 err=0
+[2915000][PERI_MMIO] pc=00000584 WR addr=20004010 wdata=00000000 rdata=00000000 err=0
+[3175000][PERI_MMIO] pc=00000594 WR addr=20004014 wdata=00000015 rdata=00000505 err=0
+[1740455000][TOP_UART] CPU ROM peripheral repeat test boot
+[1740785000][PERI_MMIO] pc=000005b4 RD addr=20004000 wdata=00000000 rdata=55415254 err=0
+[3476505000][TOP_UART] UART_ID=0x55415254
+[3476785000][PERI_MMIO] pc=000005c4 RD addr=20001000 wdata=00000000 rdata=000007ff err=0
+[5212595000][TOP_UART] GPI_CTL=0x000007FF
+[5212875000][PERI_MMIO] pc=000005d4 RD addr=20000000 wdata=00000000 rdata=0000ffff err=0
+[6948775000][TOP_UART] GPO_CTL=0x0000FFFF
+[6949055000][PERI_MMIO] pc=000005e4 RD addr=20002000 wdata=00000000 rdata=0000000f err=0
+[8771735000][TOP_UART] GPIO_CTL=0x0000000F
+[8772015000][PERI_MMIO] pc=000005f4 RD addr=20003000 wdata=00000000 rdata=00000001 err=0
+[10507735000][TOP_UART] FND_RUN=0x00000001
+[10508015000][PERI_MMIO] pc=00000604 RD addr=20004014 wdata=00000000 rdata=00000515 err=0
+[14674355000][TOP_UART] BAUDCFG src=A req=0x05 act=0x05 rate=115200bps
+[14678455000][PERI_MMIO] pc=00000700 RD addr=20001004 wdata=00000000 rdata=00000275 err=0
+[14682595000][PERI_MMIO] pc=0000072c WR addr=20000004 wdata=00008275 rdata=00000000 err=0
+[14686625000][PERI_MMIO] pc=00000750 WR addr=20002000 wdata=0000000f rdata=0000000f err=0
+[14686715000][PERI_MMIO] pc=00000754 WR addr=20002004 wdata=00000001 rdata=00000000 err=0
+[14690695000][PERI_MMIO] pc=00000774 RD addr=20002008 wdata=00000000 rdata=0000zzz0 err=0
+[14694585000][PERI_MMIO] pc=00000790 WR addr=20003000 wdata=00000000 rdata=00000001 err=0
+[14698955000][PERI_MMIO] pc=000007c8 WR addr=20004014 wdata=00000018 rdata=00000515 err=0
+[14699045000][PERI_MMIO] pc=000007cc RD addr=20004014 wdata=00000000 rdata=00000818 err=0
+[15032745000][PERI_MMIO] pc=00000890 RD addr=20000004 wdata=00000000 rdata=00008275 err=0
+[15444855000][TOP_UART] ITER 0x00 GPI=0x00000275 GPO=0x00008275 GPIO_IDATA=0x0000 FND=0
+[15444855000][TOP_TB] Peripheral repeat loop observed successfully
+[15444855000][TOP_TB] first_pc GPI_IDATA    = 00000700
+[15444855000][TOP_TB] first_pc GPO_ODATA    = 00000544
+[15444855000][TOP_TB] first_pc GPIO_CTL     = 0000055c
+[15444855000][TOP_TB] first_pc GPIO_ODATA   = 00000564
+[15444855000][TOP_TB] first_pc GPIO_IDATA   = 00000774
+[15444855000][TOP_TB] first_pc FND_RUN      = 00000570
+[15444855000][TOP_TB] first_pc UART_BAUDCFG_WR = 00000594
+[15444855000][TOP_TB] first_pc UART_BAUDCFG_RD = 00000604
+[15444855000][TOP_TB] first_pc UART_TXDATA  = 0000003c
+[15444855000][TOP_TB] uart_line_count=8 iter_line_count=1 gpo=8275 gpio=xxxx fnd_an=1101 seg=1000000
+$finish called at time : 15444855 ns : File "D:/risc_team/FPGA_Auto_Project/Project/Test/tb/tb_Top_module_peri_repeat_log.sv" Line 327
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 202.875 ; gain = 0.016
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Mar 31 03:16:17 2026...

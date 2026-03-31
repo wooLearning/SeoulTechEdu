@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #1f2937; }
+    .subtitle { font: 600 20px Arial, sans-serif; fill: #374151; }
+    .label { font: 600 18px Arial, sans-serif; fill: #111827; }
+    .text { font: 16px Arial, sans-serif; fill: #374151; }
+    .small { font: 14px Arial, sans-serif; fill: #4b5563; }
+    .tick { stroke: #9ca3af; stroke-width: 1; stroke-dasharray: 4 4; }
+    .axis { stroke: #6b7280; stroke-width: 1.5; }
+    .ideal { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+    .jitter { fill: none; stroke: #dc2626; stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+    .highlightShort { fill: rgba(37,99,235,0.08); stroke: #2563eb; stroke-width: 1.2; }
+    .highlightLong { fill: rgba(220,38,38,0.08); stroke: #dc2626; stroke-width: 1.2; }
+    .legendBox { fill: #ffffff; stroke: #d1d5db; stroke-width: 1.2; }
+  </style>
+
+  <rect x="0" y="0" width="1200" height="760" fill="#ffffff"/>
+  <text x="40" y="50" class="title">UART RX Jitter Waveform Example</text>
+  <text x="40" y="82" class="subtitle">Normal RX timing vs alternating jitter timing on i_uart_rx</text>
+
+  <text x="40" y="140" class="label">1. Ideal RX waveform (all bit widths = nominal T)</text>
+  <line x1="120" y1="320" x2="1120" y2="320" class="axis"/>
+  <line x1="120" y1="180" x2="120" y2="340" class="axis"/>
+  <text x="70" y="200" class="text">HIGH</text>
+  <text x="78" y="318" class="text">LOW</text>
+
+  <!-- Ideal ticks -->
+  <line x1="180" y1="165" x2="180" y2="345" class="tick"/>
+  <line x1="260" y1="165" x2="260" y2="345" class="tick"/>
+  <line x1="340" y1="165" x2="340" y2="345" class="tick"/>
+  <line x1="420" y1="165" x2="420" y2="345" class="tick"/>
+  <line x1="500" y1="165" x2="500" y2="345" class="tick"/>
+  <line x1="580" y1="165" x2="580" y2="345" class="tick"/>
+  <line x1="660" y1="165" x2="660" y2="345" class="tick"/>
+  <line x1="740" y1="165" x2="740" y2="345" class="tick"/>
+  <line x1="820" y1="165" x2="820" y2="345" class="tick"/>
+  <line x1="900" y1="165" x2="900" y2="345" class="tick"/>
+  <line x1="980" y1="165" x2="980" y2="345" class="tick"/>
+
+  <!-- Ideal waveform: idle, start, 8 data bits of 0xA6 (LSB first 0,1,1,0,0,1,0,1), stop -->
+  <path class="ideal" d="M 120 200 L 180 200 L 180 320 L 260 320 L 260 320 L 340 320 L 340 200 L 420 200 L 420 200 L 500 200 L 500 320 L 580 320 L 580 320 L 660 320 L 660 200 L 740 200 L 740 320 L 820 320 L 820 200 L 900 200 L 900 200 L 980 200 L 980 200 L 1080 200"/>
+
+  <text x="135" y="155" class="small">Idle</text>
+  <text x="197" y="155" class="small">Start</text>
+  <text x="284" y="155" class="small">D0</text>
+  <text x="364" y="155" class="small">D1</text>
+  <text x="444" y="155" class="small">D2</text>
+  <text x="524" y="155" class="small">D3</text>
+  <text x="604" y="155" class="small">D4</text>
+  <text x="684" y="155" class="small">D5</text>
+  <text x="764" y="155" class="small">D6</text>
+  <text x="844" y="155" class="small">D7</text>
+  <text x="930" y="155" class="small">Stop</text>
+  <text x="270" y="365" class="text">All edges occur at T, 2T, 3T, ...</text>
+
+  <text x="40" y="440" class="label">2. Jittered RX waveform (alternating T - j, T + j, T - j, T + j)</text>
+  <line x1="120" y1="640" x2="1120" y2="640" class="axis"/>
+  <line x1="120" y1="500" x2="120" y2="660" class="axis"/>
+  <text x="70" y="520" class="text">HIGH</text>
+  <text x="78" y="638" class="text">LOW</text>
+
+  <!-- Reference nominal ticks -->
+  <line x1="180" y1="485" x2="180" y2="665" class="tick"/>
+  <line x1="260" y1="485" x2="260" y2="665" class="tick"/>
+  <line x1="340" y1="485" x2="340" y2="665" class="tick"/>
+  <line x1="420" y1="485" x2="420" y2="665" class="tick"/>
+  <line x1="500" y1="485" x2="500" y2="665" class="tick"/>
+  <line x1="580" y1="485" x2="580" y2="665" class="tick"/>
+  <line x1="660" y1="485" x2="660" y2="665" class="tick"/>
+  <line x1="740" y1="485" x2="740" y2="665" class="tick"/>
+  <line x1="820" y1="485" x2="820" y2="665" class="tick"/>
+  <line x1="900" y1="485" x2="900" y2="665" class="tick"/>
+  <line x1="980" y1="485" x2="980" y2="665" class="tick"/>
+
+  <!-- Highlight short/long intervals -->
+  <rect x="180" y="505" width="60" height="120" class="highlightShort"/>
+  <rect x="240" y="505" width="100" height="120" class="highlightLong"/>
+  <rect x="340" y="505" width="60" height="120" class="highlightShort"/>
+  <rect x="400" y="505" width="100" height="120" class="highlightLong"/>
+
+  <!-- Jittered waveform with alternating widths -->
+  <path class="jitter" d="M 120 520 L 180 520 L 180 640 L 240 640 L 240 640 L 340 640 L 340 520 L 400 520 L 400 520 L 500 520 L 500 640 L 560 640 L 560 640 L 660 640 L 660 520 L 720 520 L 720 640 L 820 640 L 820 520 L 880 520 L 880 520 L 980 520 L 980 520 L 1080 520"/>
+
+  <text x="186" y="690" class="small">T - j</text>
+  <text x="274" y="690" class="small">T + j</text>
+  <text x="347" y="690" class="small">T - j</text>
+  <text x="435" y="690" class="small">T + j</text>
+  <text x="565" y="690" class="small">...</text>
+
+  <text x="245" y="470" class="text">Short bit: edge arrives earlier</text>
+  <text x="420" y="470" class="text">Long bit: edge arrives later</text>
+  <text x="210" y="715" class="text">TB changes only the RX line edge timing. DUT pclk / APB timing stay unchanged.</text>
+
+  <rect x="820" y="40" width="320" height="108" rx="10" ry="10" class="legendBox"/>
+  <line x1="845" y1="78" x2="900" y2="78" class="ideal"/>
+  <text x="915" y="84" class="text">Ideal UART RX waveform</text>
+  <line x1="845" y1="116" x2="900" y2="116" class="jitter"/>
+  <text x="915" y="122" class="text">Jittered UART RX waveform</text>
+</svg>

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RV32I Memory and Register Map</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --bg2: #ece5d8;
+      --panel: rgba(255, 251, 245, 0.92);
+      --panel-strong: #fffdf9;
+      --ink: #18202b;
+      --muted: #586273;
+      --line: #d8ceb9;
+      --line-strong: #c6b79a;
+      --accent: #145f74;
+      --accent-soft: #dff0f4;
+      --olive: #5d7340;
+      --olive-soft: #e8efdb;
+      --amber: #9a5b1a;
+      --amber-soft: #f9ecd8;
+      --rose: #87414f;
+      --rose-soft: #f8e4ea;
+      --slate: #334155;
+      --shadow: 0 22px 60px rgba(26, 23, 17, 0.10);
+      --mono: "Consolas", "SFMono-Regular", "Liberation Mono", monospace;
+      --sans: "Segoe UI", "Noto Sans", Arial, sans-serif;
+      --serif: "Georgia", "Times New Roman", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(20, 95, 116, 0.14), transparent 28rem),
+        radial-gradient(circle at top right, rgba(93, 115, 64, 0.10), transparent 22rem),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    }
+
+    main {
+      width: min(1240px, calc(100vw - 36px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+
+    section {
+      margin-top: 22px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      letter-spacing: -0.05em;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(20, 95, 116, 0.96), rgba(31, 49, 77, 0.94)),
+        linear-gradient(180deg, #1f3554, #163046);
+      color: #f9fbfd;
+      border-radius: 30px;
+      padding: 34px 34px 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -8% -38% auto;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.20), rgba(255,255,255,0.02) 65%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero p {
+      color: rgba(245, 249, 252, 0.88);
+      max-width: 760px;
+      margin-top: 14px;
+      font-size: 1.02rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .hero .pill {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.10);
+      color: #fff;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid rgba(198, 183, 154, 0.68);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .subtle {
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stat {
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+      padding: 18px;
+      min-height: 130px;
+    }
+
+    .stat-label {
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .stat-value {
+      margin-top: 10px;
+      font-family: var(--mono);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .stat-note {
+      margin-top: 10px;
+      font-size: 0.93rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .legend .pill {
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+
+    .map-stack {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .map-row {
+      display: grid;
+      grid-template-columns: 190px 1fr 140px;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.72);
+    }
+
+    .map-row strong {
+      font-size: 1rem;
+    }
+
+    .map-tag {
+      justify-self: end;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    .tag-rom {
+      background: var(--olive-soft);
+      color: var(--olive);
+    }
+
+    .tag-ram {
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    .tag-mmio {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .tag-reserved {
+      background: #eceff4;
+      color: var(--slate);
+    }
+
+    .lane {
+      height: 18px;
+      width: 100%;
+      border-radius: 999px;
+      overflow: hidden;
+      display: flex;
+      border: 1px solid var(--line);
+      background: #f2ede4;
+      margin-top: 16px;
+    }
+
+    .lane > div {
+      height: 100%;
+    }
+
+    .lane-rom {
+      width: 24%;
+      background: linear-gradient(90deg, #7fa060, #5d7340);
+    }
+
+    .lane-gap1 {
+      width: 10%;
+      background: #ece5d8;
+    }
+
+    .lane-ram {
+      width: 24%;
+      background: linear-gradient(90deg, #cf8f3d, #9a5b1a);
+    }
+
+    .lane-gap2 {
+      width: 10%;
+      background: #ece5d8;
+    }
+
+    .lane-mmio {
+      width: 32%;
+      background: linear-gradient(90deg, #2f7990, #145f74);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .device-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 188px;
+      border-radius: 22px;
+      padding: 18px;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .device-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -16% -20% auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.14);
+    }
+
+    .device-card h3,
+    .device-card p {
+      position: relative;
+    }
+
+    .device-card p {
+      color: rgba(255,255,255,0.86);
+      font-size: 0.94rem;
+      margin-top: 10px;
+    }
+
+    .device-card .mono {
+      display: block;
+      margin-top: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .gpo { background: linear-gradient(135deg, #83512d, #a66d36); }
+    .gpi { background: linear-gradient(135deg, #456c3e, #68895f); }
+    .gpio { background: linear-gradient(135deg, #505981, #7078a6); }
+    .fnd { background: linear-gradient(135deg, #8d3c58, #b14c73); }
+    .uart { background: linear-gradient(135deg, #125970, #2686a5); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--panel-strong);
+    }
+
+    th, td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #efe6d7;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #3f4a5a;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .group {
+      display: grid;
+      gap: 18px;
+    }
+
+    .group-card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px;
+      background: rgba(255,255,255,0.68);
+    }
+
+    .group-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .group-head p {
+      font-size: 0.92rem;
+    }
+
+    .bit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .bit-card {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 18px;
+      background: rgba(255,255,255,0.70);
+    }
+
+    .bit-card .pill {
+      background: var(--accent-soft);
+      border: 1px solid #c6e3eb;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .mono {
+      font-family: var(--mono);
+    }
+
+    .note {
+      border: 1px solid #e4d4ba;
+      background: linear-gradient(180deg, #fff8ed, #f8efe1);
+      border-radius: 20px;
+      padding: 16px 18px;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .foot {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    @media (max-width: 1100px) {
+      .stats,
+      .cards,
+      .bit-grid,
+      .foot {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: min(100vw - 20px, 100%);
+      }
+
+      .stats,
+      .cards,
+      .bit-grid,
+      .foot {
+        grid-template-columns: 1fr;
+      }
+
+      .map-row {
+        grid-template-columns: 1fr;
+      }
+
+      .map-tag {
+        justify-self: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>RV32I Memory Map and Register Map</h1>
+      <p>
+        Presentation-oriented summary of the current address space for
+        <span class="mono">RISC-V_Multi_Cycle</span>. The address decode follows
+        <span class="mono">Top_Memory_CNTL.sv</span> and <span class="mono">Top_APB.sv</span>,
+        while register names and software-visible meanings follow
+        <span class="mono">test_source/mmio.h</span>.
+      </p>
+      <div class="hero-meta">
+        <span class="pill">ROM: 4 KB</span>
+        <span class="pill">RAM: 4 KB</span>
+        <span class="pill">MMIO: 20 KB window</span>
+        <span class="pill">5 active peripherals</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Address Space Snapshot</h2>
+      <p class="subtle">
+        The CPU sees three active regions: instruction ROM, data RAM, and an APB-backed MMIO window.
+      </p>
+      <div class="lane" aria-hidden="true">
+        <div class="lane-rom"></div>
+        <div class="lane-gap1"></div>
+        <div class="lane-ram"></div>
+        <div class="lane-gap2"></div>
+        <div class="lane-mmio"></div>
+      </div>
+      <div class="legend">
+        <span class="pill">ROM region</span>
+        <span class="pill">gap / unused space</span>
+        <span class="pill">RAM region</span>
+        <span class="pill">MMIO region</span>
+      </div>
+      <div class="stats" style="margin-top:18px;">
+        <div class="stat">
+          <div class="stat-label">Instruction ROM</div>
+          <div class="stat-value mono">0x0000_0000 - 0x0000_0FFF</div>
+          <div class="stat-note">Read-only boot image loaded from <span class="mono">program.mem</span>.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Data RAM</div>
+          <div class="stat-value mono">0x1000_0000 - 0x1000_0FFF</div>
+          <div class="stat-note">Read/write data memory for firmware variables and debug words.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">MMIO Window</div>
+          <div class="stat-value mono">0x2000_0000 - 0x2000_4FFF</div>
+          <div class="stat-note">Decoded in <span class="mono">Top_Memory_CNTL</span> and forwarded to APB.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Decode Rule</div>
+          <div class="stat-value mono">4 KB page stride</div>
+          <div class="stat-note">Each peripheral occupies one 4 KB page inside the MMIO window.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="grid-2">
+        <div>
+          <h2>Memory Map</h2>
+          <p class="subtle">Top-level routing view from CPU request address to target region.</p>
+          <div class="map-stack">
+            <div class="map-row">
+              <div>
+                <strong>Boot ROM</strong>
+                <div class="mono">0x0000_0000 - 0x0000_0FFF</div>
+              </div>
+              <p>Instruction fetch and read-only program access through <span class="mono">rom_table.sv</span>.</p>
+              <span class="map-tag tag-rom">READ ONLY</span>
+            </div>
+            <div class="map-row">
+              <div>
+                <strong>Data RAM</strong>
+                <div class="mono">0x1000_0000 - 0x1000_0FFF</div>
+              </div>
+              <p>Byte, halfword, and word data accesses through <span class="mono">data_memory.sv</span>.</p>
+              <span class="map-tag tag-ram">READ / WRITE</span>
+            </div>
+            <div class="map-row">
+              <div>
+                <strong>Peripheral MMIO</strong>
+                <div class="mono">0x2000_0000 - 0x2000_4FFF</div>
+              </div>
+              <p>Forwarded to APB. Current design uses five 4 KB peripheral slots plus one reserved slot.</p>
+              <span class="map-tag tag-mmio">APB BRIDGE</span>
+            </div>
+            <div class="map-row">
+              <div>
+                <strong>Reserved APB slot</strong>
+                <div class="mono">0x3000_0000 - 0x3000_0FFF</div>
+              </div>
+              <p>Present in the APB master decode table but intentionally returns slave error in this build.</p>
+              <span class="map-tag tag-reserved">SLVERR</span>
+            </div>
+          </div>
+        </div>
+        <div class="note">
+          <strong>Access behavior</strong>
+          <p>
+            Misaligned or unsupported access sizes are rejected in
+            <span class="mono">Top_Memory_CNTL.sv</span>. Addresses outside ROM, RAM, and MMIO also return
+            an error response instead of silently aliasing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Peripheral Base Address Map</h2>
+      <p class="subtle">All active APB peripherals are spaced on 4 KB boundaries for clean decode and simple firmware constants.</p>
+      <div class="cards" style="margin-top:18px;">
+        <article class="device-card gpo">
+          <h3>GPO</h3>
+          <span class="mono">0x2000_0000</span>
+          <p>16-bit general-purpose output page. Firmware controls output-enable mask and output data value.</p>
+        </article>
+        <article class="device-card gpi">
+          <h3>GPI</h3>
+          <span class="mono">0x2000_1000</span>
+          <p>16-bit general-purpose input page. Used by the demo to sample switches and control UART/FND behavior.</p>
+        </article>
+        <article class="device-card gpio">
+          <h3>GPIO</h3>
+          <span class="mono">0x2000_2000</span>
+          <p>Bidirectional GPIO page. Separate direction register, output register, and observed input register.</p>
+        </article>
+        <article class="device-card fnd">
+          <h3>FND</h3>
+          <span class="mono">0x2000_3000</span>
+          <p>Seven-segment counter page. Minimal one-register interface for run and stop control.</p>
+        </article>
+        <article class="device-card uart">
+          <h3>UART</h3>
+          <span class="mono">0x2000_4000</span>
+          <p>UART TX/RX page with FIFO status, sticky error clear bits, and baud-source selection register.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Register Map by Peripheral</h2>
+      <p class="subtle">Grouped layout for slide capture: one block per peripheral instead of one long flat table.</p>
+      <div class="group" style="margin-top:18px;">
+        <div class="group-card">
+          <div class="group-head">
+            <h3>GPO Register Page</h3>
+            <p class="mono">Base = 0x2000_0000</p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Register</th>
+                <th>Address</th>
+                <th>Access</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">GPO_CTL</td>
+                <td class="mono">0x2000_0000</td>
+                <td>R/W</td>
+                <td>Per-bit output-enable mask. Bit = 1 drives the corresponding GPO pin.</td>
+              </tr>
+              <tr>
+                <td class="mono">GPO_ODATA</td>
+                <td class="mono">0x2000_0004</td>
+                <td>R/W</td>
+                <td>Output value applied to bits enabled in <span class="mono">GPO_CTL</span>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="group-card">
+          <div class="group-head">
+            <h3>GPI Register Page</h3>
+            <p class="mono">Base = 0x2000_1000</p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Register</th>
+                <th>Address</th>
+                <th>Access</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">GPI_CTL</td>
+                <td class="mono">0x2000_1000</td>
+                <td>R/W</td>
+                <td>Enable mask for the sampled GPI bits exposed back to software.</td>
+              </tr>
+              <tr>
+                <td class="mono">GPI_IDATA</td>
+                <td class="mono">0x2000_1004</td>
+                <td>R</td>
+                <td>Masked input sample. Demo firmware interprets bits for baud select, source select, FND run, and GPIO pattern.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="group-card">
+          <div class="group-head">
+            <h3>GPIO Register Page</h3>
+            <p class="mono">Base = 0x2000_2000</p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Register</th>
+                <th>Address</th>
+                <th>Access</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">GPIO_CTL</td>
+                <td class="mono">0x2000_2000</td>
+                <td>R/W</td>
+                <td>Direction control. Bit = 1 means output, bit = 0 means input.</td>
+              </tr>
+              <tr>
+                <td class="mono">GPIO_ODATA</td>
+                <td class="mono">0x2000_2004</td>
+                <td>R/W</td>
+                <td>Output value driven when the matching direction bit is configured as output.</td>
+              </tr>
+              <tr>
+                <td class="mono">GPIO_IDATA</td>
+                <td class="mono">0x2000_2008</td>
+                <td>R</td>
+                <td>Observed input value for the GPIO bus.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="group-card">
+          <div class="group-head">
+            <h3>FND Register Page</h3>
+            <p class="mono">Base = 0x2000_3000</p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Register</th>
+                <th>Address</th>
+                <th>Access</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">FND_RUN</td>
+                <td class="mono">0x2000_3000</td>
+                <td>R/W</td>
+                <td>Bit0 controls the counter. <span class="mono">0</span> = stop, <span class="mono">1</span> = run.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="group-card">
+          <div class="group-head">
+            <h3>UART Register Page</h3>
+            <p class="mono">Base = 0x2000_4000</p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Register</th>
+                <th>Address</th>
+                <th>Access</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">UART_ID</td>
+                <td class="mono">0x2000_4000</td>
+                <td>R</td>
+                <td>Peripheral identifier. Expected value is <span class="mono">0x5541_5254</span>.</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_STATUS</td>
+                <td class="mono">0x2000_4004</td>
+                <td>R</td>
+                <td>TX/RX FIFO state, TX busy, RX overflow, and frame error flags.</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_TXDATA</td>
+                <td class="mono">0x2000_4008</td>
+                <td>W</td>
+                <td>Push one byte to TX FIFO when space is available. Write while full returns slave error.</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_RXDATA</td>
+                <td class="mono">0x2000_400C</td>
+                <td>R</td>
+                <td>Pop one byte from RX FIFO. Read while empty returns slave error.</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_CONTROL</td>
+                <td class="mono">0x2000_4010</td>
+                <td>R/W</td>
+                <td>Sticky error clear control and status mirror for overflow and frame-error bits.</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_BAUDCFG</td>
+                <td class="mono">0x2000_4014</td>
+                <td>R/W</td>
+                <td>Selects switch-vs-APB baud source and records the currently active baud select code.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>UART Bitfield Summary</h2>
+      <p class="subtle">Useful zoom-in slide for software interface explanation.</p>
+      <div class="bit-grid" style="margin-top:18px;">
+        <div class="bit-card">
+          <span class="pill">UART_STATUS @ 0x2000_4004</span>
+          <table>
+            <thead>
+              <tr>
+                <th>Bit</th>
+                <th>Name</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono">0</td><td class="mono">TX_FULL</td><td>TX FIFO is full</td></tr>
+              <tr><td class="mono">1</td><td class="mono">TX_EMPTY</td><td>TX FIFO is empty</td></tr>
+              <tr><td class="mono">2</td><td class="mono">RX_FULL</td><td>RX FIFO is full</td></tr>
+              <tr><td class="mono">3</td><td class="mono">RX_EMPTY</td><td>RX FIFO is empty</td></tr>
+              <tr><td class="mono">4</td><td class="mono">TX_BUSY</td><td>UART transmitter is currently sending a frame</td></tr>
+              <tr><td class="mono">5</td><td class="mono">RX_OVERFLOW</td><td>Sticky flag set when a new byte arrives while RX FIFO is full</td></tr>
+              <tr><td class="mono">6</td><td class="mono">FRAME_ERROR</td><td>Sticky flag set when the stop bit check fails</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bit-card">
+          <span class="pill">UART_CONTROL / UART_BAUDCFG</span>
+          <table>
+            <thead>
+              <tr>
+                <th>Register</th>
+                <th>Bits</th>
+                <th>Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">UART_CONTROL</td>
+                <td class="mono">bit0</td>
+                <td>Write 1 to clear RX overflow sticky flag</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_CONTROL</td>
+                <td class="mono">bit1</td>
+                <td>Write 1 to clear frame error sticky flag</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_BAUDCFG</td>
+                <td class="mono">[3:0]</td>
+                <td>APB-programmed baud select code</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_BAUDCFG</td>
+                <td class="mono">[4]</td>
+                <td>Source select: 0 = external switch input, 1 = APB register value</td>
+              </tr>
+              <tr>
+                <td class="mono">UART_BAUDCFG</td>
+                <td class="mono">[11:8]</td>
+                <td>Read-only view of the active baud select code currently used by the UART core</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Demo Firmware Defaults and Presentation Notes</h2>
+      <div class="foot" style="margin-top:18px;">
+        <div class="note">
+          <strong>Default software setup from <span class="mono">mmio.h</span></strong>
+          <p>
+            <span class="mono">GPO_CTL = 0xFFFF</span>,
+            <span class="mono">GPO_ODATA = 0x0000</span>,
+            <span class="mono">GPI_CTL = 0x07FF</span>,
+            <span class="mono">GPIO_CTL = 0x000F</span>,
+            <span class="mono">GPIO_ODATA = 0x0005</span>,
+            <span class="mono">FND_RUN = 1</span>,
+            and the UART defaults to switch-selected <span class="mono">115200</span>.
+          </p>
+        </div>
+        <div class="note">
+          <strong>Slide-friendly capture cuts</strong>
+          <p>
+            Recommended screenshots are: the top hero plus Address Space Snapshot,
+            the Peripheral Base Address cards, the grouped Register Map section,
+            and the UART Bitfield Summary panel.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

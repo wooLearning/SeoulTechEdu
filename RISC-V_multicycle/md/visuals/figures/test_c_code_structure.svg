@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .line { stroke: #7a7a7a; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .box { fill: #ffffff; stroke: #7a7a7a; stroke-width: 3; }
+      .text { font: 24px "Noto Sans KR", Arial, sans-serif; fill: #4a4a4a; text-anchor: middle; dominant-baseline: middle; }
+      .small { font: 18px "Noto Sans KR", Arial, sans-serif; fill: #6a6a6a; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#7a7a7a"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="1200" class="bg"/>
+
+  <circle cx="600" cy="70" r="26" class="box"/>
+  <path d="M600 96 L600 142" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="470" y="142" width="260" height="74" rx="16" ry="16" class="box"/>
+  <text x="600" y="179" class="text">main()</text>
+
+  <path d="M600 216 L600 268" class="line" marker-end="url(#arrow)"/>
+
+  <polygon points="600,268 710,344 600,420 490,344" class="box"/>
+  <text x="600" y="334" class="text">helper 분기</text>
+  <text x="600" y="366" class="small">역할별 함수 묶음</text>
+
+  <path d="M490 344 L180 344 L180 430" class="line" marker-end="url(#arrow)"/>
+  <path d="M600 420 L600 430" class="line" marker-end="url(#arrow)"/>
+  <path d="M710 344 L1020 344 L1020 430" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="430" width="220" height="74" rx="16" ry="16" class="box"/>
+  <text x="180" y="465" class="text">UART 출력</text>
+  <text x="180" y="491" class="small">uart_put*</text>
+
+  <rect x="490" y="430" width="220" height="74" rx="16" ry="16" class="box"/>
+  <text x="600" y="465" class="text">UART 제어</text>
+  <text x="600" y="491" class="small">error / baud / RX</text>
+
+  <rect x="910" y="430" width="220" height="74" rx="16" ry="16" class="box"/>
+  <text x="1020" y="465" class="text">보조 기능</text>
+  <text x="1020" y="491" class="small">snapshot / FND / delay</text>
+
+  <path d="M180 504 L180 554" class="line" marker-end="url(#arrow)"/>
+  <path d="M600 504 L600 554" class="line" marker-end="url(#arrow)"/>
+  <path d="M1020 504 L1020 554" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="554" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="180" y="587" class="text">uart_putc()</text>
+
+  <rect x="490" y="554" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="600" y="587" class="text">clear_uart_errors_if_needed()</text>
+
+  <rect x="910" y="554" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="1020" y="587" class="text">report_mmio_snapshot()</text>
+
+  <path d="M180 620 L180 668" class="line" marker-end="url(#arrow)"/>
+  <path d="M600 620 L600 668" class="line" marker-end="url(#arrow)"/>
+  <path d="M1020 620 L1020 668" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="668" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="180" y="701" class="text">uart_puts()</text>
+
+  <rect x="490" y="668" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="600" y="701" class="text">uart_write_baudcfg()</text>
+
+  <rect x="910" y="668" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="1020" y="701" class="text">fnd_set_run()</text>
+
+  <path d="M180 734 L180 782" class="line" marker-end="url(#arrow)"/>
+  <path d="M600 734 L600 782" class="line" marker-end="url(#arrow)"/>
+  <path d="M1020 734 L1020 782" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="782" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="180" y="815" class="text">uart_put_hex*</text>
+
+  <rect x="490" y="782" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="600" y="815" class="text">log_uart_baudcfg()</text>
+
+  <rect x="910" y="782" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="1020" y="815" class="text">cpu_delay_loops()</text>
+
+  <path d="M180 848 L180 896" class="line" marker-end="url(#arrow)"/>
+  <path d="M600 848 L600 896" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="896" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="180" y="929" class="text">log_reg32()</text>
+
+  <rect x="490" y="896" width="220" height="66" rx="16" ry="16" class="box"/>
+  <text x="600" y="929" class="text">uart_try_getc()</text>
+
+  <rect x="180" y="1060" width="840" height="18" class="box"/>
+  <path d="M180 962 L180 1060" class="line"/>
+  <path d="M600 962 L600 1060" class="line"/>
+  <path d="M1020 848 L1020 1060" class="line"/>
+
+  <path d="M600 1078 L600 1122" class="line" marker-end="url(#arrow)"/>
+  <circle cx="600" cy="1148" r="28" class="box"/>
+  <circle cx="600" cy="1148" r="18" class="box"/>
+</svg>

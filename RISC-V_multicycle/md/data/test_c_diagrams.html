@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test.c Diagrams</title>
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --panel: #fffaf4;
+      --ink: #1a2230;
+      --muted: #5d6778;
+      --line: #d9ccb8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f7f2ea 0%, var(--bg) 100%);
+    }
+
+    main {
+      width: min(1280px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    .hero, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(34, 28, 20, 0.08);
+    }
+
+    .hero {
+      padding: 28px 30px;
+    }
+
+    .panel {
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.1rem;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>`test.c` Diagrams</h1>
+      <p>Simple black-and-white diagrams for presentation use. The first image is a vertical activity-style flowchart, and the second image is a minimal function-structure chart.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Program Flow</h2>
+      <img src="./figures/test_c_program_flow.svg" alt="test.c program flow diagram">
+    </section>
+
+    <section class="panel">
+      <h2>Code Structure</h2>
+      <img src="./figures/test_c_code_structure.svg" alt="test.c code structure diagram">
+    </section>
+  </main>
+</body>
+</html>

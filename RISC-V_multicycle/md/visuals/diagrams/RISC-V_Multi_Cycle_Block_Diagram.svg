@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" style="background-color: white; font-family: sans-serif;">
+<defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 Z" fill="#4B5563" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 Z" fill="#3B82F6" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 Z" fill="#EF4444" />
+    </marker>
+</defs>
+<rect x="50" y="50" width="1500" height="900" rx="16" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" />
+<text x="100" y="80" font-size="24px" font-weight="bold" text-anchor="start" fill="#1e293b">Top_module (RISC-V Multi-Cycle)</text>
+<rect x="100" y="150" width="450" height="600" rx="12" fill="#eff6ff" stroke="#60a5fa" stroke-width="2" />
+<text x="120" y="180" font-size="20px" font-weight="bold" text-anchor="start" fill="#1d4ed8">Top_CPU</text>
+<rect x="130" y="210" width="390" height="150" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="2" />
+<text x="325" y="230" font-size="16px" font-weight="bold" text-anchor="middle" fill="#1e293b">control</text>
+<text x="325" y="260" font-size="14px" font-weight="normal" text-anchor="middle" fill="#64748b">State Machine &amp; Decoding</text>
+<rect x="130" y="390" width="390" height="340" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="2" />
+<text x="325" y="415" font-size="16px" font-weight="bold" text-anchor="middle" fill="#1e293b">datapath</text>
+<rect x="150" y="440" width="100" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" />
+<text x="200" y="475" font-size="14px" font-weight="normal" text-anchor="middle" fill="#1e293b">pc_reg</text>
+<rect x="270" y="440" width="100" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" />
+<text x="320" y="475" font-size="14px" font-weight="normal" text-anchor="middle" fill="#1e293b">alu</text>
+<rect x="390" y="440" width="100" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" />
+<text x="440" y="475" font-size="13px" font-weight="normal" text-anchor="middle" fill="#1e293b">branch_cmp</text>
+<rect x="150" y="530" width="160" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" />
+<text x="230" y="565" font-size="14px" font-weight="normal" text-anchor="middle" fill="#1e293b">register_file</text>
+<rect x="330" y="530" width="160" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" />
+<text x="410" y="565" font-size="14px" font-weight="normal" text-anchor="middle" fill="#1e293b">imm_extender</text>
+<rect x="150" y="620" width="340" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" />
+<text x="320" y="655" font-size="14px" font-weight="normal" text-anchor="middle" fill="#1e293b">IR, MDR, A, B, ALUOut Regs</text>
+<rect x="650" y="150" width="250" height="600" rx="12" fill="#fff7ed" stroke="#fdba74" stroke-width="2" />
+<text x="775.0" y="180" font-size="20px" font-weight="bold" text-anchor="middle" fill="#c2410c">Top_Memory_CNTL</text>
+<text x="775.0" y="210" font-size="14px" font-weight="normal" text-anchor="middle" fill="#ea580c">Address Decoder &amp;</text>
+<text x="775.0" y="230" font-size="14px" font-weight="normal" text-anchor="middle" fill="#ea580c">Bus Matrix</text>
+<rect x="1000" y="150" width="250" height="250" rx="12" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="2" />
+<text x="1020" y="180" font-size="20px" font-weight="bold" text-anchor="start" fill="#047857">Top_Memory</text>
+<rect x="1030" y="210" width="190" height="70" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="2" />
+<text x="1125" y="250" font-size="16px" font-weight="bold" text-anchor="middle" fill="#1e293b">rom_table (Instr)</text>
+<rect x="1030" y="300" width="190" height="70" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="2" />
+<text x="1125" y="340" font-size="16px" font-weight="bold" text-anchor="middle" fill="#1e293b">data_memory (RAM)</text>
+<rect x="1000" y="450" width="450" height="400" rx="12" fill="#fdf4ff" stroke="#f0abfc" stroke-width="2" />
+<text x="1020" y="480" font-size="20px" font-weight="bold" text-anchor="start" fill="#a21caf">Top_APB</text>
+<rect x="1030" y="510" width="390" height="60" rx="8" fill="#ffffff" stroke="#e879f9" stroke-width="2" />
+<text x="1225" y="545" font-size="16px" font-weight="bold" text-anchor="middle" fill="#1e293b">APB_master (Bus Bridge)</text>
+<rect x="1230" y="590" width="190" height="40" rx="6" fill="#ffffff" stroke="#e879f9" stroke-width="2" />
+<text x="1325" y="615" font-size="14px" font-weight="bold" text-anchor="middle" fill="#1e293b">gpo_apb_wrapper</text>
+<rect x="1230" y="650" width="190" height="40" rx="6" fill="#ffffff" stroke="#e879f9" stroke-width="2" />
+<text x="1325" y="675" font-size="14px" font-weight="bold" text-anchor="middle" fill="#1e293b">gpi_apb_wrapper</text>
+<rect x="1230" y="710" width="190" height="40" rx="6" fill="#ffffff" stroke="#e879f9" stroke-width="2" />
+<text x="1325" y="735" font-size="14px" font-weight="bold" text-anchor="middle" fill="#1e293b">gpio_apb_wrapper</text>
+<rect x="1230" y="770" width="190" height="40" rx="6" fill="#ffffff" stroke="#e879f9" stroke-width="2" />
+<text x="1325" y="795" font-size="14px" font-weight="bold" text-anchor="middle" fill="#1e293b">fnd_apb_wrapper</text>
+<rect x="1230" y="830" width="190" height="40" rx="6" fill="#ffffff" stroke="#e879f9" stroke-width="2" />
+<text x="1325" y="855" font-size="14px" font-weight="bold" text-anchor="middle" fill="#1e293b">uart_apb_wrapper</text>
+<line x1="1100" y1="570" x2="1100" y2="850" stroke="#d946ef" stroke-width="6"  />
+<line x1="1100" y1="610" x2="1230" y2="610" stroke="#d946ef" stroke-width="3" marker-end="url(#arrow)" />
+<line x1="1100" y1="670" x2="1230" y2="670" stroke="#d946ef" stroke-width="3" marker-end="url(#arrow)" />
+<line x1="1100" y1="730" x2="1230" y2="730" stroke="#d946ef" stroke-width="3" marker-end="url(#arrow)" />
+<line x1="1100" y1="790" x2="1230" y2="790" stroke="#d946ef" stroke-width="3" marker-end="url(#arrow)" />
+<line x1="1100" y1="850" x2="1230" y2="850" stroke="#d946ef" stroke-width="3" marker-end="url(#arrow)" />
+<text x="1120" y="680" font-size="14px" font-weight="bold" text-anchor="middle" fill="#86198f">APB Bus</text>
+<path d="M 550 400 L 650 400 " fill="none" stroke="#3B82F6" stroke-width="4" marker-end="url(#arrow-blue)" />
+<path d="M 650 450 L 550 450 " fill="none" stroke="#3B82F6" stroke-width="4" marker-end="url(#arrow-blue)" />
+<text x="600.0" y="390" font-size="14px" font-weight="bold" text-anchor="middle" fill="#2563eb">Mem Req</text>
+<text x="600.0" y="470" font-size="14px" font-weight="bold" text-anchor="middle" fill="#2563eb">Mem Rsp</text>
+<path d="M 900 230 L 1000 230 " fill="none" stroke="#10B981" stroke-width="4" marker-end="url(#arrow)" />
+<path d="M 1000 270 L 900 270 " fill="none" stroke="#10B981" stroke-width="4" marker-end="url(#arrow)" />
+<text x="950.0" y="220" font-size="14px" font-weight="bold" text-anchor="middle" fill="#059669">ROM/RAM Req</text>
+<text x="950.0" y="290" font-size="14px" font-weight="bold" text-anchor="middle" fill="#059669">ROM/RAM Rsp</text>
+<path d="M 900 550 L 1000 550 " fill="none" stroke="#8B5CF6" stroke-width="4" marker-end="url(#arrow)" />
+<path d="M 1000 600 L 900 600 " fill="none" stroke="#8B5CF6" stroke-width="4" marker-end="url(#arrow)" />
+<text x="950.0" y="540" font-size="14px" font-weight="bold" text-anchor="middle" fill="#7C3AED">MMIO Req</text>
+<text x="950.0" y="620" font-size="14px" font-weight="bold" text-anchor="middle" fill="#7C3AED">MMIO Rsp</text>
+<path d="M 30 200 L 100 200 " fill="none" stroke="#4B5563" stroke-width="2" marker-end="url(#arrow)" />
+<text x="60" y="190" font-size="14px" font-weight="bold" text-anchor="middle" fill="#1e293b">clk &amp; rst</text>
+<path d="M 1420 610 L 1450 610 " fill="none" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrow)" />
+<text x="1455" y="615" font-size="14px" font-weight="bold" text-anchor="start" fill="#0d9488">io_gpo</text>
+<path d="M 1450 670 L 1420 670 " fill="none" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrow)" />
+<text x="1455" y="675" font-size="14px" font-weight="bold" text-anchor="start" fill="#0d9488">i_gpi</text>
+<path d="M 1420 730 L 1450 730 " fill="none" stroke="#14b8a6" stroke-width="2"  />
+<text x="1455" y="735" font-size="14px" font-weight="bold" text-anchor="start" fill="#0d9488">io_gpio (inout)</text>
+<path d="M 1420 790 L 1450 790 " fill="none" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrow)" />
+<text x="1455" y="795" font-size="14px" font-weight="bold" text-anchor="start" fill="#0d9488">o_fnd_seg/dp/an</text>
+<path d="M 1450 840 L 1420 840 " fill="none" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrow)" />
+<path d="M 1420 850 L 1450 850 " fill="none" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrow)" />
+<text x="1455" y="845" font-size="14px" font-weight="bold" text-anchor="start" fill="#0d9488">UART rx/tx</text>
+</svg>

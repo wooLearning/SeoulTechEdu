@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="620" viewBox="0 0 1500 620">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#111111"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2.2; rx: 16; ry: 16; }
+      .label { fill: #111111; font-family: "Segoe UI", "Malgun Gothic", sans-serif; font-size: 20px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+      .small { fill: #111111; font-family: "Segoe UI", "Malgun Gothic", sans-serif; font-size: 16px; font-weight: 500; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { fill: none; stroke: #111111; stroke-width: 2.6; marker-end: url(#arrow); stroke-linecap: round; stroke-linejoin: round; }
+      .title { fill: #111111; font-family: "Segoe UI", "Malgun Gothic", sans-serif; font-size: 32px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1500" height="620"/>
+  <text class="title" x="40" y="52">test_peri_repeat.c APB Access Sequence</text>
+
+  <rect class="box" x="40" y="110" width="190" height="86"/>
+  <text class="label" x="135" y="142">GPI_IDATA read</text>
+  <text class="small" x="135" y="170">0x2000_1004</text>
+
+  <rect class="box" x="280" y="110" width="190" height="86"/>
+  <text class="label" x="375" y="142">GPO_ODATA write</text>
+  <text class="small" x="375" y="170">0x2000_0004</text>
+
+  <rect class="box" x="520" y="110" width="190" height="86"/>
+  <text class="label" x="615" y="142">GPIO_CTL write</text>
+  <text class="small" x="615" y="170">0x2000_2000</text>
+
+  <rect class="box" x="760" y="110" width="210" height="86"/>
+  <text class="label" x="865" y="142">GPIO_ODATA write</text>
+  <text class="small" x="865" y="170">0x2000_2004</text>
+
+  <rect class="box" x="1020" y="110" width="210" height="86"/>
+  <text class="label" x="1125" y="142">GPIO_IDATA read</text>
+  <text class="small" x="1125" y="170">0x2000_2008</text>
+
+  <rect class="box" x="1280" y="110" width="180" height="86"/>
+  <text class="label" x="1370" y="142">FND_RUN write</text>
+  <text class="small" x="1370" y="170">0x2000_3000</text>
+
+  <rect class="box" x="200" y="360" width="220" height="86"/>
+  <text class="label" x="310" y="392">UART_BAUDCFG write</text>
+  <text class="small" x="310" y="420">0x2000_4014</text>
+
+  <rect class="box" x="500" y="360" width="220" height="86"/>
+  <text class="label" x="610" y="392">UART_BAUDCFG read</text>
+  <text class="small" x="610" y="420">0x2000_4014</text>
+
+  <rect class="box" x="800" y="360" width="220" height="86"/>
+  <text class="label" x="910" y="392">UART_TXDATA writes</text>
+  <text class="small" x="910" y="420">0x2000_4008</text>
+
+  <rect class="box" x="1100" y="360" width="220" height="86"/>
+  <text class="label" x="1210" y="392">UART log visible</text>
+  <text class="small" x="1210" y="420">boot / dump / ITER / HB</text>
+
+  <line class="arrow" x1="230" y1="153" x2="280" y2="153"/>
+  <line class="arrow" x1="470" y1="153" x2="520" y2="153"/>
+  <line class="arrow" x1="710" y1="153" x2="760" y2="153"/>
+  <line class="arrow" x1="970" y1="153" x2="1020" y2="153"/>
+  <line class="arrow" x1="1230" y1="153" x2="1280" y2="153"/>
+  <path class="arrow" d="M 1370 196 L 1370 260 L 310 260 L 310 360"/>
+  <line class="arrow" x1="420" y1="403" x2="500" y2="403"/>
+  <line class="arrow" x1="720" y1="403" x2="800" y2="403"/>
+  <line class="arrow" x1="1020" y1="403" x2="1100" y2="403"/>
+</svg>

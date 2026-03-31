@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Mar 31 01:32:11 2026
+# Process ID         : 31852
+# Current directory  : D:/risc_team/FPGA_Auto_Project/Project/Test/vivado_project
+# Command line       : vivado.exe -mode gui -source D:\risc_team\FPGA_Auto_Project\templates\contexts\simulation\adapters\tcl\sim_run_vivado.tcl -log D:\risc_team\FPGA_Auto_Project\Project\Test\tb\vivado_sim_tb_gpio_apb_wrapper.log -journal D:\risc_team\FPGA_Auto_Project\Project\Test\tb\vivado_sim_tb_gpio_apb_wrapper.jou -notrace -tclargs D:\risc_team\FPGA_Auto_Project\Project\Test tb_gpio_apb_wrapper D:\risc_team\FPGA_Auto_Project\Project\Test\vivado_project D:\risc_team\FPGA_Auto_Project\Project\Test\output\manifest\manifest_src_files.lst D:\risc_team\FPGA_Auto_Project\Project\Test\output\manifest\manifest_tb_files.lst D:\risc_team\FPGA_Auto_Project\Project\Test\output\manifest\manifest_inc_dirs.lst D:\risc_team\FPGA_Auto_Project\Project\Test\tb\tb_gpio_apb_wrapper.sv -testplusarg TESTNAME=all
+# Log file           : D:/risc_team/FPGA_Auto_Project/Project/Test/tb/vivado_sim_tb_gpio_apb_wrapper.log
+# Journal file       : D:\risc_team\FPGA_Auto_Project\Project\Test\tb\vivado_sim_tb_gpio_apb_wrapper.jou
+# Running On         : DESKTOP-7CFQ9ND
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-1260P
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16847 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 34027 MB
+# Available Virtual  : 10555 MB
+#-----------------------------------------------------------
+start_gui
+source {D:\risc_team\FPGA_Auto_Project\templates\contexts\simulation\adapters\tcl\sim_run_vivado.tcl} -notrace
+source tb_gpio_apb_wrapper.tcl
+update_compile_order -fileset sources_1
+close_sim
