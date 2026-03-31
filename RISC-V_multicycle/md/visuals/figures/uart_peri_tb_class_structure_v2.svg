@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .box { fill: #fbfaff; stroke: #b8afe9; stroke-width: 2.2; rx: 10; ry: 10; }
+      .table-head { fill: #c8c8c8; stroke: #808080; stroke-width: 1.4; }
+      .cell { fill: #ffffff; stroke: #808080; stroke-width: 1.2; }
+      .edge { fill: none; stroke: #4a4a4a; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+      .title { font: 700 18px Arial, sans-serif; fill: #222; }
+      .box1 { font: 700 15px Arial, sans-serif; fill: #333; text-anchor: middle; }
+      .box2 { font: 600 12px Arial, sans-serif; fill: #333; text-anchor: middle; }
+      .th { font: 700 16px Arial, sans-serif; fill: #222; }
+      .tdl { font: 600 15px Arial, sans-serif; fill: #222; }
+      .tdr { font: 400 15px Arial, sans-serif; fill: #222; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a4a4a"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="720"/>
+
+  <rect x="8" y="8" width="620" height="704" fill="none" stroke="#d0d0d0" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <rect class="box" x="210" y="22" width="170" height="62"/>
+  <text class="box1" x="295" y="48">tb_uart_apb_wrapper.sv</text>
+  <text class="box2" x="295" y="69">top module</text>
+
+  <rect class="box" x="58" y="130" width="146" height="46"/>
+  <text class="box1" x="131" y="159">UartPeriDirectedTest</text>
+
+  <rect class="box" x="62" y="238" width="138" height="46"/>
+  <text class="box1" x="131" y="267">UartPeriBaseTest</text>
+
+  <rect class="box" x="14" y="348" width="116" height="46"/>
+  <text class="box1" x="72" y="377">UartPeriConfig</text>
+
+  <rect class="box" x="152" y="348" width="120" height="46"/>
+  <text class="box1" x="212" y="377">UartPeriEnv</text>
+
+  <rect class="box" x="168" y="468" width="118" height="46"/>
+  <text class="box1" x="227" y="497">UartPeriDriver</text>
+
+  <rect class="box" x="386" y="468" width="126" height="46"/>
+  <text class="box1" x="449" y="497">UartPeriMonitor</text>
+
+  <rect class="box" x="290" y="565" width="138" height="46"/>
+  <text class="box1" x="359" y="594">mailbox mon2scb</text>
+
+  <rect class="box" x="287" y="655" width="146" height="46"/>
+  <text class="box1" x="360" y="684">UartPeriScoreboard</text>
+
+  <rect class="box" x="398" y="130" width="210" height="58"/>
+  <text class="box1" x="503" y="156">uart_peri_if</text>
+  <text class="box2" x="503" y="176">interface + clocking blocks + UART line helper</text>
+
+  <rect class="box" x="325" y="245" width="168" height="48"/>
+  <text class="box1" x="409" y="274">uart_apb_wrapper DUT</text>
+
+  <path class="edge" d="M 295 84 L 295 116 L 145 116 L 131 130" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 131 176 L 131 238" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 131 284 C 131 316, 86 325, 72 348" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 131 284 C 131 316, 190 323, 212 348" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 212 394 L 227 468" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 212 394 C 212 430, 360 430, 449 468" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 212 394 C 212 470, 212 520, 360 565" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 449 514 C 449 540, 410 548, 372 565" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 359 611 L 359 655" marker-end="url(#arrow)"/>
+
+  <path class="edge" d="M 295 84 C 295 110, 455 110, 503 130" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 295 84 C 295 145, 325 188, 409 245" marker-end="url(#arrow)"/>
+  <path class="edge" d="M 503 188 C 503 220, 485 230, 450 245" marker-end="url(#arrow)"/>
+
+  <rect class="table-head" x="675" y="126" width="350" height="34"/>
+  <rect class="table-head" x="1025" y="126" width="535" height="34"/>
+  <text class="th" x="689" y="149">파일 / 클래스</text>
+  <text class="th" x="1039" y="149">역할</text>
+
+  <rect class="cell" x="675" y="160" width="350" height="38"/>
+  <rect class="cell" x="1025" y="160" width="535" height="38"/>
+  <text class="tdl" x="687" y="184">tb_uart_apb_wrapper</text>
+  <text class="tdr" x="1037" y="184">clock/reset 생성, DUT instantiation, test 실행, assertion 보유</text>
+
+  <rect class="cell" x="675" y="198" width="350" height="38"/>
+  <rect class="cell" x="1025" y="198" width="535" height="38"/>
+  <text class="tdl" x="687" y="222">uart_peri_if</text>
+  <text class="tdr" x="1037" y="222">APB signal 묶음, clocking block, UART RX/TX helper task</text>
+
+  <rect class="cell" x="675" y="236" width="350" height="38"/>
+  <rect class="cell" x="1025" y="236" width="535" height="38"/>
+  <text class="tdl" x="687" y="260">UartPeriConfig</text>
+  <text class="tdr" x="1037" y="260">baud, bit period, jitter, timeout 설정</text>
+
+  <rect class="cell" x="675" y="274" width="350" height="38"/>
+  <rect class="cell" x="1025" y="274" width="535" height="38"/>
+  <text class="tdl" x="687" y="298">UartPeriDriver</text>
+  <text class="tdr" x="1037" y="298">APB read/write, RX line 자극 주입</text>
+
+  <rect class="cell" x="675" y="312" width="350" height="38"/>
+  <rect class="cell" x="1025" y="312" width="535" height="38"/>
+  <text class="tdl" x="687" y="336">UartPeriMonitor</text>
+  <text class="tdr" x="1037" y="336">DUT의 o_uart_tx를 실제 serial line에서 복원</text>
+
+  <rect class="cell" x="675" y="350" width="350" height="38"/>
+  <rect class="cell" x="1025" y="350" width="535" height="38"/>
+  <text class="tdl" x="687" y="374">UartPeriScoreboard</text>
+  <text class="tdr" x="1037" y="374">expected TX와 monitor가 잡은 actual TX 비교</text>
+
+  <rect class="cell" x="675" y="388" width="350" height="38"/>
+  <rect class="cell" x="1025" y="388" width="535" height="38"/>
+  <text class="tdl" x="687" y="412">UartPeriEnv</text>
+  <text class="tdr" x="1037" y="412">driver/monitor/scoreboard를 묶어 병렬 실행</text>
+
+  <rect class="cell" x="675" y="426" width="350" height="38"/>
+  <rect class="cell" x="1025" y="426" width="535" height="38"/>
+  <text class="tdl" x="687" y="450">UartPeriBaseTest</text>
+  <text class="tdr" x="1037" y="450">공통 check 함수, env 생성, 공통 run flow</text>
+
+  <rect class="cell" x="675" y="464" width="350" height="38"/>
+  <rect class="cell" x="1025" y="464" width="535" height="38"/>
+  <text class="tdl" x="687" y="488">UartPeriDirectedTest</text>
+  <text class="tdr" x="1037" y="488">실제 directed scenario 구현</text>
+</svg>

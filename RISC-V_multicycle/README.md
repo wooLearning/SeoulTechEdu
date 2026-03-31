@@ -52,7 +52,7 @@ full-top peripheral 반복 실행 흐름:
 
 UART class 기반 검증 구조:
 
-<img src="md/visuals/figures/uart_peri_tb_class_structure.svg" alt="UART Class Structure" width="980">
+<img src="md/visuals/figures/uart_peri_tb_class_structure_v2.svg" alt="UART Class Structure" width="980">
 
 ## 폴더 구조
 
