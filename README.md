@@ -1,107 +1,39 @@
-# Digital Design Project Archive
+# Digital Design Portfolio
 
-Verilog 기반 FPGA 설계, SystemVerilog 검증, RISC-V CPU 검증 결과를 함께 정리한 저장소입니다.  
-각 폴더는 프로젝트 단위로 정리되어 있으며, 문서와 산출물은 폴더 내부에서 바로 확인할 수 있습니다.
+디지털 회로 설계와 검증 과정을 프로젝트 단위로 정리한 포트폴리오 저장소입니다.  
+한 저장소 안에 여러 결과물이 섞여 보이지 않도록, 각 프로젝트를 `소스코드`, `문서`, `검증 산출물` 기준으로 다시 읽기 쉽게 정리했습니다.
 
-## 폴더 구성
+## 바로 가기
 
-| 경로 | 설명 | 주요 내용 |
-| --- | --- | --- |
-| [VerilogProject](./VerilogProject) | Verilog 기반 FPGA 설계 | 시계/스톱워치, UART, 센서 제어, RTL/TB/XDC/PDF |
-| [SystemVerilogProject](./SystemVerilogProject) | FIFO/UART 검증 프로젝트 | 검증 환경, 보고서, 로그, CSV, Python 시각화 |
-| [RISC-V_multicycle](./RISC-V_multicycle) | RV32I multicycle CPU와 APB 주변장치 연동 프로젝트 | MMIO register map, UART peripheral 검증, full-top 반복 실행 로그, timing report |
-| [RISC-V_pipeline](./RISC-V_pipeline) | RV32I 5-stage pipeline CPU 검증 프로젝트 | Spike 기반 retire compare, 케이스별 보고서, stall/redirect/forwarding 지표, Fmax |
+- [포트폴리오 가이드](./docs/PORTFOLIO_GUIDE_ko.md)
+- [VerilogProject](./VerilogProject/README.md)
+- [SystemVerilogProject](./SystemVerilogProject/README.md)
+- [RISC-V_multicycle](./RISC-V_multicycle/README.md)
+- [RISC-V_pipeline](./RISC-V_pipeline/README.md)
 
-## RISC-V_multicycle
+## 프로젝트 맵
 
-[RISC-V_multicycle](./RISC-V_multicycle)는 RV32I multicycle CPU에 GPI, GPO, GPIO, FND, UART를 APB로 연결한 프로젝트입니다.  
-문서 비중은 peripheral/MMIO 연동과 UART 검증에 맞춰져 있으며, full-top 로그 기반 동작 확인 자료까지 함께 정리했습니다.
+| 프로젝트 | 핵심 주제 | 먼저 볼 자료 | 소스코드 | 자료/산출물 |
+| --- | --- | --- | --- | --- |
+| [VerilogProject](./VerilogProject/README.md) | FPGA 통합 설계 | [START_HERE_ko.md](./VerilogProject/START_HERE_ko.md) | `SourceCode/src`, `SourceCode/tb` | `docs/` |
+| [SystemVerilogProject](./SystemVerilogProject/README.md) | FIFO/UART class-based verification | [START_HERE_ko.md](./SystemVerilogProject/START_HERE_ko.md) | `src/`, `tb/` | `reports/`, `evidence/` |
+| [RISC-V_multicycle](./RISC-V_multicycle/README.md) | RV32I multicycle CPU + APB peripheral | [START_HERE_ko.md](./RISC-V_multicycle/START_HERE_ko.md) | `src/`, `tb/` | `md/`, `output/` |
+| [RISC-V_pipeline](./RISC-V_pipeline/README.md) | RV32I 5-stage pipeline + Spike 비교 검증 | [START_HERE_ko.md](./RISC-V_pipeline/START_HERE_ko.md) | `src/`, `tb/` | `reports/`, `evidence/`, `output/` |
 
-![UART Jitter Threshold](./RISC-V_multicycle/md/visuals/figures/uart_jitter_threshold_by_baud.png)
+## 이 저장소를 읽는 기준
 
-주요 문서:
-- [README](./RISC-V_multicycle/README.md)
-- [START_HERE_ko.md](./RISC-V_multicycle/START_HERE_ko.md)
-- [개요 보고서](./RISC-V_multicycle/md/reports/riscv_multicycle_peri_overview_ko.md)
-- [UART 주변장치 보고서](./RISC-V_multicycle/md/reports/uart_peripheral_report_ko.md)
-- [UART jitter sweep 보고서](./RISC-V_multicycle/md/reports/uart_jitter_sweep_report_ko.md)
-- [Peripheral 반복 실행 보고서](./RISC-V_multicycle/md/reports/test_peri_repeat_execution_report_ko.md)
+- `src/`, `SourceCode/src/`: RTL과 설계 소스
+- `tb/`, `SourceCode/tb/`: testbench와 검증 환경
+- `docs/`, `reports/`, `md/`: 설명 문서, 보고서, 발표 자료
+- `evidence/`, `output/`: 로그, CSV, 구현 결과, 실행 산출물
 
-핵심 내용:
-- RV32I multicycle CPU + APB peripheral 구조
-- MMIO register map 정리
-- UART class 기반 directed verification
-- full-top ROM 실행 로그와 MMIO 접근 확인
-- implementation timing / utilization 정리
+## 추천 읽는 순서
 
-## RISC-V_pipeline
+1. [포트폴리오 가이드](./docs/PORTFOLIO_GUIDE_ko.md)에서 전체 흐름을 확인합니다.
+2. 관심 있는 프로젝트의 `README.md`와 `START_HERE_ko.md`를 먼저 읽습니다.
+3. 구조가 궁금하면 `src/`와 `tb/`를 보고, 결과가 궁금하면 `docs/`, `reports/`, `md/`를 봅니다.
+4. 재현 근거가 필요하면 `evidence/`와 `output/`을 확인합니다.
 
-[RISC-V_pipeline](./RISC-V_pipeline)는 RV32I 5-stage pipeline CPU를 Spike 기준 결과와 비교해 검증한 프로젝트입니다.  
-`test_top`과 `bubble_sort` 두 대표 케이스를 중심으로 pipeline TB, class-based `Top_tb`, 시각화 보고서, 성능 보고서를 함께 정리했습니다.
+## 기술 키워드
 
-주요 문서:
-- [README](./RISC-V_pipeline/README.md)
-- [START_HERE_ko.md](./RISC-V_pipeline/START_HERE_ko.md)
-- [Compact 보고서](./RISC-V_pipeline/reports/markdown/overview/rv32i_exec_compact_report_ko.md)
-- [시각화 보고서](./RISC-V_pipeline/reports/markdown/overview/rv32i_spike_visual_report_ko.md)
-- [성능 보고서](./RISC-V_pipeline/md/performance_metrics_report.md)
-- [케이스 인덱스](./RISC-V_pipeline/spike_cases/index.md)
-
-## SystemVerilogProject
-
-[SystemVerilogProject](./SystemVerilogProject)는 FIFO와 UART 계열 RTL을 대상으로 구성한 SystemVerilog 검증 프로젝트입니다.  
-검증 환경, 보고서, 시뮬레이션 로그, CSV 결과, Python 시각화 자료를 함께 정리했습니다.
-
-주요 문서:
-- [README](./SystemVerilogProject/README.md)
-- [START_HERE_ko.md](./SystemVerilogProject/START_HERE_ko.md)
-- [Markdown 시각화 보고서](./SystemVerilogProject/reports/markdown/overview/systemverilog_python_visual_report_ko.md)
-
-## VerilogProject
-
-[VerilogProject](./VerilogProject)는 Verilog 기반 FPGA 설계 결과를 정리한 폴더입니다.  
-시계/스톱워치, UART, 초음파 센서(HC-SR04), 온습도 센서(DHT11)를 하나의 시스템으로 확장한 내용을 담고 있습니다.
-
-## 디렉터리 구조
-
-```text
-Git_SeoulEduRepo/
-├─ VerilogProject/
-├─ SystemVerilogProject/
-│  ├─ src/
-│  ├─ tb/
-│  ├─ reports/
-│  ├─ evidence/
-│  └─ tools/
-├─ RISC-V_multicycle/
-│  ├─ src/
-│  ├─ tb/
-│  ├─ md/
-│  ├─ cpu_test/
-│  ├─ output/
-│  ├─ README.md
-│  └─ START_HERE_ko.md
-├─ RISC-V_pipeline/
-│  ├─ src/
-│  ├─ tb/
-│  ├─ reports/
-│  ├─ evidence/
-│  ├─ spike_cases/
-│  ├─ scripts/
-│  ├─ tools/
-│  ├─ README.md
-│  └─ START_HERE_ko.md
-└─ README.md
-```
-
-## 읽는 순서
-
-1. 저장소 전체 구성은 이 문서에서 확인
-2. multicycle CPU와 peripheral 자료는 [RISC-V_multicycle](./RISC-V_multicycle)에서 확인
-3. pipeline CPU 검증 자료는 [RISC-V_pipeline](./RISC-V_pipeline)에서 확인
-4. FIFO/UART 검증 자료는 [SystemVerilogProject](./SystemVerilogProject)에서 확인
-5. FPGA 설계 자료는 [VerilogProject](./VerilogProject)에서 확인
-
-## 기술 스택
-
-`Verilog` `SystemVerilog` `RISC-V` `FPGA` `UART` `APB` `MMIO` `Vivado` `xsim` `Python`
+`Verilog` `SystemVerilog` `RISC-V` `FPGA` `UART` `FIFO` `APB` `MMIO` `Vivado` `xsim` `Python`

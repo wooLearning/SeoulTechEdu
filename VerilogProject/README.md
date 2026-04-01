@@ -1,39 +1,54 @@
-# VerilogProject
-> Verilog-based FPGA integration project archive
+# Verilog FPGA Integration Project
 
-이 폴더는 Verilog 기반으로 진행한 FPGA 설계 결과물을 정리한 공간입니다.  
-시계/스톱워치, UART 통신, 센서 제어를 개별 기능에서 통합 시스템으로 확장한 흐름을 확인할 수 있습니다.
+Verilog 기반으로 진행한 FPGA 통합 설계 프로젝트입니다.  
+시계/스톱워치, UART 통신, 센서 제어를 개별 기능에서 시작해 하나의 상위 시스템으로 확장한 흐름을 정리했습니다.
 
-## 폴더 구성
+## 프로젝트 개요
 
-| 경로 | 설명 |
+- 설계 언어: `Verilog`
+- 성격: 기능 블록 설계 + 상위 통합
+- 대표 기능: clock, stopwatch, UART, HC-SR04, DHT11, FND 표시
+
+## 먼저 볼 자료
+
+- [START_HERE_ko.md](./START_HERE_ko.md)
+- [문서 인덱스](./docs/README.md)
+- [StopWatch / Clock 문서](./docs/FPGA%20StopWatch%20%26%20Clock%20Project.pdf)
+- [UART 문서](./docs/FPGA%20UART%20Project.pdf)
+- [센서 통합 문서](./docs/FPGA%20Seneor%20%ED%86%B5%ED%95%A9%20Project.pdf)
+
+## 소스코드와 자료 위치
+
+| 경로 | 역할 |
 | --- | --- |
-| [SourceCode](./SourceCode) | Verilog RTL, testbench, constraint 파일이 모여 있는 소스 폴더 |
-| `FPGA StopWatch & Clock Project.pdf` | Stopwatch / Clock 설계 문서 |
-| `FPGA UART Project.pdf` | UART 통신 설계 문서 |
-| `FPGA Seneor 통합 Project.pdf` | 센서 통합 시스템 설계 문서 |
+| [SourceCode/src](./SourceCode/src) | RTL 소스 |
+| [SourceCode/tb](./SourceCode/tb) | 모듈 단위 testbench |
+| [SourceCode/constrs](./SourceCode/constrs) | FPGA 제약 파일 |
+| [docs](./docs) | PDF 설계 문서 |
 
-## SourceCode 구성
-
-| 경로 | 설명 |
-| --- | --- |
-| [SourceCode/src](./SourceCode/src) | top-level 및 하위 RTL 모듈 |
-| [SourceCode/tb](./SourceCode/tb) | 주요 모듈 단위 testbench |
-| [SourceCode/constrs](./SourceCode/constrs) | FPGA 핀/제약 설정 파일 |
-
-## 주요 모듈
+## 대표 모듈
 
 - `Top.v`: UART, watch, sensor, FND를 묶는 최상위 통합 모듈
-- `watch_top.v`: clock / stopwatch 표시 로직 상위 모듈
-- `clock_core.v`, `stopwatch.v`, `stopwatch_mem.v`: 시간 표시 및 기록 기능
-- `uart_rx.v`, `uart_tx.v`, `uart_ascii_decoder.v`, `uart_ascii_sender.v`: UART 통신 경로
-- `Fifo.v`, `tx_fifo_top.v`: UART 데이터 버퍼링
+- `watch_top.v`: clock / stopwatch 표시 상위 로직
+- `clock_core.v`, `stopwatch.v`, `stopwatch_mem.v`: 시간 표시 및 기록
+- `uart_rx.v`, `uart_tx.v`, `uart_ascii_decoder.v`, `uart_ascii_sender.v`: UART 데이터 경로
+- `Fifo.v`, `tx_fifo_top.v`: UART 전송 버퍼링
 - `sr04_controller.v`, `dht11_controller.v`: 센서 제어
-- `fnd_controller.v`, `gen_clk.v`, `baud_rate_gen.v`, `button_sync.v`: 공통 주변 모듈
 
-## 읽는 순서
+## 폴더 구조
 
-1. PDF 문서로 프로젝트 흐름 확인
-2. [SourceCode/src](./SourceCode/src)에서 `Top.v`부터 읽기
-3. 필요한 기능별 하위 모듈 확인
-4. [SourceCode/tb](./SourceCode/tb)에서 개별 testbench 확인
+```text
+VerilogProject/
+├─ SourceCode/
+│  ├─ src/                     # RTL
+│  ├─ tb/                      # testbench
+│  └─ constrs/                 # XDC
+├─ docs/                       # PDF 문서
+├─ README.md
+└─ START_HERE_ko.md
+```
+
+## 메모
+
+- 이 프로젝트는 코드와 자료를 분리해서 볼 수 있도록 `SourceCode/`와 `docs/` 기준으로 정리했습니다.
+- 처음 읽을 때는 문서를 먼저 보고 `SourceCode/src/Top.v`로 내려가면 흐름이 가장 자연스럽습니다.
